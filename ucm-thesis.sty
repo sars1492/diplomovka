@@ -1,0 +1,755 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Styl pre sablony Bc+Mgr+RNDr pre  FPV UCM v Trnave
+%%  Autor: Gabriel Szasz (gabriel.szasz1@gmail.com)
+%%
+%%  Postavene na sablone pre PriF MU od Petra Zemanka (zemanekp@math.muni.cz)
+%%  Urcene pro LaTeX-2e
+%%  Verzia: 0.1 (12. juna 2016)
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\filename{ucm.thesis.sty}
+\def\filedate{2016/06/12}
+\def\fileversion{0.1}
+
+\@ifundefined{NeedsTeXFormat}{
+\typeout{*******************************************************************************}
+\ProvidesClass{ucm.thesis}[\filedate\space v\fileversion]
+\typeout{This package provides the basic style for bachelor, master, and rigorous theses written by students of 
+the Faculty of Natural Science (University of Ss. Cyril and Methodeus in Trnava)}
+\typeout{Author: Gabriel Szasz (gabriel.szasz1@gmail.com)}
+\typeout{The package is based on sci.muni.thesis by Petr Zemanek (zemanekp@math.muni.cz)}
+\typeout{For bachelor and master theses see http://www.sci.muni.cz/en/BcMgrStudium/}
+\typeout{For rigorous theses see http://www.sci.muni.cz/en/RigRiz/}
+\typeout{}
+\typeout{Tento balik poskytuje zakladny styl potrebny pro bakalarske, diplomove a rigorozni prace pisane studentami
+Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v Trnave}
+\typeout{Autor: Gabriel Szasz (gabriel.szasz1@gmail.com)}
+\typeout{Balik je odvodeny z sci.muni.thesis od Petra Zemanka (zemanekp@math.muni.cz)}
+\typeout{Pre bakalarske a diplomove prace pozri http://www.sci.muni.cz/cz/BcMgrStudium/}
+\typeout{Pre rigorozne prace pozri http://www.sci.muni.cz/cz/RigRiz/}
+\typeout{*******************************************************************************}
+}{
+\typeout{*******************************************************************************}
+\ProvidesClass{ucm.thesis}[\filedate\space v\fileversion]
+\NeedsTeXFormat{LaTeX2e}
+\typeout{This package provides the basic style for bachelor, master, and rigorous theses written by students of 
+the Faculty of Natural Science (University of Ss. Cyril and Methodeus in Trnava)}
+\typeout{Author: Gabriel Szasz (gabriel.szasz1@gmail.com)}
+\typeout{The package is based on sci.muni.thesis by Petr Zemanek (zemanekp@math.muni.cz)}
+\typeout{For bachelor and master theses see http://www.sci.muni.cz/en/BcMgrStudium/}
+\typeout{For rigorous theses see http://www.sci.muni.cz/en/RigRiz/}
+\typeout{}
+\typeout{Tento balik poskytuje zakladny styl potrebny pro bakalarske, diplomove a rigorozni prace pisane studentami
+Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v Trnave}
+\typeout{Autor: Gabriel Szasz (gabriel.szasz1@gmail.com)}
+\typeout{Balik je odvodeny z sci.muni.thesis od Petra Zemanka (zemanekp@math.muni.cz)}
+\typeout{Pre bakalarske a diplomove prace pozri http://www.sci.muni.cz/cz/BcMgrStudium/}
+\typeout{Pre rigorozne prace pozri http://www.sci.muni.cz/cz/RigRiz/}
+\typeout{*******************************************************************************}
+\RequirePackage{etoolbox,graphicx,textfit,changepage,setspace,ifthen,fancyhdr,calc,pdfpages,makeidx,color}
+\RequirePackage{hyperref}
+\RequirePackage[all]{hypcap}
+}
+
+\DeclareOption{Bc}{\newcommand{\TypPrace}{Bakal{\'{a}}rska pr{\'{a}}ca}}
+\DeclareOption{Mgr}{\newcommand{\TypPrace}{Diplomov{\'{a}} pr{\'{a}}ca}}
+\DeclareOption{RNDr}{\newcommand{\TypPrace}{Rigorózna{\'{i}} pr{\'{a}}ca}}
+
+\DeclareOption{Farebne}{\hypersetup{
+linkcolor=red,
+citecolor=blue,
+filecolor=magenta,
+urlcolor=cyan,
+}}
+
+\DeclareOption{Tlac}{\hypersetup{
+linkcolor=black,
+citecolor=black,
+filecolor=black,
+urlcolor=black,
+}}
+
+\ProcessOptions
+
+\overfullrule10pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Definicia povinnych casti
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\NazovKatedry}[2]{\newcommand{\Katedra}{#1} \newcommand{\Department}{#2}}
+\newcommand{\RokOdovzdaniaPrace}[1]{\newcommand{\RokOdovzdania}{#1}}
+\newcommand{\AkademickyRok}[1]{\newcommand{\AkadRok}{#1}}
+\newcommand{\Autor}[2]{\newcommand{\MenoAutora}{#1} \newcommand{\AutorSTitulmi}{#2}}
+\newcommand{\TemaPrace}[3]{\newcommand{\NazovPraceNaTitulnejStrane}{#1}\newcommand{\NazovPrace}{#2}
+\newcommand{\TitleOfThesis}{#3}}
+\newcommand{\SkolitelSTitulmi}[1]{\newcommand{\Skolitel}{#1}}
+\newcommand{\StudijnyProgram}[2]{\newcommand{\StudProg}{#1} \newcommand{\DegreeProgramme}{#2}}
+\newcommand{\StudijnyObor}[2]{\newcommand{\StudOb}{#1} \newcommand{\FieldOfStudy}{#2}}
+\newcommand{\KlucoveSlova}[2]{\newcommand{\KlSlova}{#1} \newcommand{\Keywords}{#2}}
+\newcommand{\PocetStran}[1]{\newcommand{\Strany}{#1}}
+\newcommand{\Abstrakty}[2]{\newcommand{\Abstrakt}{#1} \newcommand{\Abstract}{#2}}
+\newcommand{\TextPodakovania}[1]{\newcommand{\Podakovanie}{#1}}
+\newcommand{\TextPrehlasenia}[1]{\newcommand{\Prehlasenie}{#1}}
+\newcommand{\DatumPrehlasenia}[1]{\newcommand{\DatumPrehl}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Definicia rozmerov strany
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\newcommand{\VelkostHlavicky}{12 pt+\@ptsize pt}
+\makeatother
+\usepackage[top=22mm,bottom=24mm,left=34mm,right=25mm,headsep=6mm,footskip=8mm,includeheadfoot,
+headheight=\VelkostHlavicky]{geometry}
+
+%%
+%%  Definicia formatu datumu
+%%
+\def\Dnes{\number\day.~\ifcase
+\month\or janu{\'{a}}ra\or febru{\'{a}}ra\or
+marca\or apr{\'{i}}la\or m{\'{a}}ja\or
+j{\'{u}}na\or j{\'{u}}la\or augusta\or
+septembra\or okt{\'{o}}bra\or novembra\or
+decembra\fi \space\number\year}
+
+%%
+%%  Predefinovanie cleardoublepage tak, aby pri obojstrannej tlaci nebola na
+%%  strane hlavicka
+%%
+\let\origcleardoublepage\cleardoublepage %% zachovanie povodneho prikazu
+
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \hbox{}
+    \thispagestyle{empty}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother \clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Hlavicky povinnych casti
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\newcommand{\NazovPovinnejCasti}[1]{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 30\p@
+  }}
+\makeatother
+
+%%
+%%  Dosky
+%%
+
+\newcommand{\Dosky}{
+\pagestyle{empty}
+\begin{titlepage}
+\pdfbookmark{Desky}{Desky}
+\pagenumbering{Alph}
+
+\newlength{\sirkakatedraorig} %% urci povodnu sirku textu s nazvom katedry
+\settowidth{\sirkakatedraorig}{\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}}
+
+\newlength{\sirkafakultaorig} %% urci sirku textu s nazvom fakulty
+\settowidth{\sirkafakultaorig}{\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{Fakulta
+        pr{\'{i}}rodn{\'{y}}ch vied}}}}
+
+
+  \begin{center}
+    {\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{Univerzita sv. Cyrila a Metoda v Trnave}}}}\\[2mm]
+    {\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{Fakulta pr{\'{i}}rodn{\'{y}ch vied}}}}}\\
+    \ifthenelse{\lengthtest{\sirkakatedraorig > 0.95\sirkafakultaorig}}%
+        {\textbf{\textsc{\scaletowidth{0.95\sirkafakultaorig}{\Katedra}}}}%
+        {\vspace*{-3mm}\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}}
+  \end{center}
+
+\vfill
+
+  \begin{center}
+    {\fontsize{34pt}{20pt}\selectfont{\bf \TypPrace}}
+  \end{center}
+
+\vfill
+
+
+\setbox2=\hbox{\textbf{\textsc{\MenoAutora}}}
+\setbox1=\hbox{textbf{\textsc{Z}}}
+\ht2=\the\ht1
+\setbox0=\hbox{\resizebox{0.68\textwidth}{!}{\box2}}
+
+\newlength{\sirkadoskyorig} %% urci povodnu sirku textu se menom autora
+\settowidth{\sirkadoskyorig}{\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{\MenoAutora}}}}
+
+\begin{raggedright}
+ \ifthenelse{\lengthtest{\sirkadoskyorig > 0.65\textwidth}}%
+       {\noindent \resizebox{!}{\the\ht0}{{\textbf{\textsc{Trnava \RokOdovzdania}}}} \hfill \copy0}
+       {{\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{Trnava \RokOdovzdania \hfill \MenoAutora}}}}}
+\end{raggedright}
+
+\end{titlepage}
+ 
+\cleardoublepage
+}
+
+%%
+%%  Titulna strana
+%%
+
+% \newcommand{\zvetsi}[2]{\begingroup\scalefont{#1}{#2}\endgroup}
+
+\newcommand{\TitulnaStrana}{
+\pagenumbering{roman}
+\pagestyle{empty}
+\pdfbookmark{Tituln{\'{a}} strana}{Titulna strana}
+
+\changetext{}{11.6mm}{}{}{}
+\begin{adjustwidth}{-12mm}{}
+\vspace*{-5mm}
+\hspace{-6mm}
+\begin{minipage}{28mm}
+  \includegraphics[width=28mm]{logo/UCM_(black)}
+\end{minipage}\hspace{1mm}
+\begin{minipage}{150mm}
+  \begin{center}\vspace*{4mm}
+    {\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{Univerzita sv. Cyrila a Metoda v Trnave}}}}\\[2mm]
+    {\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{Fakulta pr{\'{i}}rodn{\'{y}}ch vied}}}}\\[1mm]
+%
+    \settowidth{\sirkakatedraorig}{\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}}
+   
+\settowidth{\sirkafakultaorig}{\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{Fakulta
+        pr{\'{i}}rodn{\'{y}}ch vied}}}}
+%    
+    \ifthenelse{\lengthtest{\sirkakatedraorig > 0.95\sirkafakultaorig}}%
+        {\vspace*{-0.5mm}\textbf{\textsc{\scaletowidth{0.95\sirkafakultaorig}{\Katedra}}}\\[-1mm]}%
+        {\vspace*{-4mm}\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}\\[-6mm]}
+    \noindent \rule{\textwidth}{2pt}\vspace*{2mm}
+  \end{center}
+\end{minipage}
+\end{adjustwidth}
+\changetext{}{-11.6mm}{}{}{}
+
+ \vfill
+
+\newlength{\autororig} %% urci povodnu sirku textu s menom autora
+\settowidth{\autororig}{\fontsize{26pt}{28pt}\selectfont{\bf \MenoAutora}}
+
+  \begin{raggedright}
+    \begin{spacing}{2.8}
+      {\fontsize{35pt}{28pt}\selectfont{\bf \NazovPraceNaTitulnejStrane}}\\[-2mm]
+    \end{spacing}
+      {\fontsize{20pt}{28pt}\selectfont{\TypPrace}}\\[5mm]
+    \ifthenelse{\lengthtest{\autororig > 0.98\textwidth}}%
+        {\hspace*{-1mm}\textbf{\scaletowidth{0.98\textwidth}{\MenoAutora}}}%
+        {\fontsize{26pt}{28pt}\selectfont{\bf \MenoAutora}}
+  \end{raggedright}
+
+\vspace*{5mm}
+\vfill
+
+\newlength{\sirkatitulkaorig} %% urci povodnu sirku textu s menom skolitela
+\settowidth{\sirkatitulkaorig}{\fontsize{18.5pt}{20pt}\selectfont{\textbf{{\v{S}}kolite{\v{l}}: \Skolitel}}}
+
+% \newlength{\vyskatitulka} %% urci novou vysku textu s menom skolitela
+% \settoheight{\vyskatitulka}{\textbf{\scaletowidth{0.72\textwidth}{{\v{S}}kolite{\v{l}}: \Skolitel}}}
+
+\setbox2=\hbox{\bf {\v{S}}kolite{\v{l}}: \Skolitel}
+\setbox1=\hbox{\bf A}
+\ht2=\the\ht1
+\setbox0=\hbox{\resizebox{0.75\textwidth}{!}{\box2}}
+
+\begin{raggedright}
+ \ifthenelse{\lengthtest{\sirkatitulkaorig > 0.72\textwidth}}%
+       {\noindent\copy0 \hfill \resizebox{!}{\the\ht0}{\bf Trnava \RokOdovzdania}}
+       {{\fontsize{18.5pt}{20pt}\selectfont{\textbf{{\v{S}}kolite{\v{l}}:
+               \Skolitel \hfill Trnava \RokOdovzdania}}}}
+\end{raggedright}
+
+\normalsize
+
+\cleardoublepage
+}
+
+%%
+%%  Titulna strana rigoroznej prace
+%%
+
+% \newcommand{\zvetsi}[2]{\begingroup\scalefont{#1}{#2}\endgroup}
+
+\newcommand{\TitulnaStranaRP}{
+\pagenumbering{roman}
+\pagestyle{empty}
+\pdfbookmark{Tituln{\'{a}} strana}{Titulna strana}
+
+\changetext{}{11.6mm}{}{}{}
+\begin{adjustwidth}{-12mm}{}
+\vspace*{-5mm}
+% \hspace{-17mm}
+\begin{minipage}{28mm}
+  \includegraphics[width=28mm]{loga/MU_(black)}
+\end{minipage}\hspace{2mm}
+\begin{minipage}{113mm}
+  \begin{center}\vspace*{3mm}
+    {\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{Univerzita sv. Cyrila a Metoda v Trnave}}}}\\[2mm]
+    {\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{P{\v{r}}{\'{i}}rodov{\v{e}}deck{\'{a}} fakulta}}}}\\[1mm]
+%
+    \settowidth{\sirkakatedraorig}{\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}}
+   
+\settowidth{\sirkafakultaorig}{\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{P{\v{r}}{\'{i}}rodov{\v{e}}deck{\'{a}}
+fakulta}}}}
+%    
+    \ifthenelse{\lengthtest{\sirkakatedraorig > 0.95\sirkafakultaorig}}%
+        {\vspace*{-0.5mm}\textbf{\textsc{\scaletowidth{0.95\sirkafakultaorig}{\Katedra}}}\\[-1mm]}%
+        {\vspace*{-4mm}\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}\\[-6mm]}
+    \noindent \rule{\textwidth}{2pt}\vspace*{2mm}
+  \end{center}
+\end{minipage}\hspace{2mm}
+\begin{minipage}{28mm}
+  \includegraphics[width=28mm]{loga/SCI_(black)}
+\end{minipage}
+\end{adjustwidth}
+\changetext{}{-11.6mm}{}{}{}
+
+ \vfill
+
+\newlength{\autororig} %% urci povodnu sirku textu s menom autora
+\settowidth{\autororig}{\fontsize{26pt}{28pt}\selectfont{\bf \MenoAutora}}
+
+  \begin{raggedright}
+    \begin{spacing}{2.8}
+      {\fontsize{35pt}{28pt}\selectfont{\bf \NazovPraceNaTitulnejStrane}}\\[-2mm]
+    \end{spacing}
+      {\fontsize{20pt}{28pt}\selectfont{\TypPrace}}\\[5mm]
+    \ifthenelse{\lengthtest{\autororig > 0.98\textwidth}}%
+        {\hspace*{-1mm}\textbf{\scaletowidth{0.98\textwidth}{\MenoAutora}}}%
+        {\fontsize{26pt}{28pt}\selectfont{\bf \MenoAutora}}
+  \end{raggedright}
+
+\vspace*{5mm}
+\vfill
+
+\begin{raggedright}
+   {{\fontsize{18.5pt}{20pt}\selectfont{\textbf{\hfill Brno \RokOdovzdania}}}}
+\end{raggedright}
+
+
+\normalsize
+
+\cleardoublepage
+}
+
+%%
+%%  Bibliograficky zaznam
+%%
+
+\newcommand{\BibliografickyZaznam}{
+\pdfbookmark{Bibliografick{\'{y}} z{\'{a}}znam}{Bibliograficky zaznam}
+\NazovPovinnejCasti{Bibliografick{\'{y}} z{\'{a}}znam}
+\thispagestyle{empty}
+
+\newlength{\LavyStlpecSK}
+\settowidth{\LavyStlpecSK}{{\bf {\v{S}}tudijn{\'{y}} program:} } %% urcit potrebnou sirku leveho sloupce 
+
+\newlength{\PravyStlpecSK}
+\setlength{\PravyStlpecSK}{\textwidth - \LavyStlpecSK - 24 pt} %% dopocitat pravy sloupec
+
+\noindent
+\begin{tabular}{p{\LavyStlpecSK} p{\PravyStlpecSK} }
+  {\bf Autor:}            & \AutorSTitulmi \\
+                          & Fakulta pr{\'{i}}rodn{\'{y}}ch vied, Univerzita sv. Cyrila a Metoda v Trnave \\
+                          & \Katedra  \\[6mm]
+  {\bf N{\'{a}}zov pr{\'{a}}ce:}      & \NazovPrace  \\[6mm]
+  {\bf {\v{S}}tudijn{\'{y}} program:} & \StudProg  \\[6mm]
+  {\bf {\v{S}}tudijn{\'{y}} obor:}    & \StudOb \\[6mm]
+  {\bf {\v{S}}kolite{\v{l}}}    & \Skolitel \\[6mm]
+  {\bf Akademick{\'{y}} rok:}   & \AkadRok \\[6mm]
+  {\bf Po{\v{c}}et str{\'{a}}n:}      & \Strany \\[6mm]
+  {\bf Kl{\'{u}}{\v{c}}ov{\'{e}} slov{\'{a}}:}    & \KlSlova
+\end{tabular}
+
+\cleardoublepage
+}
+
+%%
+%%  Bibliograficky zaznam rigoroznej prace
+%%
+
+\newcommand{\BibliografickyZaznamRP}{
+\pdfbookmark{Bibliografick{\'{y}} z{\'{a}}znam}{Bibliograficky zaznam}
+\NazovPovinnejCasti{Bibliografick{\'{y}} z{\'{a}}znam}
+\thispagestyle{empty}
+
+\newlength{\LavyStlpecSK}
+\settowidth{\LavyStlpecSK}{{\bf {\v{S}}tudijn{\'{y}} program:} } %% urcit potrebnu sirku laveho stlpca
+
+\newlength{\PravyStlpecSK}
+\setlength{\PravyStlpecSK}{\textwidth - \LavyStlpecSK - 24 pt} %% dopocitat pravy stlpec
+
+\noindent
+\begin{tabular}{p{\LavyStlpecSK} p{\PravyStlpecSK} }
+  {\bf Autor:}            & \AutorSTitulmi \\
+                          & Fakulta pr{\'{i}}rodn{\'{y}}ch vied, Univerzita sv. Cyrila a Metoda v Trnave \\
+                          & \Katedra  \\[6mm]
+  {\bf N{\'{a}}zov pr{\'{a}}ce:}      & \NazovPrace  \\[6mm]
+  {\bf {\v{S}}tudijn{\'{y}} program:} & \StudProg  \\[6mm]
+  {\bf {\v{S}}tudijn{\'{y}} obor:}    & \StudOb \\[6mm]
+  {\bf Akademick{\'{y}} rok:}   & \AkadRok \\[6mm]
+  {\bf Po{\v{c}}et str{\'{a}}n:}      & \Strany \\[6mm]
+  {\bf K{\v{l}}{\'{u}}{\v{c}}ov{\'{e}} slov{\'{a}}:}    & \KlSlova
+\end{tabular}
+
+\cleardoublepage
+}
+
+%%
+%%  Bibiliographic Entry
+%%
+
+\newcommand{\BibliographicEntry}{
+\pdfbookmark{Bibliographic Entry}{Bibliographic Entry}
+\NazovPovinnejCasti{Bibliographic Entry}
+\thispagestyle{empty}
+
+\newlength{\LavyStlpecEN}
+\settowidth{\LavyStlpecEN}{{\bf Degree Programme:} } %% urcit potrebnou sirku leveho sloupce 
+
+\newlength{\PravyStlpecEN}
+\setlength{\PravyStlpecEN}{\textwidth - \LavyStlpecEN - 24 pt} %% dopocitat pravy sloupec
+
+\noindent
+\begin{tabular}{ p{\LavyStlpecEN} p{\PravyStlpecEN} }
+  {\bf Author:}           & \AutorSTitulmi\\
+                          & Faculty of Natural Science, University of Ss. Cyril
+                            and Methodeus in Trnava\\
+                          & \Department \\[6mm]
+  {\bf Title of Thesis:}  & \TitleOfThesis  \\[6mm]
+  {\bf Degree Programme:} & \DegreeProgramme  \\[6mm]
+  {\bf Field of Study:}   & \FieldOfStudy \\[6mm]
+  {\bf Supervisor:}       & \Skolitel \\[6mm]
+  {\bf Academic Year:}    & \AkadRok \\[6mm]
+  {\bf Number of Pages:}  & \Strany \\[6mm]
+  {\bf Keywords:}         & \Keywords
+\end{tabular}
+
+\cleardoublepage
+}
+
+%%
+%%  Bibliographic Entry - Rigorozna praca
+%%
+
+\newcommand{\BibliographicEntryRP}{
+\pdfbookmark{Bibliographic Entry}{Bibliographic Entry}
+\NazovPovinnejCasti{Bibliographic Entry}
+\thispagestyle{empty}
+
+\newlength{\LavyStlpecEN}
+\settowidth{\LavyStlpecEN}{{\bf Degree Programme:} } %% urcit potrebnou sirku leveho sloupce 
+
+\newlength{\PravyStlpecEN}
+\setlength{\PravyStlpecEN}{\textwidth - \LavyStlpecEN - 24 pt} %% dopocitat pravy stlpec
+
+\noindent
+\begin{tabular}{ p{\LavyStlpecEN} p{\PravyStlpecEN} }
+  {\bf Author:}           & \AutorSTitulmi\\
+                          & Faculty of Natural Science, University of Ss. Cyril
+                            and Methodeus in Trnava\\
+                          & \Department \\[6mm]
+  {\bf Title of Thesis:}  & \TitleOfThesis  \\[6mm]
+  {\bf Degree Programme:} & \DegreeProgramme  \\[6mm]
+  {\bf Field of Study:}   & \FieldOfStudy \\[6mm]
+  {\bf Academic Year:}    & \AkadRok \\[6mm]
+  {\bf Number of Pages:}  & \Strany \\[6mm]
+  {\bf Keywords:}         & \Keywords
+\end{tabular}
+
+\cleardoublepage
+}
+
+%%
+%%  Uvodne povinne strany
+%%
+
+\newcommand{\VytvorPovinneStrany}{\Dosky\TitulnaStrana\BibliografickyZaznam\BibliographicEntry}
+
+\newcommand{\VytvorPovinneStranyRigoroznaPraca}{\Dosky\TitulnaStranaRP\BibliografickyZaznamRP\BibliographicEntryRP}
+
+
+%%
+%%  Abstrakty na jednej strane
+%%
+
+\newcommand{\AbstraktyNaJednejStrane}{
+\pdfbookmark{Abstrakt}{Abstrakt}
+\NazovPovinnejCasti{Abstrakt}
+\thispagestyle{empty}
+\Abstrakt
+
+\vspace*{\fill}
+
+\pdfbookmark{Abstract}{Abstract}
+\NazovPovinnejCasti{Abstract}
+
+\Abstract
+
+\vspace*{\fill}
+\cleardoublepage
+}
+
+%% 
+%%  Abstrakty na dvoch stranach
+%%
+
+\newcommand{\AbstraktyNaDvochStranach}{
+\pdfbookmark{Abstrakt}{Abstrakt}
+\NazovPovinnejCasti{Abstrakt}
+\thispagestyle{empty}
+
+\Abstrakt
+
+\cleardoublepage
+
+\pdfbookmark{Abstract}{Abstract}
+\NazovPovinnejCasti{Abstract}
+\thispagestyle{empty}
+
+\Abstract
+
+\cleardoublepage
+}
+
+
+%%
+%%  Podakovanie a prehlasenie
+%%
+
+\newcommand{\PodakovanieAPrehlasenie}{
+\pdfbookmark{Po{\v{d}}akovanie}{Podakovanie}
+\NazovPovinnejCasti{Po{\v{d}}akovanie}
+\thispagestyle{empty}
+
+
+\Podakovanie
+
+\vspace*{\fill}
+\pdfbookmark{Prehl{\'{a}}senie}{Prehlasenie}
+\NazovPovinnejCasti{Prehl{\'{a}}senie}
+
+\Prehlasenie
+ 
+\vspace*{15mm}
+
+\noindent Trnava, \DatumPrehl \hfill \makebox[50mm]{\dotfill}\\
+\hspace*{\fill} \MenoAutora\hspace*{15mm}
+\cleardoublepage
+}
+
+%%
+%%  Prehlasenie bez podakovania
+%%
+
+\newcommand{\PrehlasenieBezPodekovania}{
+
+\vspace*{\fill}
+\pdfbookmark{Prehl{\'{a}}senie}{Prohlaseni}
+\NazovPovinnejCasti{\Huge Prehl{\'{a}}senie}
+
+\Prehlasenie
+
+\vspace*{15mm}
+
+\noindent Trnava, \DatumPrehl \hfill \makebox[50mm]{\dotfill}\\
+\hspace*{\fill} \MenoAutora\hspace*{15mm}
+\cleardoublepage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Nastavenie zakladnej hlavicky a paty v sablone
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\headrulewidth{0pt}%
+\def\footrulewidth{0pt}%
+
+\makeatletter
+\fancypagestyle{plain}{%
+\fancyhf{}
+  \if@twoside
+    \fancyfoot[RO]{\it\small--\,\thepage\,--}\fancyfoot[LE]{\it\small--\,\thepage\,--}% TWOSIDE
+  \else
+    \fancyfoot[R]{\it\small--\,\thepage\,--}% ONESIDE
+  \fi
+}
+
+\newcommand{\HlavickaUvod}{
+\pagestyle{fancy}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it {\'{U}}vod\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ {\'{U}}vod}% TWOSIDE
+  \else
+    \fancyhead[C]{\small\it {\'{U}}vod\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\newcommand{\HlavickaSymbolov}{
+\pagestyle{fancy}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it Preh{\v{l}}ad pou{\v{z}}it{\'{y}}ch symbolov\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ Preh{\v{l}}ad pou{\v{z}}it{\'{y}}ch symbolov}% TWOSIDE
+  \else
+    \fancyhead[C]{\small\it P{\v{r}}eh{\v{l}}ad pou{\v{z}}it{\'{y}}ch symbolov\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\newcommand{\HlavickaKapitoly}{%
+\pagestyle{fancy}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it \chaptername\ \leftmark\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ \chaptername\ \leftmark}% TWOSIDE
+  \else
+    \fancyhead[C]{\small\it \chaptername\ \leftmark\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\newcommand{\HlavickaZaver}{
+\pagestyle{fancy}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it Z{\'{a}}ver\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ Z{\'{a}}ver}% TWOSIDE
+   \else
+    \fancyhead[C]{\small\it Z{\'{a}}ver\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\newcommand{\HlavickaPriloha}{
+\pagestyle{fancy}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it Pr{\'{i}}loha\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ Pr{\'{i}}loha}% TWOSIDE
+   \else
+    \fancyhead[C]{\small\it Pr{\'{i}}loha\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+
+\newcommand{\HlavickaLiteratura}{
+\pagestyle{plain}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it \bibname\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ \small \bibname}% TWOSIDE
+  \else
+    \fancyhead[C]{\small\it \bibname\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\newcommand{\HlavickaRegister}{
+\pagestyle{plain}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it \indexname\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ \indexname}% TWOSIDE
+  \else
+    \fancyhead[C]{\small\it \indexname\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\makeatother
+
+%%
+%%  \vloz = \input
+%%
+
+\newcommand{\vloz}{\input}
+
+%%
+%%  Register
+%%
+
+\makeatletter
+\renewenvironment{theindex}
+               {\if@twocolumn
+                  \@restonecolfalse
+                \else
+                  \@restonecoltrue
+                \fi
+                \twocolumn[\phantomsection\addcontentsline{toc}{chapter}{\indexname}\@makeschapterhead{\indexname}]%
+                \@mkboth{\MakeUppercase\indexname}%
+                        {\MakeUppercase\indexname}%
+                \thispagestyle{plain}\parindent\z@
+                \parskip\z@ \@plus .3\p@\relax
+                \columnseprule \z@
+                \columnsep 35\p@
+                \let\item\@idxitem}
+               {\if@restonecol\onecolumn\else\clearpage\fi}
+\makeatother
+
+\newcommand{\VytvorRegister}{
+\printindex
+}
+
+%%
+%%  Informacie pre PDF
+%%
+
+\AtEndPreamble{
+\hypersetup{
+pdfencoding=unicode,
+pdftitle={\NazovPrace. \TypPrace},
+pdfauthor={\MenoAutora{} (\Dnes)},
+pdfsubject={Univerzita sv. Cyrila a Metoda v Trnave, Fakulta pr{\'{i}}rodn{\'{y}}ch vied, {\Katedra}, Trnava \RokOdovzdania},
+pdfkeywords={\KlSlova},
+linktoc=all,
+breaklinks=true,
+colorlinks=true,
+pdfencoding=auto,
+%% pre dalsie mozne nastavenia pozri http://www.tug.org/applications/hyperref/manual.html
+}}
+
+%%
+%%  Vylepseny vzhlad obsahu
+%%
+
+\usepackage{tocloft}
+
+\renewcommand{\cftbeforetoctitleskip}{21.5mm} %% Medzera pred nadpisom - needitujte
+\renewcommand{\cftaftertoctitleskip}{6.5mm}   %% Medzera za nadpisom - needitujte
+
+\renewcommand{\cftchapfont}{\bfseries}        %% font nazvov kapitoly v obsahu
+\renewcommand{\cftchappagefont}{\bfseries}    %% font pre cislo stranky pri kapitole
+\renewcommand{\cftchappresnum}{Kapitola }     %% pred cislom kapitoly sa vypisuje text ``Kapitola''
+\renewcommand{\cftchapaftersnum}{.}           %% za cislom kapitoly je ``.''
+\setlength{\cftchapnumwidth}{22mm}            %% medzera za cislom kapitoly - v pripade potreby zmente
+\renewcommand{\cftchapleader}{ \bf\dotfill\ } %% oddelovac medzi nazvom kapitoly a cislom strany
+
+\setlength{\cftsecindent}{6mm}                %% sirka odsadenia urovne podkapitoly
+\setlength{\cftbeforesecskip}{0.7mm}          %% vertikalna mezera nad polozkou podkapitoly
+\setlength{\cftsecnumwidth}{8mm}              %% mezera za cislom podkapitoly - v pripade potreby zmente
+\renewcommand{\cftsecdotsep}{3}               %% hustota vyplne mezi nazvom podkapitoly a cislom stranky
+
+\setlength{\cftsubsecindent}{14mm}            %% sirka odsadenia urovne odstavca
+\setlength{\cftbeforesubsecskip}{0.5mm}       %% vertikalna mezera nad polozkou odstavca
+\setlength{\cftsubsecnumwidth}{10mm}          %% mezera za cislom odstavca - v pripade potreby zmente
+\renewcommand{\cftsubsecdotsep}{3}            %% hustota vyplne mezi nazvom odstavca a cislom stranky
+
+\newcommand{\VytvorObsah}{\tableofcontents}

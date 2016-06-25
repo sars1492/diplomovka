@@ -1,0 +1,26 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=cslatex 2016.4.28)  25 JUN 2016 15:21
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**q
+(/usr/share/texlive/texmf-dist/tex/latex/tools/q.tex
+***** WARNING ******** CSLaTeX is obsolete, don't use it please *****
+***** You can use ``normal'' LaTeX+Babel or XeLaTeX+polyglossia *****
+Loading CZ hyphenation patterns: Pavel Sevecek, v3, 1995
+Loading SK hyphenation patterns: Jana Chlebikova, 1992 File ignored
+)
+! Emergency stop.
+<*> q
+     
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 6 strings out of 494851
+ 246 string characters out of 6179984
+ 46488 words of memory out of 5000000
+ 3487 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 24 hyphenation exceptions out of 8191
+ 4i,0n,0p,81b,6s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

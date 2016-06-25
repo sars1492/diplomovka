@@ -1,0 +1,232 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Sablona Bc+Mgr+RNDr pre FPV UCM
+%%  Autor: Gabriel Szasz (gabriel.szasz1@gmail.com) 
+%%
+%%  Zalozene na sablone PrF MU v Brne
+%%      Autor: Petr Zemanek (zemanekp@math.muni.cz)
+%%
+%%  Typeset in LaTeX-2e
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper,oneside,final]{book}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[IL2]{fontenc}
+\usepackage[slovak]{babel}
+
+\usepackage{mathptmx}  % volne dostupny font Adobe Times Roman
+
+\usepackage{longtable} % balik pre tabulky presahujuce jednu stranu
+                       % (potrebne pre zoznam znaceni)
+
+\usepackage{amsmath,amssymb,amsthm} % baliky pre matematicke vzorce
+\usepackage{natbib}    % balik pre harvardsky styl citacii
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Nastavenie sablony
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[Mgr,Farebne]{ucm-thesis}  % nahrad "Farebne" za "Tlac", ked chces
+                                      % dokument tlacit; "Farebne" je len pre
+                                      % zdielanie online
+
+\NazovKatedry{Katedra biológie}{Department of Biology}
+
+\RokOdovzdaniaPrace{2016}
+
+\AkademickyRok{2016/2017}
+
+\Autor{Juraj Szász}{Bc. Juraj Szász}
+
+\TemaPrace{Scientometrická analýza FPV UCM v~Trnave}{Scientometrická analýza Fakulty
+  prírodných vied Univerzity sv.~Cyrila a~Metoda v Trnave}{Scientometric
+  analysis of the Faculty of Natural Sciences, University of Ss.~Cyril and~Methodius in Trnava}
+
+\SkolitelSTitulmi{prof. RNDr. Ján Kraic, PhD}
+
+\StudijnyProgram{Aplikovaná biológia}{Aplicated Biology}
+
+\StudijnyObor{Biológia}{Biology}
+
+\PocetStran{xiii\,$+$\,40}
+
+\KlucoveSlova{Kľúčové slovo; Kľúčové slovo; Kľúčové slovo; Kľúčové slovo;
+  Kľúčové slovo; Kľúčové slovo; Kľúčové slovo; Kľúčové slovo}{Keyword; Keyword;
+  Keyword; Keyword; Keyword; Keyword; Keyword; Keyword; Keyword}
+
+\Abstrakty{V~tejto diplomovej práci sa venujeme štúdiu Neviditeľného ružového
+  jednorožca. Kľúčovou vlastnosťou tejto ružovej bytosti je to, že je {\em ad~hoc}
+  neviditeľná a~jej neexistenciu nie je možné dokázať. Vieme, že je ružová,
+  pretože to tvrdia ľudia, ktorým sa zjavila. V našej práci sa nám podarilo
+  dokázať, že Neviditeľný ružový jednorožec stvoril vesmír po~smrti bude každého
+  človeka súdiť podľa toho, čo počas života robil v~spálni. Tento záver nie je
+  možné vyvrátiť, čo znamená že to musí byť absolútna pravda.}{In this thesis we
+  study Invisible Pink Unicorn. Key property of this pink being is that He is
+  {\em ad~hoc} invisible and His nonexistence is unprovable. We know that He is pink,
+  because it was said by the people to whom He has revealed. We have managed to
+  prove that the Invisible Pink Unicorn is the Creator of the universe and every
+  human will be judged by Him after death according to what he/she were doing in
+  bedroom. This conclusion is not falsifiable and it means that it has to be the
+  absolute true.}
+
+\TextPodakovania{Na tomto mieste by som sa chcel poďakovať in memoriam Richardovi
+  P. Feynmanovi za~to, že bol pre mňa celý čas bezodným zdrojom
+  inšpirácie. Ďalej by som sa chcel poďakovať Gabrielovi Szászovi za vytvorenie
+  šablóny pre typografický systém \LaTeX v~ktorom bola napísaná táto práca. V
+  neposlednom rade by som sa chcel poďakovať výrobcovi tabletiek AlphaD3 bez
+  ktorých by táto práca nikdy nevznikla.}
+
+\TextPrehlasenia{Prehlasujem, že som svoju diplomovú prácu vypracoval samostatne
+  s~využitím informačných zdrojov, ktoré sú v práci citované.}
+
+\DatumPrehlasenia{1. decembra 2016}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Definícia vlastných príkazov
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\Cbb}{\mathbb{C}}
+\newcommand{\Rbb}{\mathbb{R}}
+\newcommand{\Zbb}{\mathbb{Z}}
+\newcommand{\Nbb}{\mathbb{N}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Dodatocne nastavenia
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Vytvori pomocny subor pre register
+\makeindex
+
+% Zapnutie opakovania matematickych symbolov
+% \input{opakuj.sty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Zaciatok dokumentu
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%
+%%  Povinne strany (podla normy PrF MU v Brne)
+%% 
+\VytvorPovinneStrany
+% \VytvorPovinneStranyRigoroznaPraca
+
+%%
+%%  Abstrakty
+%%
+\AbstraktyNaJednejStrane
+% \AbstraktyNaDvochStranach
+
+%%
+%% Podakovanie a cestne prehlasenie
+%%
+\PodakovanieAPrehlasenie
+% \PrehlasenieBezPodakovania
+
+%%
+%%  Obsah
+%%
+\pdfbookmark{Obsah}{Obsah}
+\VytvorObsah
+\cleardoublepage
+
+%%
+%%  Uvod
+%%
+\HlavickaUvod
+\pdfbookmark{Úvod}{Uvod}
+\vloz{01-uvod}
+\cleardoublepage
+
+%%
+%%  Prehlad pouzitych symbolov
+%%
+\HlavickaSymbolov
+\pdfbookmark{Prehľad použitých symbolov}{Prehlad pouzitych symbolov}
+\vloz{02-symboly}
+\cleardoublepage
+
+%%
+%%  Kapitola 1: Literarny prehlad
+%%
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter. #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection. #1}{}}
+\HlavickaKapitoly
+\vloz{03-kapitola1}
+\cleardoublepage
+
+%%
+%%  Kapitola 2: Materialy a metody
+%%
+\vloz{04-kapitola2}
+\cleardoublepage
+
+%%
+%%  Kapitola 2: Vysledky a diskusia
+%%
+\vloz{05-kapitola3}
+\cleardoublepage
+
+%%
+%%  Zaver
+%%
+\HlavickaZaver
+% \pdfbookmark{Záver}{Zaver}
+\vloz{06-zaver}
+\cleardoublepage
+
+%%
+%%  Priloha
+%%
+\HlavickaPriloha
+% \pdfbookmark{Príloha}{Priloha}
+\vloz{07-priloha}
+\cleardoublepage
+
+%%
+%%  Zoznam pouzitej literatury
+%%
+\renewcommand{\bibname}{Zoznam použitej literatúry}
+\HlavickaLiteratura
+%\vloz{08-literatura}
+\bibliography{literatura}{}
+\bibliographystyle{csplainnat} 
+
+\cleardoublepage
+\renewcommand{\indexname}{Register}
+\HlavickaRegister
+\VytvorRegister
+%%
+%% pro vytvoreni rejstriku se spravny ceskym razenim pouzijte 
+%% csindex -d -h -k -z il2 nazev_souboru.idx
+%%
+%% nebo 
+%% texindy -I latex -L czech -M lang/czech/utf8 nazev_souboru.idx
+%%
+%% na Ustavu matematiky a statistiky zadejte
+%% /opt/texlive/2010/bin/i386-linux/texindy -I latex -L czech -M lang/czech/utf8 nazev_souboru.idx
+
+
+%%
+%%  Prazdna strana na zaver
+%%
+\newpage
+\thispagestyle{empty}
+\fancyhf{}
+\newpage
+\mbox{}
+
+\end{document}

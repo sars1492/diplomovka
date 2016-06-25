@@ -1,0 +1,20 @@
+\select@language {slovak}
+\contentsline {chapter}{\IeC {\'U}vod}{vii}{chapter*.1}
+\contentsline {chapter}{Preh\IeC {\v l}ad pou\IeC {\v z}it\IeC {\'y}ch symbolov}{viii}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Liter\IeC {\'a}rny preh\IeC {\v l}ad}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Defin\IeC {\'\i }cia pojmov}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Bibliometria}{1}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Scientometria}{2}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Informetria}{2}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Webometria}{2}{subsection.1.1.4}
+\contentsline {subsection}{\numberline {1.1.5}Cybermetria}{2}{subsection.1.1.5}
+\contentsline {subsection}{\numberline {1.1.6}Bibliometrick\IeC {\'e} z\IeC {\'a}kony}{2}{subsection.1.1.6}
+\contentsline {subsection}{\numberline {1.1.7}Lotkov z\IeC {\'a}kon}{3}{subsection.1.1.7}
+\contentsline {subsection}{\numberline {1.1.8}Bradfordov z\IeC {\'a}kon}{3}{subsection.1.1.8}
+\contentsline {subsection}{\numberline {1.1.9}Zipfov z\IeC {\'a}kon}{4}{subsection.1.1.9}
+\contentsline {chapter}{\numberline {2}Druh\IeC {\'a} kapitola s matematikou $\DOTSI \intop \ilimits@ \tmspace -\thinmuskip {.1667em} f(x)\tmspace +\thinmuskip {.1667em}\mathrm {d}x$ v~n\IeC {\'a}zvu}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Podkapitola}{5}{section.2.1}
+\contentsline {chapter}{\numberline {3}Druh\IeC {\'a} kapitola s matematikou $\DOTSI \intop \ilimits@ \tmspace -\thinmuskip {.1667em} f(x)\tmspace +\thinmuskip {.1667em}\mathrm {d}x$ v~n\IeC {\'a}zvu}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}Podkapitola}{6}{section.3.1}
+\contentsline {chapter}{Z\IeC {\'a}ver}{7}{chapter*.5}
+\contentsline {chapter}{Pr\IeC {\'\i }loha}{8}{chapter*.6}
