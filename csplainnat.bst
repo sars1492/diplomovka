@@ -730,11 +730,13 @@ FUNCTION {article}
 { output.bibitem
   format.authors "author" output.check
   author format.key output
+  format.date "year" output.check
   new.block
   format.title "title" output.check
-  new.block
+  new.block 
   crossref missing$
-    { journal emphasize "journal" output.check
+    {
+     journal emphasize "journal" output.check
       new.sentence
       format.date "year" output.check
       eid empty$
@@ -797,6 +799,7 @@ FUNCTION {book}
       if$
     }
   if$
+  format.date "year" output.check
   new.block
   format.btitle "title" output.check
   crossref missing$
