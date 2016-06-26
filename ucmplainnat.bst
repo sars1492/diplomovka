@@ -1,9 +1,10 @@
 %% $Id$
-%% File: `csplainnat.bst' for use with natbib package
-%% This is a modification of `plainnat.bst' for Czech references style
-%% (According to "CSN ISO 690: Bibliograficke citace. Obsah, forma a struktura").
-%% Some modifications are commented, look for the keyword 'CHANGE'
-%% For more detailed info use svn repository svn://kraken.pedf.cuni.cz/csplainnat/
+%% File: `ucmplainnat.bst' for use with natbib package to comply standards by
+%% UCM in Trnava (Slovakia).  This is a modification of `csplainnat.bst' for
+%% Czech references style (According to "CSN ISO 690: Bibliograficke
+%% citace. Obsah, forma a struktura").  Some modifications are commented, look
+%% for the keyword 'CHANGE' For more detailed info use svn repository
+%% svn://kraken.pedf.cuni.cz/csplainnat/
 %%
 %% Original plainnat.bst by Patrick W Daly
 %% Modifications by David Mudr{\'{a}}k mudrd8mz@uxit.pedf.cuni.cz
