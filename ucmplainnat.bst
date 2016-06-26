@@ -737,7 +737,7 @@ FUNCTION {article}
   new.block 
   crossref missing$
     {
-     journal emphasize "journal" output.check
+      "In " journal emphasize * "journal" output.check
       new.sentence
       format.date "year" output.check
       eid empty$
