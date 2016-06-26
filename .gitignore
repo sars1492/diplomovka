@@ -4,5 +4,6 @@
 *.toc
 *.bbl
 *.blg
+*.idx
 *.ind
 *.ilg
