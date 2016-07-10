@@ -1,8 +1,9 @@
 *.aux
 *.out
-*.bbl
-*.bbg
-*.idx
 *.log
 *.toc
+*.bbl
 *.blg
+*.idx
+*.ind
+*.ilg
