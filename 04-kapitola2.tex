@@ -7,10 +7,10 @@ cieľ sme rozdelili do nasledujúcich krokov:
 
 \begin{enumerate}
 
-\item Z dvoch najväčších citačných databáz \emph{Thomson Reuters Web of Science}
-  a \emph{Scopus} získať bibliometrické záznamy prác, ktorých aspoň jeden
-  spoluautor má príslušnosť (ang. \emph{affiliation}) k Fakulte prírodných vied
-  Univerzity sv. Cyrila a Metoda v Trnave.
+\item Získať bibliometrické záznamy z dvoch najväčších citačných databáz (WoS a
+  Scopus) pre práce, v ktorých má aspoň jeden spoluautor príslušnosť
+  (ang.\,\emph{affiliation}) k Fakulte prírodných vied Univerzity sv. Cyrila a
+  Metoda v Trnave.
 
 \item Jednotlivé záznamy rozdeliť podľa príslušnosti ku jednotlivým katedrám
   Fakulty prírodných vied Univerzity Cyrila a Metoda v Trnave.
@@ -33,9 +33,9 @@ prihlásili a cez službu E-ZDROJE sme získali prístup na
 Scopus\footnote{\url{https://ezproxy.cvtisr.sk:2615/}}.
 
 Webové nástroje Scopusu umožňujú vyhľadávať záznamy podľa inštitúcie (sekcia
-Affiliation search). Po zadaní kľúčového slova \uv{Methodius} systém našiel iba
+Affiliation search).  Po zadaní kľúčového slova \uv{Methodius} systém našiel iba
 jednu položku: \uv{University of SS Cyril and Methodius, Trnava}, ako je
-zobrazené na Obr.\,\ref{fig:scopus.institutionlist}.
+zobrazené na obrázku~\ref{fig:scopus.institutionlist}.
 
 \begin{figure}
   \centering
@@ -52,13 +52,13 @@ zobrazené na Obr.\,\ref{fig:scopus.institutionlist}.
 \end{figure}
 
 Kliknutím na položku sa zobrazí stránka s bližšími informáciami
-(Obr.\,\ref{fig:scopus.institutioninfo}), ako sú adresa, celkový počet
+(obr.\,\ref{fig:scopus.institutioninfo}), ako sú adresa, celkový počet
 dokumentov: 471, celkový počet autorov: 28, zoznam spoluautorských inštitúcii,
 zoznam časopisov, v ktorých boli publikované práce a koláčový graf rozdelenia
-záznamov na vedecké oblasti podľa Scopus-u.
+záznamov na vedecké oblasti podľa Scopusu.
 
 Kliknutím na číslo 471 (počet záznamov dokumentov) sa zobrazí stránka so
-zoznamom dokumentov ako ukazuje Obr.\,\ref{fig:scopus.documentlist}.
+zoznamom dokumentov ako ukazuje obrázok~\ref{fig:scopus.documentlist}.
 
 \begin{figure}
   \centering
@@ -68,9 +68,9 @@ zoznamom dokumentov ako ukazuje Obr.\,\ref{fig:scopus.documentlist}.
 \end{figure}
 
 Keďže nástroje Scopusu neumožňujú vyhľadávať podľa fakulty, alebo dokonca
-katedry (\emph{department}), bibliografické záznamy Fakulty prírodných vied sme
-získali filtrovaním samotných záznamov. Z počiatku sme vylúčili vedecké oblasti
-(\emph{Subject Area}), ktoré nesúvisia s činnosťou FPV UCM:
+katedry (ang.\,\emph{department}), bibliografické záznamy Fakulty prírodných
+vied sme získali filtrovaním samotných záznamov.  Z počiatku sme vylúčili
+vedecké oblasti (\emph{Subject Area}), ktoré nesúvisia s činnosťou FPV UCM:
 \begin{itemize}
 
 \item \emph{Art and Humanites:} umenie a humanitné vedy,
@@ -83,12 +83,12 @@ získali filtrovaním samotných záznamov. Z počiatku sme vylúčili vedecké 
 \item \emph{Psychology:} psychológia,
 
 \end{itemize}
-a publikácie z roku 1991, pretože v tomto roku UCM ešte nebola založená. Počet
+a publikácie z roku 1991, pretože v tomto roku UCM ešte nebola založená.  Počet
 záznamov sa znížil na 356.
 
 Ďalším krokom bolo vylúčenie článkov, ktorých autori nepôsobia v rámci Fakulty
-prírodných vied podľa Tab.\,\ref{tab:scopus.exauthors}.  Počet záznamov sa
-tak znížil na 329.
+prírodných vied podľa tabuľky~\ref{tab:scopus.exauthors}.  Počet záznamov sa tak
+znížil na 329.
 
 \begin{table}
 \centering\small
@@ -112,7 +112,12 @@ tak znížil na 329.
 \label{tab:scopus.exauthors}
 \end{table}
 
-Vytriedené záznamy sme uložili do formátu .csv na scientometrickú analýzu pomocou Export $\rightarrow$ CSV (Excel), Citation Information Only (iba citácie) ako je ukázané na Obr.\,\ref{fig:scopus.export}.
+Vytriedené záznamy sme uložili do formátu CSV\footnote{\uv{Comma-separated
+    values} -- textový formát dát v ktorom sú jednotlivé položky oddelené
+  čiarkami.  Typická koncovka súboru vo formáte CSV je \texttt{.csv}} na
+scientometrickú.  Typickou koncovkou súborov analýzu pomocou \textbf{Export
+  $\rightarrow$ CSV (Excel), Citation Information Only} (iba citácie) ako je
+ukázané na obrázku~\ref{fig:scopus.export}.
 
 \begin{figure}
   \centering
@@ -122,17 +127,16 @@ Vytriedené záznamy sme uložili do formátu .csv na scientometrickú analýzu 
 \end{figure}
 
 
-\subsection{Citačná databáza Web of Science}
+\subsection{Citačný register WoS}
 
-Do citačného registra \emph{Thomson Reuters Web of Science} sme pristupovali cez
-portál \emph{Centra Vedecko-Technických Informácií
-  SR}\footnote{\url{http://www.cvtisr.sk}}. Citačné záznamy sme získali zo
-stránok Web of Science\footnote{\url{https://ezproxy.cvtisr.sk:2774/}}
-(17.\,5.\,2016). Pretože vyhľadávací systém webového rozhrania neumožňuje
-vyhľadávať konkrétnu inštitúciu ako to je v prípade Scopus-u, hľadali sme podľa
-adresy (ADRESS) \uv{Trnava} a \uv{Methodius*} (pre vyňatie publikácií Trnavskej
-Univerzity v Trnave) ako ukazujú obrázky \ref{fig:wos.search} a
-\ref{fig:wos.documentlist}.
+Do citačného registra WoS sme pristupovali cez portál \emph{Centra
+  Vedecko-Technických Informácií SR}\footnote{\url{http://www.cvtisr.sk}}.
+Citačné záznamy sme získali zo stránok
+WoS\footnote{\url{https://ezproxy.cvtisr.sk:2774/}} (17.\,5.\,2016).  Pretože
+vyhľadávací systém webového rozhrania neumožňuje vyhľadávať konkrétnu inštitúciu
+ako to je v prípade Scopusu, hľadali sme podľa adresy (ADRESS) \uv{Trnava} a
+\uv{Methodius*} (pre vyňatie publikácií Trnavskej Univerzity v Trnave) ako
+ukazujú obrázky \ref{fig:wos.search} a \ref{fig:wos.documentlist}.
 
 \begin{figure}
   \centering
@@ -144,14 +148,14 @@ Univerzity v Trnave) ako ukazujú obrázky \ref{fig:wos.search} a
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{obr/wos02-cut.jpg}
-  \caption{WoS -- zoznam dokumentov, ktoré sú výsledkom vyhľadávania z Obr\,\ref{fig:wos.search}.}
+  \caption{WoS -- zoznam dokumentov, ktoré sú výsledkom vyhľadávania z obr.\,\ref{fig:wos.search}.}
   \label{fig:wos.documentlist}
 \end{figure}
 
 Filtrovanie výsledkov do domény vedy a techniky (SCIENCE AND TECHNOLOGY) znížilo
-počet záznamov na 318. Odstránenie záznamov z vedeckých oblastí (Research
+počet záznamov na 318.  Odstránenie záznamov z vedeckých oblastí (Research
 Areas): Sociológia (SOCIOLOGY), Iné sociálne vedy (SOCIAL SCIENCES OTHER TOPICS)
-a biznisu (BUSINESS ECONOMICS) ukazuje Obr.\,\ref{fig:wos.areaselection}. Na
+a biznisu (BUSINESS ECONOMICS) ukazuje obrázok~\ref{fig:wos.areaselection}.  Na
 koniec sme definovali krajinu (Countries/Territories) ako Slovensko (SLOVAKIA),
 čo nám dalo konečný počet záznamov 293.
 
@@ -169,27 +173,28 @@ koniec sme definovali krajinu (Countries/Territories) ako Slovensko (SLOVAKIA),
   \label{fig:wos.export}
 \end{figure}
 
-Obr.\,\ref{fig:wos.export} zobrazuje ako sme tieto záznamy pomocou funkcie „save
-to other formats“ uložili do csv súboru. Pre uloženie všetkých záznamov je
-potrebné zvoliť rozsah (1 to 293) a formát (\emph{Author}, \emph{Title},
-\emph{Source}).
+Obrázok~\ref{fig:wos.export} zobrazuje ako sme tieto záznamy pomocou funkcie
+\uv{save to other formats} uložili do csv súboru.  Pre uloženie všetkých
+záznamov je potrebné zvoliť rozsah (\uv{1 to 293}) a formát (\emph{Author},
+\emph{Title}, \emph{Source}).
 
 
 \section{Spracovanie bibliometrických dát}
 
-Síce webové rozhrania \emph{Scopus} a \emph{WoS} poskytujú základné
-scientometrické nástroje ako napr. výpočet $h$-indexu, ale možnosti dodatočného
-triedenia (ako napr. zatriedenie do jednotlivých katedier) sú obmedzené. Taktiež
-neumožňuje použiť modernejšie citačné indexy (viď kapitolu
-\ref{sec:citation.indicators}). Preto sme sa rozhodli použiť program Publish or
-Perish\footnote{\url{http://www.harzing.com/resources/publish-or-perish}}.
+Síce webové rozhrania Scopus a WoS poskytujú základné scientometrické nástroje
+ako napr.\,výpočet $h$-indexu, ale možnosti dodatočného triedenia (ako
+napr.\,zatriedenie do jednotlivých katedier) sú obmedzené.  Taktiež neumožňuje
+použiť modernejšie citačné indexy (viď kapitolu \ref{sec:citation.indicators}).
+Preto sme sa rozhodli použiť program Publish or
+Perish\footnote{\url{http://www.harzing.com/resources/publish-or-perish}} (ďalej
+len PoP).
 
 
 \subsection{Dodatočné spracovanie stiahnutých záznamov}
 
-Ako vstup sme použAko vstup sme použili csv súbory exportované z databáz
-\emph{Scopus} a \emph{WoS} (označené ako \uv{\texttt{scopus~17.5.2016.csv}} a
-\uv{\texttt{WoS~17.5.2016.csv}}). V textovom súbore
+Ako vstup sme použAko vstup sme použili súbory vo formáte CSV exportované z
+databáz Scopus a WoS (označené ako \uv{\texttt{scopus~17.5.2016.csv}} a
+\uv{\texttt{WoS~17.5.2016.csv}}).  V textovom súbore
 \uv{\texttt{scopus~17.5.2016.csv}} sme zmazali duplicitné záznamy a opravili
 chybný zápis mien podľa tabuľky \ref{tab:wos.namecorrections}.
 
@@ -210,9 +215,9 @@ chybný zápis mien podľa tabuľky \ref{tab:wos.namecorrections}.
 \label{tab:wos.namecorrections}
 \end{table}
 
-Pretože databáza \emph{Scopus} nám umožnila odstrániť všetky záznamy z iných
-fakúlt, súbor \uv{\texttt{scopus~17.5.2016.csv}} sme ďalej neupravovali a
-konečný počet bibliografických záznamov je 324.
+Pretože databáza Scopus nám umožnila odstrániť všetky záznamy z iných fakúlt,
+súbor \uv{\texttt{scopus~17.5.2016.csv}} sme ďalej neupravovali a konečný počet
+bibliografických záznamov je 324.
 
 \begin{table}
 \centering\small
@@ -237,23 +242,23 @@ konečný počet bibliografických záznamov je 324.
 \label{tab:wos.excludedstaff}
 \end{table}
 
-\emph{Web of Science} má veľmi obmedzené možnosti triedenia väčšieho množstva
-dát, napr. je možné filtrovať podľa 100 autorov (Scopus tákéto obmedzenie
-nepozná). Z týchto dôvodov sme súbor \uv{\texttt{WoS~17.5.2016.csv}} spracovali
-dodatočne. Odstránili sme záznamy s menami podľa tabuľky
-\ref{tab:wos.excludedstaff} a získali sme 288 záznamov.
+WoS má veľmi obmedzené možnosti triedenia väčšieho množstva dát, napr.\,je možné
+filtrovať podľa 100 autorov (Scopus tákéto obmedzenie nepozná).  Z týchto
+dôvodov sme súbor \uv{\texttt{WoS~17.5.2016.csv}} spracovali dodatočne.
+Odstránili sme záznamy s menami podľa tabuľky \ref{tab:wos.excludedstaff} a
+získali sme 288 záznamov.
 
 
 \subsection{Rozdelenie dát do katedier}
 
 Stiahnuté bibliografické záznamy sme rozdelili do ôsmych súborov
 (tab.\,\ref{tab:staffsort}) podľa pracovníkov, ktorí pôsobia (prípadne pôsobili)
-v rámci danej katedry. Súbory zo Scopusu a WoS sme spracovali samostatne,
-pretože zo získaných dát nie je možné dohľadať indentické citácie. Niektoré mená
-autorov zo Scopusu a všetky z WoS sú písané bez diakritiky. Práce, ktoré vznikli
-ako spolupráca ľudí z viacerých katedier sú zaradené iba do jednej z katedier
-(podľa kľúčových slov).Záznamy Katedry biofyziky a Katedry odbornej jazykovej
-prípravy boli z analýzy vyňaté zahrnuté pre veľmi nízky počet dát.
+v rámci danej katedry.  Súbory zo Scopusu a WoS sme spracovali samostatne,
+pretože zo získaných dát nie je možné dohľadať indentické citácie.  Niektoré
+mená autorov zo Scopusu a všetky z WoS sú písané bez diakritiky.  Práce, ktoré
+vznikli ako spolupráca ľudí z viacerých katedier sú zaradené iba do jednej z
+katedier (podľa kľúčových slov).Záznamy Katedry biofyziky a Katedry odbornej
+jazykovej prípravy boli z analýzy vyňaté zahrnuté pre veľmi nízky počet dát.
 
 \begin{table}
 \centering\small
@@ -291,8 +296,8 @@ prípravy boli z analýzy vyňaté zahrnuté pre veľmi nízky počet dát.
 
 \subsection{Scientometrická analýza dát}
 
-Pomocou programu \emph{Publish or Perish} (Harzing, 2010) sme vypočítali citačné
-indexy pre jednotlivé súbory dát (zobrazené na Obr. \ref{fig:pop.departmentfiles}).
+Pomocou programu PoP (Harzing, 2010) sme vypočítali citačné indexy pre
+jednotlivé súbory dát (zobrazené na obr.\,\ref{fig:pop.departmentfiles}).
 
 \begin{figure}
   \centering
@@ -301,8 +306,8 @@ indexy pre jednotlivé súbory dát (zobrazené na Obr. \ref{fig:pop.departmentf
   \label{fig:pop.departmentfiles}
 \end{figure}
 
-V tabuľkovom kalkulátore sme zhotovili grafické zobrazenie vývoja publikačnej činnosti
-(a citovanosti) jednotlivých katedier v čase.
+V tabuľkovom kalkulátore sme zhotovili grafické zobrazenie vývoja publikačnej
+činnosti (a citovanosti) jednotlivých katedier v čase.
 
 %%% Local Variables:
 %%% TeX-master: "diplomovka"
