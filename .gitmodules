@@ -1,0 +1,3 @@
+[submodule "iec2utf"]
+	path = iec2utf
+	url = git@github.com:michal-h21/iec2utf.git
