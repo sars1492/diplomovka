@@ -9,3 +9,5 @@
 *.idx
 *.ind
 *.ilg
+*.fdb_latexmk
+*.fls
