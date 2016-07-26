@@ -1,14 +1,26 @@
+# LaTeX temporary files
 *.aux
 *.out
 *.log
+
+# Temporary files for 'Table of Contents', 'List of Figures' and 
+# 'List of Tables'
 *.toc
 *.lof
 *.lot
+
+# BibTeX temporary files
 *.bbl
 *.blg
+
+# makeindex/texindy temporary files
 *.idx
 *.ind
 *.ilg
+
+# latexmk source info files
 *.fdb_latexmk
 *.fls
+
+# vlna backup files
 *.te~
