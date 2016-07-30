@@ -24,3 +24,6 @@
 
 # vlna backup files
 *.te~
+
+# Vim temporary files
+*.swp
