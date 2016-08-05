@@ -1,5 +1,5 @@
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%  Sablona Bc+Mgr+RNDr pre FPV UCM
 %%  Autor: Gabriel Szasz (gabriel.szasz1@gmail.com) 
@@ -9,7 +9,7 @@
 %%
 %%  Typeset in LaTeX-2e
 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[12pt,a4paper,oneside,final]{book}
 
@@ -27,19 +27,19 @@
 
 \usepackage{gfsporson} % balik pre vysadzanie greckeho textu
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%  Nastavenie stylu citacii
 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{ucmplainnat} 
 \setcitestyle{authoryear}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%  Nastavenie sablony
 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[Mgr,Farebne]{ucmthesis}   % nahrad "Farebne" za "Tlac", ked chces
                                       % dokument tlacit; "Farebne" je len pre
@@ -55,9 +55,10 @@
 
 \Autor{Juraj Szász}{Bc. Juraj Szász}
 
-\TemaPrace{Scientometrická analýza FPV UCM v~Trnave}{Scientometrická analýza Fakulty
-  prírodných vied Univerzity sv. Cyrila a Metoda v~Trnave}{Scientometric
-  analysis of the Faculty of Natural Sciences, University of Ss. Cyril and Methodius in Trnava}
+\TemaPrace{Scientometrická analýza FPV UCM v~Trnave}{Scientometrická analýza
+  Fakulty prírodných vied Univerzity sv. Cyrila a Metoda v~Trnave}{Scientometric
+  analysis of the Faculty of Natural Sciences, University of Ss. Cyril and
+  Methodius in Trnava}
 
 \SkolitelSTitulmi{prof. RNDr. Ján Kraic, PhD}
 
@@ -98,11 +99,11 @@
 
 \DatumPrehlasenia{10.\,decembra 2016}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %% Definícia vlastných príkazov
 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\Cbb}{\mathbb{C}}
 \newcommand{\Rbb}{\mathbb{R}}
@@ -111,11 +112,11 @@
 \newcommand{\tm}{\texttrademark}
 \newcommand{\R}{\textsuperscript{\textregistered}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%  Dodatocne nastavenia
 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Vytvori pomocny subor pre register
 \makeindex
@@ -123,11 +124,11 @@
 % Zapnutie opakovania matematickych symbolov
 % \input{opakuj.sty}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%  Zaciatok dokumentu
 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -234,14 +235,15 @@
 \HlavickaRegister
 \VytvorRegister
 %%
-%% pro vytvoreni rejstriku se spravny ceskym razenim pouzijte 
-%% csindex -d -h -k -z il2 nazev_souboru.idx
+%% Pre vytvorenie registra so spravnym slovenskym usporiadanim je nutne pouzit
+%% prikaz:
 %%
-%% nebo 
-%% texindy -I latex -L czech -M lang/czech/utf8 nazev_souboru.idx
+%% cd iec2utf; \
+%% texlua utftexindy.lua -L slovak-large -o ../diplomovka.ind ../diplomovka.idx
 %%
-%% na Ustavu matematiky a statistiky zadejte
-%% /opt/texlive/2010/bin/i386-linux/texindy -I latex -L czech -M lang/czech/utf8 nazev_souboru.idx
+%% Tento prikaz je sucastou .latexmkrc, takze pre spravne skompilovanie staci
+%% spustit 'latexmk'
+%%
 
 
 %%
