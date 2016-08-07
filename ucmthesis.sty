@@ -16,7 +16,7 @@
 
 \@ifundefined{NeedsTeXFormat}{
 \typeout{*******************************************************************************}
-\ProvidesClass{ucm.thesis}[\filedate\space v\fileversion]
+\ProvidesClass{ucmthesis}[\filedate\space v\fileversion]
 \typeout{This package provides the basic style for bachelor, master, and rigorous theses written by students of 
 the Faculty of Natural Science (University of Ss. Cyril and Methodeus in Trnava)}
 \typeout{Author: Gabriel Szasz (gabriel.szasz1@gmail.com)}
@@ -33,7 +33,7 @@ Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v Trnave}
 \typeout{*******************************************************************************}
 }{
 \typeout{*******************************************************************************}
-\ProvidesClass{ucm.thesis}[\filedate\space v\fileversion]
+\ProvidesClass{ucmthesis}[\filedate\space v\fileversion]
 \NeedsTeXFormat{LaTeX2e}
 \typeout{This package provides the basic style for bachelor, master, and rigorous theses written by students of 
 the Faculty of Natural Science (University of Ss. Cyril and Methodeus in Trnava)}
@@ -50,7 +50,7 @@ Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v Trnave}
 \typeout{Pre rigorozne prace pozri http://www.sci.muni.cz/cz/RigRiz/}
 \typeout{*******************************************************************************}
 \RequirePackage{etoolbox,graphicx,textfit,changepage,setspace,ifthen,fancyhdr,calc,pdfpages,makeidx,color}
-\RequirePackage{hyperref}
+\RequirePackage[hyperindex=false]{hyperref}
 \RequirePackage[all]{hypcap}
 }
 
@@ -693,7 +693,8 @@ fakulta}}}}
                 \else
                   \@restonecoltrue
                 \fi
-                \twocolumn[\phantomsection\addcontentsline{toc}{chapter}{\indexname}\@makeschapterhead{\indexname}]%
+                \twocolumn[\phantomsection\addcontentsline{toc}{chapter}{\indexname}\@makeschapterhead{\indexname}
+                \this@index@prologue\global\let\this@index@prologue\relax]%
                 \@mkboth{\MakeUppercase\indexname}%
                         {\MakeUppercase\indexname}%
                 \thispagestyle{plain}\parindent\z@
@@ -702,6 +703,8 @@ fakulta}}}}
                 \columnsep 35\p@
                 \let\item\@idxitem}
                {\if@restonecol\onecolumn\else\clearpage\fi}
+\newcommand{\indexprologue}[1]{\gdef\this@index@prologue{#1\par\bigskip}}
+\let\this@index@prologue\relax
 \makeatother
 
 \newcommand{\VytvorRegister}{
