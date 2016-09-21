@@ -534,6 +534,31 @@ fakulta}}}}
 
 
 %%
+%%  Zadanie
+%%
+
+\newcommand{\SemVlozitZadanie}{
+\phantomsection
+\chapter*{}
+\pdfbookmark{Ofici{\'{a}}lne zadanie}{Oficialne zadanie}
+\thispagestyle{empty}
+\begin{center}
+\setlength\fboxrule{1.5pt}
+\setlength\fboxsep{8pt}
+\fbox{\textcolor{blue}{\bf Namiesto tejto strany vlo{\v{z}}te k{\'{o}}piu ofici{\'{a}}lneho (podp{\'{i}}san{\'{e}}ho)
+zadania pr{\'{a}}ce.}} 
+\end{center}
+\cleardoublepage
+}
+
+\newcommand{\VlozZadanie}[1]{
+\begin{center}
+\includepdf[pages={-},pagecommand={\thispagestyle{empty}\pdfbookmark{Ofici{\'{a}}lne zadanie}{Oficialne zadane}}]{#1}
+\end{center}
+\cleardoublepage
+}
+
+%%
 %%  Podakovanie a prehlasenie
 %%
 
