@@ -27,3 +27,6 @@
 
 # Vim temporary files
 *.swp
+
+# Generated document
+diplomovka.pdf
