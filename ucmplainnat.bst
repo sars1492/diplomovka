@@ -1,10 +1,37 @@
+%% ucmplainnat.bst
+%% Copyright 2016 Juraj Szasz <juraj.szasz3@gmail.com>
+%
+% This work may be distributed and/or modified under the conditions of the LaTeX
+% Project Public License, either version 1.3 of this license or (at your option)
+% any later version.  The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX version
+% 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `author-maintained'.
+%
+% This work consists of the following files: diplomovka.tex, 01-uvod.tex,
+% 02-symboly.tex, 03-kapitola1.tex, 04-kapitola2.tex, 05-kapitola3.tex,
+% 06-zaver.tex, 07-priloha.tex, literatura.bib, opakuj.sty, ucmthesis.sty and
+% ucmplainnat.bst.
+%
+% The file `ucmplainnat.bst' was derived from the `csplainnat.bst' BibTeX style
+% for Czech references style (According to CSN ISO 690) available at:
+%   https://github.com/mudrd8mz/csplainnat
+%
+% All the other files above were derived from the Masaryk University, Faculty of
+% Science template available for download at:
+%   http://www.sci.muni.cz/NW/STUD/SablonyPraci/Sablona_Pruvodce_(v1.9).zip
+%
 %% $Id$
-%% File: `ucmplainnat.bst' for use with natbib package to comply standards by
-%% UCM in Trnava (Slovakia).  This is a modification of `csplainnat.bst' for
-%% Czech references style (According to "CSN ISO 690: Bibliograficke
-%% citace. Obsah, forma a struktura").  Some modifications are commented, look
-%% for the keyword 'CHANGE' For more detailed info use svn repository
-%% svn://kraken.pedf.cuni.cz/csplainnat/
+%% File" `ucmplainnat.bst' for use with natbib package
+%% This is a modification of `csplainnat.bst' to comply standards set by
+%% Dept. of Biotechnology, FNS UCM in Trnava (Slovakia).  The `csplainnat.bst'
+%% itself (available at https://github.com/mudrd8mz/csplainnat) is originally a
+%% modification of `plainnat.bst' for Czech references style (According to "CSN
+%% ISO 690: Bibliograficke citace. Obsah, forma a struktura").  Some
+%% modifications are commented, look for the keyword 'CHANGE' For more detailed
+%% info use svn repository svn://kraken.pedf.cuni.cz/csplainnat/
 %%
 %% Original plainnat.bst by Patrick W Daly
 %% Modifications by David Mudr{\'{a}}k mudrd8mz@uxit.pedf.cuni.cz
@@ -734,7 +761,7 @@ FUNCTION {article}
   format.date "year" output.check
   new.block
   format.title "title" output.check
-  new.block 
+  new.block
   crossref missing$
     {
       "In " journal emphasize * "journal" output.check

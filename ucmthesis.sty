@@ -1,32 +1,58 @@
-
+%% ucmthesis.sty
+%% Copyright 2016 Juraj Szasz <juraj.szasz3@gmail.com>
+%
+% This work may be distributed and/or modified under the conditions of the LaTeX
+% Project Public License, either version 1.3 of this license or (at your option)
+% any later version.  The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX version
+% 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `author-maintained'.
+%
+% This work consists of the following files: diplomovka.tex, 01-uvod.tex,
+% 02-symboly.tex, 03-kapitola1.tex, 04-kapitola2.tex, 05-kapitola3.tex,
+% 06-zaver.tex, 07-priloha.tex, literatura.bib, opakuj.sty, ucmthesis.sty and
+% ucmplainnat.bst.
+%
+% The file `ucmplainnat.bst' was derived from the `csplainnat.bst' BibTeX style
+% for Czech references style (According to CSN ISO 690) available at:
+%   https://github.com/mudrd8mz/csplainnat
+%
+% All the other files above were derived from the Masaryk University, Faculty of
+% Science template available for download at:
+%   http://www.sci.muni.cz/NW/STUD/SablonyPraci/Sablona_Pruvodce_(v1.9).zip
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-%%  Styl pre sablony Bc+Mgr+RNDr pre  FPV UCM v Trnave
-%%  Autor: Gabriel Szasz (gabriel.szasz1@gmail.com)
+%%  Styl pre sablony Bc+Mgr+RNDr pre Katedru biotechnológii FPV UCM v Trnave
+%%  Autor: Juraj Szasz (juraj.szasz3@gmail.com)
 %%
-%%  Postavene na sablone pre PriF MU od Petra Zemanka (zemanekp@math.muni.cz)
+%%  Postavene na Sablone PriF MU v1.9 (4. marca 2016)
+%%    Autor: Petr Zemanek (zemanekp@math.muni.cz)
+%%
 %%  Urcene pro LaTeX-2e
-%%  Verzia: 0.1 (12. juna 2016)
+%%  Verzia: 0.2 (20. oktobra 2016)
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\filename{ucm.thesis.sty}
-\def\filedate{2016/06/12}
-\def\fileversion{0.1}
+\def\filename{ucmthesis.sty}
+\def\filedate{2016/10/20}
+\def\fileversion{0.2}
 
 \@ifundefined{NeedsTeXFormat}{
 \typeout{*******************************************************************************}
 \ProvidesClass{ucmthesis}[\filedate\space v\fileversion]
-\typeout{This package provides the basic style for bachelor, master, and rigorous theses written by students of 
-the Faculty of Natural Science (University of Ss. Cyril and Methodeus in Trnava)}
-\typeout{Author: Gabriel Szasz (gabriel.szasz1@gmail.com)}
+\typeout{This package provides the basic style for bachelor, master, and rigorous theses written by students of
+Department of Biotechnology of the Faculty of Natural Science, University of Ss. Cyril and Methodeus in Trnava}
+\typeout{Author: Juraj Szasz (juraj.szasz3@gmail.com)}
 \typeout{The package is based on sci.muni.thesis by Petr Zemanek (zemanekp@math.muni.cz)}
 \typeout{For bachelor and master theses see http://www.sci.muni.cz/en/BcMgrStudium/}
 \typeout{For rigorous theses see http://www.sci.muni.cz/en/RigRiz/}
 \typeout{}
 \typeout{Tento balik poskytuje zakladny styl potrebny pro bakalarske, diplomove a rigorozni prace pisane studentami
-Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v Trnave}
-\typeout{Autor: Gabriel Szasz (gabriel.szasz1@gmail.com)}
+Katedry biotechnologii Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v Trnave}
+\typeout{Autor: Juraj Szasz (juraj.szasz3@gmail.com)}
 \typeout{Balik je odvodeny z sci.muni.thesis od Petra Zemanka (zemanekp@math.muni.cz)}
 \typeout{Pre bakalarske a diplomove prace pozri http://www.sci.muni.cz/cz/BcMgrStudium/}
 \typeout{Pre rigorozne prace pozri http://www.sci.muni.cz/cz/RigRiz/}
@@ -35,16 +61,16 @@ Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v Trnave}
 \typeout{*******************************************************************************}
 \ProvidesClass{ucmthesis}[\filedate\space v\fileversion]
 \NeedsTeXFormat{LaTeX2e}
-\typeout{This package provides the basic style for bachelor, master, and rigorous theses written by students of 
-the Faculty of Natural Science (University of Ss. Cyril and Methodeus in Trnava)}
-\typeout{Author: Gabriel Szasz (gabriel.szasz1@gmail.com)}
+\typeout{This package provides the basic style for bachelor, master, and rigorous theses written by students of
+Department of Biotechnology of the Faculty of Natural Science, University of Ss. Cyril and Methodeus in Trnava}
+\typeout{Author: Juraj Szasz (juraj.szasz3@gmail.com)}
 \typeout{The package is based on sci.muni.thesis by Petr Zemanek (zemanekp@math.muni.cz)}
 \typeout{For bachelor and master theses see http://www.sci.muni.cz/en/BcMgrStudium/}
 \typeout{For rigorous theses see http://www.sci.muni.cz/en/RigRiz/}
 \typeout{}
 \typeout{Tento balik poskytuje zakladny styl potrebny pro bakalarske, diplomove a rigorozni prace pisane studentami
-Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v Trnave}
-\typeout{Autor: Gabriel Szasz (gabriel.szasz1@gmail.com)}
+Katedry biotechnologii Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v Trnave}
+\typeout{Autor: Juraj Szasz (juraj.szasz3@gmail.com)}
 \typeout{Balik je odvodeny z sci.muni.thesis od Petra Zemanka (zemanekp@math.muni.cz)}
 \typeout{Pre bakalarske a diplomove prace pozri http://www.sci.muni.cz/cz/BcMgrStudium/}
 \typeout{Pre rigorozne prace pozri http://www.sci.muni.cz/cz/RigRiz/}
@@ -202,7 +228,7 @@ decembra\fi \space\number\year}
 \end{raggedright}
 
 \end{titlepage}
- 
+
 \cleardoublepage
 }
 
@@ -230,10 +256,10 @@ decembra\fi \space\number\year}
     {\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{Fakulta pr{\'{i}}rodn{\'{y}}ch vied}}}}\\[1mm]
 %
     \settowidth{\sirkakatedraorig}{\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}}
-   
+
 \settowidth{\sirkafakultaorig}{\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{Fakulta
         pr{\'{i}}rodn{\'{y}}ch vied}}}}
-%    
+%
     \ifthenelse{\lengthtest{\sirkakatedraorig > 0.95\sirkafakultaorig}}%
         {\vspace*{-0.5mm}\textbf{\textsc{\scaletowidth{0.95\sirkafakultaorig}{\Katedra}}}\\[-1mm]}%
         {\vspace*{-4mm}\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}\\[-6mm]}
@@ -308,10 +334,10 @@ decembra\fi \space\number\year}
     {\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{P{\v{r}}{\'{i}}rodov{\v{e}}deck{\'{a}} fakulta}}}}\\[1mm]
 %
     \settowidth{\sirkakatedraorig}{\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}}
-   
+
 \settowidth{\sirkafakultaorig}{\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{P{\v{r}}{\'{i}}rodov{\v{e}}deck{\'{a}}
 fakulta}}}}
-%    
+%
     \ifthenelse{\lengthtest{\sirkakatedraorig > 0.95\sirkafakultaorig}}%
         {\vspace*{-0.5mm}\textbf{\textsc{\scaletowidth{0.95\sirkafakultaorig}{\Katedra}}}\\[-1mm]}%
         {\vspace*{-4mm}\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}\\[-6mm]}
@@ -362,7 +388,7 @@ fakulta}}}}
 \thispagestyle{empty}
 
 \newlength{\LavyStlpecSK}
-\settowidth{\LavyStlpecSK}{{\bf {\v{S}}tudijn{\'{y}} program:} } %% urcit potrebnou sirku leveho sloupce 
+\settowidth{\LavyStlpecSK}{{\bf {\v{S}}tudijn{\'{y}} program:} } %% urcit potrebnou sirku leveho sloupce
 
 \newlength{\PravyStlpecSK}
 \setlength{\PravyStlpecSK}{\textwidth - \LavyStlpecSK - 24 pt} %% dopocitat pravy sloupec
@@ -425,7 +451,7 @@ fakulta}}}}
 \thispagestyle{empty}
 
 \newlength{\LavyStlpecEN}
-\settowidth{\LavyStlpecEN}{{\bf Degree Programme:} } %% urcit potrebnou sirku leveho sloupce 
+\settowidth{\LavyStlpecEN}{{\bf Degree Programme:} } %% urcit potrebnou sirku leveho sloupce
 
 \newlength{\PravyStlpecEN}
 \setlength{\PravyStlpecEN}{\textwidth - \LavyStlpecEN - 24 pt} %% dopocitat pravy sloupec
@@ -458,7 +484,7 @@ fakulta}}}}
 \thispagestyle{empty}
 
 \newlength{\LavyStlpecEN}
-\settowidth{\LavyStlpecEN}{{\bf Degree Programme:} } %% urcit potrebnou sirku leveho sloupce 
+\settowidth{\LavyStlpecEN}{{\bf Degree Programme:} } %% urcit potrebnou sirku leveho sloupce
 
 \newlength{\PravyStlpecEN}
 \setlength{\PravyStlpecEN}{\textwidth - \LavyStlpecEN - 24 pt} %% dopocitat pravy stlpec
@@ -510,7 +536,7 @@ fakulta}}}}
 \cleardoublepage
 }
 
-%% 
+%%
 %%  Abstrakty na dvoch stranach
 %%
 
@@ -546,7 +572,7 @@ fakulta}}}}
 \setlength\fboxrule{1.5pt}
 \setlength\fboxsep{8pt}
 \fbox{\textcolor{blue}{\bf Namiesto tejto strany vlo{\v{z}}te k{\'{o}}piu ofici{\'{a}}lneho (podp{\'{i}}san{\'{e}}ho)
-zadania pr{\'{a}}ce.}} 
+zadania pr{\'{a}}ce.}}
 \end{center}
 \cleardoublepage
 }
@@ -575,7 +601,7 @@ zadania pr{\'{a}}ce.}}
 \NazovPovinnejCasti{Prehl{\'{a}}senie}
 
 \Prehlasenie
- 
+
 \vspace*{15mm}
 
 \noindent Trnava, \DatumPrehl \hfill \makebox[50mm]{\dotfill}\\
