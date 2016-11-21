@@ -32,13 +32,13 @@
 %%    Autor: Petr Zemanek (zemanekp@math.muni.cz)
 %%
 %%  Urcene pro LaTeX-2e
-%%  Verzia: 0.2 (20. oktobra 2016)
+%%  Verzia: 0.3 (21. novembra 2016)
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\filename{ucmthesis.sty}
-\def\filedate{2016/10/20}
-\def\fileversion{0.2}
+\def\filedate{2016/11/21}
+\def\fileversion{0.3}
 
 \@ifundefined{NeedsTeXFormat}{
 \typeout{*******************************************************************************}
@@ -183,53 +183,42 @@ decembra\fi \space\number\year}
 %%
 
 \newcommand{\Dosky}{
-\pagestyle{empty}
-\begin{titlepage}
-\pdfbookmark{Desky}{Desky}
-\pagenumbering{Alph}
+  \pagestyle{empty}
+  \begin{titlepage}
+    \pdfbookmark{Dosky}{Dosky}
+    \pagenumbering{Alph}
 
-\newlength{\sirkakatedraorig} %% urci povodnu sirku textu s nazvom katedry
-\settowidth{\sirkakatedraorig}{\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}}
+    \begin{center}
+      \fontsize{18pt}{18pt}\selectfont\textbf{UNIVERZITA SV. CYRILA A METODA V TRNAVE}\\[2mm]
+      \fontsize{18pt}{18pt}\selectfont\textbf{\textsc{Fakulta pr{\'{i}}rodn{\'{y}}ch vied}}\\
+    \end{center}
 
-\newlength{\sirkafakultaorig} %% urci sirku textu s nazvom fakulty
-\settowidth{\sirkafakultaorig}{\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{Fakulta
-        pr{\'{i}}rodn{\'{y}}ch vied}}}}
+    \vfill
 
+    \begin{center}
+      \fontsize{28pt}{34pt}\selectfont\textbf{\textsc{\NazovPraceNaTitulnejStrane}}\\[65pt]
+      \fontsize{21pt}{34pt}\selectfont\textbf{\TypPrace}
+    \end{center}
 
-  \begin{center}
-    {\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{Univerzita sv. Cyrila a Metoda v Trnave}}}}\\[2mm]
-    {\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{Fakulta pr{\'{i}}rodn{\'{y}ch vied}}}}}\\
-    \ifthenelse{\lengthtest{\sirkakatedraorig > 0.95\sirkafakultaorig}}%
-        {\textbf{\textsc{\scaletowidth{0.95\sirkafakultaorig}{\Katedra}}}}%
-        {\vspace*{-3mm}\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}}
-  \end{center}
+    \vfill
 
-\vfill
+    \setbox2=\hbox{\textbf{\AutorSTitulmi}}
+    \setbox1=\hbox{textbf{Z}}
+    \ht2=\the\ht1
+    \setbox0=\hbox{\resizebox{0.68\textwidth}{!}{\box2}}
 
-  \begin{center}
-    {\fontsize{34pt}{20pt}\selectfont{\bf \TypPrace}}
-  \end{center}
+    \newlength{\sirkadoskyorig} %% urci povodnu sirku textu se menom autora
+    \settowidth{\sirkadoskyorig}{\fontsize{18pt}{18pt}\selectfont\textbf{\AutorSTitulmi}}
 
-\vfill
+    \begin{raggedright}
+      \ifthenelse{\lengthtest{\sirkadoskyorig > 0.65\textwidth}}%
+        {\noindent \resizebox{!}{\the\ht0}{\textbf{\RokOdovzdania}} \hfill \copy0}
+        {\fontsize{18pt}{18pt}\selectfont\textbf{\RokOdovzdania \hfill \AutorSTitulmi}}
+    \end{raggedright}
 
+  \end{titlepage}
 
-\setbox2=\hbox{\textbf{\textsc{\MenoAutora}}}
-\setbox1=\hbox{textbf{\textsc{Z}}}
-\ht2=\the\ht1
-\setbox0=\hbox{\resizebox{0.68\textwidth}{!}{\box2}}
-
-\newlength{\sirkadoskyorig} %% urci povodnu sirku textu se menom autora
-\settowidth{\sirkadoskyorig}{\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{\MenoAutora}}}}
-
-\begin{raggedright}
- \ifthenelse{\lengthtest{\sirkadoskyorig > 0.65\textwidth}}%
-       {\noindent \resizebox{!}{\the\ht0}{{\textbf{\textsc{Trnava \RokOdovzdania}}}} \hfill \copy0}
-       {{\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{Trnava \RokOdovzdania \hfill \MenoAutora}}}}}
-\end{raggedright}
-
-\end{titlepage}
-
-\cleardoublepage
+  \cleardoublepage
 }
 
 %%
@@ -239,281 +228,75 @@ decembra\fi \space\number\year}
 % \newcommand{\zvetsi}[2]{\begingroup\scalefont{#1}{#2}\endgroup}
 
 \newcommand{\TitulnaStrana}{
-\pagenumbering{roman}
-\pagestyle{empty}
-\pdfbookmark{Tituln{\'{a}} strana}{Titulna strana}
+  \pagenumbering{roman}
+  \pagestyle{empty}
+  \pdfbookmark{Tituln{\'{a}} strana}{Titulna strana}
 
-\changetext{}{11.6mm}{}{}{}
-\begin{adjustwidth}{-12mm}{}
-\vspace*{-5mm}
-\hspace{-6mm}
-\begin{minipage}{28mm}
-  \includegraphics[width=28mm]{logo/UCM_(black)}
-\end{minipage}\hspace{1mm}
-\begin{minipage}{150mm}
-  \begin{center}\vspace*{4mm}
-    {\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{Univerzita sv. Cyrila a Metoda v Trnave}}}}\\[2mm]
-    {\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{Fakulta pr{\'{i}}rodn{\'{y}}ch vied}}}}\\[1mm]
-%
-    \settowidth{\sirkakatedraorig}{\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}}
-
-\settowidth{\sirkafakultaorig}{\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{Fakulta
-        pr{\'{i}}rodn{\'{y}}ch vied}}}}
-%
-    \ifthenelse{\lengthtest{\sirkakatedraorig > 0.95\sirkafakultaorig}}%
-        {\vspace*{-0.5mm}\textbf{\textsc{\scaletowidth{0.95\sirkafakultaorig}{\Katedra}}}\\[-1mm]}%
-        {\vspace*{-4mm}\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}\\[-6mm]}
-    \noindent \rule{\textwidth}{2pt}\vspace*{2mm}
+  \begin{center}
+    \fontsize{18pt}{18pt}\selectfont\textbf{UNIVERZITA SV. CYRILA A METODA V TRNAVE} \\[2mm]
+    \fontsize{18pt}{18pt}\selectfont\textbf{\textsc{Fakulta pr{\'{i}}rodn{\'{y}}ch vied}} \\[-2mm]
+    \rule{\textwidth}{1pt}
   \end{center}
-\end{minipage}
-\end{adjustwidth}
-\changetext{}{-11.6mm}{}{}{}
 
- \vfill
+  \vfill
 
-\newlength{\autororig} %% urci povodnu sirku textu s menom autora
-\settowidth{\autororig}{\fontsize{26pt}{28pt}\selectfont{\bf \MenoAutora}}
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{logo/UCM_(color)}
+  \end{center}
+
+  \vfill
+
+  \begin{center}
+    \fontsize{28pt}{34pt}\selectfont\textbf{\textsc{\NazovPraceNaTitulnejStrane}}\\[65pt]
+    \fontsize{21pt}{34pt}\selectfont\textbf\TypPrace
+  \end{center}
+
+  \vfill
+
+  \begin{raggedleft}
+    \fontsize{14pt}{23pt}\selectfont
+
+    \newlength{\LavyStlpecT}
+    \settowidth{\LavyStlpecT}{\textbf{{\v{S}}koliace pracovisko:}} %% urcit potrebnou sirku leveho sloupce
+
+    \newlength{\PravyStlpecT}
+    \setlength{\PravyStlpecT}{\textwidth - \LavyStlpecT - 24 pt} %% dopocitat pravy sloupec
+
+    \noindent
+    \begin{tabular}{p{\LavyStlpecT}p{\PravyStlpecT}}
+      \textbf{{\v{S}}tudijn{\'{y}} program:} & \StudProg \\
+      \textbf{{\v{S}}tudijn{\'{y}} obor:}    & \StudOb   \\
+      \textbf{{\v{S}}koliace pracovisko:}    & \Katedra  \\
+      \textbf{{\v{S}}kolite{\v{l}}:}         & \Skolitel \\
+    \end{tabular}
+  \end{raggedleft}
+
+  \vspace*{42pt}
+
+  \setbox2=\hbox{\textbf{\AutorSTitulmi}}
+  \setbox1=\hbox{textbf{Z}}
+  \ht2=\the\ht1
+  \setbox0=\hbox{\resizebox{0.68\textwidth}{!}{\box2}}
+
+  \newlength{\sirkatitulkaorig} %% urci povodnu sirku textu se menom autora
+  \settowidth{\sirkatitulkaorig}{\fontsize{18pt}{18pt}\selectfont\textbf{\AutorSTitulmi}}
 
   \begin{raggedright}
-    \begin{spacing}{2.8}
-      {\fontsize{35pt}{28pt}\selectfont{\bf \NazovPraceNaTitulnejStrane}}\\[-2mm]
-    \end{spacing}
-      {\fontsize{20pt}{28pt}\selectfont{\TypPrace}}\\[5mm]
-    \ifthenelse{\lengthtest{\autororig > 0.98\textwidth}}%
-        {\hspace*{-1mm}\textbf{\scaletowidth{0.98\textwidth}{\MenoAutora}}}%
-        {\fontsize{26pt}{28pt}\selectfont{\bf \MenoAutora}}
+    \ifthenelse{\lengthtest{\sirkatitulkaorig > 0.72\textwidth}}%
+      {\noindent \resizebox{!}{\the\ht0}{\textbf{\RokOdovzdania}} \hfill \copy0}
+      {\fontsize{18pt}{18pt}\selectfont\textbf{\RokOdovzdania \hfill \AutorSTitulmi}}
   \end{raggedright}
 
-\vspace*{5mm}
-\vfill
+  \normalsize
 
-\newlength{\sirkatitulkaorig} %% urci povodnu sirku textu s menom skolitela
-\settowidth{\sirkatitulkaorig}{\fontsize{18.5pt}{20pt}\selectfont{\textbf{{\v{S}}kolite{\v{l}}: \Skolitel}}}
-
-% \newlength{\vyskatitulka} %% urci novou vysku textu s menom skolitela
-% \settoheight{\vyskatitulka}{\textbf{\scaletowidth{0.72\textwidth}{{\v{S}}kolite{\v{l}}: \Skolitel}}}
-
-\setbox2=\hbox{\bf {\v{S}}kolite{\v{l}}: \Skolitel}
-\setbox1=\hbox{\bf A}
-\ht2=\the\ht1
-\setbox0=\hbox{\resizebox{0.75\textwidth}{!}{\box2}}
-
-\begin{raggedright}
- \ifthenelse{\lengthtest{\sirkatitulkaorig > 0.72\textwidth}}%
-       {\noindent\copy0 \hfill \resizebox{!}{\the\ht0}{\bf Trnava \RokOdovzdania}}
-       {{\fontsize{18.5pt}{20pt}\selectfont{\textbf{{\v{S}}kolite{\v{l}}:
-               \Skolitel \hfill Trnava \RokOdovzdania}}}}
-\end{raggedright}
-
-\normalsize
-
-\cleardoublepage
-}
-
-%%
-%%  Titulna strana rigoroznej prace
-%%
-
-% \newcommand{\zvetsi}[2]{\begingroup\scalefont{#1}{#2}\endgroup}
-
-\newcommand{\TitulnaStranaRP}{
-\pagenumbering{roman}
-\pagestyle{empty}
-\pdfbookmark{Tituln{\'{a}} strana}{Titulna strana}
-
-\changetext{}{11.6mm}{}{}{}
-\begin{adjustwidth}{-12mm}{}
-\vspace*{-5mm}
-% \hspace{-17mm}
-\begin{minipage}{28mm}
-  \includegraphics[width=28mm]{loga/MU_(black)}
-\end{minipage}\hspace{2mm}
-\begin{minipage}{113mm}
-  \begin{center}\vspace*{3mm}
-    {\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{Univerzita sv. Cyrila a Metoda v Trnave}}}}\\[2mm]
-    {\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{P{\v{r}}{\'{i}}rodov{\v{e}}deck{\'{a}} fakulta}}}}\\[1mm]
-%
-    \settowidth{\sirkakatedraorig}{\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}}
-
-\settowidth{\sirkafakultaorig}{\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{P{\v{r}}{\'{i}}rodov{\v{e}}deck{\'{a}}
-fakulta}}}}
-%
-    \ifthenelse{\lengthtest{\sirkakatedraorig > 0.95\sirkafakultaorig}}%
-        {\vspace*{-0.5mm}\textbf{\textsc{\scaletowidth{0.95\sirkafakultaorig}{\Katedra}}}\\[-1mm]}%
-        {\vspace*{-4mm}\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Katedra}}}\\[-6mm]}
-    \noindent \rule{\textwidth}{2pt}\vspace*{2mm}
-  \end{center}
-\end{minipage}\hspace{2mm}
-\begin{minipage}{28mm}
-  \includegraphics[width=28mm]{loga/SCI_(black)}
-\end{minipage}
-\end{adjustwidth}
-\changetext{}{-11.6mm}{}{}{}
-
- \vfill
-
-\newlength{\autororig} %% urci povodnu sirku textu s menom autora
-\settowidth{\autororig}{\fontsize{26pt}{28pt}\selectfont{\bf \MenoAutora}}
-
-  \begin{raggedright}
-    \begin{spacing}{2.8}
-      {\fontsize{35pt}{28pt}\selectfont{\bf \NazovPraceNaTitulnejStrane}}\\[-2mm]
-    \end{spacing}
-      {\fontsize{20pt}{28pt}\selectfont{\TypPrace}}\\[5mm]
-    \ifthenelse{\lengthtest{\autororig > 0.98\textwidth}}%
-        {\hspace*{-1mm}\textbf{\scaletowidth{0.98\textwidth}{\MenoAutora}}}%
-        {\fontsize{26pt}{28pt}\selectfont{\bf \MenoAutora}}
-  \end{raggedright}
-
-\vspace*{5mm}
-\vfill
-
-\begin{raggedright}
-   {{\fontsize{18.5pt}{20pt}\selectfont{\textbf{\hfill Brno \RokOdovzdania}}}}
-\end{raggedright}
-
-
-\normalsize
-
-\cleardoublepage
-}
-
-%%
-%%  Bibliograficky zaznam
-%%
-
-\newcommand{\BibliografickyZaznam}{
-\pdfbookmark{Bibliografick{\'{y}} z{\'{a}}znam}{Bibliograficky zaznam}
-\NazovPovinnejCasti{Bibliografick{\'{y}} z{\'{a}}znam}
-\thispagestyle{empty}
-
-\newlength{\LavyStlpecSK}
-\settowidth{\LavyStlpecSK}{{\bf {\v{S}}tudijn{\'{y}} program:} } %% urcit potrebnou sirku leveho sloupce
-
-\newlength{\PravyStlpecSK}
-\setlength{\PravyStlpecSK}{\textwidth - \LavyStlpecSK - 24 pt} %% dopocitat pravy sloupec
-
-\noindent
-\begin{tabular}{p{\LavyStlpecSK} p{\PravyStlpecSK} }
-  {\bf Autor:}            & \AutorSTitulmi \\
-                          & Fakulta pr{\'{i}}rodn{\'{y}}ch vied, Univerzita sv. Cyrila a Metoda v Trnave \\
-                          & \Katedra  \\[6mm]
-  {\bf N{\'{a}}zov pr{\'{a}}ce:}      & \NazovPrace  \\[6mm]
-  {\bf {\v{S}}tudijn{\'{y}} program:} & \StudProg  \\[6mm]
-  {\bf {\v{S}}tudijn{\'{y}} obor:}    & \StudOb \\[6mm]
-  {\bf {\v{S}}kolite{\v{l}}}    & \Skolitel \\[6mm]
-  {\bf Akademick{\'{y}} rok:}   & \AkadRok \\[6mm]
-  {\bf Po{\v{c}}et str{\'{a}}n:}      & \Strany \\[6mm]
-  {\bf Kl{\'{u}}{\v{c}}ov{\'{e}} slov{\'{a}}:}    & \KlSlova
-\end{tabular}
-
-\cleardoublepage
-}
-
-%%
-%%  Bibliograficky zaznam rigoroznej prace
-%%
-
-\newcommand{\BibliografickyZaznamRP}{
-\pdfbookmark{Bibliografick{\'{y}} z{\'{a}}znam}{Bibliograficky zaznam}
-\NazovPovinnejCasti{Bibliografick{\'{y}} z{\'{a}}znam}
-\thispagestyle{empty}
-
-\newlength{\LavyStlpecSK}
-\settowidth{\LavyStlpecSK}{{\bf {\v{S}}tudijn{\'{y}} program:} } %% urcit potrebnu sirku laveho stlpca
-
-\newlength{\PravyStlpecSK}
-\setlength{\PravyStlpecSK}{\textwidth - \LavyStlpecSK - 24 pt} %% dopocitat pravy stlpec
-
-\noindent
-\begin{tabular}{p{\LavyStlpecSK} p{\PravyStlpecSK} }
-  {\bf Autor:}            & \AutorSTitulmi \\
-                          & Fakulta pr{\'{i}}rodn{\'{y}}ch vied, Univerzita sv. Cyrila a Metoda v Trnave \\
-                          & \Katedra  \\[6mm]
-  {\bf N{\'{a}}zov pr{\'{a}}ce:}      & \NazovPrace  \\[6mm]
-  {\bf {\v{S}}tudijn{\'{y}} program:} & \StudProg  \\[6mm]
-  {\bf {\v{S}}tudijn{\'{y}} obor:}    & \StudOb \\[6mm]
-  {\bf Akademick{\'{y}} rok:}   & \AkadRok \\[6mm]
-  {\bf Po{\v{c}}et str{\'{a}}n:}      & \Strany \\[6mm]
-  {\bf K{\v{l}}{\'{u}}{\v{c}}ov{\'{e}} slov{\'{a}}:}    & \KlSlova
-\end{tabular}
-
-\cleardoublepage
-}
-
-%%
-%%  Bibiliographic Entry
-%%
-
-\newcommand{\BibliographicEntry}{
-\pdfbookmark{Bibliographic Entry}{Bibliographic Entry}
-\NazovPovinnejCasti{Bibliographic Entry}
-\thispagestyle{empty}
-
-\newlength{\LavyStlpecEN}
-\settowidth{\LavyStlpecEN}{{\bf Degree Programme:} } %% urcit potrebnou sirku leveho sloupce
-
-\newlength{\PravyStlpecEN}
-\setlength{\PravyStlpecEN}{\textwidth - \LavyStlpecEN - 24 pt} %% dopocitat pravy sloupec
-
-\noindent
-\begin{tabular}{ p{\LavyStlpecEN} p{\PravyStlpecEN} }
-  {\bf Author:}           & \AutorSTitulmi\\
-                          & Faculty of Natural Science, University of Ss. Cyril
-                            and Methodeus in Trnava\\
-                          & \Department \\[6mm]
-  {\bf Title of Thesis:}  & \TitleOfThesis  \\[6mm]
-  {\bf Degree Programme:} & \DegreeProgramme  \\[6mm]
-  {\bf Field of Study:}   & \FieldOfStudy \\[6mm]
-  {\bf Supervisor:}       & \Skolitel \\[6mm]
-  {\bf Academic Year:}    & \AkadRok \\[6mm]
-  {\bf Number of Pages:}  & \Strany \\[6mm]
-  {\bf Keywords:}         & \Keywords
-\end{tabular}
-
-\cleardoublepage
-}
-
-%%
-%%  Bibliographic Entry - Rigorozna praca
-%%
-
-\newcommand{\BibliographicEntryRP}{
-\pdfbookmark{Bibliographic Entry}{Bibliographic Entry}
-\NazovPovinnejCasti{Bibliographic Entry}
-\thispagestyle{empty}
-
-\newlength{\LavyStlpecEN}
-\settowidth{\LavyStlpecEN}{{\bf Degree Programme:} } %% urcit potrebnou sirku leveho sloupce
-
-\newlength{\PravyStlpecEN}
-\setlength{\PravyStlpecEN}{\textwidth - \LavyStlpecEN - 24 pt} %% dopocitat pravy stlpec
-
-\noindent
-\begin{tabular}{ p{\LavyStlpecEN} p{\PravyStlpecEN} }
-  {\bf Author:}           & \AutorSTitulmi\\
-                          & Faculty of Natural Science, University of Ss. Cyril
-                            and Methodeus in Trnava\\
-                          & \Department \\[6mm]
-  {\bf Title of Thesis:}  & \TitleOfThesis  \\[6mm]
-  {\bf Degree Programme:} & \DegreeProgramme  \\[6mm]
-  {\bf Field of Study:}   & \FieldOfStudy \\[6mm]
-  {\bf Academic Year:}    & \AkadRok \\[6mm]
-  {\bf Number of Pages:}  & \Strany \\[6mm]
-  {\bf Keywords:}         & \Keywords
-\end{tabular}
-
-\cleardoublepage
+  \cleardoublepage
 }
 
 %%
 %%  Uvodne povinne strany
 %%
 
-\newcommand{\VytvorPovinneStrany}{\Dosky\TitulnaStrana\BibliografickyZaznam\BibliographicEntry}
-
-\newcommand{\VytvorPovinneStranyRigoroznaPraca}{\Dosky\TitulnaStranaRP\BibliografickyZaznamRP\BibliographicEntryRP}
-
+\newcommand{\VytvorPovinneStrany}{\Dosky\TitulnaStrana}
 
 %%
 %%  Abstrakty na jednej strane
