@@ -298,6 +298,83 @@ decembra\fi \space\number\year}
 
 \newcommand{\VytvorPovinneStrany}{\Dosky\TitulnaStrana}
 
+
+%%
+%%  Zadanie
+%%
+
+\newcommand{\SemVlozitZadanie}{
+\phantomsection
+\chapter*{}
+\pdfbookmark{Ofici{\'{a}}lne zadanie}{Oficialne zadanie}
+\thispagestyle{empty}
+\begin{center}
+\setlength\fboxrule{1.5pt}
+\setlength\fboxsep{8pt}
+\fbox{\textcolor{blue}{\bf Namiesto tejto strany vlo{\v{z}}te k{\'{o}}piu ofici{\'{a}}lneho (podp{\'{i}}san{\'{e}}ho)
+zadania pr{\'{a}}ce.}}
+\end{center}
+\cleardoublepage
+}
+
+\newcommand{\VlozZadanie}[1]{
+\begin{center}
+\includepdf[pages={-},pagecommand={\thispagestyle{empty}\pdfbookmark{Ofici{\'{a}}lne zadanie}{Oficialne zadane}}]{#1}
+\end{center}
+\cleardoublepage
+}
+
+
+%%
+%%  Cestne prehlasenie a podakovanie
+%%
+
+\newcommand{\PrehlasenieAPodakovanie}{
+  \thispagestyle{empty}
+  \vspace*{\fill}
+  \pdfbookmark{{\v{C}}estn{\'{e}} prehl{\'{a}}senie}{Cestne prehlasenie}
+  \NazovPovinnejCasti{\Huge {\v{C}}estn{\'{e}} prehl{\'{a}}senie}
+
+  \Prehlasenie
+
+  \vspace*{15mm}
+
+  \noindent Trnava, \DatumPrehl \hfill \makebox[50mm]{\dotfill}\\
+  \hspace*{\fill} \MenoAutora\hspace*{15mm}
+  \cleardoublepage
+
+
+  \thispagestyle{empty}
+  \vspace*{\fill}
+  \pdfbookmark{Po{\v{d}}akovanie}{Podakovanie}
+  \NazovPovinnejCasti{Po{\v{d}}akovanie}
+
+  \Podakovanie
+
+  \cleardoublepage
+}
+
+\newcommand{\PrehlasenieBezPodakovania}{
+  \vspace*{\fill}
+  \pdfbookmark{{\v{C}}estn{\'{e}} prehl{\'{a}}senie}{Cestne prehlasenie}
+  \NazovPovinnejCasti{\Huge {\v{C}}estn{\'{e}} prehl{\'{a}}senie}
+
+  \Prehlasenie
+
+  \vspace*{15mm}
+
+  \noindent Trnava, \DatumPrehl \hfill \makebox[50mm]{\dotfill}\\
+  \hspace*{\fill} \MenoAutora\hspace*{15mm}
+  \cleardoublepage
+}
+
+
+%%
+%%  Podakovanie
+%%
+
+
+
 %%
 %%  Abstrakty na jednej strane
 %%
@@ -341,75 +418,6 @@ decembra\fi \space\number\year}
 \cleardoublepage
 }
 
-
-%%
-%%  Zadanie
-%%
-
-\newcommand{\SemVlozitZadanie}{
-\phantomsection
-\chapter*{}
-\pdfbookmark{Ofici{\'{a}}lne zadanie}{Oficialne zadanie}
-\thispagestyle{empty}
-\begin{center}
-\setlength\fboxrule{1.5pt}
-\setlength\fboxsep{8pt}
-\fbox{\textcolor{blue}{\bf Namiesto tejto strany vlo{\v{z}}te k{\'{o}}piu ofici{\'{a}}lneho (podp{\'{i}}san{\'{e}}ho)
-zadania pr{\'{a}}ce.}}
-\end{center}
-\cleardoublepage
-}
-
-\newcommand{\VlozZadanie}[1]{
-\begin{center}
-\includepdf[pages={-},pagecommand={\thispagestyle{empty}\pdfbookmark{Ofici{\'{a}}lne zadanie}{Oficialne zadane}}]{#1}
-\end{center}
-\cleardoublepage
-}
-
-%%
-%%  Podakovanie a prehlasenie
-%%
-
-\newcommand{\PodakovanieAPrehlasenie}{
-\pdfbookmark{Po{\v{d}}akovanie}{Podakovanie}
-\NazovPovinnejCasti{Po{\v{d}}akovanie}
-\thispagestyle{empty}
-
-
-\Podakovanie
-
-\vspace*{\fill}
-\pdfbookmark{Prehl{\'{a}}senie}{Prehlasenie}
-\NazovPovinnejCasti{Prehl{\'{a}}senie}
-
-\Prehlasenie
-
-\vspace*{15mm}
-
-\noindent Trnava, \DatumPrehl \hfill \makebox[50mm]{\dotfill}\\
-\hspace*{\fill} \MenoAutora\hspace*{15mm}
-\cleardoublepage
-}
-
-%%
-%%  Prehlasenie bez podakovania
-%%
-
-\newcommand{\PrehlasenieBezPodekovania}{
-
-\vspace*{\fill}
-\pdfbookmark{Prehl{\'{a}}senie}{Prohlaseni}
-\NazovPovinnejCasti{\Huge Prehl{\'{a}}senie}
-
-\Prehlasenie
-
-\vspace*{15mm}
-
-\noindent Trnava, \DatumPrehl \hfill \makebox[50mm]{\dotfill}\\
-\hspace*{\fill} \MenoAutora\hspace*{15mm}
-\cleardoublepage
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
