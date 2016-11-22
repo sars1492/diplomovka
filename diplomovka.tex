@@ -9,24 +9,27 @@
 % 2005/12/01 or later.
 %
 % This work has the LPPL maintenance status `author-maintained'.
-% 
+%
 % This work consists of the following files: diplomovka.tex, 01-uvod.tex,
 % 02-symboly.tex, 03-kapitola1.tex, 04-kapitola2.tex, 05-kapitola3.tex,
 % 06-zaver.tex, 07-priloha.tex, literatura.bib, opakuj.sty, ucmthesis.sty and
 % ucmplainnat.bst.
 %
-% All of the files above were derived from the Masaryk University, Faculty of
+% The file `ucmplainnat.bst' was derived from the `csplainnat.bst' BibTeX style
+% for Czech references style (According to CSN ISO 690) available at:
+%   https://github.com/mudrd8mz/csplainnat
+%
+% All the other files above were derived from the Masaryk University, Faculty of
 % Science template available for download at:
 %   http://www.sci.muni.cz/NW/STUD/SablonyPraci/Sablona_Pruvodce_(v1.9).zip
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%  Sablona Bc+Mgr+RNDr pre FPV UCM
-%%  Autori: Juraj Szasz (juraj.szasz3@gmail.com)
-%%          Gabriel Szasz (gabriel.szasz1@gmail.com) 
+%%  Autor: Juraj Szasz (juraj.szasz3@gmail.com)
 %%
 %%  Zalozene na sablone PriF MU v Brne
-%%      Autor: Petr Zemanek (zemanekp@math.muni.cz)
+%%    Autor: Petr Zemanek (zemanekp@math.muni.cz)
 %%
 %%  Typeset in LaTeX-2e
 %%
@@ -34,7 +37,7 @@
 
 \documentclass[12pt,a4paper,oneside,final]{book}
 
-\usepackage[utf8]{inputenc} 
+\usepackage[utf8]{inputenc}
 \usepackage[LGR,IL2]{fontenc}
 \usepackage[slovak]{babel}
 
@@ -53,7 +56,7 @@
 %%  Nastavenie stylu citacii
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{ucmplainnat} 
+\bibliographystyle{ucmplainnat}
 \setcitestyle{authoryear}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -77,9 +80,9 @@
 
 \Autor{Juraj Szász}{Bc. Juraj Szász}
 
-\TemaPrace{Scientometrická analýza FPV UCM v~Trnave}{Scientometrická analýza
-  Fakulty prírodných vied Univerzity sv. Cyrila a Metoda v~Trnave}{Scientometric
-  analysis of the Faculty of Natural Sciences, University of Ss. Cyril and
+\TemaPrace{Scientometrická analýza FPV~UCM v~Trnave}{Scientometrická analýza
+  Fakulty prír odných vied Univerzity sv.\,Cyrila a~Metoda v~Trnave}{Scientometric
+  analysis of the Faculty of Natural Sciences, University of Ss.\,Cyril and
   Methodius in Trnava}
 
 \SkolitelSTitulmi{prof. RNDr. Ján Kraic, PhD}
@@ -155,16 +158,28 @@
 \begin{document}
 
 %%
-%%  Povinne strany (podla normy PrF MU v Brne)
-%% 
+%%  Uvodne povinne strany
+%%
 \VytvorPovinneStrany
-% \VytvorPovinneStranyRigoroznaPraca
+
 
 %%
 %%  Abstrakty
 %%
 \AbstraktyNaJednejStrane
 % \AbstraktyNaDvochStranach
+
+
+%%
+%%  Zadanie
+%%
+%%  Oskenujte zadanie a vo formate PDF ho vlozte do tohto adresara (subor
+%%  pomenujte napr. zadanie.pdf.  Potom zakomentujte riadok \SemVlozitZadanie a
+%%  odkomentujte riadok s \VlozZadanie.
+
+\SemVlozitZadanie
+
+% \VlozZadanie{zadanie.pdf}
 
 %%
 %% Podakovanie a cestne prehlasenie
