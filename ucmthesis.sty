@@ -111,7 +111,8 @@ urlcolor=black,
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\NazovKatedry}[2]{\newcommand{\Katedra}{#1} \newcommand{\Department}{#2}}
+\newcommand{\NazovKatedry}[2]{\newcommand{\Katedra}{#1}\newcommand{\Department}{#2}}
+\newcommand{\MiestoRieseniaPrace}[2]{\newcommand{\MiestoRiesenia}{#1}\newcommand{\PlaceOfPerformance}{#2}}
 \newcommand{\RokOdovzdaniaPrace}[1]{\newcommand{\RokOdovzdania}{#1}}
 \newcommand{\AkademickyRok}[1]{\newcommand{\AkadRok}{#1}}
 \newcommand{\Autor}[2]{\newcommand{\MenoAutora}{#1} \newcommand{\AutorSTitulmi}{#2}}
@@ -387,7 +388,15 @@ decembra\fi \space\number\year}
   \NazovPovinnejCasti{Abstrakt}
   \thispagestyle{empty}
 
-  \Abstrakt
+  \noindent\MenoAutora: \textit{\NazovPrace{}}
+  (\TypPrace)~--~Univerzita sv.\,Cyrila a~Metoda v~Trnave, Fakulta prírodných
+  vied, \Katedra~--~{\v{S}}kolite{\v{l}}: \Skolitel~--~Stupe{\v{n}} odbornej
+  kvalifik{\'{a}}cie: \StupenOdbornosti~--~\MiestoRiesenia, \RokOdovzdania,
+  \Strany.\\
+
+  \noindent\Abstrakt\\
+
+  \noindent\textbf{K{\v{l}}{\'{u}}{\v{c}}ov{\'{e}} slov{\'{a}}:} \KlSlova
 
   \cleardoublepage
 
@@ -395,7 +404,14 @@ decembra\fi \space\number\year}
   \NazovPovinnejCasti{Abstract}
   \thispagestyle{empty}
 
-  \Abstract
+  \noindent\MenoAutora: \textit{\TitleOfThesis{}} (\TypeOfThesis)~--~University
+  of Ss.\,Cyril and Methodius in Trnava, Faculty of Natural Sciences,
+  \Department~--~Supervisor: \Skolitel~--~Degree of professional qualification:
+  \Degree~--~\PlaceOfPerformance, \RokOdovzdania, \Strany.\\
+
+  \noindent\Abstract\\
+
+  \noindent\textbf{Keywords:} \Keywords
 
   \cleardoublepage
 }
