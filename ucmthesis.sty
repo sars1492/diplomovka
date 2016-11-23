@@ -32,13 +32,13 @@
 %%    Autor: Petr Zemanek (zemanekp@math.muni.cz)
 %%
 %%  Urcene pro LaTeX-2e
-%%  Verzia: 0.4 (23. novembra 2016)
+%%  Verzia: 0.5 (24. novembra 2016)
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\filename{ucmthesis.sty}
-\def\filedate{2016/11/23}
-\def\fileversion{0.4}
+\def\filedate{2016/11/24}
+\def\fileversion{0.5}
 
 \@ifundefined{NeedsTeXFormat}{
 \typeout{*******************************************************************************}
@@ -75,7 +75,7 @@ Katedry biotechnologii Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v 
 \typeout{Pre bakalarske a diplomove prace pozri http://www.sci.muni.cz/cz/BcMgrStudium/}
 \typeout{Pre rigorozne prace pozri http://www.sci.muni.cz/cz/RigRiz/}
 \typeout{*******************************************************************************}
-\RequirePackage{etoolbox,graphicx,textfit,changepage,setspace,ifthen,fancyhdr,calc,pdfpages,makeidx,color}
+\RequirePackage{etoolbox,graphicx,textfit,changepage,setspace,ifthen,fancyhdr,calc,pdfpages,makeidx,color,caption}
 \RequirePackage[hyperindex=false]{hyperref}
 \RequirePackage[all]{hypcap}
 }
@@ -149,6 +149,12 @@ marca\or apr{\'{i}}la\or m{\'{a}}ja\or
 j{\'{u}}na\or j{\'{u}}la\or augusta\or
 septembra\or okt{\'{o}}bra\or novembra\or
 decembra\fi \space\number\year}
+
+%
+%  Nastavenie popiskov obrazkov a tabuliek
+%
+\captionsetup{labelfont=bf}
+\captionsetup[figure]{name=Obr{\'{a}}zok}
 
 %%
 %%  Predefinovanie cleardoublepage tak, aby pri obojstrannej tlaci nebola na
