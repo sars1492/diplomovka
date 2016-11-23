@@ -80,9 +80,12 @@ Katedry biotechnologii Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v 
 \RequirePackage[all]{hypcap}
 }
 
-\DeclareOption{Bc}{\newcommand{\TypPrace}{Bakal{\'{a}}rska pr{\'{a}}ca}}
-\DeclareOption{Mgr}{\newcommand{\TypPrace}{Diplomov{\'{a}} pr{\'{a}}ca}}
-\DeclareOption{RNDr}{\newcommand{\TypPrace}{Rigorózna{\'{i}} pr{\'{a}}ca}}
+\DeclareOption{Bc}{\newcommand{\TypPrace}{Bakal{\'{a}}rska pr{\'{a}}ca}\newcommand{\TypeOfThesis}{Bachelor's Thesis}
+  \newcommand{\StupenOdbornosti}{Bakal{\'{a}}r}\newcommand{\Degree}{Bachelor}}
+\DeclareOption{Mgr}{\newcommand{\TypPrace}{Diplomov{\'{a}} pr{\'{a}}ca}\newcommand{\TypeOfThesis}{Master's Thesis}
+  \newcommand{\StupenOdbornosti}{Magister}\newcommand{\Degree}{Magister}}
+\DeclareOption{RNDr}{\newcommand{\TypPrace}{Rigor{\'{o}}zna pr{\'{a}}ca}\newcommand{\TypeOfThesis}{Dissertation Thesis}
+  \newcommand{\StupenOdbornosti}{Doktor}\newcommand{\Degree}{Doctor}}
 
 \DeclareOption{Farebne}{\hypersetup{
 linkcolor=red,
@@ -113,7 +116,7 @@ urlcolor=black,
 \newcommand{\AkademickyRok}[1]{\newcommand{\AkadRok}{#1}}
 \newcommand{\Autor}[2]{\newcommand{\MenoAutora}{#1} \newcommand{\AutorSTitulmi}{#2}}
 \newcommand{\TemaPrace}[3]{\newcommand{\NazovPraceNaTitulnejStrane}{#1}\newcommand{\NazovPrace}{#2}
-\newcommand{\TitleOfThesis}{#3}}
+  \newcommand{\TitleOfThesis}{#3}}
 \newcommand{\SkolitelSTitulmi}[1]{\newcommand{\Skolitel}{#1}}
 \newcommand{\StudijnyProgram}[2]{\newcommand{\StudProg}{#1} \newcommand{\DegreeProgramme}{#2}}
 \newcommand{\StudijnyObor}[2]{\newcommand{\StudOb}{#1} \newcommand{\FieldOfStudy}{#2}}
