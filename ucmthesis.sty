@@ -304,24 +304,30 @@ decembra\fi \space\number\year}
 %%
 
 \newcommand{\SemVlozitZadanie}{
-\phantomsection
-\chapter*{}
-\pdfbookmark{Ofici{\'{a}}lne zadanie}{Oficialne zadanie}
-\thispagestyle{empty}
-\begin{center}
-\setlength\fboxrule{1.5pt}
-\setlength\fboxsep{8pt}
-\fbox{\textcolor{blue}{\bf Namiesto tejto strany vlo{\v{z}}te k{\'{o}}piu ofici{\'{a}}lneho (podp{\'{i}}san{\'{e}}ho)
-zadania pr{\'{a}}ce.}}
-\end{center}
-\cleardoublepage
-}
-
-\newcommand{\VlozZadanie}[1]{
-\begin{center}
-\includepdf[pages={-},pagecommand={\thispagestyle{empty}\pdfbookmark{Ofici{\'{a}}lne zadanie}{Oficialne zadane}}]{#1}
-\end{center}
-\cleardoublepage
+  \phantomsection
+  \chapter*{}
+  \thispagestyle{empty}
+  \begin{center}
+    \setlength\fboxrule{1.5pt}
+    \setlength\fboxsep{8pt}
+    \fbox{\parbox{0.9\textwidth}{\textcolor{blue}{\textbf{Namiesto tejto strany
+          vlo{\v{z}}te k{\'{o}}piu ofici{\'{a}}lneho (podp{\'{i}}san{\'{e}}ho)
+          zadania pr{\'{a}}ce.}} \\
+        \par\textcolor{blue}{Zadanie vytla{\v{c}}en{\'{e}} z~AIS-u,
+        podp{\'{i}}san{\'{e}} ved{\'{u}}cim danej katedry sa vklad{\'{a}} do
+        vytla{\v{c}}enej z{\'{a}}vere{\v{c}}nej pr{\'{a}}ce, pri{\v{c}}om
+        do~jednej z{\'{a}}vere{\v{c}}nej pr{\'{a}}ce sa vklad{\'{a}}
+        origin{\'{a}}l zadania a~do ostatn{\'{y}}ch posta{\v{c}}uje jeho
+        k{\'{o}}pia.  T{\'{a}}to {\v{c}}as{\v{t}} sa ne{\v{c}}{\'{i}}sluje
+        a~nezapo{\v{c}}{\'{i}}tava sa do po{\v{c}}tu znakov
+        z{\'{a}}vere{\v{c}}nej pr{\'{a}}ce.  Zadania z{\'{a}}vere{\v{c}}nej
+        pr{\'{a}}ce poskytne katedra (koordin{\'{a}}tor {\v{s}}t{\'{u}}dia) po
+        vy{\v{z}}iadan{\'{i}} {\v{s}}tudentom.  Zadanie z{\'{a}}vere{\v{c}}nej
+        pr{\'{a}}ce sa nepriklad{\'{a}} do elektronickej z{\'{a}}vere{\v{c}}nej
+        pr{\'{a}}ce, ktor{\'{u}} vklad{\'{a}}te Centr{\'{a}}lneho registra
+        z{\'{a}}vere{\v{c}}n{\'{y}}ch pr{\'{a}}c (do AIS-u). }}}
+  \end{center}
+  \cleardoublepage
 }
 
 
