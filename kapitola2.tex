@@ -81,8 +81,10 @@ záznamov sa znížil na 356.
 prírodných vied podľa tabuľky~\ref{tab:scopus.exauthors}.  Počet záznamov sa tak
 znížil na 329.
 
-\begin{table}
+\begin{SCtable}
 \centering\small
+\caption{Scopus -- vylúčení autori.}
+\label{tab:scopus.exauthors}
 \begin{tabular}{lc}
   \hline\noalign{\vspace{.3ex}}
   Meno autora                & Afiliácia \\[0.3ex]
@@ -99,9 +101,7 @@ znížil na 329.
   Vicente, Romana Albaladejo & -- \\[0.5ex]
   \hline
 \end{tabular}
-\caption{Scopus -- vylúčení autori.}
-\label{tab:scopus.exauthors}
-\end{table}
+\end{SCtable}
 
 Vytriedené záznamy sme uložili do formátu CSV\footnote{\uv{Comma-separated
     values} -- textový formát dát v~ktorom sú jednotlivé položky oddelené
@@ -190,7 +190,9 @@ z~databáz Scopus a WoS (označené ako \uv{\texttt{scopus~17.5.2016.csv}} a
 \uv{\texttt{scopus~17.5.2016.csv}} sme zmazali duplicitné záznamy a opravili
 chybný zápis mien podľa tabuľky \ref{tab:wos.namecorrections}.
 
-\begin{table}
+\begin{SCtable}
+\caption{Oprava chýb v~menách autorov v~súbore \uv{\texttt{scopus~17.5.2016.csv}}.}
+\label{tab:wos.namecorrections}
 \centering\small
 \begin{tabular}{ll}
   \hline\noalign{\vspace{.3ex}}
@@ -203,15 +205,15 @@ chybný zápis mien podľa tabuľky \ref{tab:wos.namecorrections}.
   Titiş        & Titiš      \\[0.5ex]
   \hline
 \end{tabular}
-\caption{Oprava chýb v~menách autorov v~súbore \uv{\texttt{scopus~17.5.2016.csv}}.}
-\label{tab:wos.namecorrections}
-\end{table}
+\end{SCtable}
 
 Pretože databáza Scopus nám umožnila odstrániť všetky záznamy z~iných fakúlt,
 súbor \uv{\texttt{scopus~17.5.2016.csv}} sme ďalej neupravovali a konečný počet
 bibliografických záznamov je 324.
 
-\begin{table}
+\begin{SCtable}
+\caption{Mená pracovníkov, ktorí nepatria do Fakulty prírodných vied.}
+\label{tab:wos.excludedstaff}
 \centering\small
 \begin{tabular}{lc}
   \hline\noalign{\vspace{.3ex}}
@@ -230,9 +232,7 @@ bibliografických záznamov je 324.
   Novakova Renata & -- \\[0.5ex]
   \hline
 \end{tabular}
-\caption{Mená pracovníkov, ktorí nepatria do Fakulty prírodných vied.}
-\label{tab:wos.excludedstaff}
-\end{table}
+\end{SCtable}
 
 WoS má veľmi obmedzené možnosti triedenia väčšieho množstva dát, napr.\,je možné
 filtrovať podľa 100 autorov (Scopus tákéto obmedzenie nepozná).  Z~týchto
@@ -253,12 +253,14 @@ z~katedier (podľa kľúčových slov).Záznamy Katedry biofyziky a Katedry odbo
 jazykovej prípravy boli z~analýzy vyňaté zahrnuté pre veľmi nízky počet dát.
 
 \begin{table}
+\caption{Rozdelenie pracovníkov do jednotlivých katedier.}
+\label{tab:staffsort}
 \centering\small
 \begin{tabular}{lllll}
   \hline\noalign{\vspace{.3ex}}
   Katedra  & Katedra        & Katedra & Katedra         & Katedry      \\
-  biológie & biotechnológii & chémie  & ekochémie       & aplikovanej  \\ 
-           &                &         & a~rádioekológie & informatiky  \\ 
+  biológie & biotechnológii & chémie  & ekochémie       & aplikovanej  \\
+           &                &         & a~rádioekológie & informatiky  \\
            &                &         &                 & a~matematiky \\[0.3ex]
   \hline\noalign{\vspace{.5ex}}
   Janeček, Štefan, Š. & Breierová      & Baran       & Babulicová & Ďurikovič   \\
@@ -281,8 +283,6 @@ jazykovej prípravy boli z~analýzy vyňaté zahrnuté pre veľmi nízky počet 
                       &                & Titiš       &            &             \\[0.5ex]
   \hline
 \end{tabular}
-\caption{Rozdelenie pracovníkov do jednotlivých katedier.}
-\label{tab:staffsort}
 \end{table}
 
 
