@@ -601,4 +601,8 @@ pdfencoding=auto,
 \setlength{\cftsubsecnumwidth}{10mm}          %% mezera za cislom odstavca - v pripade potreby zmente
 \renewcommand{\cftsubsecdotsep}{3}            %% hustota vyplne mezi nazvom odstavca a cislom stranky
 
-\newcommand{\VytvorObsah}{\tableofcontents}
+\newcommand{\VytvorObsah}{
+  \setcounter{page}{1}
+  \pagenumbering{arabic}
+  \tableofcontents
+}
