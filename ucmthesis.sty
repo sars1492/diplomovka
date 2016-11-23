@@ -119,7 +119,7 @@ urlcolor=black,
 \newcommand{\StudijnyObor}[2]{\newcommand{\StudOb}{#1} \newcommand{\FieldOfStudy}{#2}}
 \newcommand{\KlucoveSlova}[2]{\newcommand{\KlSlova}{#1} \newcommand{\Keywords}{#2}}
 \newcommand{\PocetStran}[1]{\newcommand{\Strany}{#1}}
-\newcommand{\Abstrakty}[2]{\newcommand{\Abstrakt}{#1} \newcommand{\Abstract}{#2}}
+\newcommand{\TextAbstraktov}[2]{\newcommand{\Abstrakt}{#1} \newcommand{\Abstract}{#2}}
 \newcommand{\TextPodakovania}[1]{\newcommand{\Podakovanie}{#1}}
 \newcommand{\TextPrehlasenia}[1]{\newcommand{\Prehlasenie}{#1}}
 \newcommand{\DatumPrehlasenia}[1]{\newcommand{\DatumPrehl}{#1}}
@@ -376,52 +376,25 @@ decembra\fi \space\number\year}
 
 
 %%
-%%  Podakovanie
+%%  Abstrakty
 %%
 
+\newcommand{\Abstrakty}{
+  \pdfbookmark{Abstrakt}{Abstrakt}
+  \NazovPovinnejCasti{Abstrakt}
+  \thispagestyle{empty}
 
+  \Abstrakt
 
-%%
-%%  Abstrakty na jednej strane
-%%
+  \cleardoublepage
 
-\newcommand{\AbstraktyNaJednejStrane}{
-\pdfbookmark{Abstrakt}{Abstrakt}
-\NazovPovinnejCasti{Abstrakt}
-\thispagestyle{empty}
-\Abstrakt
+  \pdfbookmark{Abstract}{Abstract}
+  \NazovPovinnejCasti{Abstract}
+  \thispagestyle{empty}
 
-\vspace*{\fill}
+  \Abstract
 
-\pdfbookmark{Abstract}{Abstract}
-\NazovPovinnejCasti{Abstract}
-
-\Abstract
-
-\vspace*{\fill}
-\cleardoublepage
-}
-
-%%
-%%  Abstrakty na dvoch stranach
-%%
-
-\newcommand{\AbstraktyNaDvochStranach}{
-\pdfbookmark{Abstrakt}{Abstrakt}
-\NazovPovinnejCasti{Abstrakt}
-\thispagestyle{empty}
-
-\Abstrakt
-
-\cleardoublepage
-
-\pdfbookmark{Abstract}{Abstract}
-\NazovPovinnejCasti{Abstract}
-\thispagestyle{empty}
-
-\Abstract
-
-\cleardoublepage
+  \cleardoublepage
 }
 
 
