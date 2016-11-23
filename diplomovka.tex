@@ -193,10 +193,9 @@
 \cleardoublepage
 
 %%
-%%  Zoznam ilustracii
+%%  Zoznam obrazkov
 %%
-\pdfbookmark{Zoznam ilustrácií}{Zoznam ilustracii}
-\renewcommand*\listfigurename{Zoznam ilustrácií}
+\pdfbookmark{Zoznam obrázkov}{Zoznam obrazkov}
 \listoffigures
 \cleardoublepage
 
@@ -208,19 +207,19 @@
 \cleardoublepage
 
 %%
-%%  Zoznam skratiek a znaciek
-%%
-\HlavickaSymbolov
-\pdfbookmark{Zoznam skratiek a značiek}{Zoznam skratiek a znaciek}
-\vloz{skratky-a-znacky}
-\cleardoublepage
-
-%%
 %%  Uvod
 %%
 \HlavickaUvod
 %\pdfbookmark{Úvod}{Uvod}
-\vloz{uvod}
+\vloz{01-uvod}
+\cleardoublepage
+
+%%
+%%  Prehlad pouzitych symbolov
+%%
+\HlavickaSymbolov
+%\pdfbookmark{Prehľad použitých symbolov}{Prehlad pouzitych symbolov}
+\vloz{02-symboly}
 \cleardoublepage
 
 %%
@@ -229,19 +228,19 @@
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter. #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection. #1}{}}
 \HlavickaKapitoly
-\vloz{kapitola1}
+\vloz{03-kapitola1}
 \cleardoublepage
 
 %%
 %%  Kapitola 2: Materialy a metody
 %%
-\vloz{kapitola2}
+\vloz{04-kapitola2}
 \cleardoublepage
 
 %%
 %%  Kapitola 2: Vysledky a diskusia
 %%
-\vloz{kapitola3}
+\vloz{05-kapitola3}
 \cleardoublepage
 
 %%
@@ -249,22 +248,22 @@
 %%
 \HlavickaZaver
 % \pdfbookmark{Záver}{Zaver}
-\vloz{zaver}
+\vloz{06-zaver}
 \cleardoublepage
 
 %%
 %%  Priloha
 %%
-%\HlavickaPriloha
-%\pdfbookmark{Príloha}{Priloha}
-%\vloz{priloha}
-%\cleardoublepage
+\HlavickaPriloha
+% \pdfbookmark{Príloha}{Priloha}
+\vloz{07-priloha}
+\cleardoublepage
 
 %%
 %%  Zoznam pouzitej literatury
 %%
 \renewcommand{\bibname}{Zoznam použitej literatúry}
-\pdfbookmark{Zoznam použitej literatúry}{Zoznam pouzitej literatury}
+\pdfbookmark{Zoznam literatúry}{Zoznam literatury}
 \HlavickaLiteratura
 \bibliography{literatura}{}
 
