@@ -32,13 +32,13 @@
 %%    Autor: Petr Zemanek (zemanekp@math.muni.cz)
 %%
 %%  Urcene pro LaTeX-2e
-%%  Verzia: 0.3 (21. novembra 2016)
+%%  Verzia: 0.4 (23. novembra 2016)
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\filename{ucmthesis.sty}
-\def\filedate{2016/11/21}
-\def\fileversion{0.3}
+\def\filedate{2016/11/23}
+\def\fileversion{0.4}
 
 \@ifundefined{NeedsTeXFormat}{
 \typeout{*******************************************************************************}
@@ -80,9 +80,12 @@ Katedry biotechnologii Fakulty prirodnych vied Univerzity sv. Cyrila a Metoda v 
 \RequirePackage[all]{hypcap}
 }
 
-\DeclareOption{Bc}{\newcommand{\TypPrace}{Bakal{\'{a}}rska pr{\'{a}}ca}}
-\DeclareOption{Mgr}{\newcommand{\TypPrace}{Diplomov{\'{a}} pr{\'{a}}ca}}
-\DeclareOption{RNDr}{\newcommand{\TypPrace}{Rigorózna{\'{i}} pr{\'{a}}ca}}
+\DeclareOption{Bc}{\newcommand{\TypPrace}{Bakal{\'{a}}rska pr{\'{a}}ca}\newcommand{\TypeOfThesis}{Bachelor's Thesis}
+  \newcommand{\StupenOdbornosti}{Bakal{\'{a}}r}\newcommand{\Degree}{Bachelor}}
+\DeclareOption{Mgr}{\newcommand{\TypPrace}{Diplomov{\'{a}} pr{\'{a}}ca}\newcommand{\TypeOfThesis}{Master's Thesis}
+  \newcommand{\StupenOdbornosti}{Magister}\newcommand{\Degree}{Magister}}
+\DeclareOption{RNDr}{\newcommand{\TypPrace}{Rigor{\'{o}}zna pr{\'{a}}ca}\newcommand{\TypeOfThesis}{Dissertation Thesis}
+  \newcommand{\StupenOdbornosti}{Doktor}\newcommand{\Degree}{Doctor}}
 
 \DeclareOption{Farebne}{\hypersetup{
 linkcolor=red,
@@ -108,18 +111,19 @@ urlcolor=black,
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\NazovKatedry}[2]{\newcommand{\Katedra}{#1} \newcommand{\Department}{#2}}
+\newcommand{\NazovKatedry}[2]{\newcommand{\Katedra}{#1}\newcommand{\Department}{#2}}
+\newcommand{\MiestoRieseniaPrace}[2]{\newcommand{\MiestoRiesenia}{#1}\newcommand{\PlaceOfPerformance}{#2}}
 \newcommand{\RokOdovzdaniaPrace}[1]{\newcommand{\RokOdovzdania}{#1}}
 \newcommand{\AkademickyRok}[1]{\newcommand{\AkadRok}{#1}}
 \newcommand{\Autor}[2]{\newcommand{\MenoAutora}{#1} \newcommand{\AutorSTitulmi}{#2}}
 \newcommand{\TemaPrace}[3]{\newcommand{\NazovPraceNaTitulnejStrane}{#1}\newcommand{\NazovPrace}{#2}
-\newcommand{\TitleOfThesis}{#3}}
+  \newcommand{\TitleOfThesis}{#3}}
 \newcommand{\SkolitelSTitulmi}[1]{\newcommand{\Skolitel}{#1}}
 \newcommand{\StudijnyProgram}[2]{\newcommand{\StudProg}{#1} \newcommand{\DegreeProgramme}{#2}}
 \newcommand{\StudijnyObor}[2]{\newcommand{\StudOb}{#1} \newcommand{\FieldOfStudy}{#2}}
 \newcommand{\KlucoveSlova}[2]{\newcommand{\KlSlova}{#1} \newcommand{\Keywords}{#2}}
 \newcommand{\PocetStran}[1]{\newcommand{\Strany}{#1}}
-\newcommand{\Abstrakty}[2]{\newcommand{\Abstrakt}{#1} \newcommand{\Abstract}{#2}}
+\newcommand{\TextAbstraktov}[2]{\newcommand{\Abstrakt}{#1} \newcommand{\Abstract}{#2}}
 \newcommand{\TextPodakovania}[1]{\newcommand{\Podakovanie}{#1}}
 \newcommand{\TextPrehlasenia}[1]{\newcommand{\Prehlasenie}{#1}}
 \newcommand{\DatumPrehlasenia}[1]{\newcommand{\DatumPrehl}{#1}}
@@ -376,52 +380,46 @@ decembra\fi \space\number\year}
 
 
 %%
-%%  Podakovanie
+%%  Abstrakty
 %%
 
+\newcommand{\Abstrakty}{
+  \pdfbookmark{Abstrakt}{Abstrakt}
+  \NazovPovinnejCasti{Abstrakt}
+  \thispagestyle{empty}
+
+  \noindent\MenoAutora: \textit{\NazovPrace{}}
+  (\TypPrace)~--~Univerzita sv.\,Cyrila a~Metoda v~Trnave, Fakulta prírodných
+  vied, \Katedra~--~{\v{S}}kolite{\v{l}}: \Skolitel~--~Stupe{\v{n}} odbornej
+  kvalifik{\'{a}}cie: \StupenOdbornosti~--~\MiestoRiesenia, \RokOdovzdania,
+  \Strany.\\
+
+  \noindent\Abstrakt\\
+
+  \noindent\textbf{K{\v{l}}{\'{u}}{\v{c}}ov{\'{e}} slov{\'{a}}:} \KlSlova
+
+  \cleardoublepage
+
+  \begin{otherlanguage}{english}
+
+    \pdfbookmark{Abstract}{Abstract}
+    \NazovPovinnejCasti{Abstract}
+    \thispagestyle{empty}
 
 
-%%
-%%  Abstrakty na jednej strane
-%%
 
-\newcommand{\AbstraktyNaJednejStrane}{
-\pdfbookmark{Abstrakt}{Abstrakt}
-\NazovPovinnejCasti{Abstrakt}
-\thispagestyle{empty}
-\Abstrakt
+    \noindent\MenoAutora: \textit{\TitleOfThesis{}} (\TypeOfThesis)~--~University
+    of Ss.\,Cyril and Methodius in Trnava, Faculty of Natural Sciences,
+    \Department~--~Supervisor: \Skolitel~--~Degree of professional qualification:
+    \Degree~--~\PlaceOfPerformance, \RokOdovzdania, \Strany.\\
 
-\vspace*{\fill}
+    \noindent\Abstract\\
 
-\pdfbookmark{Abstract}{Abstract}
-\NazovPovinnejCasti{Abstract}
+    \noindent\textbf{Keywords:} \Keywords
 
-\Abstract
+  \end{otherlanguage}
 
-\vspace*{\fill}
-\cleardoublepage
-}
-
-%%
-%%  Abstrakty na dvoch stranach
-%%
-
-\newcommand{\AbstraktyNaDvochStranach}{
-\pdfbookmark{Abstrakt}{Abstrakt}
-\NazovPovinnejCasti{Abstrakt}
-\thispagestyle{empty}
-
-\Abstrakt
-
-\cleardoublepage
-
-\pdfbookmark{Abstract}{Abstract}
-\NazovPovinnejCasti{Abstract}
-\thispagestyle{empty}
-
-\Abstract
-
-\cleardoublepage
+  \cleardoublepage
 }
 
 
