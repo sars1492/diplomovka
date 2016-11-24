@@ -269,7 +269,7 @@ FUNCTION {format.names.full}
                 'skip$
               if$
               t "OTHERS" = % CHANGE mudrd8mz 2005-10-12 because of capitalize
-                { " et~al." * }
+                { " a~kol." * } % CHANGE sars99 2016-11-24 my thesis requires a~kol. instead of et~al.
                 { " -- " * t * } % CHANGE mudrd8mz 2005-10-12 : between the last and the one before
               if$
             }
@@ -288,7 +288,7 @@ FUNCTION {format.names.short} %  CHANGE mudrd8mz 2005-10-14 adding more authors 
   s #1 "{ll}" format.name$ 't1 :=
   t1 capitalize 't1 :=
   s #1 "{, f.}{~j.}" format.name$ 't2 :=
-  t1 t2 * " et~al." *
+  t1 t2 * " a~kol." * % CHANGE sars99 2016-11-24 my thesis requires a~kol. instead of et~al.
 }
 
 FUNCTION {format.names}
@@ -342,7 +342,7 @@ FUNCTION {format.issn}
 FUNCTION {format.url}
 { url empty$
     { "" }
-    { new.block "Dostupn{\'{e}}~z: $\texttt{<{" url * "}>}$" * }
+    { new.block "Dostupn{\'{e}}~na internete: $\texttt{<{" url * "}>}$" * }
   if$
 }
 
@@ -381,7 +381,7 @@ FUNCTION {format.full.names}
                 'skip$
               if$
               t "others" =
-                { " et~al." * }
+                { " a~kol." * } % CHANGE sars99 2016-11-24 my thesis requires a~kol. instead of et~al.
                 { ", " * t * } %  CHANGE mudrd8mz 2005-10-12
               if$
             }
@@ -766,6 +766,7 @@ FUNCTION {article}
     {
       "In " journal emphasize * "journal" output.check
       new.sentence
+      format.issn output % CHANGE sars99 2016-11-24 my thesis ISSN right after journal title
       format.date "year" output.check
       eid empty$
         { format.vol.num.pages output }
@@ -779,8 +780,7 @@ FUNCTION {article}
       if$
     }
   if$
-  format.issn output
-  format.doi output
+% format.doi output  % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   note output
@@ -845,7 +845,7 @@ FUNCTION {book}
   if$
   format.edition output
   format.date "year" output.check
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   note output
@@ -863,7 +863,7 @@ FUNCTION {booklet}
   howpublished output
   address output
   format.date output
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   note output
@@ -902,7 +902,7 @@ FUNCTION {inbook}
   if$
   format.edition output
   format.date "year" output.check
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   note output
@@ -935,7 +935,7 @@ FUNCTION {incollection}
       format.chapter.pages output
     }
   if$
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   format.isbn output
@@ -973,7 +973,7 @@ FUNCTION {inproceedings}
       format.pages output
     }
   if$
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   format.isbn output
@@ -1064,7 +1064,7 @@ FUNCTION {proceedings}
   new.sentence
   organization output
   publisher output
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   format.isbn output
@@ -1196,11 +1196,11 @@ FUNCTION {format.lab.names}
   s #1 "{vv~}{ll}" format.name$
   s num.names$ duplicate$
   #2 >
-    { pop$ " et~al." * }
+    { pop$ " a~kol." * } % CHANGE sars99 2016-11-24 my thesis requires a~kol. instead of et~al.
     { #2 <
         'skip$
         { s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
-            { " et~al." * }
+            { " a~kol." * } % CHANGE sars99 2016-11-24 my thesis requires a~kol. instead of et~al.
             { " -- " * s #2 "{vv~}{ll}" format.name$ * } % CHANGE mudrd8mz 2005-10-12: changed "and"
           if$
         }
