@@ -9,24 +9,27 @@
 % 2005/12/01 or later.
 %
 % This work has the LPPL maintenance status `author-maintained'.
-% 
+%
 % This work consists of the following files: diplomovka.tex, 01-uvod.tex,
 % 02-symboly.tex, 03-kapitola1.tex, 04-kapitola2.tex, 05-kapitola3.tex,
 % 06-zaver.tex, 07-priloha.tex, literatura.bib, opakuj.sty, ucmthesis.sty and
 % ucmplainnat.bst.
 %
-% All of the files above were derived from the Masaryk University, Faculty of
+% The file `ucmplainnat.bst' was derived from the `csplainnat.bst' BibTeX style
+% for Czech references style (According to CSN ISO 690) available at:
+%   https://github.com/mudrd8mz/csplainnat
+%
+% All the other files above were derived from the Masaryk University, Faculty of
 % Science template available for download at:
 %   http://www.sci.muni.cz/NW/STUD/SablonyPraci/Sablona_Pruvodce_(v1.9).zip
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%  Sablona Bc+Mgr+RNDr pre FPV UCM
-%%  Autori: Juraj Szasz (juraj.szasz3@gmail.com)
-%%          Gabriel Szasz (gabriel.szasz1@gmail.com) 
+%%  Autor: Juraj Szasz (juraj.szasz3@gmail.com)
 %%
 %%  Zalozene na sablone PriF MU v Brne
-%%      Autor: Petr Zemanek (zemanekp@math.muni.cz)
+%%    Autor: Petr Zemanek (zemanekp@math.muni.cz)
 %%
 %%  Typeset in LaTeX-2e
 %%
@@ -34,14 +37,19 @@
 
 \documentclass[12pt,a4paper,oneside,final]{book}
 
-\usepackage[utf8]{inputenc} 
+\usepackage[utf8]{inputenc}
 \usepackage[LGR,IL2]{fontenc}
-\usepackage[slovak]{babel}
+\usepackage[english,slovak]{babel} % posledny jazyk v zozname je implicitny
 
 \usepackage{mathptmx}  % volne dostupny font Adobe Times Roman
 
 \usepackage{longtable} % balik pre tabulky presahujuce jednu stranu
                        % (potrebne pre zoznam znaceni)
+
+\usepackage{booktabs}  % balík pre vysadzanie profesionalnych tabuliek
+
+% balik pre postranne popisky obrazkov a tabuliek
+\usepackage[leftcaption,ragged]{sidecap}
 
 \usepackage{amsmath,amssymb,amsthm} % baliky pre matematicke vzorce
 \usepackage{natbib}    % balik pre harvardsky styl citacii
@@ -53,7 +61,7 @@
 %%  Nastavenie stylu citacii
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{ucmplainnat} 
+\bibliographystyle{ucmplainnat}
 \setcitestyle{authoryear}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -71,15 +79,17 @@
 
 \NazovKatedry{Katedra biológie}{Department of Biology}
 
+\MiestoRieseniaPrace{Trnava}{Trnava}
+
 \RokOdovzdaniaPrace{2016}
 
 \AkademickyRok{2016/2017}
 
 \Autor{Juraj Szász}{Bc. Juraj Szász}
 
-\TemaPrace{Scientometrická analýza FPV UCM v~Trnave}{Scientometrická analýza
-  Fakulty prírodných vied Univerzity sv. Cyrila a Metoda v~Trnave}{Scientometric
-  analysis of the Faculty of Natural Sciences, University of Ss. Cyril and
+\TemaPrace{Scientometrická analýza FPV~UCM v~Trnave}{Scientometrická analýza
+  Fakulty prírodných vied Univerzity sv.\,Cyrila a~Metoda v~Trnave}{Scientometric
+  analysis of the Faculty of Natural Sciences, University of Ss.\,Cyril and
   Methodius in Trnava}
 
 \SkolitelSTitulmi{prof. RNDr. Ján Kraic, PhD}
@@ -88,38 +98,41 @@
 
 \StudijnyObor{Biológia}{Biology}
 
-\PocetStran{xiii\,$+$\,40}
+\PocetStran{vi\,$+$\,45}
 
-\KlucoveSlova{Kľúčové slovo; Kľúčové slovo; Kľúčové slovo; Kľúčové slovo;
-  Kľúčové slovo; Kľúčové slovo; Kľúčové slovo; Kľúčové slovo}{Keyword; Keyword;
-  Keyword; Keyword; Keyword; Keyword; Keyword; Keyword; Keyword}
+\KlucoveSlova{bibliometria; scientometria; impakt faktor; citačný index;
+  hodnotenie vedeckej práce}{bibliometry; scientometry; impact factor; citation
+  index; evaluation of scientific work}
 
-\Abstrakty{Scientometrická analýza slúži na kvalitatívne a kvantitatívne
+\TextAbstraktov{Scientometrická analýza slúži na kvalitatívne a~kvantitatívne
   hodnotenie vedeckej práce.  Vykonáva sa pomocou štatistickej analýzy
-  publikačnej činnosti jednotlivých pracovníkov, inštitúcií a dokonca celých
+  publikačnej činnosti jednotlivých pracovníkov, inštitúcií a~dokonca celých
   krajín.  Kvalitu vedeckých publikácií určuje množstvo citácií (odkazov) na
-  publikácie.  Viac citácií na článok vyjadruje jeho popularitu, kvalitu a
-  prínos pre vedecký pokrok.  Cieľom tejto práce je kvalitatítne a kvantitatívne
-  zhodnotiť publikačnú činnosť pracovníkov Fakulty prírodných vied Univerzity
-  sv. Cyrila a Metoda v~Trnave za obdobie 2000--2016.}{The purpose of
-  scientometric analysis is to provide qualitative and quantitative evaluation
-  of the scientific work.  It is being performed by statistical analysis of the
-  publishing activity---addressing individual researchers, institutions or even
-  whole countries.  The quality of a scientific publication is derived from the
-  number of citations.  The amount of references to a paper determines its
-  popularity, quality and its impact on scientific progress.  The goal of this
-  thesis is to carry out qualitative and quantitative analysis of the publishing
-  activity of the academic staff members affiliated to Faculty of Natural
-  Science, University of SS. Cyril and Methodeus in Trnava during 2000--2016.}
+  publikácie.  Viac citácií na článok vyjadruje jeho popularitu, kvalitu
+  a~prínos pre vedecký pokrok.  Cieľom tejto práce je kvalitatítne
+  a~kvantitatívne zhodnotiť publikačnú činnosť pracovníkov Fakulty prírodných
+  vied Univerzity sv.\,Cyrila a Metoda v~Trnave za~obdobie 2000--2016.}{The
+  purpose of scientometric analysis is to provide qualitative and quantitative
+  evaluation of the scientific work.  It is being performed by statistical
+  analysis of the publishing activity---addressing individual researchers,
+  institutions or even whole countries.  The quality of a scientific publication
+  is derived from the number of citations.  The amount of references to a paper
+  determines its popularity, quality and its impact on scientific progress.  The
+  goal of this thesis is to carry out qualitative and quantitative analysis of
+  the publishing activity of the academic staff members affiliated to Faculty of
+  Natural Science, University of Ss.\,Cyril and Methodeus in Trnava during
+  2000--2016.}
 
 \TextPodakovania{Ďakujem môjmu školiteľovi prof. Jánovi Kraicovi, za jeho
   odborné vedenie, metodickú pomoc a cenné rady, ktoré mi poskytol pri
   vypracovaní tejto diplomovej práce.}
 
-\TextPrehlasenia{Prehlasujem, že som svoju diplomovú prácu vypracoval samostatne
-  s~využitím informačných zdrojov, ktoré sú v~práci citované.}
+\TextPrehlasenia{Prehlasujem, že som svoju diplomovú prácu na tému
+  \textit{Scientometrická analýza Fakulty prírodných vied Univerzity sv.\,Cyrila
+    a~Metoda v~Trnave} vypracoval samostatne pod~odborným vedením svojho
+  školiteľa, s~použitím literatúry uvedenej v~zozname.}
 
-\DatumPrehlasenia{10.\,decembra 2016}
+\DatumPrehlasenia{20.\,decembra 2016}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
@@ -155,22 +168,27 @@
 \begin{document}
 
 %%
-%%  Povinne strany (podla normy PrF MU v Brne)
-%% 
+%%  Uvodne povinne strany
+%%
 \VytvorPovinneStrany
-% \VytvorPovinneStranyRigoroznaPraca
+
+%%
+%%  Zadanie
+%%
+%%  Vo finalnej verzii zakomentujtie riadok \SemVlozitZadanie
+
+\SemVlozitZadanie
+
+%%
+%% Cestne prehlasenie a podakovanie
+%%
+\PrehlasenieAPodakovanie
+% \PrehlasenieBezPodakovania
 
 %%
 %%  Abstrakty
 %%
-\AbstraktyNaJednejStrane
-% \AbstraktyNaDvochStranach
-
-%%
-%% Podakovanie a cestne prehlasenie
-%%
-\PodakovanieAPrehlasenie
-% \PrehlasenieBezPodakovania
+\Abstrakty
 
 %%
 %%  Obsah
@@ -180,9 +198,10 @@
 \cleardoublepage
 
 %%
-%%  Zoznam obrazkov
+%%  Zoznam ilustracii
 %%
-\pdfbookmark{Zoznam obrázkov}{Zoznam obrazkov}
+\pdfbookmark{Zoznam ilustrácií}{Zoznam ilustracii}
+\renewcommand*\listfigurename{Zoznam ilustrácií}
 \listoffigures
 \cleardoublepage
 
@@ -194,19 +213,19 @@
 \cleardoublepage
 
 %%
+%%  Zoznam skratiek a znaciek
+%%
+\HlavickaSymbolov
+\pdfbookmark{Zoznam skratiek a značiek}{Zoznam skratiek a znaciek}
+\vloz{skratky-a-znacky}
+\cleardoublepage
+
+%%
 %%  Uvod
 %%
 \HlavickaUvod
 %\pdfbookmark{Úvod}{Uvod}
-\vloz{01-uvod}
-\cleardoublepage
-
-%%
-%%  Prehlad pouzitych symbolov
-%%
-\HlavickaSymbolov
-%\pdfbookmark{Prehľad použitých symbolov}{Prehlad pouzitych symbolov}
-\vloz{02-symboly}
+\vloz{uvod}
 \cleardoublepage
 
 %%
@@ -215,19 +234,19 @@
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter. #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection. #1}{}}
 \HlavickaKapitoly
-\vloz{03-kapitola1}
+\vloz{kapitola1}
 \cleardoublepage
 
 %%
 %%  Kapitola 2: Materialy a metody
 %%
-\vloz{04-kapitola2}
+\vloz{kapitola2}
 \cleardoublepage
 
 %%
 %%  Kapitola 2: Vysledky a diskusia
 %%
-\vloz{05-kapitola3}
+\vloz{kapitola3}
 \cleardoublepage
 
 %%
@@ -235,22 +254,22 @@
 %%
 \HlavickaZaver
 % \pdfbookmark{Záver}{Zaver}
-\vloz{06-zaver}
+\vloz{zaver}
 \cleardoublepage
 
 %%
 %%  Priloha
 %%
-\HlavickaPriloha
-% \pdfbookmark{Príloha}{Priloha}
-\vloz{07-priloha}
-\cleardoublepage
+%\HlavickaPriloha
+%\pdfbookmark{Príloha}{Priloha}
+%\vloz{priloha}
+%\cleardoublepage
 
 %%
 %%  Zoznam pouzitej literatury
 %%
 \renewcommand{\bibname}{Zoznam použitej literatúry}
-\pdfbookmark{Zoznam literatúry}{Zoznam literatury}
+\pdfbookmark{Zoznam použitej literatúry}{Zoznam pouzitej literatury}
 \HlavickaLiteratura
 \bibliography{literatura}{}
 

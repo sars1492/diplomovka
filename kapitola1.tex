@@ -1,6 +1,4 @@
 \chapter{Literárny prehľad}
-\setcounter{page}{1}
-\pagenumbering{arabic}
 
 \section{Definícia pojmov}
 
@@ -191,45 +189,34 @@ práci študoval bibliografické záznamy časopisov z~oblasti geofyziky.  Člá
 týkajúce sa istej témy našiel v~326 časopisoch.  Potom zostupne usporiadal
 časopisy podľa počtu článkov spadajúcich to danej témy.  Nakoniec ich rozčlenil
 do troch skupín tak, aby každá skupina obsahovala zhruba taký istý počet
-článkov.  Vyšlo mu:
-
+článkov:
 \begin{itemize}
 \item prvá skupina obsahovala 9 časopisov s~429 článkami,
 \item druhá skupina obsahovala 59 časopisov s~499 článkami,
 \item tretia skupina obsahovala 258 časopisov s~404 článkami.
 \end{itemize}
-
-Prvú skupinu s~najväčším počtom článkov na časopis pomenoval ako jadro, druhú
-pomenoval ako prvú zónu a tretiu pomenoval ako druhú zónu.
-
-Počty časopisov v~jednotlivých skupinách dal do pomeru:
-
+Prvú skupinu, s~najväčším počtom článkov na časopis, pomenoval \emph{jadro},
+druhú skupinu pomenoval \emph{prvá zóna} a tretiu skupinu pomenoval \emph{druhá
+  zóna}.  Počty časopisov v~jednotlivých skupinách dal do pomeru:
 \begin{equation*}
-\label{eq:bradfordov_zakon1}
-9 : 59 : 258
+9 : 59 : 258 \;,
 \end{equation*}
-
-ktorý sa blíži ku:
-
+ktorý sa blíži k:
 \begin{equation*}
-\label{eq:bradfordov_zakon2}
 9 : (9 \cdot 5) : (9 \cdot 5^2)
 \end{equation*}
-
-Teda pomer:
-
-\begin{equation*}
-\label{eq:bradfordov_zakon3}
-9 : 5 : 5^2
-\end{equation*}
-
-Podľa, ktorého definoval všeobecnú matematickú definíciu ako:
-
+a mohol ho tak zjednodušiť na:
 \begin{equation}
-\label{eq:bradfordov_zakon4}
-1 : n : n^2 : \dotso
+\label{eq:bradfordov_pomer}
+1 : 5 : 5^2
 \end{equation}
 
+Na základe výsledného pomeru (\ref{eq:bradfordov_pomer}) definoval všeobecný
+vzťah (\ref{eq:bradfordov_zakon}), známy ako Bradfordov zákon:
+\begin{equation}
+\label{eq:bradfordov_zakon}
+1 : n : n^2 : \dotso \;,
+\end{equation}
 pričom $n$ sa nazýva Bradfordov násobok a je závislý od konkrétnych
 bibliometrický dát.
 
@@ -410,7 +397,7 @@ z~januára 2016 indexuje viac ako 21\,500 titulov, ktoré zahrňujú:
 \item viac než 360 obchodných časopisov,
 \item viac než 530 knižných edícií,
 \item viac než 7,2 milióna konferenčných príspevkov z~83\,000 konferencií,
-\item viac než 116\,000 knižných titulov, 
+\item viac než 116\,000 knižných titulov,
 \item viac ako 27 miliónov patentových záznamov z~piatich patentových úradov,
 \item články v~tlači (Articles-in-Press) z~viac ako 5\,000 časopisov.
 \end{itemize}
@@ -564,7 +551,7 @@ Ako je z~príkladu zrejmé, $g$-index $\geq$ $h$-index.  Keďže $g$-index berie
 citovaných článkov.  Pokiaľ vedec má napr.\,10 publikácií, ktoré sú spolu 300
 citované, tak jeho maximálny $g$-index je 10 a zvyšných 200 citácií je
 ignorovaných.  Z~toho dôvodu sám Egghe navrhol umelo zvýšiť počet článkov na
-číslo $T$, ktorého druhá mocnina sa blíži ku celkovému počtu citácií. \citep{Egghe2006} 
+číslo $T$, ktorého druhá mocnina sa blíži ku celkovému počtu citácií. \citep{Egghe2006}
 Samozrejme manipulovanie s~dátami nie je dobrá metóda a preto je
 potrebné použiť iný indikátor, ktorý je schopný zachytiť podobné prípady.
 

@@ -1,10 +1,37 @@
+%% ucmplainnat.bst
+%% Copyright 2016 Juraj Szasz <juraj.szasz3@gmail.com>
+%
+% This work may be distributed and/or modified under the conditions of the LaTeX
+% Project Public License, either version 1.3 of this license or (at your option)
+% any later version.  The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX version
+% 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `author-maintained'.
+%
+% This work consists of the following files: diplomovka.tex, 01-uvod.tex,
+% 02-symboly.tex, 03-kapitola1.tex, 04-kapitola2.tex, 05-kapitola3.tex,
+% 06-zaver.tex, 07-priloha.tex, literatura.bib, opakuj.sty, ucmthesis.sty and
+% ucmplainnat.bst.
+%
+% The file `ucmplainnat.bst' was derived from the `csplainnat.bst' BibTeX style
+% for Czech references style (According to CSN ISO 690) available at:
+%   https://github.com/mudrd8mz/csplainnat
+%
+% All the other files above were derived from the Masaryk University, Faculty of
+% Science template available for download at:
+%   http://www.sci.muni.cz/NW/STUD/SablonyPraci/Sablona_Pruvodce_(v1.9).zip
+%
 %% $Id$
-%% File: `ucmplainnat.bst' for use with natbib package to comply standards by
-%% UCM in Trnava (Slovakia).  This is a modification of `csplainnat.bst' for
-%% Czech references style (According to "CSN ISO 690: Bibliograficke
-%% citace. Obsah, forma a struktura").  Some modifications are commented, look
-%% for the keyword 'CHANGE' For more detailed info use svn repository
-%% svn://kraken.pedf.cuni.cz/csplainnat/
+%% File" `ucmplainnat.bst' for use with natbib package
+%% This is a modification of `csplainnat.bst' to comply standards set by
+%% Dept. of Biotechnology, FNS UCM in Trnava (Slovakia).  The `csplainnat.bst'
+%% itself (available at https://github.com/mudrd8mz/csplainnat) is originally a
+%% modification of `plainnat.bst' for Czech references style (According to "CSN
+%% ISO 690: Bibliograficke citace. Obsah, forma a struktura").  Some
+%% modifications are commented, look for the keyword 'CHANGE' For more detailed
+%% info use svn repository svn://kraken.pedf.cuni.cz/csplainnat/
 %%
 %% Original plainnat.bst by Patrick W Daly
 %% Modifications by David Mudr{\'{a}}k mudrd8mz@uxit.pedf.cuni.cz
@@ -242,7 +269,7 @@ FUNCTION {format.names.full}
                 'skip$
               if$
               t "OTHERS" = % CHANGE mudrd8mz 2005-10-12 because of capitalize
-                { " et~al." * }
+                { " a~kol." * } % CHANGE sars99 2016-11-24 my thesis requires a~kol. instead of et~al.
                 { " -- " * t * } % CHANGE mudrd8mz 2005-10-12 : between the last and the one before
               if$
             }
@@ -261,7 +288,7 @@ FUNCTION {format.names.short} %  CHANGE mudrd8mz 2005-10-14 adding more authors 
   s #1 "{ll}" format.name$ 't1 :=
   t1 capitalize 't1 :=
   s #1 "{, f.}{~j.}" format.name$ 't2 :=
-  t1 t2 * " et~al." *
+  t1 t2 * " a~kol." * % CHANGE sars99 2016-11-24 my thesis requires a~kol. instead of et~al.
 }
 
 FUNCTION {format.names}
@@ -315,7 +342,7 @@ FUNCTION {format.issn}
 FUNCTION {format.url}
 { url empty$
     { "" }
-    { new.block "Dostupn{\'{e}}~z: $\texttt{<{" url * "}>}$" * }
+    { new.block "Dostupn{\'{e}}~na internete: $\texttt{<{" url * "}>}$" * }
   if$
 }
 
@@ -354,7 +381,7 @@ FUNCTION {format.full.names}
                 'skip$
               if$
               t "others" =
-                { " et~al." * }
+                { " a~kol." * } % CHANGE sars99 2016-11-24 my thesis requires a~kol. instead of et~al.
                 { ", " * t * } %  CHANGE mudrd8mz 2005-10-12
               if$
             }
@@ -734,11 +761,12 @@ FUNCTION {article}
   format.date "year" output.check
   new.block
   format.title "title" output.check
-  new.block 
+  new.block
   crossref missing$
     {
       "In " journal emphasize * "journal" output.check
       new.sentence
+      format.issn output % CHANGE sars99 2016-11-24 my thesis ISSN right after journal title
       format.date "year" output.check
       eid empty$
         { format.vol.num.pages output }
@@ -752,8 +780,7 @@ FUNCTION {article}
       if$
     }
   if$
-  format.issn output
-  format.doi output
+% format.doi output  % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   note output
@@ -818,7 +845,7 @@ FUNCTION {book}
   if$
   format.edition output
   format.date "year" output.check
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   note output
@@ -836,7 +863,7 @@ FUNCTION {booklet}
   howpublished output
   address output
   format.date output
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   note output
@@ -875,7 +902,7 @@ FUNCTION {inbook}
   if$
   format.edition output
   format.date "year" output.check
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   note output
@@ -908,7 +935,7 @@ FUNCTION {incollection}
       format.chapter.pages output
     }
   if$
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   format.isbn output
@@ -946,7 +973,7 @@ FUNCTION {inproceedings}
       format.pages output
     }
   if$
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   format.isbn output
@@ -1037,7 +1064,7 @@ FUNCTION {proceedings}
   new.sentence
   organization output
   publisher output
-  format.doi output
+ % format.doi output % CHANGE sars99 2016-11-24 there are no DOI in my thesis
   format.url output
   new.block
   format.isbn output
@@ -1169,11 +1196,11 @@ FUNCTION {format.lab.names}
   s #1 "{vv~}{ll}" format.name$
   s num.names$ duplicate$
   #2 >
-    { pop$ " et~al." * }
+    { pop$ " a~kol." * } % CHANGE sars99 2016-11-24 my thesis requires a~kol. instead of et~al.
     { #2 <
         'skip$
         { s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
-            { " et~al." * }
+            { " a~kol." * } % CHANGE sars99 2016-11-24 my thesis requires a~kol. instead of et~al.
             { " -- " * s #2 "{vv~}{ll}" format.name$ * } % CHANGE mudrd8mz 2005-10-12: changed "and"
           if$
         }
