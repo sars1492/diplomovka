@@ -28,5 +28,9 @@
 # Vim temporary files
 *.swp
 
+# Vim backup files
+*~
+.*~
+
 # Generated document
 diplomovka.pdf
