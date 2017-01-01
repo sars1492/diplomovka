@@ -1201,7 +1201,7 @@ FUNCTION {format.lab.names}
         'skip$
         { s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
             { " a~kol." * } % CHANGE sars99 2016-11-24 my thesis requires a~kol. instead of et~al.
-            { " -- " * s #2 "{vv~}{ll}" format.name$ * } % CHANGE mudrd8mz 2005-10-12: changed "and"
+            { " a " * s #2 "{vv~}{ll}" format.name$ * } % CHANGE sars99 2016-12-28 my thesis requires 'a' instead of --
           if$
         }
       if$
