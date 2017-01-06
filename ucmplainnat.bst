@@ -479,12 +479,13 @@ FUNCTION {format.date}
     { "empty year in " cite$ * warning$
        pop$ "" }
     'skip$
-  if$
-  month empty$
-    'skip$
-    { month
-      " " * swap$ *
-    }
+% CHANGE sars99 2016-11-24 my thesis don't use month in date
+%  if$
+%  month empty$
+%    'skip$
+%    { month
+%      " " * swap$ *
+%    }
   if$
   extra.label *
 }

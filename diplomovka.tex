@@ -55,6 +55,7 @@
 \usepackage{natbib}    % balik pre harvardsky styl citacii
 
 \usepackage{gfsporson} % balik pre vysadzanie greckeho textu
+\usepackage{fancyvrb} % balik pre oramovanie verbatim prostredia
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
@@ -98,7 +99,7 @@
 
 \StudijnyObor{Biológia}{Biology}
 
-\PocetStran{vi\,$+$\,45}
+\PocetStran{58}
 
 \KlucoveSlova{bibliometria; scientometria; impakt faktor; citačný index;
   hodnotenie vedeckej práce}{bibliometry; scientometry; impact factor; citation
@@ -147,6 +148,16 @@
 \newcommand{\tm}{\texttrademark}
 \newcommand{\R}{\textsuperscript{\textregistered}}
 
+% Environment for source code
+\newenvironment{source}[1][\scriptsize\bfseries]{
+  \begin{list}{}{
+      \setlength{\leftmargin}{1em}}%
+      \setlength{\itemsep}{0pt}%
+      \setlength{\parskip}{0pt}%
+      \setlength{\parsep}{0pt}%
+      \renewcommand{\baselinestretch}{1.0}%
+  \item#1}
+  {\end{list}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%  Dodatocne nastavenia
@@ -284,7 +295,7 @@
 \renewcommand{\indexname}{Register}
 \HlavickaRegister
 \indexprologue{\noindent Čísla strán vysádzané \emph{kurzívou} odkazujú na pojmy
-  použité v obrázkoch, tabuľkách a vzťahoch.  Čísla strán vysádzané
+  použité v~obrázkoch, tabuľkách a vzťahoch.  Čísla strán vysádzané
   \textbf{tučným písmom} odkazujú na definíciu pojmu.}
 \VytvorRegister
 %%

@@ -1,0 +1,55 @@
+Definícia pojmov: 
+	Informetria:
+		Vzťah disciplín v rámci informetrie \label{fig:fields}
+
+Bibliometrické zákony:
+	Lotkov zakon:
+		 Lotkov zákon 1. vzorec \label{eq:lotka.law}
+		 Lotkov zákon 2. vzorec \label{eq:lotka.law2}
+	Bradfordov zakon:
+		Bradfordov zákon - pomer \label{eq:bradford.ration}
+		Bradfordov zákon - vzorec \label{eq:bradford.law}
+	Zipfov zakon:
+		Zipfov zákon vzorec \label{eq:zipf_law}
+
+Citačné registre:
+	Web of Science \label{sec:wos}
+	Scopus \label{sec:scopus}
+	Google Scholar \label{sec:gs}
+
+Citačné indikátory:
+	\label{sec:indicators}
+	Prehľad citačných indikátorov
+		Tabuľka \label{tab:indicators.review}
+	Impakt faktor
+		sekcia \label{sec:if}
+		vzorec \label{eq:if}
+	Scimago
+		\label{sec:SJR}
+	CiteScore
+		sekcia \label{sec:citescore}
+		vzorec \label{eq:citescore}
+	SNIP
+		\label{sec:SNIP}
+
+	h-index
+		sekcia \label{sec:h-index}
+	g-index
+		sekcia \label{sec:g-index}
+  e-index
+		sekcia \label{sec:e-index}
+  súčasný index
+		sekcia \label{sec:hc-index}
+		výpočet skóre na hc-index \label{eq:hc-index.score}
+  AW-index
+		sekcia \label{sec:aw-index}
+		AR-index vzorec \label{eq:ar-index}
+	Invidiualny h-index
+		sekcia \label{sec:hi-index}
+		vzorec \label{eq:hi-index}
+  PoP invidiualny h-index
+		sekcia \label{sec:hinorm}
+  Multiautorky h-index
+		sekcia \label{sec:hm-index}
+		vzorec \label{eq:hm-index}
+		Efektívny rang \label{eq:hm-index.reff}

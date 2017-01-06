@@ -1,175 +1,382 @@
 \chapter{Materály a metódy}
 
-\section{Ciele}
-
-Cieľom tejto práce je urobiť scientimetrickú analýzu FPV UCM v~Trnave.  Tento
-cieľ sme rozdelili do nasledujúcich krokov:
-
-\begin{enumerate}
-\item Získať bibliometrické záznamy z~dvoch najväčších citačných databáz (WoS a
-  Scopus) pre práce, v~ktorých má aspoň jeden spoluautor príslušnosť
-  (ang.\,\emph{affiliation}) k~Fakulte prírodných vied Univerzity sv. Cyrila a
-  Metoda v~Trnave.
-\item Jednotlivé záznamy rozdeliť podľa príslušnosti ku jednotlivým katedrám
-  Fakulty prírodných vied Univerzity Cyrila a Metoda v~Trnave.
-\item Urobiť kvantitatívnu a citačnú analýzu vedeckých publikácií pracovníkov
-  Fakulty prírodných vied Univerzity Cyrila a Metoda v~Trnave.
-\end{enumerate}
-
-
 \section{Získanie bibliometrických dát}
 
-\subsection{Citačný register Scopus}
+\subsection{Celej fakulty}
+\label{sec:mine.department}
 
-Prístup k~citačnému indexu Scopus (17.\,5.\,2016) bol umožnený prostredníctvom
-webovej stránky \emph{Centra Vedecko-Technických Informácií
-  SR}\footnote{\url{http://www.cvtisr.sk}}, pretože Scopus nie je voľne
-prístupná služba.  Na stránkach Centra Vedecko-Technických Informácií SR sme sa
-prihlásili a cez službu E-ZDROJE sme získali prístup na
-Scopus\footnote{\url{https://ezproxy.cvtisr.sk:2615/}}.
+Pre potreby tejto práce sme získali bibliografické údaje, ktorých aspoň jeden z
+autorov má príslušnosť (ang. \emph{affiliation}) k FPV UCM v~Trnave. Na túto
+analýzu sme nepoužili GS, pretože neumožňuje vyhľadávať podľa inštitúcie.
 
-Webové nástroje Scopusu umožňujú vyhľadávať záznamy podľa inštitúcie (sekcia
-Affiliation search).  Po zadaní kľúčového slova \uv{Methodius} systém našiel iba
-jednu položku: \uv{University of SS Cyril and Methodius, Trnava}, ako je
-zobrazené na Obrázku~\ref{fig:scopus.institutionlist}.
+Bibligrafické záznamy FPV UCM sme získali z citačných registrov
+Wos a Scopus zo dňa 21.\,decembra~2016.  Prístup k~obom citačným registrom bol
+umožnený prostredníctvom webovej služby \emph{Centra Vedecko-Technických
+Informácií SR}\footnote{\url{http://www.cvtisr.sk}} (ďalej len CVTI SR).  Webové nástroje Scopusu
+umožňujú vyhľadávať záznamy podľa inštitúcie (sekcia \emph{Affiliation search}).
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{scopus02-cut.jpg}
-  \caption{Scopus -- zoznam inštitúcií.}
-  \label{fig:scopus.institutionlist}
-\end{figure}
+Následne sme fitrovali publikácie, ktoré patria do FPV, pretože Scopus
+neumožňuje zobraziť záznamy podľa príslušnosti k fakulte danej inštitúcie.
+Vyňali sme (\texttt{EXCLUDE}) publikácie podľa vedeckých oblastí
+(\texttt{SUBJAREA}), ktoré nesúvisia s~činnosťou FPV:
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{scopus03-cut.jpg}
-  \caption{Scopus -- informácie o~inštitúcii.}
-  \label{fig:scopus.institutioninfo}
-\end{figure}
-
-Kliknutím na položku sa zobrazí stránka s~bližšími informáciami
-(Obrázok~\ref{fig:scopus.institutioninfo}), ako sú adresa, celkový počet
-dokumentov: 471, celkový počet autorov: 28, zoznam spoluautorských inštitúcii,
-zoznam časopisov, v~ktorých boli publikované práce a koláčový graf rozdelenia
-záznamov na vedecké oblasti podľa Scopusu.
-
-Kliknutím na číslo 471 (počet záznamov dokumentov) sa zobrazí stránka so
-zoznamom dokumentov ako ukazuje Obrázok~\ref{fig:scopus.documentlist}.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{scopus04-cut.jpg}
-  \caption{Scopus -- zoznam dokumentov.}
-  \label{fig:scopus.documentlist}
-\end{figure}
-
-Keďže nástroje Scopusu neumožňujú vyhľadávať podľa fakulty, alebo dokonca
-katedry (ang.\,\emph{department}), bibliografické záznamy Fakulty prírodných
-vied sme získali filtrovaním samotných záznamov.  Z~počiatku sme vylúčili
-vedecké oblasti (\emph{Subject Area}), ktoré nesúvisia s~činnosťou FPV UCM:
 \begin{itemize}
-\item \emph{Art and Humanites:} umenie a humanitné vedy,
-\item \emph{Social Sciences:} sociálne vedy,
-\item \emph{Business, Management and Accounting:} biznis, manažment a
-  účtovníctvo,
-\item \emph{Psychology:} psychológia,
+  \item \emph{Art and Humanites} (\texttt{ARTS}): spoločenské a humanitné vedy,
+  \item \emph{Social Sciences} (\texttt{SOCI}): sociálne vedy,
+  \item \emph{Economics} (\texttt{ECON}): ekonómia,
+  \item \emph{Decision Science} (\texttt{DECI}): rozhodovacie vedy,
 \end{itemize}
-a publikácie z~roku 1991, pretože v~tomto roku UCM ešte nebola založená.  Počet
-záznamov sa znížil na 356.
+a časopisov (\texttt{EXACTSRCTITLE}), v ktorých pracovníci FPV nepublikovali:
 
-Ďalším krokom bolo vylúčenie článkov, ktorých autori nepôsobia v~rámci Fakulty
-prírodných vied podľa Tabuľky~\ref{tab:scopus.exauthors}.  Počet záznamov sa tak
-znížil na 329.
+\begin{itemize}
+  \item \emph{Pediatrika}, 
+  \item \emph{Serbian Journal of Managment}, 
+  \item \emph{Wound Repair and Regeneration}.
+\end{itemize}
+
+Zo zoznamu sme ešte ostránili všetky publikácie  prof. MUDr.\,Jozefa
+Rovenského,\,DrSc.  (\texttt{AU-ID}: \uv{Rovenský, Jozef A.} a \uv{Rovenský,
+Jozef}), pretože je pracovníkom Inštitútu fyzioterapie, balneológie a liečebnej
+rehabilitácie UCM a publikácie z roku (\texttt{PUBYEAR}) 1991, pretože v tom
+období UCM ešte nebola založená, teda sme to zhodnotili ako chybu v databázi.
+
+Výsledný vyhľadávací reťazec (Obrázok \ref{fig:scopus.query}), sme zadali (po
+odstránení zalomenia riadku) do poľa \emph{search} na webových stránkach Scopus
+a získali sme zoznam publikácií FPV UCM v~Trnave (obsahuje 360 záznamov). Ten
+sme stiahli, pomocou fukncie \emph{Export all} (Zašktli sme formát
+CSV\footnote{Formát textového súboru, ktorý obsahuje tabuľku dát. Jednotlivé
+riadky súboru zodpovedajú riadkom tabuľky a položky jednotlivých stĺpcoch sú
+oddelené čiarkou a prípadne ohraničené úvodzovkami.  Názov formátu pochádza
+z~ang.  \emph{comma-separated values}} a položku \emph{Citation information
+only} \footnote {Použitie iných možnosti bráni otvoreniu CSV súboru v
+programe PoP \citep{Harzing2011}}).  Z dôvodu, že exportovaný súbor zo Scopusu má
+iné poradie položiek ako ten z programu PoP, sme ešte súbor otvorili v programe
+PoP a v~ňom exportovali do formátu CSV.
+
+
+\begin{figure}
+  \footnotesize
+  \begin{Verbatim}[frame=single]
+    AF-ID ( "University of SS Cyril and Methodius Trnava"   60021677 )  AND
+      ( EXCLUDE ( SUBJAREA ,  "ARTS" ) )  AND
+      ( EXCLUDE ( PUBYEAR ,  1991 ) )  AND
+      ( EXCLUDE ( SUBJAREA ,  "ECON" ) )  AND
+      ( EXCLUDE ( SUBJAREA ,  "SOCI" ) )  AND
+      ( EXCLUDE ( EXACTSRCTITLE ,  "Serbian Journal Of Management" ) )  AND
+      ( EXCLUDE ( SUBJAREA ,  "DECI" ) )  AND
+      ( EXCLUDE ( EXACTSRCTITLE ,  "Wound Repair And Regeneration" ) )  AND
+      ( EXCLUDE ( AU-ID ,  "Rovenský, Jozef A."   55356120400 )  OR
+      EXCLUDE ( AU-ID ,  "Rovenský, Jozef"   56351633900 ) )  AND
+      ( EXCLUDE ( EXACTSRCTITLE ,  "Pediatrika" ) )
+  \end{Verbatim}
+  \vspace*{-4mm}
+  \caption[Vyhľahávaci reťazec pre celú fakultu pre Scopus]{Vyhľadávací reťazec
+  pre Scopus na zobrazenie zoznamu všetkých publikácii FPV UCM v Trnave.
+  Z celej fakulty (\texttt{AF-ID})
+  sme vyčlenili (\texttt{EXCLUDE}) podľa vedeckých oblastí (\texttt{SUBJAREA}):
+  spoločenské a humanitné vedy (\texttt{ARTS}), sociálne vedy (\texttt{SOCI}),
+  ekonómia (\texttt{ECON}), rozhodovacie vedy (\texttt{DECI}) a časopisov
+  (\texttt{EXACTSRCTITLE}).  Odstrálili sme práce prof. MUDr.\,Jozefa
+  Rovenského,\,DrSc.  (\texttt{AU-ID}, ktorý pracuje na Inštitúte fyzioterapie,
+  balneológie a liečebnej rehabilitácie a publikácie z roku (\texttt{PUBYEAR})
+  1991, kedy fakulta ešte nebola založená. Pre zadanie reťazca je nutné
+  odstrániť zalomenia riadkov.}
+  \label{fig:scopus.query}
+\end{figure}
+
+
+Na webové stránky WoS sme prispupovali skrz portál CVTI SR. Nástroje WoS nám
+neumožnili vyhľadávať podľa inštitúcie, ako v nástroje Scopusu, preto sme boli
+nútený hľadávať podľa adresy inštitúcie. Na webových stránkach WoS sme do poľa
+pre hľadanie podľa adresy inštitúcie zadali: \uv{methodius*} a \uv{Trnava},
+pretože v publikáciách sa vyskytujú rôzne varianty názvu univerzity (napr. SS
+Cyril \& Methodius Trnava, alebo Sv. Cyril and Methodius Trnava).  Aby sme
+získali iba publikácie FPV, tak zoznam publikácií sme zúžili (použitím funkcie
+\emph{Refine}) na záznamy z vedy a techniky (\emph{SCIENCE TECHNOLOGY}) a
+odstránili sme publikácie vedeckých oblastí mimo odborného záberu FPV:
+
+\begin{itemize}
+  \item \emph{ORTHOPEDICS}: ortopédia,
+  \item \emph{PEDIATRICS}: pediatria, 
+  \item \emph{RHEUMATOLOGY}: reumatológia,
+  \item \emph{SOCIAL SCIENCES OTHER TOPICS}: iné oblasti sociálnych vied,
+  \item \emph{SOCIOLOGY}: sociológia,
+  \item \emph{SURGERY}: chirurgia.
+\end{itemize}
+
+\begin{figure}
+  \footnotesize
+  \begin{Verbatim}[frame=single]
+    ADDRESS: (methodius* AND Trnava) Refined by: RESEARCH DOMAINS: 
+      ( SCIENCE TECHNOLOGY ) AND [excluding] RESEARCH AREAS: 
+      ( SOCIOLOGY OR SURGERY OR SOCIAL SCIENCES OTHER TOPICS 
+      OR ORTHOPEDICS OR PEDIATRICS OR RHEUMATOLOGY ) 
+
+    Timespan: 2000-2017.
+    Search language=Auto
+  \end{Verbatim}
+  \vspace*{-4mm}
+  \caption[Popis kritérií vyhľadávania vo WoS pre FPV]{Popis vyhľadávacích
+  krítérií, podľa ktorých sme vyhľadávali vo Web of Science všetky publikácie
+  FPV UCM v~Trnave.  Hľadali sme podľa adresy inštitúcie (\texttt{ADDRESS}) so zameraním
+  na vedu a technológiu (\texttt{SCIENCE TECHNOLOGY}) a vylúčili sme vybrané
+  oblasti výskumu -- sociológiu, chirurgiu, iné oblasti sociálnych vied,
+  ortopédiu, pediatriu, a reumatológiu.}
+  \label{fig:wos.query}
+\end{figure}
+
+
+Počet výsledkov hľadania sme zúžili na 315 záznamov. Pre názornosť uvádzame
+popis kritérií hľadania (Obrázok \ref{fig:wos.query}), ktorý je zobrazený na
+webových stránkách WoS.  V zozname sme našli 4 publikácie, ktoré nenapísali
+pracovníci FPV.  Vyňatie prebeho tak, že pomocou funkcie \emph{Marked list} sme
+označili všetky publikácie okrem: 
+
+\begin{itemize} 
+  \item \emph{Left-handedness preferences, functions and dependence on neurotic
+    behavior limited by specific social dimensions},
+    %príslušnosť patrí  katedre Psychológie, Filozofická fakulta UCM,
+  \item \emph{Intensification of menopausal symptoms among female inhabitants
+    of East European countries}, 
+    %príslušnosť patrí Inštitútu fyzioterapie, balneológie a liečebnej
+    %rehabilitácie,
+  \item \emph{FAMILY CARE AS THE MOST SIGNIFICANT SYSTEM BARRIER TO WOMEN'S
+    POLITICAL ACTIVITIES IN SLOVAKIA ON THE EXAMPLE OF MUNICIPAL
+    FEMALE-MAYORS},
+    %príslušnosť patrí Fakulte sociálnych vied UCM,
+  \item \emph{Treatment of lupus-nephritis and its course through the
+    maintenance therapy},
+    %príslušnosť patrí Inštitútu fyzioterapie, balneológie a liečebnej
+    %rehabilitácie,
+\end{itemize}
+
+Následne sme zoznam publikácii uložený v \emph{Marked list} stiahli ako textový
+súbor s použitím funkcie \emph{Save to Other Formats} (uložiť do iných
+formátov) a v okne \emph{Send to File} sme zvolili položku vo vyskakujúcom menu
+\emph{Tab-delimited (Win, UTF-8)}. Na konverziu do formátu CSV je potrebné
+súbor otvoriť v programe PoP \citep{Harzing2011} a v ňom ho exportovať vo~formáte CSV.
+
+\subsection{Jednotlivých pracovníkov fakulty}
+
+Na scientometrickú analýzu inštitúcie je vhodnejšie použiť bibliografické
+informácie všetkých publikácií pracovníkov danej inštitúcie, nie len tých
+publikácií, ktoré boli napísané v rámci danej inštitúcie. Pretože ak vedecký
+pracovník s bohatou vyskumnou minulosťou nastúpi na nové pracovisko, prinesie
+zo sebou skúsenosti a znalosti, čím zvýši kredit danej inštitúcie
+\citep{Altanopoulou2012}. 
+
+Postupovali sme podľa prác \citet{Kazakis2014a} a
+\citet{Kazakis2014b,Kazakis2015}.  Z webových stránok FPV UCM v~Trnave
+\footnote{\url{http://fpv.ucm.sk/sk/}} a webových stránok jednotlivých katedier
+(Obrázok \ref{tab:department.list} sme stiahli mená vedecký pracovníkov FPV UCM v~Trnave
+v decembri 2016.
+
+\begin{table}
+\centering\small
+\caption[Zoznam katedier FPV]{Zoznam katedier FPV a ich oficiálných skratiek, s~odkazmi na webové stránky}
+\label{tab:department.list}
+\begin{tabular}{lll}
+  \toprule\noalign{\vspace{.3ex}}
+  Názov katedry                   & Skr.    & Webová stránka\\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}
+  Katedra biológie                & KB      & {\footnotesize \url{http://kb.fpv.ucm.sk/}} \\[0.5ex]
+  Katedra biotechnológií          & KBt     & {\footnotesize \url{http://katedra-biotechnologii.webnode.sk/}}\\[0.5ex]
+  Katedra chémie                  & KCh     & {\footnotesize \url{http://kchfpv.weebly.com/}} \\[0.5ex]
+  Katedra ekochémie               & KER     & {\footnotesize \url{http://ker.fpv.ucm.sk/}} \\[-0.25ex]
+  a rádiobiológie                 &         &                                             \\ [0.5ex]
+  Kat. aplikovanej informatiky    & KAIM    & {\footnotesize \url{http://ki.fpv.ucm.sk/}} \\[-0.25ex]
+  a matematiky                    &         &                                              \\[0.5ex]
+  Katedra biofyziky               & KBf     & {\footnotesize \url{http://fpv.ucm.sk/sk/katedra-biofyziky.html}} \\[0.5ex]
+  Katedra odbornej jazykovej      & KOIP    & {\footnotesize \url{http://kaj.fpv.ucm.sk/}} \\[-0.25ex]
+  prípravy                        &         &                                              \\[0.5ex]
+  \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+  \caption[Rozdelenie pracovníkov do jednotlivých katedier]{Rozdelenie
+  pracovníkov, ktorých bibliometrické dáta sme použili v tejto práci, do
+  jednotlivých katedier. Zoznam úplnych názvov katedier sú uvedené v Tabuľke
+  \ref{tab:department.list}.} 
+  \label{tab:academics.list}
+\centering\small
+\begin{tabular}{lllll}
+  \toprule\noalign{\vspace{.3ex}}
+   Katedra& \multicolumn{2}{c}{Zoznam pracovníkov}                  \\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}
+  KB   & prof. RNDr. Anna Preťová, DrSc. &  Mgr. Ľubica Uváčková, PhD.      \\ 
+       & prof. RNDr. Juraj Krajčovič, CSc.& RNDr. Zuzana Šramková, PhD.       \\
+       & doc. Ing. Andrej Godány, CSc. &    RNDr. Lenka Tišáková, PhD.     \\
+       & doc. Ing. Štefan Janeček, DrSc.&   RNDr. Barbora Vidová, PhD.      \\
+       & doc. RNDr. Milan Seman, CSc. &     Mgr. Lenka Blažeková, PhD.    \\
+       & doc. RNDr. Peter Siekel, CSc. &    Mgr. Lenka Raabová, PhD.     \\
+       & Ing. Eva Ürgeová, PhD. &    \\ [2ex]
+  KBt  & prof. Ing. Stanislav Miertuš, DrSc.  & RNDr. Daniela Chmelová, PhD.            \\
+       & prof. RNDr. Ján Kraic, PhD.          & Mgr. Daniel Mihálik, PhD.            \\
+       & doc. RNDr. Miroslav Ondrejovič, PhD. & Mgr. Katarína Lenghartová, PhD.            \\
+       & doc. Ing. Stanislav Šilhár, CSc.     & RNDr. Jana Lomenová, PhD.            \\
+       & doc. RNDr. Ján Rafay, CSc.           & Ing. Tibor Maliar, PhD.            \\
+       & RNDr. Michaela Havrlentová, PhD.     &            \\[2ex]
+  KCh  & prof. Ing. Roman Boča, DrSc. & doc. Ing. Ján Reguli, CSc. \\
+       & prof. Ing. Ernest Beinrohr, DrSc. & Mgr. Peter Nemeček, PhD. \\
+       & prof. RNDr. Jaromír Pastorek, DrSc & RNDr. Cyril Rajnák, PhD. \\
+       & prof. Ing. Oľga Križanová, DrSc. & RNDr. Zita Tokárová, PhD. \\ 
+       & prof. Ing. Jozef Lehotay, DrSc. & RNDr. Beáta Vranovičová, PhD. \\
+       & doc. Ing. Dušan Valigura, PhD. & Ing. Jozef Miklovič, PhD. \\
+       & doc. Mgr. Renata Gašparová, PhD. & Ing. Ján Rimarčík, PhD. \\
+       & doc. RNDr. Ján Titiš, PhD. & Ing. Mária Maliarová, PhD. \\
+       & doc. Ing. Jozef Sokol, CSc. & Ing. Dáša Kružlicová, PhD. \\ [2ex]
+  KER  & prof. Ing. Jozef Augustín, DrSc. & Mgr. Ildikó Matušíková, PhD. \\
+       & doc. Dr. habil RNDr. Juraj Lesný, PhD. & RNDr. Miroslav Horník, PhD. \\
+       & doc. Ing. Stanislav Hostin, PhD. &  RNDr. Anna Koprdová, PhD.\\
+       & doc. RNDr. Martin Pipíška, PhD. &  \\[2ex]
+  KAIM & prof. Ing. Vladimír Kvasnička, DrSc. & PaedDr. Miroslav Ölvecký, PhD. \\
+       & prof. RNDr. Jiří Pospíchal, DrSc & Ing. Miroslav Beňo, PhD. \\
+       & doc. RNDr. PaedDr. Ladislav Huraj, PhD. & Ing. Darja Gabriška, PhD. \\
+       & doc. Ing. Michal Čerňanský, PhD. & Ing. Jana Jurinová, PhD.  \\
+       & doc. Ing. Branislav Hrúz, PhD. & Ing. Marek Šimon, PhD. \\
+       & doc. Ing. German Michaľčonok, CSc. & Ing. Andrea Vadkertiová, PhD. \\
+       & RNDr. Iveta Dirgová Luptáková, PhD. & Mgr. Marián Hosťovecký, PhD. \\
+       & RNDr. Jaroslava Trubenová, PhD. &  \\[2ex]
+  KBf  & prof. Ing. Ivan Štich, DrSc.  & doc. RNDr. Ľubica Lacinová, DrSc. \\
+       & doc. Mgr. Alžbeta Marček Chorvátová, DrSc. & RNDr. Júlia Horilová, PhD. \\
+       & doc. RNDr. Štefan Húšťava, PhD. & Mgr. Michal Žitňan, PhD. \\[2ex]
+  KOJP & Mgr. Helena Zárubová & Mgr. Juraj Miština, PhD. \\[0.5ex]
+  \bottomrule
+\end{tabular}
+\end{table}
+
+Podľa Tabuľky \ref{tab:academics.list} sme vyhľadali záznamy jednotlivých
+pracovníkov FPV z citačných registrov Scopus, Web of Science a Google Scholar.
+Dáta sú z decembra 2016.
+
+Databáza citačného register Scopus má špeciálnu indentitu pre autorov
+(\texttt{AU-ID}).  Pomocou celého mena autora, priezviska, alebo jeho
+príslušnosti (ang.  \emph{Affiliation}) je možné vyhľadať konkrétneho vedca a
+získať iba jeho bibliometrické informácie. Niektorých prípadoch mal jeden
+akademik niekoľko \texttt{AU-ID} (napr. Godány mal až tri). V taktomto prípade
+sme stiahli bibliografické záznamy všetkých identít do súborov vo formáte CSV a
+súbory spojili do jedného súboru.  Vďaka  \texttt{AU-ID} Scopus dokáže najsť
+autora bezohľadu na to, či meno je zadané s diakritikou, alebo nie.  Napriek
+tomu sa vyskytli ľudia, ktorých Schopu nenašiel (viď Tabuľka
+\ref{tab:missing.author}).
+
+WoS umožňuje vyhľadávať autorov len podľa priezviska a nemá taký prepracovaný
+systém uloženej identity autora ako Scopus. Z toho dôvodu, ak meno pracovníka
+obsahuje diakritiku, tak sme v rozšírenom výhľadávaní hľadali rôzne varianty s
+chýbajúcom diakritikov. Následne sme museli zoznam publikácie triediť podľa
+iniciál, pretože väčšina publikácií neobsahuje celé mená autorov. V prípade
+vyskytu rôznych autorov s rovnakým priezviskom a inicál sme museli zoznam
+triediť podľa vednej oblasti. Nakoniec sme zoznam porovnali z dátami zo Scopusu
+toho istého autora a články, ktoré sa vyskytovali v Scopuse, ale nie WoS sme
+hľadali podľa nadpisu vo WoS. Všetky relevantné záznamy sme uložili do
+\emph{Marked list} a uložili ako iný formát (funkcia \emph{Save to Other
+Formats}). Stiahnutý textový súbor sme otvorili v programe PoP a v ňom sme
+exportovali do CSV formátu.
+
+Vo GS sme vyhľadávali priamo v programe PoP. Vytvorili sme nový dopyt pre
+vyhľadávanie v GS (\emph{New Google Scholar Query}). Do poľa  \emph{Authors}
+sme zadali meno pracovníka a spustili sme vyhľadávania. Pretože program
+neumožňuje zadať alternatívy mena ako WoS, urobili sme niekoľko hľadaní vždy s
+inou variantou mena (napr. s diakritikou, bez diakritiky, s krsným menom,
+inicálmi).  Ak meno sa bežne vyskytuje v publikáciach (napr. Seman), PoP
+vyhľadal maximálne 1\,000 záznamov, pretože GS neumožnuje zobraziť viacej
+výsledkov. Tak sme museli vložiť do poľa \uv{všetký slová} (ang. \emph{All of
+the words}) reťazce, ktoré bližšie určujú hľadané pracovníka ako napr.
+\emph{Slovakia}. 
+
+Z podstaty fungovania GS je zrejmé, že výsledný zoznam bude obsahovať veľa
+balastu\footnote{Ako napr. záznamy iných autorov s podobných, alebo rovnakým
+priezviskom a iniciálmi; záznamy, ktoré vôbec nesúvisia s dopytom; duplicidné
+záznamy, nekopletné záznamy; nezmyselné záznamy.} (viď Kapitolu \ref{sec:gs}).
+Preto obsah CSV súbor z PoP bolo ešte dodatočne pretriediť a upraviť. Tento fakt uľahčovalo 
+to, že väčšina záznamov obsahovala internetový odkaz na zdroj. Ale aj tak
+bolo nutné doplniť chýbajúcich autorov (GS ukazuje max 5 autorov) a roky.
+
+Práce niektorých pracovníkov FPV sa nám vôbec nepodarilo vyhľadať. Príčinou
+bola ich nedávna zmena mena po svadbe (viď. \ref{tab:rename.author} Našťastie
+pôvodné priezivsko sme dohľadali z akademickej emailovej adresy, ktorá bola
+uverejnená na internetových stránkach katedry.
 
 \begin{SCtable}
 \centering\small
-\caption{Scopus -- vylúčení autori.}
-\label{tab:scopus.exauthors}
-\begin{tabular}{lc}
+  \caption[Mená pracovníkov FPV, u ktorých došlo k zmene priezivska] {Zoznam
+  pracovníkov FPV, ku ktorých došlo k zmene priezivska. Pôvodné priezivsko sme
+  dohľadali z akademickej emailovej adresy.}
+\label{tab:rename.author}
+\begin{tabular}{ll}
   \toprule\noalign{\vspace{.3ex}}
-  Meno autora                & Afiliácia \\[0.3ex]
+  Súčasné meno    & Pôvodné meno  \\[0.3ex]
   \midrule\noalign{\vspace{.5ex}}
-  Bezáková, Zuzana           & -- \\
-  Ferriero, Giorgio          & -- \\
-  Halenár, Robert            & -- \\
-  Jačala, Jozef              & -- \\
-  Mura, Ladislav             & -- \\[1ex]
-  Nováková, Renata           & -- \\
-  Rovenský, Jozef            & -- \\
-  Rovenský, Jozef A.         & -- \\
-  Trnka, Andrej              & -- \\
-  Vicente, Romana Albaladejo & -- \\[0.5ex]
-  \bottomrule
+  Jana Lomenová & Jana Viskupičová \\
+  Zita Tokárová & Zita Puterová \\
+  Anna Koprdová & Anna Sunovská \\[0.5ex]
+  \bottomrule 
 \end{tabular}
 \end{SCtable}
 
-Vytriedené záznamy sme uložili do formátu CSV\footnote{\uv{Comma-separated
-    values} -- textový formát dát v~ktorom sú jednotlivé položky oddelené
-  čiarkami.  Typická koncovka súboru vo formáte CSV je \texttt{.csv}} na
-scientometrickú.  Typickou koncovkou súborov analýzu pomocou \textbf{Export
-  $\rightarrow$ CSV (Excel), Citation Information Only} (iba citácie) ako je
-ukázané na Obrázku~\ref{fig:scopus.export}.
+\begin{SCtable}
+\centering\small
+  \caption[Mená pracovníkov FPV, pre ktorých sa nám nepodarilo získať všetky
+  dáta]{Zoznam Pracovníkov FPV, pre ktorých sa nepodarilo získať z niektorých
+  citačných registrov žiadne dáta.  V posledných troch sĺpcoch je uvedený počet
+  publikácií, ktoré sa nám podarilo získať.}
+\label{tab:missing.author}
+\begin{tabular}{lcccc}
+  \toprule\noalign{\vspace{.3ex}}
+  Meno pracovníka            & Katedra & Scopus & WoS$^\dagger$ & GS$^\ddagger$ \\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}
+  Lenka Raabová              &  KB  &  1     & --  & 3  \\
+  Miroslav Beňo              & KAIM & --     & --  & 3  \\
+  Jana Jurinová              & KAIM & --     & 2   & 11 \\
+  Iveta Dirgová Luptáková    & KAIM & 1      & --  & 6  \\
+  Jaroslava Trubenová        & KAIM & --     & 3   & 6  \\
+  Andrea Vadkertiová         & KAIM & --     & 1   & 6  \\[0.5ex]
+  \bottomrule \\[-2ex]
+  \multicolumn{5}{l}{\footnotesize $^\dagger$ Web of Science; $^\ddagger$ Google Scholar} 
+\end{tabular}
+\end{SCtable}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{scopus10-cut.jpg}
-  \caption{Scopus -- export dát do súboru.}
-  \label{fig:scopus.export}
-\end{figure}
 
+\subsection{Časopisov}
 
-\subsection{Citačný register WoS}
+Obsahom tejto práce je hodnotenie fakulty na základe časopisov, v ktorých jej
+publikujú jej pracovníci. Vedecké časopisy je možné hodnotiť na základe
+citačných indikátorov (viď Tabuľka \ref{tab:indicators.review}). Toto
+hodnotenie vykonávajú medzinárodné ištitúcie (ako ISI, alebo SciMago) pre
+spektrum svetových a domácich časopisov. 
 
-Do citačného registra WoS sme pristupovali cez portál \emph{Centra
-  Vedecko-Technických Informácií SR}\footnote{\url{http://www.cvtisr.sk}}.
-Citačné záznamy sme získali zo stránok
-WoS\footnote{\url{https://ezproxy.cvtisr.sk:2774/}} (17.\,5.\,2016).  Pretože
-vyhľadávací systém webového rozhrania neumožňuje vyhľadávať konkrétnu inštitúciu
-ako to je v~prípade Scopusu, hľadali sme podľa adresy (ADRESS) \uv{Trnava} a
-\uv{Methodius*} (pre vyňatie publikácií Trnavskej Univerzity v~Trnave) ako
-ukazuje Obrázok~\ref{fig:wos.search} a Obrázok~\ref{fig:wos.documentlist}.
+Zistili sme hodnoty impakt faktoru (viď podkapitola \ref{sec:if}, SciMago rang
+časopisu, (viď podkapitola \ref{sec:sjr}), CiteScore (viď podkapitola
+\ref{sec:citescore}) SNIP (viď podkapitola \ref{sec:snip}) pre všetky časopisy
+z bibliografických záznamov, ktorých proces získavania popisujeme v podkapitole
+\ref{sec:mine.department}.  Hodnoty pre IF sme získali z oficiálnych
+internetových stránok (viď Tabuľka \ref{tab:indicators.web}).  Zoznam časopisov
+je uvedený ďalej kapitole (viď Tabuľka \ref{tab:journals.results}).  V prípade
+ak daný časopis sme na oficiálnych stránkach nenašli, použili sme web
+ResearchGate\footnote{\url{https://www.researchgate.net/}}.  Ak impakt faktor
+pre daný časopis nenašli nikde na internete, tak sme položku v tabuľke
+\ref{tab:journals.results} nechali práznu.  Ak hodnoty ostatných indikátorov
+sme nenašli na  oficiálnych stránkách, tak sme položku nechali práznu.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{wos01-cut.jpg}
-  \caption{WoS -- vyhľadávanie záznamov.}
-  \label{fig:wos.search}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{wos02-cut.jpg}
-  \caption{WoS -- zoznam dokumentov, ktoré sú výsledkom vyhľadávania
-    z~Obrázku~\ref{fig:wos.search}.}
-  \label{fig:wos.documentlist}
-\end{figure}
-
-Filtrovanie výsledkov do domény vedy a techniky (SCIENCE AND TECHNOLOGY) znížilo
-počet záznamov na 318.  Odstránenie záznamov z~vedeckých oblastí (Research
-Areas): Sociológia (SOCIOLOGY), Iné sociálne vedy (SOCIAL SCIENCES OTHER TOPICS)
-a biznisu (BUSINESS ECONOMICS) ukazuje Obrázok~\ref{fig:wos.areaselection}.  Na
-koniec sme definovali krajinu (Countries/Territories) ako Slovensko (SLOVAKIA),
-čo nám dalo konečný počet záznamov 293.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{wos04-cut.jpg}
-  \caption{WoS -- výber vedeckých oblastí.}
-  \label{fig:wos.areaselection}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{wos06-cut.jpg}
-  \caption{WoS -- export dát do súboru.}
-  \label{fig:wos.export}
-\end{figure}
-
-Obrázok~\ref{fig:wos.export} zobrazuje ako sme tieto záznamy pomocou funkcie
-\uv{save to other formats} uložili do csv súboru.  Pre uloženie všetkých
-záznamov je potrebné zvoliť rozsah (\uv{1 to 293}) a formát (\emph{Author},
-\emph{Title}, \emph{Source}).
-
+\begin{SCtable}
+\centering\small
+  \caption[Webové stránky citačných indikátorov na hodnotenie časopisov]
+  {Zoznam citačných indikátorov na hodnotenie časopisov, s~odkazmi na oficiálne
+  webové stránky}
+\label{tab:indicators.web}
+\begin{tabular}{ll}
+  \toprule\noalign{\vspace{.3ex}}
+  Názov citačného indikátoru      & Webová stránka\\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}
+  impakt faktor                   & {\footnotesize \url{http://www.scijournal.org}} \\[0.5ex]
+  SciMago rang časopisu           & {\footnotesize \url{http://www.scimagojr.com}}\\[0.5ex]
+  CiteScore                       & {\footnotesize \url{https://journalmetrics.scopus.com}} \\[0.5ex]
+  SNIP                            & {\footnotesize \url{http://www.scimagojr.com}} \\[-0.25ex]
+                                  & {\footnotesize \url{https://journalmetrics.scopus.com}} \\[0.5ex]
+  \bottomrule
+\end{tabular}
+\end{SCtable}
 
 \section{Spracovanie bibliometrických dát}
 
