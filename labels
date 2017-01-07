@@ -53,3 +53,11 @@ Citačné indikátory:
 		sekcia \label{sec:hm-index}
 		vzorec \label{eq:hm-index}
 		Efektívny rang \label{eq:hm-index.reff}
+
+
+Results
+  Journal Results
+    tabulka \label{tab:journal.results}
+  Academics results
+    tabulka \label{tab:academic.results}
+

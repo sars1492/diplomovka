@@ -3,20 +3,20 @@
 \section{Získanie bibliometrických dát}
 
 \subsection{Celej fakulty}
-\label{sec:mine.department}
+\label{sec.all.mining}
 
-Pre potreby tejto práce sme získali bibliografické údaje, ktorých aspoň jeden z
-autorov má príslušnosť (ang. \emph{affiliation}) k FPV UCM v~Trnave. Na túto
+Pre potreby tejto práce sme získali bibliografické údaje, ktorých aspoň jeden
+z~autorov má príslušnosť (ang. \emph{affiliation}) k~FPV UCM v~Trnave. Na túto
 analýzu sme nepoužili GS, pretože neumožňuje vyhľadávať podľa inštitúcie.
 
-Bibligrafické záznamy FPV UCM sme získali z citačných registrov
+Bibligrafické záznamy FPV UCM sme získali z~citačných registrov
 Wos a Scopus zo dňa 21.\,decembra~2016.  Prístup k~obom citačným registrom bol
 umožnený prostredníctvom webovej služby \emph{Centra Vedecko-Technických
 Informácií SR}\footnote{\url{http://www.cvtisr.sk}} (ďalej len CVTI SR).  Webové nástroje Scopusu
 umožňujú vyhľadávať záznamy podľa inštitúcie (sekcia \emph{Affiliation search}).
 
 Následne sme fitrovali publikácie, ktoré patria do FPV, pretože Scopus
-neumožňuje zobraziť záznamy podľa príslušnosti k fakulte danej inštitúcie.
+neumožňuje zobraziť záznamy podľa príslušnosti k~fakulte danej inštitúcie.
 Vyňali sme (\texttt{EXCLUDE}) publikácie podľa vedeckých oblastí
 (\texttt{SUBJAREA}), ktoré nesúvisia s~činnosťou FPV:
 
@@ -26,7 +26,7 @@ Vyňali sme (\texttt{EXCLUDE}) publikácie podľa vedeckých oblastí
   \item \emph{Economics} (\texttt{ECON}): ekonómia,
   \item \emph{Decision Science} (\texttt{DECI}): rozhodovacie vedy,
 \end{itemize}
-a časopisov (\texttt{EXACTSRCTITLE}), v ktorých pracovníci FPV nepublikovali:
+a časopisov (\texttt{EXACTSRCTITLE}), v~ktorých pracovníci FPV nepublikovali:
 
 \begin{itemize}
   \item \emph{Pediatrika}, 
@@ -37,8 +37,8 @@ a časopisov (\texttt{EXACTSRCTITLE}), v ktorých pracovníci FPV nepublikovali:
 Zo zoznamu sme ešte ostránili všetky publikácie  prof. MUDr.\,Jozefa
 Rovenského,\,DrSc.  (\texttt{AU-ID}: \uv{Rovenský, Jozef A.} a \uv{Rovenský,
 Jozef}), pretože je pracovníkom Inštitútu fyzioterapie, balneológie a liečebnej
-rehabilitácie UCM a publikácie z roku (\texttt{PUBYEAR}) 1991, pretože v tom
-období UCM ešte nebola založená, teda sme to zhodnotili ako chybu v databázi.
+rehabilitácie UCM a publikácie z~roku (\texttt{PUBYEAR}) 1991, pretože v~tom
+období UCM ešte nebola založená, teda sme to zhodnotili ako chybu v~databázi.
 
 Výsledný vyhľadávací reťazec (Obrázok \ref{fig:scopus.query}), sme zadali (po
 odstránení zalomenia riadku) do poľa \emph{search} na webových stránkach Scopus
@@ -48,9 +48,9 @@ CSV\footnote{Formát textového súboru, ktorý obsahuje tabuľku dát. Jednotli
 riadky súboru zodpovedajú riadkom tabuľky a položky jednotlivých stĺpcoch sú
 oddelené čiarkou a prípadne ohraničené úvodzovkami.  Názov formátu pochádza
 z~ang.  \emph{comma-separated values}} a položku \emph{Citation information
-only} \footnote {Použitie iných možnosti bráni otvoreniu CSV súboru v
-programe PoP \citep{Harzing2011}}).  Z dôvodu, že exportovaný súbor zo Scopusu má
-iné poradie položiek ako ten z programu PoP, sme ešte súbor otvorili v programe
+only} \footnote {Použitie iných možnosti bráni otvoreniu CSV súboru
+v~programe PoP \citep{Harzing2011}}).  Z~dôvodu, že exportovaný súbor zo Scopusu má
+iné poradie položiek ako ten z~programu PoP, sme ešte súbor otvorili v~programe
 PoP a v~ňom exportovali do formátu CSV.
 
 
@@ -71,14 +71,14 @@ PoP a v~ňom exportovali do formátu CSV.
   \end{Verbatim}
   \vspace*{-4mm}
   \caption[Vyhľahávaci reťazec pre celú fakultu pre Scopus]{Vyhľadávací reťazec
-  pre Scopus na zobrazenie zoznamu všetkých publikácii FPV UCM v Trnave.
-  Z celej fakulty (\texttt{AF-ID})
+  pre Scopus na zobrazenie zoznamu všetkých publikácii FPV UCM v~Trnave.
+  Z~celej fakulty (\texttt{AF-ID})
   sme vyčlenili (\texttt{EXCLUDE}) podľa vedeckých oblastí (\texttt{SUBJAREA}):
   spoločenské a humanitné vedy (\texttt{ARTS}), sociálne vedy (\texttt{SOCI}),
   ekonómia (\texttt{ECON}), rozhodovacie vedy (\texttt{DECI}) a časopisov
   (\texttt{EXACTSRCTITLE}).  Odstrálili sme práce prof. MUDr.\,Jozefa
   Rovenského,\,DrSc.  (\texttt{AU-ID}, ktorý pracuje na Inštitúte fyzioterapie,
-  balneológie a liečebnej rehabilitácie a publikácie z roku (\texttt{PUBYEAR})
+  balneológie a liečebnej rehabilitácie a publikácie z~roku (\texttt{PUBYEAR})
   1991, kedy fakulta ešte nebola založená. Pre zadanie reťazca je nutné
   odstrániť zalomenia riadkov.}
   \label{fig:scopus.query}
@@ -86,13 +86,13 @@ PoP a v~ňom exportovali do formátu CSV.
 
 
 Na webové stránky WoS sme prispupovali skrz portál CVTI SR. Nástroje WoS nám
-neumožnili vyhľadávať podľa inštitúcie, ako v nástroje Scopusu, preto sme boli
+neumožnili vyhľadávať podľa inštitúcie, ako v~nástroje Scopusu, preto sme boli
 nútený hľadávať podľa adresy inštitúcie. Na webových stránkach WoS sme do poľa
 pre hľadanie podľa adresy inštitúcie zadali: \uv{methodius*} a \uv{Trnava},
-pretože v publikáciách sa vyskytujú rôzne varianty názvu univerzity (napr. SS
+pretože v~publikáciách sa vyskytujú rôzne varianty názvu univerzity (napr. SS
 Cyril \& Methodius Trnava, alebo Sv. Cyril and Methodius Trnava).  Aby sme
 získali iba publikácie FPV, tak zoznam publikácií sme zúžili (použitím funkcie
-\emph{Refine}) na záznamy z vedy a techniky (\emph{SCIENCE TECHNOLOGY}) a
+\emph{Refine}) na záznamy z~vedy a techniky (\emph{SCIENCE TECHNOLOGY}) a
 odstránili sme publikácie vedeckých oblastí mimo odborného záberu FPV:
 
 \begin{itemize}
@@ -128,7 +128,7 @@ odstránili sme publikácie vedeckých oblastí mimo odborného záberu FPV:
 
 Počet výsledkov hľadania sme zúžili na 315 záznamov. Pre názornosť uvádzame
 popis kritérií hľadania (Obrázok \ref{fig:wos.query}), ktorý je zobrazený na
-webových stránkách WoS.  V zozname sme našli 4 publikácie, ktoré nenapísali
+webových stránkách WoS.  V~zozname sme našli 4 publikácie, ktoré nenapísali
 pracovníci FPV.  Vyňatie prebeho tak, že pomocou funkcie \emph{Marked list} sme
 označili všetky publikácie okrem: 
 
@@ -150,31 +150,32 @@ označili všetky publikácie okrem:
     %rehabilitácie,
 \end{itemize}
 
-Následne sme zoznam publikácii uložený v \emph{Marked list} stiahli ako textový
-súbor s použitím funkcie \emph{Save to Other Formats} (uložiť do iných
-formátov) a v okne \emph{Send to File} sme zvolili položku vo vyskakujúcom menu
+Následne sme zoznam publikácii uložený v~\emph{Marked list} stiahli ako textový
+súbor s~použitím funkcie \emph{Save to Other Formats} (uložiť do iných
+formátov) a v~okne \emph{Send to File} sme zvolili položku vo vyskakujúcom menu
 \emph{Tab-delimited (Win, UTF-8)}. Na konverziu do formátu CSV je potrebné
-súbor otvoriť v programe PoP \citep{Harzing2011} a v ňom ho exportovať vo~formáte CSV.
+súbor otvoriť v~programe PoP \citep{Harzing2011} a v~ňom ho exportovať vo~formáte CSV.
 
 \subsection{Jednotlivých pracovníkov fakulty}
+\label{sec:staff.mining}
 
 Na scientometrickú analýzu inštitúcie je vhodnejšie použiť bibliografické
 informácie všetkých publikácií pracovníkov danej inštitúcie, nie len tých
-publikácií, ktoré boli napísané v rámci danej inštitúcie. Pretože ak vedecký
-pracovník s bohatou vyskumnou minulosťou nastúpi na nové pracovisko, prinesie
+publikácií, ktoré boli napísané v~rámci danej inštitúcie. Pretože ak vedecký
+pracovník s~bohatou vyskumnou minulosťou nastúpi na nové pracovisko, prinesie
 zo sebou skúsenosti a znalosti, čím zvýši kredit danej inštitúcie
 \citep{Altanopoulou2012}. 
 
 Postupovali sme podľa prác \citet{Kazakis2014a} a
-\citet{Kazakis2014b,Kazakis2015}.  Z webových stránok FPV UCM v~Trnave
+\citet{Kazakis2014b,Kazakis2015}.  Z~webových stránok FPV UCM v~Trnave
 \footnote{\url{http://fpv.ucm.sk/sk/}} a webových stránok jednotlivých katedier
-(Obrázok \ref{tab:department.list} sme stiahli mená vedecký pracovníkov FPV UCM v~Trnave
-v decembri 2016.
+(Obrázok \ref{tab:department.review} sme stiahli mená vedecký pracovníkov FPV UCM v~Trnave
+v~decembri 2016.
 
 \begin{table}
 \centering\small
 \caption[Zoznam katedier FPV]{Zoznam katedier FPV a ich oficiálných skratiek, s~odkazmi na webové stránky}
-\label{tab:department.list}
+\label{tab:department.review}
 \begin{tabular}{lll}
   \toprule\noalign{\vspace{.3ex}}
   Názov katedry                   & Skr.    & Webová stránka\\[0.3ex]
@@ -195,10 +196,10 @@ v decembri 2016.
 
 \begin{table}
   \caption[Rozdelenie pracovníkov do jednotlivých katedier]{Rozdelenie
-  pracovníkov, ktorých bibliometrické dáta sme použili v tejto práci, do
-  jednotlivých katedier. Zoznam úplnych názvov katedier sú uvedené v Tabuľke
-  \ref{tab:department.list}.} 
-  \label{tab:academics.list}
+  pracovníkov, ktorých bibliometrické dáta sme použili v~tejto práci, do
+  jednotlivých katedier. Zoznam úplnych názvov katedier sú uvedené v~Tabuľke
+  \ref{tab:department.review}.} 
+  \label{tab:staff.list}
 \centering\small
 \begin{tabular}{lllll}
   \toprule\noalign{\vspace{.3ex}}
@@ -246,64 +247,64 @@ v decembri 2016.
 \end{tabular}
 \end{table}
 
-Podľa Tabuľky \ref{tab:academics.list} sme vyhľadali záznamy jednotlivých
-pracovníkov FPV z citačných registrov Scopus, Web of Science a Google Scholar.
-Dáta sú z decembra 2016.
+Podľa Tabuľky \ref{tab:staff.list} sme vyhľadali záznamy jednotlivých
+pracovníkov FPV z~citačných registrov Scopus, Web of Science a Google Scholar.
+Dáta sú z~decembra 2016.
 
 Databáza citačného register Scopus má špeciálnu indentitu pre autorov
 (\texttt{AU-ID}).  Pomocou celého mena autora, priezviska, alebo jeho
 príslušnosti (ang.  \emph{Affiliation}) je možné vyhľadať konkrétneho vedca a
 získať iba jeho bibliometrické informácie. Niektorých prípadoch mal jeden
-akademik niekoľko \texttt{AU-ID} (napr. Godány mal až tri). V taktomto prípade
+akademik niekoľko \texttt{AU-ID} (napr. Godány mal až tri). V~taktomto prípade
 sme stiahli bibliografické záznamy všetkých identít do súborov vo formáte CSV a
 súbory spojili do jedného súboru.  Vďaka  \texttt{AU-ID} Scopus dokáže najsť
-autora bezohľadu na to, či meno je zadané s diakritikou, alebo nie.  Napriek
+autora bezohľadu na to, či meno je zadané s~diakritikou, alebo nie.  Napriek
 tomu sa vyskytli ľudia, ktorých Schopu nenašiel (viď Tabuľka
-\ref{tab:missing.author}).
+\ref{tab:staff.missing}).
 
 WoS umožňuje vyhľadávať autorov len podľa priezviska a nemá taký prepracovaný
-systém uloženej identity autora ako Scopus. Z toho dôvodu, ak meno pracovníka
-obsahuje diakritiku, tak sme v rozšírenom výhľadávaní hľadali rôzne varianty s
-chýbajúcom diakritikov. Následne sme museli zoznam publikácie triediť podľa
-iniciál, pretože väčšina publikácií neobsahuje celé mená autorov. V prípade
-vyskytu rôznych autorov s rovnakým priezviskom a inicál sme museli zoznam
-triediť podľa vednej oblasti. Nakoniec sme zoznam porovnali z dátami zo Scopusu
-toho istého autora a články, ktoré sa vyskytovali v Scopuse, ale nie WoS sme
+systém uloženej identity autora ako Scopus. Z~toho dôvodu, ak meno pracovníka
+obsahuje diakritiku, tak sme v~rozšírenom výhľadávaní hľadali rôzne varianty
+s~chýbajúcom diakritikov. Následne sme museli zoznam publikácie triediť podľa
+iniciál, pretože väčšina publikácií neobsahuje celé mená autorov. V~prípade
+vyskytu rôznych autorov s~rovnakým priezviskom a inicál sme museli zoznam
+triediť podľa vednej oblasti. Nakoniec sme zoznam porovnali z~dátami zo Scopusu
+toho istého autora a články, ktoré sa vyskytovali v~Scopuse, ale nie WoS sme
 hľadali podľa nadpisu vo WoS. Všetky relevantné záznamy sme uložili do
 \emph{Marked list} a uložili ako iný formát (funkcia \emph{Save to Other
-Formats}). Stiahnutý textový súbor sme otvorili v programe PoP a v ňom sme
+Formats}). Stiahnutý textový súbor sme otvorili v~programe PoP a v~ňom sme
 exportovali do CSV formátu.
 
-Vo GS sme vyhľadávali priamo v programe PoP. Vytvorili sme nový dopyt pre
-vyhľadávanie v GS (\emph{New Google Scholar Query}). Do poľa  \emph{Authors}
+Vo GS sme vyhľadávali priamo v~programe PoP. Vytvorili sme nový dopyt pre
+vyhľadávanie v~GS (\emph{New Google Scholar Query}). Do poľa  \emph{Authors}
 sme zadali meno pracovníka a spustili sme vyhľadávania. Pretože program
-neumožňuje zadať alternatívy mena ako WoS, urobili sme niekoľko hľadaní vždy s
-inou variantou mena (napr. s diakritikou, bez diakritiky, s krsným menom,
-inicálmi).  Ak meno sa bežne vyskytuje v publikáciach (napr. Seman), PoP
+neumožňuje zadať alternatívy mena ako WoS, urobili sme niekoľko hľadaní vždy
+s~inou variantou mena (napr. s~diakritikou, bez diakritiky, s~krsným menom,
+inicálmi).  Ak meno sa bežne vyskytuje v~publikáciach (napr. Seman), PoP
 vyhľadal maximálne 1\,000 záznamov, pretože GS neumožnuje zobraziť viacej
 výsledkov. Tak sme museli vložiť do poľa \uv{všetký slová} (ang. \emph{All of
 the words}) reťazce, ktoré bližšie určujú hľadané pracovníka ako napr.
 \emph{Slovakia}. 
 
-Z podstaty fungovania GS je zrejmé, že výsledný zoznam bude obsahovať veľa
-balastu\footnote{Ako napr. záznamy iných autorov s podobných, alebo rovnakým
-priezviskom a iniciálmi; záznamy, ktoré vôbec nesúvisia s dopytom; duplicidné
+Z~podstaty fungovania GS je zrejmé, že výsledný zoznam bude obsahovať veľa
+balastu\footnote{Ako napr. záznamy iných autorov s~podobných, alebo rovnakým
+priezviskom a iniciálmi; záznamy, ktoré vôbec nesúvisia s~dopytom; duplicidné
 záznamy, nekopletné záznamy; nezmyselné záznamy.} (viď Kapitolu \ref{sec:gs}).
-Preto obsah CSV súbor z PoP bolo ešte dodatočne pretriediť a upraviť. Tento fakt uľahčovalo 
+Preto obsah CSV súbor z~PoP bolo ešte dodatočne pretriediť a upraviť. Tento fakt uľahčovalo 
 to, že väčšina záznamov obsahovala internetový odkaz na zdroj. Ale aj tak
 bolo nutné doplniť chýbajúcich autorov (GS ukazuje max 5 autorov) a roky.
 
 Práce niektorých pracovníkov FPV sa nám vôbec nepodarilo vyhľadať. Príčinou
-bola ich nedávna zmena mena po svadbe (viď. \ref{tab:rename.author} Našťastie
-pôvodné priezivsko sme dohľadali z akademickej emailovej adresy, ktorá bola
+bola ich nedávna zmena mena po svadbe (viď. \ref{tab:staff.rename} Našťastie
+pôvodné priezivsko sme dohľadali z~akademickej emailovej adresy, ktorá bola
 uverejnená na internetových stránkach katedry.
 
 \begin{SCtable}
 \centering\small
-  \caption[Mená pracovníkov FPV, u ktorých došlo k zmene priezivska] {Zoznam
-  pracovníkov FPV, ku ktorých došlo k zmene priezivska. Pôvodné priezivsko sme
-  dohľadali z akademickej emailovej adresy.}
-\label{tab:rename.author}
+  \caption[Mená pracovníkov FPV, u~ktorých došlo k~zmene priezivska] {Zoznam
+  pracovníkov FPV, ku ktorých došlo k~zmene priezivska. Pôvodné priezivsko sme
+  dohľadali z~akademickej emailovej adresy.}
+\label{tab:staff,rename}
 \begin{tabular}{ll}
   \toprule\noalign{\vspace{.3ex}}
   Súčasné meno    & Pôvodné meno  \\[0.3ex]
@@ -318,10 +319,10 @@ uverejnená na internetových stránkach katedry.
 \begin{SCtable}
 \centering\small
   \caption[Mená pracovníkov FPV, pre ktorých sa nám nepodarilo získať všetky
-  dáta]{Zoznam Pracovníkov FPV, pre ktorých sa nepodarilo získať z niektorých
-  citačných registrov žiadne dáta.  V posledných troch sĺpcoch je uvedený počet
+  dáta]{Zoznam Pracovníkov FPV, pre ktorých sa nepodarilo získať z~niektorých
+  citačných registrov žiadne dáta.  V~posledných troch sĺpcoch je uvedený počet
   publikácií, ktoré sa nám podarilo získať.}
-\label{tab:missing.author}
+\label{tab:staff.missing}
 \begin{tabular}{lcccc}
   \toprule\noalign{\vspace{.3ex}}
   Meno pracovníka            & Katedra & Scopus & WoS$^\dagger$ & GS$^\ddagger$ \\[0.3ex]
@@ -339,8 +340,9 @@ uverejnená na internetových stránkach katedry.
 
 
 \subsection{Časopisov}
+\label{sec:journal.mining}
 
-Obsahom tejto práce je hodnotenie fakulty na základe časopisov, v ktorých jej
+Obsahom tejto práce je hodnotenie fakulty na základe časopisov, v~ktorých jej
 publikujú jej pracovníci. Vedecké časopisy je možné hodnotiť na základe
 citačných indikátorov (viď Tabuľka \ref{tab:indicators.review}). Toto
 hodnotenie vykonávajú medzinárodné ištitúcie (ako ISI, alebo SciMago) pre
@@ -349,14 +351,14 @@ spektrum svetových a domácich časopisov.
 Zistili sme hodnoty impakt faktoru (viď podkapitola \ref{sec:if}, SciMago rang
 časopisu, (viď podkapitola \ref{sec:sjr}), CiteScore (viď podkapitola
 \ref{sec:citescore}) SNIP (viď podkapitola \ref{sec:snip}) pre všetky časopisy
-z bibliografických záznamov, ktorých proces získavania popisujeme v podkapitole
-\ref{sec:mine.department}.  Hodnoty pre IF sme získali z oficiálnych
+z~bibliografických záznamov, ktorých proces získavania popisujeme v~podkapitole
+\ref{sec.all.mining}.  Hodnoty pre IF sme získali z~oficiálnych
 internetových stránok (viď Tabuľka \ref{tab:indicators.web}).  Zoznam časopisov
-je uvedený ďalej kapitole (viď Tabuľka \ref{tab:journals.results}).  V prípade
+je uvedený ďalej kapitole (viď Tabuľka \ref{tab:journal.results}).  V~prípade
 ak daný časopis sme na oficiálnych stránkach nenašli, použili sme web
 ResearchGate\footnote{\url{https://www.researchgate.net/}}.  Ak impakt faktor
-pre daný časopis nenašli nikde na internete, tak sme položku v tabuľke
-\ref{tab:journals.results} nechali práznu.  Ak hodnoty ostatných indikátorov
+pre daný časopis nenašli nikde na internete, tak sme položku v~tabuľke
+\ref{tab:journal.results} nechali práznu.  Ak hodnoty ostatných indikátorov
 sme nenašli na  oficiálnych stránkách, tak sme položku nechali práznu.
 
 \begin{SCtable}
@@ -380,16 +382,84 @@ sme nenašli na  oficiálnych stránkách, tak sme položku nechali práznu.
 
 \section{Spracovanie bibliometrických dát}
 
-Síce webové rozhrania Scopus a WoS poskytujú základné scientometrické nástroje
-ako napr.\,výpočet $h$-indexu, ale možnosti dodatočného triedenia (ako
-napr.\,zatriedenie do jednotlivých katedier) sú obmedzené.  Taktiež neumožňuje
-použiť modernejšie citačné indexy (viď kapitolu \ref{sec:citation.indicators}).
-Preto sme sa rozhodli použiť program Publish or
-Perish\footnote{\url{http://www.harzing.com/resources/publish-or-perish}} (ďalej
-len PoP).
+\subsection{Program \emph{Publish or Perish}}
+\label{sec:pop}
+
+Na výpočet citačných indexov sme použili program \emph{Publish or Perish} verzie
+5.25.2.6208 \citep{Harzing2011}.  PoP je voľne dostupná aplikácia pre operačný
+systém Microsoft Windows na scientometrickú analýzu bibliografických záznamov.
+Prirodzene umožňnuje získavanie bibliografických záznamov z~GS a Microsoft
+Academic. Prístup do GS je zdarma, ale na MS Academic je potrebné vložiť kľúč.
+Ďalej umožňuje importovať a exportovať dáta no najrôznejších formátov ako napr.
+CSV, MS Exel, EndNote\footnote{\url{http://endnote.com/}}, a
+BibTex\footnote{\url{http://www.bibtex.org/}}.  PoP poskytuje robiť scienometrickú
+analýzu s~použítím širokého spektra citačných indikátorov (časť, ktorú sme použili
+v~tejto práci je uvedená v~Tabuľke \ref{tab:indicators.review}).
+Súbor dát, z~ktorého sa počítajú všetky indikátory sa nazýva dopyt (ang. \emph{query}).
+PoP neumožňuje editovať položky v~danom dopyte. Na úpravu dát sme exportovali
+do~formátu CSV a editovali v~externom programe.
+
+Okno programu (viz Obrázok
+\ref{fig:pop.screenshot}) pozostáva z~troch rámcov: 
+\begin{itemize}
+  \item tabuľka dopytov s~vypočítanými indikátormi v~stĺpcoch, 
+  \item tabuľka bibliografických záznamov v~označenom dopyte,
+  \item priečinkový strom na triedenie dopytov.
+\end{itemize}
+
+\subsection{Scientometrická analýza pracovníkov FPV}
+
+Podľa prác \citet{Kazakis2014a} a \citet{Kazakis2014b,Kazakis2015} sme získali
+bibliografické údaje všetkých publikácií pracovníkov FPV a uložili sme ich do
+CSV súborov. Tieto súbory sme importovali do PoP, kde sme zistili citačné
+indikátory pre každého pracovníka. Vypočítané citačné indikátory dopytov
+všetkých pracovníkov sme uložili do súborov s~názvami katedier, do ktorých
+patria. Z~týchto súborov sme vybrali stĺpce, ktoré reprezentujú citačné
+indikátory podľa Tabuľky \ref{tab:indicators.review}, a počet citácií a
+publikácii.  Záznamy sme usporiadali do skupín podľa citačného registru,
+z~ktorého boli získané.  Vypočítali sme priemer, medián, štandartnú odchlylku a
+MAD\footnote{Absolútna odchýlka mediánu (ang.\emph{Median Absolute Devination})
+je robustná štatistická metóda na zistenie rozptylu dát. Keďže $\mathrm{MAD} =
+\mathrm{Med}(|X_i - \tilde{X}|)$, využíva medián, MAD je menej náchylný na
+extrémne vybočujúce hodnoty, a preto sa používa v~nenormálnych
+distribúciách.}\footnote{\url{http://www.statisticshowto.com/median-absolute-deviation/}}
+(absolútna odchýlka mediánu)pre každú skupinu. Pre hodnoty počtu citácií a
+publikácií sme nepočítali priemer a median, ale sme urobili sumu počtu citácii
+a sumu počtu publikácii pre každú skupinu.
+
+Nakoniec sme vytvorili dátový súbor s~18 riadkami (dáta zo Scopus, WoW a GS
+pre každú katedru), ktorého každý riadok obsahuje skratku kadetry a spracované
+dáta jednotlivých citačných indikátorov.
+
+Tieto dáta sme previedli to Tabuľky \ref{tab:staff.results}, ktorá je
+uvedená v~nasledújúcej kapitole. Grafické znázornenie sme vytvorili pomocou
+vlastného programu \emph{scientometry-plot-gen}, ktorý je napísaný
+v~programovacom jazyku Python\footnote{\url{https://www.python.org/}} verzie 2.7
+a využíva knižnicu \emph{matplotlib} na kreslenie grafov.
 
 
-\subsection{Dodatočné spracovanie stiahnutých záznamov}
+\subsection{Scientometrická analýza celej FPV}
+
+Na zhotovenie grafického znázornenia vývoja publikačnej a čitačnej činnosti FPV
+sme použli bibliometrické dáta z~celej fakulty, ktorých získanie popisujeme
+v~podkapitole \ref{sec.all.mining}. Z~jednotlivých dátových súborov (Scopus a Wos)
+sme zistili počet publikácií na každý rok  a celkovú sumu citácií na tieto
+publikácie, tiež rozdelých podľa rokov. Na tento výpočet sme použili vlastný
+progam \emph{scientometry-data-proc}, ktorý je napísaný v~programovacom jazyku
+Python\footnote{\url{https://www.python.org/}} verzie 2.7.
+
+\subsection{Scientometrická analýza publikácií celej FPV podľa časopisov}
+
+Zistili sme počet publikácií v~každom časopise zo bibliografických záznamov
+celej fakulty (proces získavania je popísaný v~podkapitole
+\ref{sec.all.mining}).  Na túto úlohu sme použili vlastný progam
+\emph{scientometry-data-proc}, ktorý je napísaný v~programovacom jazyku
+Python\footnote{\url{https://www.python.org/}} verzie 2.7.  Pomocou neho sme
+vytvorili  Tabuľku \ref{tab:journal.results}, ktorá obsahuje zoznam časopisov
+s~počtom výskytov publikácií a jeho citačné indikátory (ich získanie je opísane
+v~podkapitole \ref{sec:journal.mining}). 
+
+%\subsection{
 
 Ako vstup sme použAko vstup sme použili súbory vo formáte CSV exportované
 z~databáz Scopus a WoS (označené ako \uv{\texttt{scopus~17.5.2016.csv}} a
@@ -493,17 +563,12 @@ jazykovej prípravy boli z~analýzy vyňaté zahrnuté pre veľmi nízky počet 
 \end{table}
 
 
-\subsection{Scientometrická analýza dát}
-
-Pomocou programu PoP (Harzing, 2010) sme vypočítali citačné indexy pre
-jednotlivé súbory dát (zobrazené na Obrázku\,\ref{fig:pop.departmentfiles}).
-
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{publish-or-perish.jpg}
+  \includegraphics[width=\textwidth]{publish-or-perish_wine.jpg}
   \caption{Súbory dát jednotlivých katedier v~programe \emph{Publish or
       Perish}.}
-  \label{fig:pop.departmentfiles}
+  \label{fig:pop.screenshot}
 \end{figure}
 
 V~tabuľkovom kalkulátore sme zhotovili grafické zobrazenie vývoja publikačnej
