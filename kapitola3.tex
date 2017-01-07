@@ -407,6 +407,20 @@ Okno programu (viz Obrázok
   \item priečinkový strom na triedenie dopytov.
 \end{itemize}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{publish-or-perish_wine.png}
+  \caption[Snímok obrazovky s~oknom programu \emph{Publish or Perish}.]
+  {Snímok obrazovky s~oknom programu \emph{Publish or Perish} (skrátene PoP),
+  ktorý sme v~tejto práci použili na scientometrickú analýzu.  Ukážka zobrazuje
+  scientometrické dáta jednotlivých pracovníkov FPV UCM v~Trnave. V~hornom
+  rámci vidíme tabuľku pracovníkov s~citačnými indikátormi. V~dolnom rámci je
+  zoznam publikácií označeného pracovníka. Na ľavej strane vidíme priečinkový
+  strom, v~ktorom sú uložené dáta.}
+  \label{fig:pop.screenshot}
+\end{figure}
+
+
 \subsection{Scientometrická analýza}
 
 Podľa prác \citet{Kazakis2014a} a \citet{Kazakis2014b,Kazakis2015} sme získali
@@ -427,147 +441,44 @@ distribúciách.}\footnote{\url{http://www.statisticshowto.com/median-absolute-d
 publikácií sme nepočítali priemer a median, ale sme urobili sumu počtu citácii
 a sumu počtu publikácii pre každú skupinu.
 
-Nakoniec sme vytvorili dátový súbor s~18 riadkami (dáta zo Scopus, WoW a GS
-pre každú katedru), ktorého každý riadok obsahuje skratku kadetry a spracované
-dáta jednotlivých citačných indikátorov.
-
-Tieto dáta sme previedli to Tabuľky \ref{tab:staff.results}, ktorá je
-uvedená v~nasledújúcej kapitole. Grafické znázornenie sme vytvorili pomocou
-vlastného programu \emph{scientometry-plot-gen}, ktorý je napísaný
-v~programovacom jazyku Python\footnote{\url{https://www.python.org/}} verzie 2.7
-a využíva knižnicu \emph{matplotlib} na kreslenie grafov.
+Nakoniec sme vytvorili dátový súbor s~18 riadkami (dáta zo Scopus, WoW a GS pre
+každú katedru), ktorého každý riadok obsahuje skratku kadetry a spracované dáta
+jednotlivých citačných indikátorov.  Tieto dáta sme previedli to Tabuľky
+\ref{tab:staff.results}, ktorá je uvedená v~nasledújúcej kapitole. Grafické
+znázornenie sme vytvorili pomocou vlastného programu
+\emph{scientometry-plot-gen} (viď podkapitola \ref{sec:program.my})
 
 Na zhotovenie grafického znázornenia vývoja publikačnej a čitačnej činnosti FPV
 sme použli bibliometrické dáta z~celej fakulty, ktorých získanie popisujeme
-v~podkapitole \ref{sec.all.mining}. Z~jednotlivých dátových súborov (Scopus a Wos)
-sme zistili počet publikácií na každý rok  a celkovú sumu citácií na tieto
+v~podkapitole \ref{sec.all.mining}. Z~jednotlivých dátových súborov (Scopus a
+Wos) sme zistili počet publikácií na každý rok  a celkovú sumu citácií na tieto
 publikácie, tiež rozdelých podľa rokov. Na tento výpočet sme použili vlastný
-progam \emph{scientometry-data-proc}, ktorý je napísaný v~programovacom jazyku
-Python\footnote{\url{https://www.python.org/}} verzie 2.7.
+progam \emph{scientometry-data-proc} (viď podkapitola \ref{sec:program.my}).
 
-Zistili sme počet publikácií v~každom časopise zo bibliografických záznamov
-celej fakulty (proces získavania je popísaný v~podkapitole
-\ref{sec.all.mining}).  Na túto úlohu sme použili vlastný progam
-\emph{scientometry-data-proc}, ktorý je napísaný v~programovacom jazyku
-Python\footnote{\url{https://www.python.org/}} verzie 2.7.  Pomocou neho sme
-vytvorili  Tabuľku \ref{tab:journal.results}, ktorá obsahuje zoznam časopisov
-s~počtom výskytov publikácií a jeho citačné indikátory (ich získanie je opísane
+Z~bibliografických dát celej fakulty (proces získavania je popísaný
+v~podkapitole \ref{sec.all.mining}) sme zistili koľko článkov bolo
+publikovaných v~každom časopise.  Na túto úlohu sme použili vlastný progam
+\emph{scientometry-data-proc}. Z~výstupu programu sme vytvorili  Tabuľku
+\ref{tab:journal.results}, ktorá obsahuje zoznam časopisov s~počtom výskytov
+publikácií a citačné indikátory príslušného časopisu (ich získanie je opísane
 v~podkapitole \ref{sec:journal.mining}). 
 
-%\subsection{
+\subsection{Vlastné programy na spracovanie a vizualizáciu dát}
+\label{sec:program.my}
 
-Ako vstup sme použAko vstup sme použili súbory vo formáte CSV exportované
-z~databáz Scopus a WoS (označené ako \uv{\texttt{scopus~17.5.2016.csv}} a
-\uv{\texttt{WoS~17.5.2016.csv}}).  V~textovom súbore
-\uv{\texttt{scopus~17.5.2016.csv}} sme zmazali duplicitné záznamy a opravili
-chybný zápis mien podľa Tabuľky \ref{tab:wos.namecorrections}.
+Pre účeli tejto práce sme napísali programy \emph{scientometry-data-proc} na
+spracovanie dát a \emph{scientometry-plot-gen} na vykreslenie grafov.  Obidva
+programy sú napísané v~programovacom jazyku
+Python\footnote{\url{https://www.python.org/}}. verzie 2.7. 
+Program \emph{scientometry-plot-gen} využíva knižnicu \emph{matplotlib} na kreslenie
+grafov.
 
-\begin{SCtable}
-\caption{Oprava chýb v~menách autorov v~súbore \uv{\texttt{scopus~17.5.2016.csv}}.}
-\label{tab:wos.namecorrections}
-\centering\small
-\begin{tabular}{ll}
-  \toprule\noalign{\vspace{.3ex}}
-  Pôvodné meno & Opravené meno \\[0.3ex]
-  \midrule\noalign{\vspace{.5ex}}
-  Boa          & Boča       \\
-  Boça         & Boča       \\
-  Horváthovái  & Horváthová \\
-  Oturdík      & Šturdík    \\
-  Titiş        & Titiš      \\[0.5ex]
-  \bottomrule
-\end{tabular}
-\end{SCtable}
+Program \emph{scientometry-data-proc} sa konfiguruje pomocou štrukturovaného
+textového súboru vo formáte YAML\footnote{\url{http://yaml.org/}} (viď
+Príloha). Súbor, v~ktorom sú definované metadáta pre vykreslovanie grafov
+pomocou programu \emph{scientometry-plot-gen} je tiež vo formáte YAML
+(v~Prílohe sú oba súbory podrobne rozpísané).  
 
-Pretože databáza Scopus nám umožnila odstrániť všetky záznamy z~iných fakúlt,
-súbor \uv{\texttt{scopus~17.5.2016.csv}} sme ďalej neupravovali a konečný počet
-bibliografických záznamov je 324.
-
-\begin{SCtable}
-\caption{Mená pracovníkov, ktorí nepatria do Fakulty prírodných vied.}
-\label{tab:wos.excludedstaff}
-\centering\small
-\begin{tabular}{lc}
-  \toprule\noalign{\vspace{.3ex}}
-  Meno            & Fakulta \\[0.3ex]
-  \midrule\noalign{\vspace{.5ex}}
-  Balaz           & -- \\
-  Balazova        & -- \\
-  Bezakova        & -- \\
-  Lukac           & -- \\
-  Rovensky        & -- \\[1ex]
-  Jurinova        & -- \\
-  Ferriero        & -- \\
-  Trnka           & -- \\
-  Halenar         & -- \\
-  Mura            & -- \\[1ex]
-  Novakova Renata & -- \\[0.5ex]
-  \bottomrule
-\end{tabular}
-\end{SCtable}
-
-WoS má veľmi obmedzené možnosti triedenia väčšieho množstva dát, napr.\,je možné
-filtrovať podľa 100 autorov (Scopus tákéto obmedzenie nepozná).  Z~týchto
-dôvodov sme súbor \uv{\texttt{WoS~17.5.2016.csv}} spracovali dodatočne.
-Odstránili sme záznamy s~menami podľa Tabuľky \ref{tab:wos.excludedstaff} a
-získali sme 288 záznamov.
-
-
-\subsection{Rozdelenie dát do katedier}
-
-Stiahnuté bibliografické záznamy sme rozdelili do ôsmych súborov
-(tab.\,\ref{tab:staffsort}) podľa pracovníkov, ktorí pôsobia (prípadne pôsobili)
-v~rámci danej katedry.  Súbory zo Scopusu a WoS sme spracovali samostatne,
-pretože zo získaných dát nie je možné dohľadať indentické citácie.  Niektoré
-mená autorov zo Scopusu a všetky z~WoS sú písané bez diakritiky.  Práce, ktoré
-vznikli ako spolupráca ľudí z~viacerých katedier sú zaradené iba do jednej
-z~katedier (podľa kľúčových slov).Záznamy Katedry biofyziky a Katedry odbornej
-jazykovej prípravy boli z~analýzy vyňaté zahrnuté pre veľmi nízky počet dát.
-
-\begin{table}
-\caption{Rozdelenie pracovníkov do jednotlivých katedier.}
-\label{tab:staffsort}
-\centering\small
-\begin{tabular}{lllll}
-  \toprule\noalign{\vspace{.3ex}}
-  Katedra  & Katedra        & Katedra & Katedra         & Katedry      \\
-  biológie & biotechnológii & chémie  & ekochémie       & aplikovanej  \\
-           &                &         & a~rádioekológie & informatiky  \\
-           &                &         &                 & a~matematiky \\[0.3ex]
-  \midrule\noalign{\vspace{.5ex}}
-  Janeček, Štefan, Š. & Breierová      & Baran       & Babulicová & Ďurikovič   \\
-  Godány              & Faragó         & Bednárová   & Fargašová  & Gudába      \\
-  Preťová             & Gazdík         & Beinrohr    & Horník     & Hostovecký  \\
-  Siekel              & Havrlentová    & Boča        & Lesný      & Huraj       \\
-  Ürgeová             & Chraštieľ      & Boronová    & Pipíška    & Kostolanský \\[1ex]
-  Vidová              & Kováčik        & Gašparová   & Uhrovčík   &             \\
-                      & Kraic, Ján, J. & Halgaš      &            &             \\
-                      & Maliar         & Jóna        &            &             \\
-                      & Miertuš        & Krutošíková &            &             \\
-                      & Ondrejovič     & Kružlicová  &            &             \\[1ex]
-                      & Šturdík        & Kováčiková  &            &             \\
-                      & Urban          & Lehotay     &            &             \\
-                      &                & Miklovič    &            &             \\
-                      &                & Močák       &            &             \\
-                      &                & Nemeček     &            &             \\[1ex]
-                      &                & Rabara      &            &             \\
-                      &                & Rimančík    &            &             \\
-                      &                & Titiš       &            &             \\[0.5ex]
-  \bottomrule
-\end{tabular}
-\end{table}
-
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{publish-or-perish_wine.png}
-  \caption{Súbory dát jednotlivých katedier v~programe \emph{Publish or
-      Perish}.}
-  \label{fig:pop.screenshot}
-\end{figure}
-
-V~tabuľkovom kalkulátore sme zhotovili grafické zobrazenie vývoja publikačnej
-činnosti (a citovanosti) jednotlivých katedier v~čase.
 
 %%% Local Variables:
 %%% TeX-master: "diplomovka"
