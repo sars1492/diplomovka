@@ -1,9 +1,270 @@
 \chapter{Výsledky a diskusia}
 
+\section{Scientometrické hodnotenie katedier FPV}
+
+Hlavnou časťou tejto práce bola scientometrická analýza jednotlivých katedier
+podľa \citet{Kazakis2014a} a \citet{Kazakis2014b,Kazakis2015}. Metodika zahrňuje
+výpočet citačných indikátorov zvlášť pre každého vedeckého pracovníka 
+z~danej inštitúcie. Indikátorom pre katedru predstavuje priemer a medián 
+hodnôt citačných indikátorov zamestnancov katedry. 
+Distribúcia indikátorov skupiny pracovníkov nie je normálna (tzv. gausovská), 
+a~ani sa neblíži k normálnej. Z toho dôvodu si myslíme, že na túto analýzuje je
+vhodnejšie použiť medián než aritmetický priemer.  
+
+V Tabuľkách  \ref{tab:1-staff.results}, \ref{tab:2-staff.results},
+\ref{tab:3-staff.results}, \ref{tab:4-staff.results}, \ref{tab:5-staff.results}
+a \ref{tab:6-staff.results} sú uvedené výsledné hodnoty indikátorov každú
+katedru FPV.  Namiesto mien katedier sme použili oficiálne skratky (viď Tabuľka
+\ref{tab:department.review}).  V Ťabuľké \ref{tab:1-staff.results} stĺec $n$
+zodpovedá počtu vedeckých zamestancov, ktorý boli zahrnutý do dátového súboru.
+V stĺpcoch $P$ a $c$ uvádzame sumu všetkých článkov a citácií v dátom súbore.
+Tieto informácie uvádzame pre ilustráciu, pretože Veľkosti dátových súborov, z
+ktorých dane indikátory boli počítané, určujú presnosť štatistiky. 
+
+Nasleduje artimetický priemer a medián počtu dokumentov na autora (graf
+porovania mediánov je na Obrázku \ref{fig:p/a.results}).  Pre ilustráciu sme k
+hodnotám artimetického priemeru uviedli štandartné odchýlky.  Na mnohých
+prípadoch (najmä pre hodnoty indexov dokumenty na autora a citácie na dokument)
+je smerodajná odchýlka vyšia než samotný priemer. Čo indikuje nedôverihodnosť
+použitia artimetického priemeru na tento účel. Napriek tomu v~literatúre sme sa
+stretli s častejším použitím aritmetického priemeru než mediánu
+\citep{Lazaridis2010}.  
+
+Podobne ako u priemerov, k mediánu sme vypočítali obdobu smerodanej odchylky
+tzv.\,MAD\footnote{Absolútna odchýlka mediánu
+(ang.\emph{Median Absolute Devination}) je robustná štatistická metóda na
+zistenie rozptylu dát. Keďže $\mathrm{MAD} = \mathrm{Med}(|X_i - \tilde{X}|)$,
+využíva medián, MAD je menej náchylný na extrémne vybočujúce hodnoty, a preto
+sa používa v~nenormálnych
+distribúciách.}\footnote{\url{http://www.statisticshowto.com/median-absolute-deviation/}}.
+Rozdiel medzi absolútnou hodnotou mediánu a MAD je nižšií 
+než medzi absolútnou hodnoutov priemeru a štandartnej odchýlky znamená, že
+medián je lepší ukazovateľom.
+
+Tabuľka \ref{tab:2-staff.results} obsahuje počet citácií na dokument a Zhangov
+$e$-index.  Keď porovnáme hodnoty štandartných odchýlok a hodnoty aritmetických
+priemerov indikátorov počtu publikácií na autora a počtu citácií na dokument
+(Tabuľky \ref{tab1-staf.results} a \ref{tab2-staf.results}), spozorujeme, že v
+mnohých prípadoch hodnota štandartnej odchýlky presahuje hodnotu priemeru.  Čo
+znamená, že základné indikátory ako počet publikácií na~autora a počet citácií
+na dokument nie su vhodné na scientometrickú analýzu tohoto typu.  Zhangov
+$e$-index  je modifikácia $h$-indexu, ktorá je citlivá na veľmi citované články
+v malom súbore publikácií (viď. pokapitola \ref{sec:e-index}).  Na základe
+výsledkov Katedry biofyziky (Tabuľka \ref{tab:2-staff.results}) môžeme názorne
+vidieť, že mediány $e$-indexu sú rádovo väčšie od ostatných (Graficky znáznornené
+na Obrázku \ref{fig:e-index.results}).
+
+\citet{Kazakis2015} scientometricky analyzoval katedry 
+
+\begin{table}
+  \centering\small
+  \caption[Hodnotenie FPV\,--\,počet publikácií na autora]{Scientometrické hodnotenie katedier FPV UCM v Trnave, (1. časť)}
+  \label{tab:1-staff.results}
+  \begin{tabular}{llccccccc}
+  \toprule\noalign{\vspace{.3ex}}
+ Katedra & Citačný   & $n$  & $P$    & $c$     & \multicolumn{4}{c}{Počet publikácií na autora}  \\
+      & register  &    &      &       & $\bar{x}$      & $\sigma$  & $\tilde{x}$   & MAD  \\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}                                                                                                                         
+ KB   & Scopus & 14 & 380  & 5234  & 9,09          & 13,20 & 3,42  & 3,02 \\
+      & WoS    & 13 & 392  & 4982  & 10,66         & 14,44 & 7,20  & 5,18 \\
+      & GS     & 14 & 594  & 7289  & 16,88         & 20,77 & 8,92  & 7,42 \\[1ex]
+ KBt  & Scopus & 11 & 356  & 11492 & 8,34          & 12,16 & 4,44  & 2,49 \\
+      & WoS    & 11 & 351  & 3707  & 7,83          & 10,48 & 5,20  & 3,49 \\
+      & GS     & 11 & 828  & 14901 & 23,15         & 24,90 & 12,10 & 5,60 \\[1ex]
+ KCh  & Scopus & 18 & 1106 & 19248 & 15,42         & 21,10 & 5,34  & 4,32 \\
+      & WoS    & 18 & 1120 & 19223 & 16,14         & 21,85 & 5,76  & 4,54 \\
+      & GS     & 18 & 1525 & 25208 & 25,74         & 35,37 & 8,27  & 6,23 \\[1ex]
+ KER  & Scopus & 7  & 265  & 1773  & 5,43          & 0,83  & 5,53  & 0,67 \\
+      & WoS    & 7  & 275  & 1700  & 5,41          & 0,92  & 5,43  & 0,79 \\
+      & GS     & 7  & 543  & 2694  & 4,68          & 0,76  & 4,67  & 0,64 \\[1ex]
+ KBf  & Scopus & 5  & 211  & 5232  & 11,85         & 10,71 & 13,85 & 8,50 \\
+      & WoS    & 5  & 261  & 6011  & 17,78         & 12,74 & 20,85 & 6,81 \\
+      & GS     & 5  & 320  & 8510  & 19,59         & 15,42 & 16,51 & 6,48 \\[1ex]
+ KAIM & Scopus & 11 & 91   & 615   & 10,60         & 16,71 & 3,92  & 2,14 \\
+      & WoS    & 13 & 106  & 1382  & 10,18         & 19,29 & 2,00  & 0,97 \\
+      & GS     & 15 & 151  & 616   & 19,01         & 34,50 & 5,95  & 3,03 \\[1ex]
+ KOJP & Scopus & 2  & 3    & 0     & 0,58          & 0,35  & 0,58  & 1,50 \\
+      & WoS    & 2  & 2    & 0     & 0,33          & 0,00  & 0,33  & 1,00 \\
+      & GS     & 2  & 6    & 3     & 2,00          & 1,88  & 2,00  & 1,33 \\
+  \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+  \centering\small
+  \caption[Hodnotenie FPV\,--\,počet citácií na publikáciu a $e$-index]{Scientometrické hodnotenie katedier FPV UCM v Trnave (2. časť)}
+\label{tab:2-staff.results}
+\begin{tabular}{llcccccccc}
+\hline
+  \toprule\noalign{\vspace{.3ex}}
+  Katedra & Citačný  & \multicolumn{4}{c}{Počet citácií na publikáciu}   & \multicolumn{4}{c}{$e$-index}  \\
+       & register & $\bar{x}$      & $\sigma$  & $\tilde{x}$ & MAD  & $\bar{x}$      & $\sigma$  & $\tilde{x}$  & MAD  \\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}                                                                                                                         
+ KB   & Scopus & 7,74        & 7,75  & 5,88  & 3,99  & 9,03    & 9,53  & 7,49  & 4,06  \\
+      & WoS    & 7,77        & 7,16  & 6,17  & 3,77  & 9,14    & 9,36  & 7,75  & 5,10  \\
+      & GS     & 17,88       & 7,40  & 6,50  & 3,31  & 26,88   & 11,45 & 9,83  & 3,95  \\[1ex]
+ KBt  & Scopus & 13,54       & 18,36 & 7,76  & 5,29  & 16,12   & 24,59 & 9,27  & 1,92  \\
+      & WoS    & 7,40        & 5,74  & 5,70  & 4,70  & 9,63    & 7,62  & 9,00  & 2,45  \\
+      & GS     & 9,93        & 14,14 & 4,27  & 3,33  & 18,96   & 26,42 & 12,45 & 2,20  \\[1ex]
+ KCh  & Scopus & 12,45       & 12,03 & 10,97 & 1,92  & 14,70   & 16,23 & 10,82 & 4,42  \\
+      & WoS    & 12,62       & 10,91 & 11,81 & 2,98  & 14,94   & 15,74 & 11,86 & 4,52  \\
+      & GS     & 11,35       & 10,87 & 10,35 & 3,30  & 17,21   & 18,65 & 13,25 & 6,12  \\[1ex]
+ KER  & Scopus & 5,49        & 2,73  & 6,63  & 1,19  & 7,63    & 3,84  & 9,27  & 0,27  \\
+      & WoS    & 5,21        & 2,28  & 6,06  & 0,92  & 7,26    & 4,46  & 8,31  & 0,75  \\
+      & GS     & 4,53        & 1,80  & 4,93  & 0,82  & 9,60    & 4,64  & 11,96 & 0,53  \\[1ex]
+ KBf  & Scopus & 16,58       & 13,35 & 13,34 & 13,34 & 19,52   & 16,86 & 18,65 & 16,45 \\
+      & WoS    & 16,44       & 15,49 & 14,68 & 9,73  & 23,99   & 19,66 & 25,16 & 14,00 \\
+      & GS     & 18,44       & 15,93 & 15,90 & 14,42 & 25,31   & 23,36 & 21,70 & 21,70 \\[1ex]
+ KAIM & Scopus & 3,57        & 5,24  & 0,80  & 0,80  & 5,28    & 7,80  & 1,00  & 1,00  \\
+      & WoS    & 3,16        & 5,53  & 0,25  & 0,25  & 4,83    & 9,37  & 0,00  & 0,00  \\
+      & GS     & 2,83        & 3,58  & 1,00  & 1,00  & 6,25    & 8,57  & 2,00  & 2,00  \\[1ex]
+ KOJP & Scopus & --          & --    & --    & --    & --      & --    & --    & --    \\
+      & WoS    & --          & --    & --    & --    & --      & --    & --    & --    \\
+      & GS     & 0,50        & 0,00  & 0,25  & 0,25  & 0,50    & 0,71  & 0,50  & 0,50  \\[0.5ex]
+  \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+  \centering\small
+  \caption[Hodnotenie FPV\,--\,$h$-index a $h$-index]{Scientometrické hodnotenie katedier FPV UCM v Trnave, (3. časť)}
+\label{tab:3-staff.results}
+\begin{tabular}{llcccccccc}
+  \toprule\noalign{\vspace{.3ex}}
+  Katedra & Citačný  & \multicolumn{4}{c}{$h$-index}     & \multicolumn{4}{c}{$g$-index}    \\
+       & register & $\bar{x}$      & $\sigma$  & $\tilde{x}$ & MAD  & $\bar{x}$      & $\sigma$  & $\tilde{x}$  & MAD  \\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}                                                                                                                         
+ KB   & Scopus & 7,93    & 7,65  & 6,50  & 4,50  & 12,71   & 13,22 & 11,00 & 7,00  \\
+      & WoS    & 8,23    & 7,57  & 7,00  & 5,00  & 12,92   & 13,07 & 10,50 & 7,50  \\
+      & GS     & 18,88   & 8,39  & 6,00  & 3,50  & 19,88   & 15,19 & 11,50 & 6,00  \\[1ex]
+ KBt  & Scopus & 7,45    & 8,07  & 5,00  & 3,00  & 18,36   & 27,16 & 12,00 & 4,00  \\
+      & WoS    & 6,55    & 7,38  & 4,00  & 3,00  & 12,09   & 11,04 & 10,00 & 3,00  \\
+      & GS     & 9,73    & 8,83  & 7,00  & 4,00  & 22,55   & 28,96 & 16,00 & 4,00  \\[1ex]
+ KCh  & Scopus & 11,78   & 11,70 & 7,50  & 4,50  & 19,83   & 22,23 & 14,50 & 9,50  \\
+      & WoS    & 11,94   & 11,70 & 7,50  & 4,50  & 20,22   & 21,68 & 15,00 & 9,50  \\
+      & GS     & 13,61   & 12,99 & 9,00  & 5,50  & 23,56   & 24,89 & 16,50 & 9,50  \\[1ex]
+ KER  & Scopus & 8,00    & 4,40  & 9,00  & 3,00  & 11,71   & 6,55  & 14,00 & 2,00  \\
+      & WoS    & 7,57    & 4,35  & 8,00  & 4,00  & 11,00   & 6,88  & 12,00 & 3,00  \\
+      & GS     & 9,43    & 4,76  & 11,00 & 2,00  & 14,71   & 7,11  & 18,00 & 2,00  \\[1ex]
+ KBf  & Scopus & 12,80   & 10,57 & 15,00 & 10,00 & 24,80   & 21,61 & 26,00 & 20,00 \\
+      & WoS    & 15,50   & 12,37 & 16,00 & 8,00  & 30,75   & 25,00 & 32,00 & 17,50 \\
+      & GS     & 16,00   & 13,17 & 17,00 & 13,00 & 31,80   & 28,26 & 30,00 & 23,00 \\[1ex]
+ KAIM & Scopus & 3,91    & 5,82  & 1,00  & 1,00  & 6,82    & 10,42 & 1,00  & 1,00  \\
+      & WoS    & 3,85    & 7,06  & 1,00  & 1,00  & 6,62    & 12,50 & 1,00  & 1,00  \\
+      & GS     & 4,33    & 6,00  & 2,00  & 2,00  & 8,13    & 11,28 & 3,00  & 3,00  \\[1ex]
+ KOJP & Scopus & --      & --    & --    & --    & --      & --    & --    & --    \\
+      & WoS    & --      & --    & --    & --    & --      & --    & --    & --    \\
+      & GS     & 1,00    & 0,00  & 0,50  & 0,50  & 1,00    & 0,00  & 0,50  & 0,50  \\[0.5ex]
+  \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+  \centering\small
+  \caption[Hodnotenie FPV\,--\,$h_{\mathrm{I}}$-index a $h_{\mathrm{I,norm}}$]{Scientometrické hodnotenie katedier FPV UCM v Trnave, (4. časť)}
+\label{tab:4-staff.results}
+\begin{tabular}{llcccccccc}
+  \toprule\noalign{\vspace{.3ex}}
+  Katedra& Citačný & \multicolumn{4}{c}{$h_{\mathrm{I}}$-index}  & \multicolumn{4}{c}{$h_{\mathrm{I,norm}}$}  \\
+      & register& $\bar{x}$      & $\sigma$  & $\tilde{x}$ & MAD  & $\bar{x}$      & $\sigma$  & $\tilde{x}$  & MAD  \\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}                                                                                                                         
+ KB   & Scopus & 1,94     & 2,82 & 1,10 & 0,85 & 4,00    & 4,96 & 2,50 & 1,50 \\
+      & WoS    & 2,08     & 2,88 & 1,46 & 0,89 & 4,23    & 5,40 & 3,00 & 2,00 \\
+      & GS     & 21,88    & 3,40 & 1,48 & 0,84 & 22,88   & 5,85 & 3,50 & 2,00 \\[1ex]
+ KBt  & Scopus & 1,46     & 1,66 & 0,84 & 0,34 & 3,64    & 2,94 & 3,00 & 0,00 \\
+      & WoS    & 1,24     & 1,47 & 0,82 & 0,46 & 3,36    & 2,80 & 3,00 & 1,00 \\
+      & GS     & 2,41     & 2,15 & 1,73 & 0,71 & 5,00    & 3,74 & 4,00 & 1,00 \\[1ex]
+ KCh  & Scopus & 2,10     & 1,64 & 1,55 & 0,86 & 5,17    & 4,72 & 4,00 & 2,00 \\
+      & WoS    & 2,20     & 1,77 & 1,53 & 0,94 & 5,50    & 4,82 & 4,00 & 2,00 \\
+      & GS     & 3,02     & 2,87 & 2,08 & 1,23 & 6,61    & 6,55 & 5,00 & 2,50 \\[1ex]
+ KER  & Scopus & 1,56     & 0,93 & 1,72 & 0,53 & 3,14    & 1,68 & 3,00 & 2,00 \\
+      & WoS    & 1,46     & 0,93 & 1,65 & 0,36 & 3,00    & 2,00 & 3,00 & 1,00 \\
+      & GS     & 1,88     & 1,02 & 1,94 & 0,54 & 4,14    & 2,04 & 5,00 & 1,00 \\[1ex]
+ KBf  & Scopus & 2,49     & 2,29 & 2,50 & 1,88 & 6,80    & 6,06 & 6,00 & 6,00 \\
+      & WoS    & 3,17     & 2,86 & 2,91 & 1,73 & 8,00    & 6,73 & 8,00 & 5,00 \\
+      & GS     & 3,44     & 2,90 & 3,04 & 2,04 & 8,60    & 6,84 & 8,00 & 6,00 \\[1ex]
+ KAIM & Scopus & 1,74     & 2,52 & 0,50 & 0,50 & 2,73    & 3,69 & 1,00 & 1,00 \\
+      & WoS    & 1,60     & 2,75 & 0,50 & 0,50 & 2,46    & 4,35 & 1,00 & 1,00 \\
+      & GS     & 1,66     & 2,28 & 1,00 & 0,67 & 2,93    & 4,17 & 1,00 & 1,00 \\[1ex]
+ KOJP & Scopus & --       & --   & --   & --   & --      & --   & --   & --   \\
+      & WoS    & --       & --   & --   & --   & --      & --   & --   & --   \\
+      & GS     & 0,67     & 0,47 & 0,50 & 0,34 & 0,50    & 0,71 & 0,50 & 0,50 \\[0.5ex]
+  \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+  \centering\small
+  \caption[Hodnotenie FPV\,--\,AWCR a $AW$-index]{Scientometrické hodnotenie katedier FPV UCM v Trnave, (5. časť)}
+\label{tab:5-staff.results}
+\begin{tabular}{llcccccccc}
+  \toprule\noalign{\vspace{.3ex}}
+  Katedra & Citačný  & \multicolumn{4}{c}{AWCR}         & \multicolumn{4}{c}{$AW$-index}  \\
+      &  register& $\bar{x}$      & $\sigma$  & $\tilde{x}$ & MAD  & $\bar{x}$      & $\sigma$  & $\tilde{x}$  & MAD  \\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}                                                                                                                         
+ KB   & Scopus & 37,50  & 66,36  & 20,21  & 15,31  & 4,64     & 4,15 & 4,46  & 2,25 \\
+      & WoS    & 38,77  & 66,64  & 21,65  & 16,82  & 4,83     & 4,09 & 4,65  & 2,45 \\
+      & GS     & 23,88  & 91,79  & 22,06  & 15,15  & 24,88    & 4,70 & 4,69  & 1,69 \\[1ex]
+ KBt  & Scopus & 59,31  & 121,61 & 24,57  & 9,57   & 5,93     & 5,15 & 4,96  & 1,09 \\
+      & WoS    & 33,76  & 54,44  & 19,41  & 9,83   & 4,71     & 3,57 & 4,41  & 1,32 \\
+      & GS     & 84,97  & 153,60 & 37,05  & 17,60  & 7,48     & 5,65 & 6,09  & 1,30 \\[1ex]
+ KCh  & Scopus & 122,65 & 217,78 & 40,94  & 38,87  & 8,34     & 7,49 & 6,37  & 2,78 \\
+      & WoS    & 120,48 & 207,33 & 44,28  & 39,76  & 8,33     & 7,36 & 6,61  & 3,36 \\
+      & GS     & 157,82 & 272,44 & 53,79  & 47,38  & 9,56     & 8,39 & 7,29  & 4,40 \\[1ex]
+ KER  & Scopus & 45,53  & 28,61  & 58,01  & 12,18  & 6,24     & 2,78 & 7,62  & 0,76 \\
+      & WoS    & 40,24  & 26,21  & 46,23  & 15,52  & 5,82     & 2,73 & 6,80  & 1,06 \\
+      & GS     & 74,13  & 45,04  & 86,72  & 19,96  & 8,04     & 3,33 & 9,31  & 1,02 \\[1ex]
+ KBf  & Scopus & 85,87  & 79,65  & 88,52  & 76,25  & 7,71     & 5,76 & 9,41  & 3,86 \\
+      & WoS    & 104,22 & 92,18  & 101,11 & 67,94  & 8,61     & 6,33 & 9,90  & 3,26 \\
+      & GS     & 129,18 & 125,84 & 116,20 & 115,44 & 9,50     & 6,98 & 10,78 & 5,81 \\[1ex]
+ KAIM & Scopus & 9,17   & 15,03  & 1,50   & 1,50   & 2,10     & 2,28 & 1,22  & 0,94 \\
+      & WoS    & 10,07  & 21,56  & 0,25   & 0,25   & 1,73     & 2,77 & 0,50  & 0,50 \\
+      & GS     & 18,00  & 28,49  & 3,25   & 3,25   & 3,09     & 3,01 & 1,80  & 1,80 \\[1ex]
+ KOJP & Scopus & --     & --     & --     & --     & --       & --   & --    & --   \\
+      & WoS    & --     & --     & --     & --     & --       & --   & --    & --   \\
+      & GS     & 0,67   & 0,47   & 0,17   & 0,50   & 0,79     & 0,30 & 0,29  & 0,50 \\[0.5ex]
+  \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+  \centering\small
+  \caption[Hodnotenie FPV\,--\,$h^{\mathrm{c}}$-index a $h_{\mathrm{m}}$-index]{Scientometrické hodnotenie katedier FPV UCM v Trnave, (6. časť)}
+\label{tab:6-staff.results}
+\begin{tabular}{llcccccccc}
+  \toprule\noalign{\vspace{.3ex}}
+  %Katedra &Citačný  & \multicolumn{4}{c}{$h^{\mathrm{c}}$} & \multicolumn{4}{c}{$h^{\mathrm{c}}$} & \multicolumn{4}{c}{$h_{\mathrm{m}}$-index} \\
+  Katedra &Citačný  & \multicolumn{4}{c}{$h^{\mathrm{c}}$-index} & \multicolumn{4}{c}{$h_{\mathrm{m}}$-index} \\
+      & register& $\bar{x}$      & $\sigma$  & $\tilde{x}$ & MAD  & $\bar{x}$      & $\sigma$  & $\tilde{x}$  & MAD  \\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}                                                                                                                         
+ KB   & Scopus & 5,14     & 4,42 & 4,50  & 2,00 & 3,81     & 5,07 & 1,75 & 1,75 \\
+      & WoS    & 5,46     & 4,56 & 5,00  & 2,00 & 4,04     & 5,23 & 2,88 & 1,68 \\
+      & GS     & 20,88    & 5,15 & 6,00  & 2,00 & 27,88    & 5,60 & 2,34 & 1,99 \\[1ex]
+ KBt  & Scopus & 5,64     & 3,50 & 5,00  & 1,00 & 3,34     & 3,88 & 1,90 & 0,90 \\
+      & WoS    & 4,55     & 3,21 & 4,00  & 1,00 & 2,92     & 3,52 & 1,98 & 0,99 \\
+      & GS     & 7,18     & 3,74 & 6,00  & 1,00 & 4,66     & 4,58 & 3,33 & 1,30 \\[1ex]
+ KCh  & Scopus & 7,94     & 7,68 & 6,00  & 3,00 & 5,03     & 4,81 & 3,17 & 2,22 \\
+      & WoS    & 7,94     & 7,39 & 6,50  & 3,50 & 5,40     & 5,16 & 3,06 & 2,26 \\
+      & GS     & 9,44     & 8,49 & 8,00  & 4,00 & 6,26     & 6,22 & 3,59 & 2,45 \\[1ex]
+ KER  & Scopus & 7,00     & 2,83 & 8,00  & 1,00 & 3,57     & 2,47 & 3,87 & 1,41 \\
+      & WoS    & 6,14     & 2,34 & 7,00  & 1,00 & 3,31     & 2,26 & 3,70 & 0,98 \\
+      & GS     & 8,00     & 3,00 & 9,00  & 1,00 & 4,44     & 2,44 & 4,41 & 2,49 \\[1ex]
+ KBf  & Scopus & 8,00     & 6,08 & 11,00 & 2,00 & 5,62     & 5,01 & 6,79 & 3,86 \\
+      & WoS    & 9,00     & 7,07 & 9,50  & 4,50 & 6,45     & 5,00 & 6,91 & 3,11 \\
+      & GS     & 9,80     & 7,60 & 11,00 & 7,00 & 6,49     & 5,32 & 7,09 & 5,01 \\[1ex]
+ KAIM & Scopus & 2,09     & 1,97 & 2,00  & 2,00 & 2,56     & 4,01 & 0,83 & 0,67 \\
+      & WoS    & 1,46     & 2,15 & 1,00  & 1,00 & 2,45     & 4,44 & 0,50 & 0,50 \\
+      & GS     & 2,87     & 2,75 & 2,00  & 2,00 & 2,93     & 4,40 & 1,25 & 1,25 \\[1ex]
+ KOJP & Scopus & --       & --   & --    & --   & --       & --   & --   & --   \\
+      & WoS    & --       & --   & --    & --   & --       & --   & --   & --   \\
+      & GS     & 1,00     & 0,00 & 0,50  & 0,50 & 0,67     & 0,47 & 0,50 & 0,34 \\[0.5ex]
+  \bottomrule
+\end{tabular}
+\end{table}
 \section{Vývoj publikačnej činnosti a citovanosti pracovníkov celej Fakulty
   prírodných vied v~čase}
 
-Obrázok~\ref{fig:plot.all.publications} vyjadruje grafické znázornenie množstvo
+Obrázok~\ref{fig:plot.all.publications} vyjadruje grafické znázornenie množstva
 publikovaných článkov všetkými pracovníkmi Fakulty prírodných vied
 v~jednotlivých rokoch z~citačných registrov Scopus a WoS (samostatné krivky).
 Je prirodzené, že pracovníci slovenskej univerzity viac článkov publikujú
@@ -40,319 +301,118 @@ vidíme počte citácií pre rok 2015.
   \label{fig:plot.all.citations}
 \end{figure}
 
+\begin{longtable}[c]{lcccrcc}
+\caption{Tabuľka časopisov}
+    \label{tab:journal.results} \\
+   \toprule\noalign{\vspace{.3ex}}
+  Source title                                                                       & n & IF & SJR  & CiteScore & SNIP           \\[0.3ex]
+ \midrule\noalign{\vspace{.5ex}}
+    \endfirsthead
 
+    \caption{(pokračovanie)} \\
+   \toprule\noalign{\vspace{.3ex}}
+  Source title                                                                       & n & IF & SJR  & CiteScore & SNIP            \\[0.3ex]
+ \midrule\noalign{\vspace{.5ex}}
+    \endhead
 
-\section{Vývoj publikačnej činnosti a citovanosti pracovníkov Katedry biológie
-  v~čase}
+    \bottomrule \\ [-2ex]
+    \multicolumn{7}{l}{\footnotesize $^\dagger$ posledné dáta sú z roku 2008} \\
+    \endfoot
 
-Na Obrázku~\ref{fig:plot.bio.publications} je zobrazený počet článkov
-publikovaných každým rokom v~období 2000--2016.  Vzostup publikácií vo WoS pre
-rok 2013 je spôsobený už spomínanou akreditáciou.  Dáta zo Scopusu obsahujú tri
-články naviac oproti dátam z~WoS.  Najväčší počet publikácií má doc.\,Janeček
-(17 v~Scopus a 13 vo WoS).  Na rozdiel od ostatných pracovníkov, publikuje
-v~rámci UCM od roku 2000.
+  \bottomrule \\ [-2ex]
+    \multicolumn{7}{l}{\footnotesize $^\dagger$ posledné dáta sú z roku 2008} \\
+    \endlastfoot
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-bio-publications.png}
-  \caption{Vývoj publikačnej činnosti pracovníkov Katedry biológie v~období
-    2000--2016.}
-  \label{fig:plot.bio.publications}
-\end{figure}
+  Chemical Papers                                                                    & 25     & 1.326   & 0.382 &  1.36      & 0.56                  \\[0.5ex]
+  Polyhedron                                                                         & 22     & 2.108   & 0.592 &  2.02      & 0.777                 \\[0.5ex]
+  Biologia                                                                           & 15     & 1,10    & 0.322 &  0.88      & 0.88                  \\[0.5ex]
+  Cereal Research Communications                                                     & 14     & 0.528   & 0.305 &  0.62      & 0.515                 \\[0.5ex]
+  Dalton Transactions                                                                & 14     & 4.177   & 1.404 &  4.1       & 1                     \\[0.5ex]
+  Chemicke Listy                                                                     & 13     & 0.279   & 0.183 &  0.22      & 0.24                  \\[0.5ex]
+  Inorganic Chemistry                                                                & 12     & 4.82    & 1.873 &  1.36      & 0.741                 \\[0.5ex]
+  Inorganica Chimica Acta                                                            & 11     & 1.918   & 0.584 &  1.88      & 0.664                 \\[0.5ex]
+  Nova Biotechnologica et Chimica                                                    & 11     & 0.188   & 0.129 &  0.31      & 0.044                 \\[0.5ex]
+  Acta Chimica Slovenica                                                             & 7      & 1.167   & 0.288 &  0.99      & 0.528                 \\[0.5ex]
+  Journal of Food and Nutrition                                                      & 7      & 1.676   & 0.334 &  0.74      & 0.393                 \\[0.5ex]
+  Research                                                                           &        &         &       &            &                       \\[0.5ex]
+  Journal of Liquid Chromatography                                                   & 7      & 0.669   & 0.299 &  0.69      & 0.416                 \\[0.5ex]
+  and Related Technologies                                                           &        &         &       &            &                       \\[0.5ex]
+  Journal of Radioanalytical                                                         & 7      & 0.983   & 0.458 &  0.99      & 0.683                 \\[0.5ex]
+  and Nuclear Chemistry                                                              &        &         &       &            &                       \\[0.5ex]
+  Acta Crystallographica Section E:                                                  & 6      & 0.21    & 0.179 &  0.17      & 0.106                 \\[0.5ex]
+  Structure Reports Online                                                           &        &         &       &            &                       \\[0.5ex]
+  Agriculture                                                                        & 6      & n/a     & 0.156 &  0.31      & 0.281                 \\[0.5ex]
+  Biologia - Section Cellular                                                        & 6      & 0.46$^\dagger$    & 0.138 $^\dagger$ &  --       & 0.259$^\dagger$ \\[0.5ex]
+  and Molecular Biology                                                             &        &         &       &            &                \\[0.5ex]
+  Central European Journal                                                           & 6      & 1.329   & 0.346 &  1.24      & 0.841                 \\[0.5ex]
+  of Chemistry                                                                       &        &         &       &            &                       \\[0.5ex]
+  Journal of Biotechnology                                                           & 6      & 2.667   & 1.064 &  2.87      & 0.944                 \\[0.5ex]
+  Arkivoc                                                                            & 5      & 1.096   & 0.237 &  0.8       & 0.342                 \\[0.5ex]
+  Current Opinion in Biotechnology                                                   & 5      & 8.314   & 3.124 &  7.99      & 2.063                 \\[0.5ex]
+  Inorganic Chemistry Communications                                                 & 5      & 1.762   & 0.489 &  1.68      & 0.529                 \\[0.5ex]
+  Czech Journal of Food Sciences                                                     & 4      & 0.728   & 0.409 &  0.95      & 0.681                 \\[0.5ex]
+  International Journal of Molecular                                                 & 4      & 3.257   & 1.16  &  3.37      & 1.076                 \\[0.5ex]
+  Sciences                                                                           &        &         &       &            &                       \\[0.5ex]
+  Journal of Thermal Analysis                                                        & 4      & 1.781   & 0.612 &  1.69      & 0.951                 \\[0.5ex]
+  and Calorimetry                                                                    &        &         &       &            &                       \\[0.5ex]
+  Monatshefte für Chemie -                                                           & 4      & 1.131   & 0.34  &  1.15      & 0.546                 \\[0.5ex]
+  Chemical Monthly                                                                   &        &         &       &            &                       \\[0.5ex]
+  New Journal of Chemistry                                                           & 4      & 3.277   & 0.987 &  3.27      & 0.819                 \\[0.5ex]
+  Nukleonika                                                                         & 4      & 0.546   & 0.205 &  0.49      & 0.461                 \\[0.5ex]
+\end{longtable}
 
-Citovanosť článkov pracovníkov Katedry biológie podľa roku ich publikovania
-zobrazuje graf na Obrázku~\ref{fig:plot.bio.citations}.  Krivky dát zo Scopusu a
-WoS sú takmer podobné, s~výnimkou už spomenutého \uv{chýbajúceho} roku 2005.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-bio-citations.png}
-  \caption{Citovanosť článkov pracovníkov Katedry biológie za obdobie
-    2000--2016.}
-  \label{fig:plot.bio.citations}
-\end{figure}
-
-
-\section{Vývoj publikačnej činnosti a citovanosti pracovníkov Katedry
-  biotechnológií v~čase}
-
-Na grafe (Obrázok~\ref{fig:plot.biotech.publications}) vidíme rozdiel medzi
-dátami zo Scopusu a WoS.  Zdôrazníme 2 záznamy z~roku 2001, ktoré nie sú
-v~zozname zo Scopusu Sú veľmi dobre citované ako ukazuje začiatok krivky WoS na
-Obrázku~\ref{fig:plot.biotech.citations}.  Prekvapujúci je vyšší počet článkov
-obdobi 2010--2011 v~prospech WoS je spôsobený troma príspevkami do
-\emph{Proceedings of The 6\textsuperscript{th} International Conference on
-  Polysaccharides-Glycoscience} a dvoma článkami z~\emph{Current Opinion in
-  Biotechnology}, ktoré nie sú v~dátach zo Scopusu.  Relatívne minimum v~počtu
-publikácií z~roku 2012 na rozdiel od celkových dát
-(Obrázok~\ref{fig:plot.all.publications}) pre WoS tvorí už spomenutých 16
-kapitol knihy \emph{Handbook of Magentochemical Formulae} doc.\,Boču z~Katedry
-chémie.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-biotech-publications.png}
-  \caption{Vývoj publikačnej činnosti pracovníkov Katedry biotechnológií
-    v~období 2000--2016.}
-  \label{fig:plot.biotech.publications}
-\end{figure}
-
-Prvú vec, ktorú si môžeme všimnúť na Obrázku~\ref{fig:plot.biotech.citations} je
-extrémne veľká citovanosť (65 citácií) 15 rokov starých článkov, ktoré nie sú
-zahrnuté v~dátach zo Scopusu.  Naopak jeden dokument s~29 citáciami z~roku 2002
-nie je v~dátach zo WoS a druhý má menej citácií v~WoS.  Podobne ako dokumenty
-z~roku 2006 (článok s~32 citáciami nie je v~dátach WoS).  Inak citačné pokrytie
-WoS kopíruje trend dát zo Scopusu.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-biotech-citations.png}
-  \caption{Citovanosť článkov pracovníkov Katedry biotechnológií za obdobie
-    2000--2016.}
-  \label{fig:plot.biotech.citations}
-\end{figure}
-
-
-\section{Vývoj publikačnej činnosti a citovanosti pracovníkov Katedry chémie
-  v~čase}
-
-Publikácie Katedry chémie tvoria väčšinu získaných citačných záznamov (54\,\%
-pre Scopus a 59\,\% pre WoS).  Z~toho dôvodu grafické zobrazenie počtu článkov
-v~rokoch ich publikácie (Obrázok~\ref{fig:plot.chem.publications}) je veľmi
-podobné ku grafu počtu publikácii celej fakulty
-(Obrázok~\ref{fig:plot.all.publications}).
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-chem-publications.png}
-  \caption{Vývoj publikačnej činnosti pracovníkov Katedry chémie v~období
-    2000--2016.}
-  \label{fig:plot.chem.publications}
-\end{figure}
-
-Pretože publikácie Katedry chémie tvoria viac než polovicu záznamov dát graf
-citácií (Obrázok~\ref{fig:plot.chem.citations}) je veľmi podobný než publikácií
-celej katedry (Obrázok~\ref{fig:plot.all.citations}).  Hlavným rozdielom absencia
-záznamov z~WoS v~rokoch 2000--2001 a suma citácií článkov z~roku 2010 je
-podstate rovnaká pre záznamy z~WoS a Scopusu.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-chem-citations.png}
-  \caption{Citovanosť článkov pracovníkov Katedry chémie za obdobie 2000--2016.}
-  \label{fig:plot.chem.citations}
-\end{figure}
-
-
-\section{Vývoj publikačnej činnosti a citovanosti pracovníkov Katedry ekochémie
-  a rádioekológie v~čase}
-
-V~grafickom zobrazení článkov podľa roku publikácie pracovníkov Katedry
-ekochémie a rádiobiológie (Obrázok~\ref{fig:plot.eco.publications}) môžeme vidieť
-prepad publikačnej činnosti v~období 2007--2012.  V~roku 2009 nebola publikovaná
-ani jedna práca resp. v~dátach chýba.  Pravdepodobne tento fenomén súvisí zo
-založením Katedry ekochémie a rádiobiológie v~tomto období.  Vidíme typickú
-absenciu dát z~WoS pre rok 2005 a nižší počet publikácií v~rokoch 2007 a 2014 na
-rozdiel od dáť zo Scopusu.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-eco-publications.png}
-  \caption{Vývoj publikačnej činnosti pracovníkov Katedry ekochémie v~období
-    2000--2016.}
-  \label{fig:plot.eco.publications}
-\end{figure}
-
-Citácie na články publikované pracovníkmi Katedry ekochéme a rádioekológie
-zobrazuje Obrázok~\ref{fig:plot.eco.citations}.  Je pozoruhodné, že od roku 2008
-krivky počtu citácií pre WoS a Scopus takmer kopírujú rovnaký trend napriek
-rozdieloch v~počtu záznamov pre roky 2012 až 2014 (hlavne pre rok 2014).  To
-znamená, že dáta publikácií pracovníkov Katedry ekochémie z~WoS a Scopusu sú
-presné okrem už spomínaného roku 2005.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-eco-citations.png}
-  \caption{Citovanosť článkov pracovníkov Katedry ekochémie a rádioekológie za
-    obdobie 2000--2016.}
-  \label{fig:plot.eco.citations}
-\end{figure}
-
-
-\section{Vývoj publikačnej činnosti a citovanosti pracovníkov Katedry
-  aplikovanej informatiky a matematiky v~čase}
-
-Obrázok~\ref{fig:plot.inf.publications} je typickým príkladom, že z~malého
-množstva dát nie je možné nič odvodzovať.  Keďže z~citačného registru WoS sa nám
-podarilo získať iba 6 záznamov s~jednou citáciou (článok z~roku 2014) lepšie je
-tieto dáta vôbec nepoužiť v~citačnej analýze.  Zaujímavé je, že z~roku nemáme
-ani jednu publikáciu, rovnako ako v~prípade dát Katedry ekochémie.  Môže to
-vypovedať o~podstatnejším zmenách na pôde Fakulty prírodných vied v~roku 2009.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-inf-publications.png}
-  \caption{Vývoj publikačnej činnosti pracovníkov Katedry aplikovanej
-    informatiky a matematiky v~období 2000-2016.}
-  \label{fig:plot.inf.publications}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-inf-citations.png}
-  \caption{Citovanosť článkov pracovníkov Katedry aplikovanej informatiky a
-    matematiky za obdobie 2000-2016.}
-  \label{fig:plot.inf.citations}
-\end{figure}
-
-
-\section{Scientometrická analýza publikačnej činnosti katedier FPM UCM
-  z~citačných registrov WoS a Scopus pomocou programu PoP}
-
-Súbory dát pre jednotlivé katedry sme spracovali v~programe
-PoP\footnote{\url{http://www.harzing.com/resources/publish-or-perish}}.  Výstup
-programu v~20 stĺpcoch sme rozdelili do štyroch tabuliek
-(Tabuľka~\ref{tab:citation.info} a Tabuľka~\ref{tab:citation.info2} pre základné
-citačné údaje; Tabuľka~\ref{tab:citation.indicators} a
-Tabuľka~\ref{tab:citation.indicators2} pre citačné indikátory).  Druhý a tretí
-stĺpec Tabuľky~\ref{tab:citation.info} predstavujú celkový počet publikácií a
-celkový počet citácií, základné údaje pre citačnú analýzu (napr. výpočet impakt
-faktoru).  Najväčší počet článkov tvorí blok Katedry chémie (54\,\% pre Scopus a
-59\,\% pre WoS z~celej fakulty) a pochopiteľne najväčšiu časť citácií (62\,\%
-pre Scopus a 60\,\% pre WoS z~celej fakulty).  Vek v~rokoch znamená koľko rokov
-ubehlo od publikácie najstaršieho článku (12 v~prípade Katedry ekochémie
-znamená, že prvé publikácie sú z~roku 2004).
-
-Priemerný počet citácií na počet článkov (v~Tabuľke~\ref{tab:citation.info}
-nazvaný Citácie/článok) je jednoduchý podiel celového počtu citácií počtom
-článkov.  Podobný je priemerný počet citácií na rok (Citácie/rok), ktorý sa
-vypočíta ako podiel citácií/článok a veku v~rokoch.  Citácie/autor získame
-spočítaním podielov počtu citácií na článok počtom jeho autorov pre každý
-článok.  Články/autor sa vypočíta sčítaním čiatkových hodnôt (1/počet autorov
-daného článku) pre každý článok.  Priemerný počet autorov na článok
-(Autori/článok) je jednoduchý podiel počtu všetkých autorov počtom článkov.
-\citep{Harzing2011}
-
-Hlavnou nevýhodou týchto základných metrík je veľká citlivosť na krajné hodnoty.
-Môžeme to vidieť na porovnaní dát tých istých ľudí z~registrov Web of Science a
-scopus.  Napr. priemerný počet citácií na počet článkov sa zhoduje iba v~prípade
-dát Katedry ekochémie (6,27) a všetkých ostatných prípadoch sú hodnoty veľmi
-odlišné.  Toto platí takmer pre všetky základné metriky.  Okrem priemerného
-počtu autorov na článok, pri ktorom hodnoty varírujú medzi 4 a 5 (s~výnimkou dát
-Katedry aplikovanej informatiky).
-
-Citačné indikátory v~Tabuľke~\ref{tab:citation.indicators} a
-Tabuľke~\ref{tab:citation.indicators2} sú rozobrané v~kapitole
-\ref{sec:citation.indicators} (s~výnimkou citácie/autori/rok a pokrytia $h$ a
-$g$ indexov).  Priemerný počet citácií na autora a rok je podiel citácie/autor
-celkovým vekom dát.  Pokrytie $h$ a $g$ indexov predstavuje percenuálny podiel
-citácií použitých na výpočet $h$ a $g$ indexu.
-
-Katedra chémie UCM dosahuje úroveň $h$-indexu katedry chémie na Univezite na
-Kréte. \citep{LAZARIDIS2010}
-
-\begin{table}
-\centering\small
-\caption{Základné citačné informácie.}
-\label{tab:citation.info}
-\begin{tabular}{llccccc}
-  \toprule\noalign{\vspace{.3ex}}
-  Dátový súbor & Citačný  & Počet   & Počet   & Vek      & Citácie/ & Citácie/ \\
-               & register & článkov & citácii & v~rokoch & rok      & článok   \\[0.3ex]
-  \midrule\noalign{\vspace{.5ex}}
-  Celá fakulta   & Scopus & 324 & 2\,524 & 16 & 157,75 & 7,79 \\
-                 & WoS    & 288 & 1\,712 & 16 & 107,00 & 5,94 \\[1ex]
-  Biológia       & Scopus &  28 &    265 & 16 &  16,56 & 9,46 \\
-                 & WoS    &  26 &    219 & 16 &  13,56 & 8,42 \\[1ex]
-  Biotechnológie & Scopus &  67 &    406 & 15 &  27,07 & 6,01 \\
-                 & WoS    &  58 &    267 & 15 &  17,80 & 4,60 \\[1ex]
-  Chémia         & Scopus & 175 & 1\,567 & 16 &  97,94 & 8,95 \\
-                 & WoS    & 170 & 1\,026 & 14 &  73,29 & 6,04 \\[1ex]
-  Ekochémia      & Scopus &  41 &    257 & 12 &  21,42 & 6,27 \\
-                 & WoS    &  33 &    207 & 12 &  17,25 & 6,27 \\[1ex]
-  Informatika    & Scopus &  18 &     28 & 14 &   2,00 & 1,56 \\
-                 & WoS    &  -- &     -- & -- &  --    & --   \\[0.5ex]
-  \bottomrule
-\end{tabular}
-\end{table}
-
-
-\begin{table}
-\centering\small
-\caption{Pokračovanie základných citačných informácii.}
-\label{tab:citation.info2}
-\begin{tabular}{llccc}
-  \toprule\noalign{\vspace{.3ex}}
-  Dátový súbor & Citačný  & Citácie/ & Články/ & Autori/ \\
-               & register & autor    & autor   & článok  \\[0.3ex]
-  \midrule\noalign{\vspace{.5ex}}
-  Celá fakulta   & Scopus & 662,43 & 83,89 & 4,78 \\
-                 & WoS    & 425,01 & 84,58 & 4,70 \\[1ex]
-  Biológia       & Scopus &  88,59 &  9,23 & 3,93 \\
-                 & WoS    &  56,53 &  7,10 & 4,19 \\[1ex]
-  Biotechnológie & Scopus &  93,43 & 16,32 & 4,79 \\
-                 & WoS    &  64,51 & 14,33 & 4,90 \\[1ex]
-  Chémia         & Scopus & 405,62 & 41,56 & 5,06 \\
-                 & WoS    & 256,15 & 54,63 & 4,72 \\[1ex]
-  Ekochémia      & Scopus &  62,12 &  9,97 & 4,85 \\
-                 & WoS    &  48,45 &  7,77 & 4,97 \\[1ex]
-  Informatika    & Scopus &  11,67 &  7,95 & 2,78 \\
-                 & WoS    &  --    & --    & --   \\[0.5ex]
-  \bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}
-\centering\small
-\caption{Citačné indikátory.}
-\label{tab:citation.indicators}
-\begin{tabular}{llcccccccc}
-  \toprule\noalign{\vspace{.3ex}}
-  Dátový súbor & Citačný  & $h$ & $g$ & $h^{\mathrm{c}}$ & $h_{\mathrm{I}}$ & $h_{\mathrm{I, norm}}$ & AWCR & AW    & AWCR/ \\
-               & register &     &     &                  &                  &                        &       & index & autor \\[0.3ex]
-  \midrule\noalign{\vspace{.5ex}}
-  Celá fakulta   & Scopus & 26 & 36 & 21 & 4,76 & 12 & 488,95 & 22,11 & 127,24 \\
-                 & WoS    & 22 & 31 & 20 & 4,44 & 10 & 400,05 & 20,00 &  95,77 \\[1ex]
-  Biológia       & Scopus & 10 & 16 &  8 & 2,44 &  6 &  46,66 &  6,83 &  13,00 \\
-                 & WoS    &  8 & 14 &  7 & 1,68 &  4 &  42,63 &  6,53 &  10,13 \\[1ex]
-  Biotechnológie & Scopus & 10 & 18 &  8 & 1,96 &  5 &  52,12 &  7,36 &  12,16 \\
-                 & WoS    &  7 & 15 &  5 & 1,63 &  5 &  34,80 &  5,90 &   7,68 \\[1ex]
-  Chémia         & Scopus & 22 & 32 & 18 & 4,07 & 10 & 324,90 & 18,02 &  84,17 \\
-                 & WoS    & 17 & 26 & 16 & 3,36 &  7 & 270,74 & 16,45 &  64,02 \\[1ex]
-  Ekochémia      & Scopus &  9 & 13 &  8 & 1,88 &  4 &  59,02 &  7,68 &  16,23 \\
-                 & WoS    &  8 & 12 &  8 & 1,64 &  4 &  54,52 &  7,38 &  14,15 \\[1ex]
-  Informatika    & Scopus &  3 &  4 &  2 & 1,00 &  2 &   3,99 &  2,00 &   1,61 \\
-                 & WoS    & -- & -- & -- &  --  & -- &  --    & --    &  --    \\[0.5ex]
-  \bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}
-\centering\small
-\caption{Pokračovanie citačných indikátorov.}
-\label{tab:citation.indicators2}
-\begin{tabular}{llccccc}
-  \toprule\noalign{\vspace{.3ex}}
-  Dátový súbor & Citačný  & $e$ & $h_{\mathrm{m}}$ & Citácia/   & Pokrytie        & Pokrytie        \\
-               & register &     &                  & autora/rok & $h$-indexu (\%) & $g$-indexu (\%) \\[0.3ex]
-  \midrule\noalign{\vspace{.5ex}}
-  Celá fakulta   & Scopus & 20,62 & 13,62 & 41,40 & 44 & 53 \\
-                 & WoS    & 18,71 & 10,67 & 26,56 & 49 & 58 \\[1ex]
-  Biológia       & Scopus & 10,86 &  4,94 &  5,53 & 82 & 97 \\
-                 & WoS    & 10,39 &  3,64 &  3,50 & 79 & 95 \\[1ex]
-  Biotechnológie & Scopus & 13,75 &  4,84 &  6,67 & 72 & 87 \\
-                 & WoS    & 13,08 &  3,18 &  4,30 & 82 & 93 \\[1ex]
-  Chémia         & Scopus & 19,65 & 10,01 & 25,35 & 56 & 67 \\
-                 & WoS    & 16,49 &  8,00 & 18,29 & 55 & 66 \\[1ex]
-  Ekochémia      & Scopus &  8,60 &  4,90 &  5,17 & 60 & 73 \\
-                 & WoS    &  8,12 &  4,18 &  4,03 & 63 & 76 \\[1ex]
-  Informatika    & Scopus &  3,32 &  1,42 &  0,83 & 71 & 82 \\
-                 & WoS    & --    & --    & --    & -- & -- \\[0.5ex]
-  \bottomrule
-\end{tabular}
-\end{table}
-
+\begin{longtable}[c]{lcccrcc}
+  Applied Mechanics and Materials                                                    & 3      & 0.16    & 0.113 &  0.07      & 0.066                 \\[0.5ex]
+  Collection of Czechoslovak                                                         & 3      & 2.27    & n/a   &            &                       \\[0.5ex]
+ Chemical Communications                                                            &        &         &       &            &                       \\[0.5ex]
+ Current Pharmaceutical Design                                                      & 3      & 3.052   & 1.22  &  3.01      & 3.01                  \\[0.5ex]
+ European Journal of Inorganic                                                      & 3      & 2.686   & 1.018 &  2.58      & 0.685                 \\[0.5ex]
+ Chemistry                                                                          &        &         &       &            &                       \\[0.5ex]
+ Journal of Chromatography A                                                        & 3      & 3.926   & 1.774 &  4.03      & 1.34                  \\[0.5ex]
+ Journal of Pharmaceutical                                                          & 3      & 3.169   & 1.049 &  3.16      & 1.42                  \\[0.5ex]
+ and Biomedical Analysis                                                            &        &         &       &            &                       \\[0.5ex]
+ Molecules                                                                          & 3      & 2.465   & 0.544 &  2.65      & 1.095                 \\[0.5ex]
+ Pharmazie                                                                          & 3      & 1.32    & 0.428 &  1.33      & 0.527                 \\[0.5ex]
+ Polish Journal of Environmental                                                    & 3      & 0.71    & 0.341 &  0.92      & 0.627                 \\[0.5ex]
+ of Studies                                                                         &        &         &       &            &                       \\[0.5ex]
+ Advanced Materials Research                                                        & 2      & 0.23    & 0.115 &  0.08      & 0.096                 \\[0.5ex]
+ Analytical Methods                                                                 & 2      & 1.915   & 0.623 &  1.98      & 0.626                 \\[0.5ex]
+ Bioorganic and Medicinal                                                           & 2      & 2.923   & 1.064 &  3         & 1.064                 \\[0.5ex]
+ Chemistry                                                                          &        &         &       &            &                       \\[0.5ex]
+ Cellular and Molecular Life                                                        & 2      & 5.694   & 3.388 &  5.68      & 1.388                 \\[0.5ex]
+ Sciences                                                                           &        &         &       &            &                       \\[0.5ex]
+ Chemistry and Biodiversity                                                         & 2      & 1.444   & 0.542 &  1.65      & 0.804                 \\[0.5ex]
+ Chemistry of Heterocyclic                                                          & 2      & 0.815   & 0.339 &  0.82      & 0.493                 \\[0.5ex]
+ Compounds                                                                          &        &         &       &            &                       \\[0.5ex]
+ Communications in Computer                                                         & 2      & 0.35    & 0.149 &  0.15      & 0.166                 \\[0.5ex]
+ and Information Science                                                            &        &         &       &            &                       \\[0.5ex]
+ Computational and Theoretical                                                      & 2      & 1.403   & 0.566 &  1.42      & 0.585                 \\[0.5ex]
+ Chemistry                                                                          &        &         &       &            &                       \\[0.5ex]
+ CrystEngComm                                                                       & 2      & 3.849   & 1.096 &  3.83      & 3.83                  \\[0.5ex]
+ Desalination and Water Treatment                                                   & 2      & 1.272   & 0.392 &  1.17      & 0.691                 \\[0.5ex]
+ of Chemistry                                                                       &        &         &       &            &                       \\[0.5ex]
+ Enzyme and Microbial Technology                                                    & 2      & 2.624   & 0.854 &  2.63      & 0.933                 \\[0.5ex]
+ of Chemistry                                                                       &        &         &       &            &                       \\[0.5ex]
+ European Journal of Organic                                                        & 2      & 3.068   & 1.245 &  2.88      & 0.735                 \\[0.5ex]
+ Chemistry                                                                          &        &         &       &            &                       \\[0.5ex]
+ FEBS Journal                                                                       & 2      & 4.237   & 2.141 &  3.92      & 1.111                 \\[0.5ex]
+ Food Chemistry                                                                     & 2      & 4.052   & 1.62  &  4.31      & 1.883                 \\[0.5ex]
+ International Journal of Electro-                                                  & 2      & 2.808   & 0.51  &  1.86      & 1.86                  \\[0.5ex]
+ chemical Sciencey                                                                  &        &         &       &            &                       \\[0.5ex]
+ Journal of Applied Microbiology                                                    & 2      & 2.156   & 0.921 &  2.57      & 1.026                 \\[0.5ex]
+ Journal of Coordination Chemistry                                                  & 2      & 1.756   & 0.404 &  1.55      & 0.608                 \\[0.5ex]
+ Journal of Molecular Structure                                                     & 2      & 1.78    & 0.463 &  1.7       & 0.813                 \\[0.5ex]
+ Khimiya Geterotsiklicheskikh                                                       & 2      & n/a     & 0.1   &            &                       \\[0.5ex]
+ Soedinenii                                                                         &        &         &       &            &                       \\[0.5ex]
+ Neoplasma                                                                          & 2      & 1.961   & 0.726 &  1.94      & 0.565                 \\[0.5ex]
+ Plant Cell Reports                                                                 & 2      & 3.088   & 1.225 &  3.11      & 1.178                 \\[0.5ex]
+ Tetrahedron                                                                        & 2      & 2.645   & 0.991 &  2.72      & 0.814                 \\[0.5ex]
+ Transition Metal Chemistry                                                         & 2      & 1.465   & 0.398 &  1.36      & 0.592                 \\[0.5ex]
+\end{longtable}
 
 %%% Local Variables:
 %%% TeX-master: "diplomovka"
 %%% End:
+
+
+

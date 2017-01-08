@@ -55,9 +55,16 @@ Citačné indikátory:
 		Efektívny rang \label{eq:hm-index.reff}
 
 
+
+
 Results
   Journal Results
     tabulka \label{tab:journal.results}
   Academics results
-    tabulka \label{tab:academic.results}
+    tabulky \label{tab:1-staff.results}
+            \label{tab:2-staff.results}
+            \label{tab:3-staff.results}
+            \label{tab:4-staff.results}
+            \label{tab:5-staff.results}
+            \label{tab:6-staff.results}
 

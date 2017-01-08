@@ -352,14 +352,11 @@ Zistili sme hodnoty impakt faktoru (viď podkapitola \ref{sec:if}, SciMago rang
 časopisu, (viď podkapitola \ref{sec:sjr}), CiteScore (viď podkapitola
 \ref{sec:citescore}) SNIP (viď podkapitola \ref{sec:snip}) pre všetky časopisy
 z~bibliografických záznamov, ktorých proces získavania popisujeme v~podkapitole
-\ref{sec.all.mining}.  Hodnoty pre IF sme získali z~oficiálnych
-internetových stránok (viď Tabuľka \ref{tab:indicators.web}).  Zoznam časopisov
-je uvedený ďalej kapitole (viď Tabuľka \ref{tab:journal.results}).  V~prípade
-ak daný časopis sme na oficiálnych stránkach nenašli, použili sme web
-ResearchGate\footnote{\url{https://www.researchgate.net/}}.  Ak impakt faktor
-pre daný časopis nenašli nikde na internete, tak sme položku v~tabuľke
-\ref{tab:journal.results} nechali práznu.  Ak hodnoty ostatných indikátorov
-sme nenašli na  oficiálnych stránkách, tak sme položku nechali práznu.
+\ref{sec.all.mining}.  Hodnoty pre IF sme získali z~oficiálnych internetových
+stránok (viď Tabuľka \ref{tab:indicators.web}).  Zoznam časopisov je uvedený
+ďaľšiej kapitole (viď Tabuľka \ref{tab:journal.results}).  V~prípade ak
+citačný indikátor pre daný časopis sa nám nepodarilo vyhľadať, tak sme položku
+v~tabuľke \ref{tab:journal.results} označili pomlčkou.  
 
 \begin{SCtable}
 \centering\small
@@ -375,7 +372,6 @@ sme nenašli na  oficiálnych stránkách, tak sme položku nechali práznu.
   SciMago rang časopisu           & {\footnotesize \url{http://www.scimagojr.com}}\\[0.5ex]
   CiteScore                       & {\footnotesize \url{https://journalmetrics.scopus.com}} \\[0.5ex]
   SNIP                            & {\footnotesize \url{http://www.scimagojr.com}} \\[-0.25ex]
-                                  & {\footnotesize \url{https://journalmetrics.scopus.com}} \\[0.5ex]
   \bottomrule
 \end{tabular}
 \end{SCtable}
@@ -423,28 +419,31 @@ Okno programu (viz Obrázok
 
 \subsection{Scientometrická analýza}
 
-Podľa prác \citet{Kazakis2014a} a \citet{Kazakis2014b,Kazakis2015} sme získali
-bibliografické údaje všetkých publikácií pracovníkov FPV a uložili sme ich do
-CSV súborov. Tieto súbory sme importovali do PoP, kde sme zistili citačné
-indikátory pre každého pracovníka. Vypočítané citačné indikátory dopytov
-všetkých pracovníkov sme uložili do súborov s~názvami katedier, do ktorých
-patria. Z~týchto súborov sme vybrali stĺpce, ktoré reprezentujú citačné
-indikátory podľa Tabuľky \ref{tab:indicators.review}, a počet citácií a
-publikácii.  Záznamy sme usporiadali do skupín podľa citačného registru,
-z~ktorého boli získané.  Vypočítali sme priemer, medián, štandartnú odchlylku a
-MAD\footnote{Absolútna odchýlka mediánu (ang.\emph{Median Absolute Devination})
-je robustná štatistická metóda na zistenie rozptylu dát. Keďže $\mathrm{MAD} =
-\mathrm{Med}(|X_i - \tilde{X}|)$, využíva medián, MAD je menej náchylný na
-extrémne vybočujúce hodnoty, a preto sa používa v~nenormálnych
+Podľa metodiky \citet{Kazakis2014a} a \citet{Kazakis2014b,Kazakis2015} sme
+získali bibliografické údaje všetkých publikácií pracovníkov FPV a uložili sme
+ich do CSV súborov. Tieto súbory sme importovali do PoP, kde sme zistili
+citačné indikátory pre každého pracovníka. Vypočítané citačné indikátory
+dopytov všetkých pracovníkov sme uložili do súborov s~názvami katedier, do
+ktorých patria. Z~týchto súborov sme vybrali stĺpce, ktoré reprezentujú citačné
+indikátory podľa Tabuľky \ref{tab:indicators.review} plus počet publikácií na
+autora, počet citácií na publikáciu.  Záznamy sme usporiadali do skupín podľa
+citačného registru, z~ktorého boli získané.  Vypočítali sme priemer, medián,
+štandartnú odchlylku a MAD\footnote{Absolútna odchýlka mediánu
+(ang.\emph{Median Absolute Devination}) je robustná štatistická metóda na
+zistenie rozptylu dát. Keďže $\mathrm{MAD} = \mathrm{Med}(|X_i - \tilde{X}|)$,
+využíva medián, MAD je menej náchylný na extrémne vybočujúce hodnoty, a preto
+sa používa v~nenormálnych
 distribúciách.}\footnote{\url{http://www.statisticshowto.com/median-absolute-deviation/}}
-(absolútna odchýlka mediánu)pre každú skupinu. Pre hodnoty počtu citácií a
+(absolútnu odchýlku mediánu) pre každú skupinu. Pre hodnoty počtu citácií a
 publikácií sme nepočítali priemer a median, ale sme urobili sumu počtu citácii
 a sumu počtu publikácii pre každú skupinu.
 
 Nakoniec sme vytvorili dátový súbor s~18 riadkami (dáta zo Scopus, WoW a GS pre
 každú katedru), ktorého každý riadok obsahuje skratku kadetry a spracované dáta
-jednotlivých citačných indikátorov.  Tieto dáta sme previedli to Tabuľky
-\ref{tab:staff.results}, ktorá je uvedená v~nasledújúcej kapitole. Grafické
+jednotlivých citačných indikátorov.  Tieto dáta sme previedli to Tabuliek
+\ref{tab:1-staff.results}, \ref{tab:2-staff.results},
+\ref{tab:3-staff.results}, \ref{tab:4-staff.results}, \ref{tab:5-staff.results}
+a \ref{tab:6-staff.results}, ktore nájdeme v~nasledújúcej kapitole. Grafické
 znázornenie sme vytvorili pomocou vlastného programu
 \emph{scientometry-plot-gen} (viď podkapitola \ref{sec:program.my})
 
