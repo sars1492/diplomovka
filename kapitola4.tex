@@ -15,18 +15,18 @@ V Tabuľkách  \ref{tab:1-staff.results}, \ref{tab:2-staff.results},
 \ref{tab:3-staff.results}, \ref{tab:4-staff.results}, \ref{tab:5-staff.results}
 a \ref{tab:6-staff.results} sú uvedené výsledné hodnoty indikátorov každú
 katedru FPV.  Namiesto mien katedier sme použili oficiálne skratky (viď Tabuľka
-\ref{tab:department.review}).  V Ťabuľké \ref{tab:1-staff.results} stĺec $n$
-zodpovedá počtu vedeckých zamestancov, ktorý boli zahrnutý do dátového súboru.
+\ref{tab:department.review}).  V Tabuľke  \ref{tab:1-staff.results} stĺpec $n$
+zodpovedá počtu vedeckých zamestancov, ktorý boli zahrnutý do~dátového súboru.
 V stĺpcoch $P$ a $c$ uvádzame sumu všetkých článkov (Obrázok
-\ref{fig:publications.results}) a citácií (Obrázok \ref{fig:citations.results})
+\ref{fig:publications.plot}) a citácií (Obrázok \ref{fig:citations.plot})
 v dátom súbore.  Tieto informácie uvádzame pre ilustráciu, pretože Veľkosti
 dátových súborov, z ktorých dane indikátory boli počítané, určujú presnosť
 štatistiky. 
 
 Nasleduje artimetický priemer a medián počtu dokumentov na autora (graf
-porovania mediánov je na Obrázku \ref{fig:p/a.results}).  Pre ilustráciu sme k
-hodnotám artimetického priemeru uviedli štandartné odchýlky.  Na mnohých
-prípadoch (najmä pre hodnoty \uv{metrík} dokumenty na autora a citácie na dokument)
+porovnania mediánov je na Obrázku \ref{fig:p/a.plot}).  Pre ilustráciu sme k
+hodnotám artimetického priemeru uviedli štandardné odchýlky.  Na mnohých
+prípadoch (najmä pre hodnoty indikátorov: dokumenty na autora a citácie na dokument)
 je smerodajná odchýlka vyšia než samotný priemer. Čo indikuje nedôverihodnosť
 použitia artimetického priemeru na tento účel. Napriek tomu v~literatúre sme sa
 stretli s častejším použitím aritmetického priemeru než mediánu
@@ -40,36 +40,61 @@ využíva medián, MAD je menej náchylný na extrémne vybočujúce hodnoty, a 
 sa používa v~nenormálnych
 distribúciách.}\footnote{\url{http://www.statisticshowto.com/median-absolute-deviation/}}.
 Rozdiel medzi absolútnou hodnotou mediánu a MAD je nižšií 
-než medzi absolútnou hodnoutov priemeru a štandartnej odchýlky znamená, že
+než medzi absolútnou hodnoutov priemeru a štandardnej odchýlky znamená, že
 medián je lepší ukazovateľom.
 
 Tabuľka \ref{tab:2-staff.results} obsahuje počet citácií na dokument (grafické
-porovnanie mediánov v grafe Obrázok \ref{fig:c/p.results}) a Zhangov $e$-index.
+porovnanie mediánov v grafe Obrázok \ref{fig:c/p.plot}) a Zhangov $e$-index.
 Hodnoty dát Katedry odbornej jazykovej prípravy zo Scopusu a WoS nepočítali,
-pretože neboli vôbec citované.  štandartných odchýlok a hodnoty aritmetických
+pretože neboli vôbec citované.  štandardných odchýlok a hodnoty aritmetických
 priemerov indikátorov počtu publikácií na autora a počtu citácií na dokument
-(Tabuľky \ref{tab1-staf.results} a \ref{tab2-staf.results}), spozorujeme, že v
-mnohých prípadoch hodnota štandartnej odchýlky presahuje hodnotu priemeru.  Čo
+(Tabuľky \ref{tab:1-staff.results} a \ref{tab:1-staff.results}), spozorujeme, že v
+mnohých prípadoch hodnota štandardnej odchýlky presahuje hodnotu priemeru.  Čo
 znamená, že základné indikátory ako počet publikácií na~autora a počet citácií
 na dokument nie su vhodné na scientometrickú analýzu tohoto typu.  Zhangov
 $e$-index  je modifikácia $h$-indexu, ktorá je citlivá na veľmi citované články
 v malom súbore publikácií (viď. pokapitola \ref{sec:e-index}).  Na základe
 výsledkov Katedry biofyziky (Tabuľka \ref{tab:2-staff.results}) môžeme názorne
 vidieť, že mediány $e$-indexu sú rádovo väčšie od ostatných (Graficky
-znáznornené na Obrázku \ref{fig:e-index.results}).
+znáznornené na Obrázku \ref{fig:e-index.plot}).
 
 Hodnoty citačných indikátorov $h$-index a $g$-index sú uvedené v tabuľke
 \ref{tab:3-staff.results} a mediány sú graficky znázornené na Obrázkoch
-\ref{fig:h-index.results} a \ref{fig:g-index.results}.  Rozdiel medzi hodnotami
+\ref{fig:h-index.plot} a \ref{fig:g-index.plot}.  Rozdiel medzi hodnotami
 priemeru a mediánu Katedry aplikovanej informatiky a je spôsobeny výskytom
 niekoľko veľmi citovaných pracovníkov oproti ostatným, ktorí sú minimálne
 citovaní.
 
 \citet{Kazakis2015} scientometricky porovnával katedry chemického inžinierstva
-troch gréckych univerzít (v Aténach, v Solúne a Patre). 
+troch gréckych univerzít (v Aténach, v Solúne a Patre). Dáta čerpal
+z citačného registru Scopus. V Tabuľke \ref{tab:kazakis.results} sme porovnali naše výsledky s Kazakisovymi. my sme výsledky porovnávali zo všetkých použitých
+citačných registrov. 
+
+
 Vypočítal hodnoty Pracoval so väčšou vzorkov zamestancov (136 zamestnancov)
 tým pádom 
 
+\begin{table}
+  \label{tab:kazakis.results}
+  \caption{Porovnanie citačných indikátorov Katedry chémie a katedier chemického inžinierstva troch gréckych univerzít \citep{Kazakis2015}}
+\begin{tabular}{lllllll}
+\hline
+ Indikátor & Kch    &       &       & Atény & Solún & Patra \\
+           & Scopus & WoS   & GS    &       &       &       \\
+ n         & 18     & 18    & 18    & 72    & 34    & 30    \\
+ P         & 1106   & 1120  & 1525  & 4463  & 2253  & 2573  \\
+ P/A       & 15.42  & 16.14 & 25.74 & 62    & 66,3  & 85,8  \\
+ C         & 19248  & 19223 & 25208 & 74368 & 39695 & 63718 \\
+ C/P       & 12,45  & 12,62 & 11,35 & 16,7  & 17,6  & 24,8  \\
+ h ave     & 11,78  & 11,94 & 13,61 & 16,3  & 16,8  & 21,3  \\
+ h sigma   & 11,70  & 11,70 & 12,99 & 8     & 8,5   & 1,5   \\
+ h med     & 7,50   & 7,50  & 9,00  & 15,5  & 17    & 18    \\
+ g ave     & 19,83  & 20,22 & 23,56 & 26,8  & 28,3  & 35,5  \\
+ g sigma   & 22,23  & 21,68 & 24,89 & 12,6  & 13,9  & 23    \\
+ g med     & 14,50  & 15,00 & 16,50 & 26,5  & 27    & 30,5  \\
+\hline
+\end{tabular}
+\end{table}
 
 \begin{table}
   \centering\small
@@ -104,6 +129,28 @@ tým pádom
   \bottomrule
 \end{tabular}
 \end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-papers.png}
+  \caption{Celkový počet publikácií jednotlivých katedier FPV UCM v~Trnave}
+  \label{fig:publications.plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-citations.png}
+  \caption{Celkový počet citácií jednotlivých katedier FPV UCM v~Trnave}
+  \label{fig:citations.plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-papers_author.png}
+  \caption{Medián počtu publikácií na autora pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:p/a.plot}
+\end{figure}
+
 
 \begin{table}
   \centering\small
@@ -140,6 +187,23 @@ tým pádom
 \end{tabular}
 \end{table}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-cites_paper.png}
+  \caption{Medián citácií na publikáciu pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:c/p.plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-e_index.png}
+  \caption{Medián $e$-indexu pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:e-index.plot}
+\end{figure}
+\clearpage
+
+
+
 \begin{table}
   \centering\small
   \caption[Hodnotenie FPV\,--\,$h$-index a $h$-index]{Scientometrické hodnotenie katedier FPV UCM v Trnave, (3. časť)}
@@ -173,6 +237,21 @@ tým pádom
   \bottomrule
 \end{tabular}
 \end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-h_index.png}
+  \caption{Medián $h$-indexu pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:h-index.plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-g_index.png}
+  \caption{Medián $g$-indexu pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:g-index.plot}
+\end{figure}
+
 
 \begin{table}
   \centering\small
@@ -208,6 +287,21 @@ tým pádom
 \end{tabular}
 \end{table}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-hi_index.png}
+  \caption{Medián $h_{\mathrm{I}}$-indexu pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:hi-index.plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-hi_norm.png}
+  \caption{Medián $h_{\mathrm{I,norm}}$ pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:hinorm.plot}
+\end{figure}
+
+
 \begin{table}
   \centering\small
   \caption[Hodnotenie FPV\,--\,AWCR a $AW$-index]{Scientometrické hodnotenie katedier FPV UCM v Trnave, (5. časť)}
@@ -241,6 +335,21 @@ tým pádom
   \bottomrule
 \end{tabular}
 \end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-awcr.png}
+  \caption{Medián AWCR pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:awcr.plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-aw_index.png}
+  \caption{Medián $AW$-indexu pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:aw-index.plot}
+\end{figure}
+
 
 \begin{table}
   \centering\small
@@ -276,8 +385,22 @@ tým pádom
   \bottomrule
 \end{tabular}
 \end{table}
-\section{Vývoj publikačnej činnosti a citovanosti pracovníkov celej Fakulty
-  prírodných vied v~čase}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-hc_index.png}
+  \caption{Medián $h^\mathrm{c}$-indexu pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:hc-index.plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-hm_index.png}
+  \caption{Medián $h_\mathrm{m}$-indexu pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:hm-index.plot}
+\end{figure}
+
+
 
 Obrázok~\ref{fig:plot.all.publications} vyjadruje grafické znázornenie množstva
 publikovaných článkov všetkými pracovníkmi Fakulty prírodných vied
@@ -374,9 +497,6 @@ vidíme počte citácií pre rok 2015.
   Chemical Monthly                                                                   &        &         &       &            &                       \\[0.5ex]
   New Journal of Chemistry                                                           & 4      & 3.277   & 0.987 &  3.27      & 0.819                 \\[0.5ex]
   Nukleonika                                                                         & 4      & 0.546   & 0.205 &  0.49      & 0.461                 \\[0.5ex]
-\end{longtable}
-
-\begin{longtable}[c]{lcccrcc}
   Applied Mechanics and Materials                                                    & 3      & 0.16    & 0.113 &  0.07      & 0.066                 \\[0.5ex]
   Collection of Czechoslovak                                                         & 3      & 2.27    & n/a   &            &                       \\[0.5ex]
  Chemical Communications                                                            &        &         &       &            &                       \\[0.5ex]
@@ -428,6 +548,7 @@ vidíme počte citácií pre rok 2015.
 %%% Local Variables:
 %%% TeX-master: "diplomovka"
 %%% End:
+
 
 
 
