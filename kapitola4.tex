@@ -24,125 +24,6 @@ dátových súborov, z ktorých dane indikátory boli počítané, určujú pres
 štatistiky. Všetky grafy neobsahujú výsledné hodnoty Katedry odbornej
 jazykovej prípravy, pretože boli príliš nízke, z dôvodu nedostatku dát.
 
-
-Nasleduje artimetický priemer a medián počtu dokumentov na autora (graf
-porovnania mediánov je na Obrázku \ref{fig:p/a.plot}).  Pre ilustráciu sme k
-hodnotám artimetického priemeru uviedli štandardné odchýlky.  Na mnohých
-prípadoch (najmä pre hodnoty indikátorov: dokumenty na autora a citácie na dokument)
-je smerodajná odchýlka vyšia než samotný priemer. Čo indikuje nedôverihodnosť
-použitia artimetického priemeru na tento účel. Napriek tomu v~literatúre sme sa
-stretli s častejším použitím aritmetického priemeru než mediánu
-\citep{Lazaridis2010}.
-
-Podobne ako u priemerov, k mediánu sme vypočítali obdobu smerodanej odchylky
-tzv.\,MAD\footnote{Absolútna odchýlka mediánu
-(ang.\emph{Median Absolute Devination}) je robustná štatistická metóda na
-zistenie rozptylu dát. Keďže $\mathrm{MAD} = \mathrm{Med}(|X_i - \tilde{X}|)$,
-využíva medián, MAD je menej náchylný na extrémne vybočujúce hodnoty, a preto
-sa používa v~nenormálnych
-distribúciách.}\footnote{\url{http://www.statisticshowto.com/median-absolute-deviation/}}.
-Rozdiel medzi absolútnou hodnotou mediánu a MAD je nižšií
-než medzi absolútnou hodnoutov priemeru a štandardnej odchýlky znamená, že
-medián je lepší ukazovateľom.
-
-Tabuľka \ref{tab:2-staff.results} obsahuje počet citácií na dokument (grafické
-porovnanie mediánov v grafe Obrázok \ref{fig:c/p.plot}) a Zhangov $e$-index.
-Hodnoty dát Katedry odbornej jazykovej prípravy zo Scopusu a WoS nepočítali,
-pretože neboli vôbec citované.  štandardných odchýlok a hodnoty aritmetických
-priemerov indikátorov počtu publikácií na autora a počtu citácií na dokument
-(Tabuľky \ref{tab:1-staff.results} a \ref{tab:1-staff.results}), spozorujeme, že v
-mnohých prípadoch hodnota štandardnej odchýlky presahuje hodnotu priemeru.  Čo
-znamená, že základné indikátory ako počet publikácií na~autora a počet citácií
-na dokument nie su vhodné na scientometrickú analýzu tohoto typu.  Zhangov
-$e$-index  je modifikácia $h$-indexu, ktorá je citlivá na veľmi citované články
-v malom súbore publikácií (viď. pokapitola \ref{sec:e-index}).  Na základe
-výsledkov Katedry biofyziky (Tabuľka \ref{tab:2-staff.results}) môžeme názorne
-vidieť, že mediány $e$-indexu sú rádovo väčšie od ostatných (graficky
-znáznornené na Obrázku \ref{fig:e-index.plot}).
-
-Hodnoty citačných indikátorov $h$-index a $g$-index sú uvedené v tabuľke
-\ref{tab:3-staff.results} a mediány sú graficky znázornené na Obrázkoch
-\ref{fig:h-index.plot} a \ref{fig:g-index.plot}.  Rozdiel medzi hodnotami
-priemeru a mediánu Katedry aplikovanej informatiky a je spôsobeny výskytom
-niekoľko veľmi citovaných pracovníkov oproti ostatným, ktorí sú minimálne
-citovaní.
-
-\citet{Kazakis2015} scientometricky porovnával katedry chemického inžinierstva
-troch gréckych univerzít (Atény, Solún a Patra).  V Tabuľke
-\ref{tab:kazakis.results} sme porovnali naše výsledky s Kazakisovymi. Napriek
-tomu, že gréci čerpali iba z citačného registru Scopus, my sme porovnali
-indikátory zo všetkých použitých citačných registrov. Na prvý pohľad si
-všimneme rozdiel v počte pracovníkov (v tabuľke označené ako $n$).  Grécke
-katedry zahrňujú ďaleko viacej ľudí (katedra v Aténach dokonca až 72
-akademikov) než katedra Chémie s 18 pracovníkmi.  Hodnoty priemerného $h$-index
-a $g$-indexu katedry Chémie sú  zhruba o tretinu nižšie než gréckych katedier.
-Veľký rozdiel predstavujú príliš vysoké štandardné odchýlky (ktoré skoro
-dosahujú hodnotu priemeru). Gréci ich majú nižšie.  Myslíme si, že lepší
-indikátorom sú mediány, pretože MAD hodnoty sú nižšie než smerodajné odchýlky.
-V tomto prípade sú mediány $h$-index a $g$-indexu katedry Chémie okolo 100\,\%
-nižšie než gréckych katedier. Ale ak zoberieme do úvahy, že katedra Chémie raz
-toľko menej zamestnancov, tak výsledok je očakávateľný.
-
-\citet{Lazaridis2010} vypočítal priemerný $h$-index gréckych chemických
-katedier prestížnych gréckych univerzít (Krétska, Patraska, Solúnska,
-Ioanninanska, a Aténska).  Dáta čerpal z citačného registru WoS, pričom na
-výpočet $h$-index používal webové rozhranie WoS, alebo ho počítal ručne. V
-Tabuľke \ref{tab:lazaridis.results} sú porovnané priemerné $h$-index katedier
-spomenutých gréckych univerzít a naše výsledky pre Katedru Chémie. Síce
-priemerný $h$-index gréckych katedier je porovnateľný s KCh (s výnimkou z
-Krétskej univerzity), ale dátový súbor je výrazne menší. Zdá sa nám
-nepravdepodobné aby taká inštitúcia mala také male množstvo publikácií.  Autor
-o získavaní dát píše iba o problémami s gréckymi menami v anglickej databáze
-WoS. V neposlednom rade nesmieme zabúdať, že autor neuvádza šmerodajnú odchýlku
-a je nám dobre známe, že distribúcia citačných indikátorov nemusí byť podobná
-normálnemu rozdeleniu. V prípade nenormálnej distribúcie sa použitie
-aritmetického priemeru sa stáva nevhodným.
-
-Na grafickom porovaní mediánov $h$-index a $g$-indexu katedier FPV môžeme vidieť
-vyrazný rozdiel medzi Katedrov biofyziky a ostatnými katedrami, najmä Katedry
-Chémie, ktorá je výrazne zaostáva za KBf napriek najvyšiemu počtu publikácií
-a citácií (Obrázky \ref{fig:publications.plot} a \ref{fig:citations.plot}
-
-\begin{SCtable}
-  \label{tab:kazakis.results}
-
-  \caption[Porovnanie Katedry chémie a katedier chemického inžinierstva troch gréckych univerzít]
-  {Porovnanie citačných indikátorov Katedry chémie FPV a katedier chemického inžinierstva troch gréckych univerzít \citep{Kazakis2015}}
-\begin{tabular}{lcccccc}
-\toprule\noalign{\vspace{.3ex}}
-           & \multicolumn{3}{c}{Katedra chémie FPV} & \multicolumn{3}{c}{\citet{Kazakis2015}}  \\
- Indikátor & Scopus & WoS   & GS    &  Atény     & Solún      & Patra      \\[0.3ex]
-\midrule\noalign{\vspace{.5ex}}
- n         & 18     & 18    & 18    & 72    & 34    & 30    \\
- P         & 1106   & 1120  & 1525  & 4463  & 2253  & 2573  \\
- P/A       & 15.42  & 16.14 & 25.74 & 62    & 66,3  & 85,8  \\
- C         & 19248  & 19223 & 25208 & 74368 & 39695 & 63718 \\
- C/P       & 12,45  & 12,62 & 11,35 & 16,7  & 17,6  & 24,8  \\[1ex]
- h ave     & 11,78  & 11,94 & 13,61 & 16,3  & 16,8  & 21,3  \\
- h sigma   & 11,70  & 11,70 & 12,99 & 8     & 8,5   & 1,5   \\
- h med     & 7,50   & 7,50  & 9,00  & 15,5  & 17    & 18    \\
- g ave     & 19,83  & 20,22 & 23,56 & 26,8  & 28,3  & 35,5  \\
- g sigma   & 22,23  & 21,68 & 24,89 & 12,6  & 13,9  & 23    \\
- g med     & 14,50  & 15,00 & 16,50 & 26,5  & 27    & 30,5  \\[0.5ex]
-\bottomrule
-\end{tabular}
-\end{SCtable}
-
-\begin{table}
-  \label{tab:lazaridis.results}
-  \caption[Porovnanie Katedry chémie a chemických katedier vybraných gréckych univerzít]
-  {Porovnanie citačných indikátorov Katedry chémie a katedier chémie piatich gréckych univerzít \citep{Lazaridis2010}}
-\begin{tabular}{lllllllll}
-\hline
- Indikátor & Kch    &       &       & Kréta & Patra & Solún & Ioaninna & Atény \\
-           & Scopus & WoS   & GS    &       &       &       &          &       \\
- P         & 1106   & 1120  & 1525  & 56    & 61    & 41    & 48       & 219   \\
- h ave     & 11,78  & 11,94 & 13,61 & 16,6  & 12,6  & 10,4  & 10,3     & 9,0   \\
-\hline
-\end{tabular}
-\end{table}
-
-
 \begin{table}
   \centering\small
   \caption[Hodnotenie FPV\,--\,počet publikácií na autora]{Scientometrické hodnotenie katedier FPV UCM v Trnave, (1. časť)}
@@ -177,27 +58,25 @@ a citácií (Obrázky \ref{fig:publications.plot} a \ref{fig:citations.plot}
 \end{tabularx}
 \end{table}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-results-data-papers.png}
-  \caption{Celkový počet publikácií jednotlivých katedier FPV UCM v~Trnave}
-  \label{fig:publications.plot}
-\end{figure}
+Nasleduje artimetický priemer a medián počtu dokumentov na autora (graf
+porovnania mediánov je na Obrázku \ref{fig:p/a.plot}).  Pre ilustráciu sme k
+hodnotám artimetického priemeru uviedli štandardné odchýlky.  Na mnohých
+prípadoch (najmä pre hodnoty indikátorov: dokumenty na autora a citácie na dokument)
+je smerodajná odchýlka vyšia než samotný priemer. Čo indikuje nedôverihodnosť
+použitia artimetického priemeru na tento účel. Napriek tomu v~literatúre sme sa
+stretli s častejším použitím aritmetického priemeru než mediánu
+\citep{Lazaridis2010}.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-results-data-citations.png}
-  \caption{Celkový počet citácií jednotlivých katedier FPV UCM v~Trnave}
-  \label{fig:citations.plot}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-results-data-papers_author.png}
-  \caption{Medián počtu publikácií na autora pre jednotlivé katedry FPV UCM v~Trnave}
-  \label{fig:p/a.plot}
-\end{figure}
-
+Podobne ako u priemerov, k mediánu sme vypočítali obdobu smerodanej odchylky
+tzv.\,MAD\footnote{Absolútna odchýlka mediánu
+(ang.\emph{Median Absolute Devination}) je robustná štatistická metóda na
+zistenie rozptylu dát. Keďže $\mathrm{MAD} = \mathrm{Med}(|X_i - \tilde{X}|)$,
+využíva medián, MAD je menej náchylný na extrémne vybočujúce hodnoty, a preto
+sa používa v~nenormálnych
+distribúciách.}\footnote{\url{http://www.statisticshowto.com/median-absolute-deviation/}}.
+Rozdiel medzi absolútnou hodnotou mediánu a MAD je nižšií
+než medzi absolútnou hodnoutov priemeru a štandardnej odchýlky znamená, že
+medián je lepší ukazovateľom.
 
 \begin{table}
   \centering\small
@@ -232,6 +111,143 @@ a citácií (Obrázky \ref{fig:publications.plot} a \ref{fig:citations.plot}
   \bottomrule
 \end{tabularx}
 \end{table}
+
+Tabuľka \ref{tab:2-staff.results} obsahuje počet citácií na dokument (grafické
+porovnanie mediánov v grafe Obrázok \ref{fig:c/p.plot}) a Zhangov $e$-index.
+Hodnoty dát Katedry odbornej jazykovej prípravy zo Scopusu a WoS nepočítali,
+pretože neboli vôbec citované.  štandardných odchýlok a hodnoty aritmetických
+priemerov indikátorov počtu publikácií na autora a počtu citácií na dokument
+(Tabuľky \ref{tab:1-staff.results} a \ref{tab:1-staff.results}), spozorujeme, že v
+mnohých prípadoch hodnota štandardnej odchýlky presahuje hodnotu priemeru.  Čo
+znamená, že základné indikátory ako počet publikácií na~autora a počet citácií
+na dokument nie su vhodné na scientometrickú analýzu tohoto typu.  Zhangov
+$e$-index  je modifikácia $h$-indexu, ktorá je citlivá na veľmi citované články
+v malom súbore publikácií (viď. pokapitola \ref{sec:e-index}).  Na základe
+výsledkov Katedry biofyziky (Tabuľka \ref{tab:2-staff.results}) môžeme názorne
+vidieť, že mediány $e$-indexu sú rádovo väčšie od ostatných (graficky
+znáznornené na Obrázku \ref{fig:e-index.plot}).
+
+Hodnoty citačných indikátorov $h$-index a $g$-index sú uvedené v tabuľke
+\ref{tab:3-staff.results} a mediány sú graficky znázornené na Obrázkoch
+\ref{fig:h-index.plot} a \ref{fig:g-index.plot}.  Rozdiel medzi hodnotami
+priemeru a mediánu Katedry aplikovanej informatiky a je spôsobeny výskytom
+niekoľko veľmi citovaných pracovníkov oproti ostatným, ktorí sú minimálne
+citovaní.
+
+\citet{Kazakis2015} scientometricky porovnával katedry chemického inžinierstva
+troch gréckych univerzít (Atény, Solún a Patra).  V Tabuľke
+\ref{tab:kazakis.results} sme porovnali naše výsledky s Kazakisovymi. Napriek
+tomu, že gréci čerpali iba z citačného registru Scopus, my sme porovnali
+indikátory zo všetkých použitých citačných registrov. Na prvý pohľad si
+všimneme rozdiel v počte pracovníkov (v tabuľke označené ako $n$).  Grécke
+katedry zahrňujú ďaleko viacej ľudí (katedra v Aténach dokonca až 72
+akademikov) než Katedra chémie s 18 pracovníkmi.  Hodnoty priemerného $h$-index
+a $g$-indexu Katedry chémie sú  zhruba o tretinu nižšie než gréckych katedier.
+Veľký rozdiel predstavujú príliš vysoké štandardné odchýlky (ktoré skoro
+dosahujú hodnotu priemeru). Gréci ich majú nižšie.  Myslíme si, že lepší
+indikátorom sú mediány, pretože MAD hodnoty sú nižšie než smerodajné odchýlky.
+V tomto prípade sú mediány $h$-index a $g$-indexu Katedry chémie okolo 100\,\%
+nižšie než gréckych katedier. Ale ak zoberieme do úvahy, že Katedra chémie raz
+toľko menej zamestnancov, tak výsledok je očakávateľný.
+
+\citet{Lazaridis2010} vypočítal priemerný $h$-index gréckych chemických
+katedier prestížnych gréckych univerzít (Krétska, Patraska, Solúnska,
+Ioanninanska, a Aténska).  Dáta čerpal z citačného registru WoS, pričom na
+výpočet $h$-index používal webové rozhranie WoS, alebo ho počítal ručne. V
+Tabuľke \ref{tab:lazaridis.results} sú porovnané priemerné $h$-index katedier
+spomenutých gréckych univerzít a naše výsledky pre Katedru chémie. Síce
+priemerný $h$-index gréckych katedier je porovnateľný s KCh (s výnimkou z
+Krétskej univerzity), ale dátový súbor je výrazne menší. Zdá sa nám
+nepravdepodobné aby taká inštitúcia mala také male množstvo publikácií.  Autor
+o získavaní dát píše iba o problémami s gréckymi menami v anglickej databáze
+WoS. V neposlednom rade nesmieme zabúdať, že autor neuvádza šmerodajnú odchýlku
+a je nám dobre známe, že distribúcia citačných indikátorov nemusí byť podobná
+normálnemu rozdeleniu. V prípade nenormálnej distribúcie sa použitie
+aritmetického priemeru sa stáva nevhodným.
+
+Na grafickom porovaní mediánov $h$-index a $g$-indexu katedier FPV môžeme vidieť
+vyrazný rozdiel medzi Katedrov biofyziky a ostatnými katedrami, najmä Katedry
+Chémie, ktorá je výrazne zaostáva za KBf napriek najvyšiemu počtu publikácií
+a citácií (Obrázky \ref{fig:publications.plot} a \ref{fig:citations.plot}
+
+\begin{SCtable}
+  \label{tab:kazakis.results}
+
+  \caption[Porovnanie Katedry chémie a katedier chemického inžinierstva troch gréckych univerzít]
+  {Porovnanie citačných indikátorov Katedry chémie FPV a katedier chemického inžinierstva troch gréckych univerzít \citep{Kazakis2015}}
+\begin{tabular}{lcccccc}
+\toprule\noalign{\vspace{.3ex}}
+           & \multicolumn{3}{c}{Katedra chémie FPV} & \multicolumn{3}{c}{\citet{Kazakis2015}}  \\
+ Indikátor & Scopus & WoS   & GS    &  Atény     & Solún      & Patra      \\[0.3ex]
+\midrule\noalign{\vspace{.5ex}}
+ n         & 18     & 18    & 18    & 72    & 34    & 30    \\
+ P         & 1106   & 1120  & 1525  & 4463  & 2253  & 2573  \\
+ P/A       & 15.42  & 16.14 & 25.74 & 62    & 66,3  & 85,8  \\
+ c         & 19248  & 19223 & 25208 & 74368 & 39695 & 63718 \\
+ C/P       & 12,45  & 12,62 & 11,35 & 16,7  & 17,6  & 24,8  \\[1ex]
+ h ave     & 11,78  & 11,94 & 13,61 & 16,3  & 16,8  & 21,3  \\
+ h sigma   & 11,70  & 11,70 & 12,99 & 8     & 8,5   & 1,5   \\
+ h med     & 7,50   & 7,50  & 9,00  & 15,5  & 17    & 18    \\
+ g ave     & 19,83  & 20,22 & 23,56 & 26,8  & 28,3  & 35,5  \\
+ g sigma   & 22,23  & 21,68 & 24,89 & 12,6  & 13,9  & 23    \\
+ g med     & 14,50  & 15,00 & 16,50 & 26,5  & 27    & 30,5  \\[0.5ex]
+\bottomrule
+\end{tabular}
+\end{SCtable}
+
+\begin{table}
+  \label{tab:lazaridis.results}
+  \caption[Porovnanie Katedry chémie a chemických katedier vybraných gréckych univerzít]
+  {Porovnanie citačných indikátorov Katedry chémie a katedier chémie piatich gréckych univerzít \citep{Lazaridis2010}}
+\begin{tabular}{lllllllll}
+\hline
+ Indikátor & Kch    &       &       & Kréta & Patra & Solún & Ioaninna & Atény \\
+           & Scopus & WoS   & GS    &       &       &       &          &       \\
+ P         & 1106   & 1120  & 1525  & 56    & 61    & 41    & 48       & 219   \\
+ h ave     & 11,78  & 11,94 & 13,61 & 16,6  & 12,6  & 10,4  & 10,3     & 9,0   \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\label{tab:wildgaard.results}
+  \caption[Porovnanie KEB a vybranej skupiny enviromentalistov]
+  {Porovnanie citačných indikátorov Katedry ekochémie a rádiobiológie a vybranej skupiny vedcou z oblasti enviromentalistiky, ktorý sa zúčastnili
+  projektu ACUMEN FP7\citep{Wildgaard2015}}
+\begin{tabular}{lllllllllll}
+\hline
+ kat. &Citačný    & n  & p    & c     & a/p  & c/p & awcr & AW  & h    & g    & e    \\
+      &register    &    &      &       &      &     &      &     &      &      &      \\
+ ENV  & WoS      & 99 & 3228 & 34851 & 3,1   & 7,8   & 42,4  & 5,4  & 8,5  & 13,1  & 9,1   \\
+      & GS       & 99 & 7425 & 62351 & 3,2   & 7,6   & 76,1  & 7,5  & 11,9 & 18,4  & 13,2  \\
+ KER  & WoS      & 7  & 275  & 1700  & 5,41  & 5,21  & 40,24 & 5,82 & 7,57 & 11    & 7,26  \\
+      & GS       & 7  & 543  & 2694  & 4,68  & 4,53  & 74,13 & 8,04 & 9,43 & 14,71 & 9,6   \\
+ Kbt  & WoS      & 1  & 351  & 3707  & 7,83  & 7,4   & 33,76 & 4,71 & 6,55 & 12,09 & 9,63  \\
+      & GS       & 1  & 828  & 14901 & 23,15 & 14,14 & 84,97 & 7,48 & 9,73 & 22,55 & 18,96 \\
+\hline
+\end{tabular}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-papers.png}
+  \caption{Celkový počet publikácií jednotlivých katedier FPV UCM v~Trnave}
+  \label{fig:publications.plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-citations.png}
+  \caption{Celkový počet citácií jednotlivých katedier FPV UCM v~Trnave}
+  \label{fig:citations.plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-results-data-papers_author.png}
+  \caption{Medián počtu publikácií na autora pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:p/a.plot}
+\end{figure}
+
 
 \begin{figure}
   \centering
@@ -593,3 +609,4 @@ vidíme počte citácií pre rok 2015.
 %%% Local Variables:
 %%% TeX-master: "diplomovka"
 %%% End:
+
