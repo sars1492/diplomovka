@@ -1,5 +1,46 @@
 \chapter{Výsledky a diskusia}
 
+\section{Vývoj publikačnej činnosti a citovanosti článkov FPV}
+
+Obrázok~\ref{fig:all.publications.plot} vyjadruje grafické znázornenie množstva
+publikovaných článkov všetkými pracovníkmi Fakulty prírodných vied
+v~jednotlivých rokoch z~citačných registrov Scopus a WoS (samostatné krivky).
+Je prirodzené, že pracovníci slovenskej univerzity viac článkov publikujú
+v~európskych časopisoch, pre ktoré má Scopus väčšie pokrytie než WoS.  Čo môžeme
+vidieť ako rozdiel kriviek v~období 2004--2010.  Publikačný skok WoS od roku
+2012 je spôsobený obsiahnutím šesťnástich kapitol z~knihy \emph{Handbook of
+  Magentochemical Formulae} od doc.\,J.\,Boču z~Katedry chémie, ktoré nie sú
+citované (knihy sú o~mnoho menej citované ako vedecké články).  Zvýšenie počtu
+publikácií vo WoS v~roku 2015 je dôsledkom tlaku na získanie akreditácie.  Pre
+akreditačnú komisiu komisiu sú najdôležitejšie časopisy indexované vo WoS.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-all-publications-data.png}
+  \caption{Vývoj publikačnej činnosti pracovníkov FPV v~období 2000--2016.}
+  \label{fig:all.publications.plot}
+\end{figure}
+
+Graf na Obrázku~\ref{fig:all.citations.plot} zobrazuje celkový počet citácií
+článkov publikovaných v~danom roku.  Rozdiel v~citáciách medzi dátami z~Scopusu
+a WoS sú viditeľné hlavne už spomínanom období 2004--2010.  Extrémny rozdiel
+citácií na publikácie z~roku 2005 je spôsobený, že v~citačnom registri Scopus je
+obsiahnutých 16 článkov z~roku 2005, ktorých 15 sú dobre citované.  WoS obsahuje
+iba dva články z~tohto roku: ten necitovaný zo Scopusu a publikáciu, ktorá je
+obsiahnutá iba v~databáze z~WoS, ale tiež bez citácií. V roku 2015 vidíme
+dvojnásobný nárast počtu citácií vo WoS oproti Scopusu.  Toto je spôsobené nárastom 
+publikovania do časpopisov, ktoré sú indexované vo WoS ako následok na tlak na
+získanie akreditácie.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{plot-all-citations-data.png}
+  \caption{Citovanosť článkov všetkých pracovníkov FPV za obdobie
+    2000--2016.}
+  \label{fig:all.citations.plot}
+\end{figure}
+
+
 \section{Scientometrické hodnotenie katedier FPV}
 
 Hlavnou časťou tejto práce bola scientometrická analýza jednotlivých katedier
@@ -25,10 +66,10 @@ dátových súborov, z ktorých dane indikátory boli počítané, určujú pres
 jazykovej prípravy, pretože boli príliš nízke, z dôvodu nedostatku dát.
 
 \begin{table}
-  \centering\small
+\centering\small
   \caption[Hodnotenie FPV\,--\,počet publikácií na autora]{Scientometrické hodnotenie katedier FPV UCM v Trnave, (1. časť)}
   \label{tab:1-staff.results}
-  \begin{tabularx}{\textwidth}{lXc@{\hspace{2.5em}}c@{\hspace{2.5em}}c@{\hspace{3.5em}}cccc}
+\begin{tabularx}{\textwidth}{lXc@{\hspace{2.5em}}c@{\hspace{2.5em}}c@{\hspace{3.5em}}cccc}
   \toprule\noalign{\vspace{.3ex}}
          &        &   &     &      & \multicolumn{4}{c}{Počet publikácií na autora}  \\
  Katedra & Cit. register  & $n$   & $P$     &  $c$     & $\bar{x}$      & $\sigma$  & $\tilde{x}$   & MAD  \\[0.3ex]
@@ -53,7 +94,7 @@ jazykovej prípravy, pretože boli príliš nízke, z dôvodu nedostatku dát.
       & GS     & 15 & 151  & 616   & 19,01         & 34,50 & 5,95  & 3,03 \\[3ex]
  KOJP & Scopus & 2  & 3    & 0     & 0,58          & 0,35  & 0,58  & 1,50 \\
       & WoS    & 2  & 2    & 0     & 0,33          & 0,00  & 0,33  & 1,00 \\
-      & GS     & 2  & 6    & 3     & 2,00          & 1,88  & 2,00  & 1,33 \\
+      & GS     & 2  & 6    & 3     & 2,00          & 1,88  & 2,00  & 1,33 \\[0.5ex]
   \bottomrule
 \end{tabularx}
 \end{table}
@@ -150,12 +191,11 @@ V tomto prípade sú mediány $h$-index a $g$-indexu Katedry chémie okolo 100\,
 nižšie než gréckych katedier. Ale ak zoberieme do úvahy, že Katedra chémie raz
 toľko menej zamestnancov, tak výsledok je očakávateľný.
 
-
 \citet{Lazaridis2010} vypočítal priemerný $h$-index gréckych chemických
 katedier prestížnych gréckych univerzít (Krétska, Patraska, Solúnska,
 Ioanninanska, a Aténska).  Dáta čerpal z citačného registru WoS, pričom na
 výpočet $h$-index používal webové rozhranie WoS, alebo ho počítal ručne. 
-V~Tabuľke \ref{tab:lazaridis.results} sú porovnané priemerné $h$-index katedier
+V~Tabuľke \ref{tab:foo} sú porovnané priemerné $h$-index katedier
 spomenutých gréckych univerzít a naše výsledky pre Katedru chémie. Síce
 priemerný $h$-index gréckych katedier je porovnateľný s KCh (s výnimkou z
 Krétskej univerzity), ale dátový súbor je výrazne menší. Zdá sa nám
@@ -229,7 +269,6 @@ Mediány týchto citačných indikátorov pre FPV sú vykreslené ako Obrázok \
 
 \begin{table}
 \centering\small
-  \label{tab:lazaridis.results}
   \caption[Porovnanie Katedry chémie a chemických katedier vybraných gréckych univerzít]
   {Porovnanie citačných indikátorov Katedry chémie a katedier chémie piatich gréckych univerzít \citep{Lazaridis2010}}
 \begin{tabularx}{\textwidth}{Xccclccccc}
@@ -241,12 +280,12 @@ Indikátor  & Scopus & WoS   & GS                 &  & Kréta & Patra & Solún &
  $\bar{h}$  & 11,78  & 11,94 & 13,61              & & 16,6  & 12,6  & 10,4  & 10,3     & 9,0   \\[0.5ex]
   \bottomrule
 \end{tabularx}
+  \label{tab:foo}
 \end{table}
 
 \begin{table}
 \centering\small
-\label{tab:wildgaard.results}
-  \caption[Porovnanie KEB a vybranej skupiny enviromentalistov]
+  \caption[Porovnanie KEB, KBt a vybranej skupiny enviromentalistov]
   {Porovnanie citačných indikátorov Katedry ekochémie a rádiobiológie a vybranej skupiny vedcov z oblasti enviromentalistiky, ktorí sa zúčastnili
   projektu ACUMEN FP7 \citep{Wildgaard2015}.}
 \begin{tabularx}{\textwidth}{Xlcccccccccc}
@@ -262,45 +301,48 @@ Indikátor  & Scopus & WoS   & GS                 &  & Kréta & Patra & Solún &
 \bottomrule
     \multicolumn{12}{l}{\footnotesize $^\dagger$ počet autorov na publikáciu; $^\ddagger$ počet citácii na publikáciu} \\
 \end{tabularx}
+  \label{tab:foo2}
 \end{table}
 
-\begin{table}
-\centering\small
-  \caption[Hodnotenie FPV\,--\,počet publikácií na autora]{Scientometrické hodnotenie katedier FPV UCM v Trnave, (1. časť)}
-  \label{tab:1-staff.results}
-\begin{tabularx}{\textwidth}{lXc@{\hspace{2.5em}}c@{\hspace{2.5em}}c@{\hspace{3.5em}}cccc}
-  \toprule\noalign{\vspace{.3ex}}
-         &        &   &     &      & \multicolumn{4}{c}{Počet publikácií na autora}  \\
- Katedra & Cit. register  & $n$   & $P$     &  $c$     & $\bar{x}$      & $\sigma$  & $\tilde{x}$   & MAD  \\[0.3ex]
-\midrule\noalign{\vspace{.5ex}}
- KB   & Scopus & 14 & 380  & 5234  & 9,09          & 13,20 & 3,42  & 3,02 \\
-      & WoS    & 13 & 392  & 4982  & 10,66         & 14,44 & 7,20  & 5,18 \\
-      & GS     & 14 & 594  & 7289  & 16,88         & 20,77 & 8,92  & 7,42 \\[3ex]
- KBt  & Scopus & 11 & 356  & 11492 & 8,34          & 12,16 & 4,44  & 2,49 \\
-      & WoS    & 11 & 351  & 3707  & 7,83          & 10,48 & 5,20  & 3,49 \\
-      & GS     & 11 & 828  & 14901 & 23,15         & 24,90 & 12,10 & 5,60 \\[3ex]
- KCh  & Scopus & 18 & 1106 & 19248 & 15,42         & 21,10 & 5,34  & 4,32 \\
-      & WoS    & 18 & 1120 & 19223 & 16,14         & 21,85 & 5,76  & 4,54 \\
-      & GS     & 18 & 1525 & 25208 & 25,74         & 35,37 & 8,27  & 6,23 \\[3ex]
- KER  & Scopus & 7  & 265  & 1773  & 5,43          & 0,83  & 5,53  & 0,67 \\
-      & WoS    & 7  & 275  & 1700  & 5,41          & 0,92  & 5,43  & 0,79 \\
-      & GS     & 7  & 543  & 2694  & 4,68          & 0,76  & 4,67  & 0,64 \\[3ex]
- KBf  & Scopus & 5  & 211  & 5232  & 11,85         & 10,71 & 13,85 & 8,50 \\
-      & WoS    & 5  & 261  & 6011  & 17,78         & 12,74 & 20,85 & 6,81 \\
-      & GS     & 5  & 320  & 8510  & 19,59         & 15,42 & 16,51 & 6,48 \\[3ex]
- KAIM & Scopus & 11 & 91   & 615   & 10,60         & 16,71 & 3,92  & 2,14 \\
-      & WoS    & 13 & 106  & 1382  & 10,18         & 19,29 & 2,00  & 0,97 \\
-      & GS     & 15 & 151  & 616   & 19,01         & 34,50 & 5,95  & 3,03 \\[3ex]
- KOJP & Scopus & 2  & 3    & 0     & 0,58          & 0,35  & 0,58  & 1,50 \\
-      & WoS    & 2  & 2    & 0     & 0,33          & 0,00  & 0,33  & 1,00 \\
-      & GS     & 2  & 6    & 3     & 2,00          & 1,88  & 2,00  & 1,33 \\[0.5ex]
-  \bottomrule
-\end{tabularx}
-\end{table}
+\citet{Wildgaard2015} porovnával 17 citačných indikátorov na vzorke vedcou z
+rôznych vedných oblastí. Jednou z nich bola enviromentalistika. Vzorka
+obsahovala $n$ akademikov od doktorov po profesorov. Porovnávali sme Katedru
+ekochémie a rádiobilógie (KER), Katedru biotechnlógií a už vyšie uvedenú vzorku
+vedcov.  Porovnanie hodnôt citačných indikátorov je uvedené v Tabuľke
+\ref{tab:foo2}.  Dáta boli získané z citačných registrov \emph{Web of
+Science} (WoS) a \emph{Google Scholar} (GS).  Napriek veľkému rozdielu v počte
+akademikov ($n$), vo väčšine prípadov katedry FPV vykazujú väčšie kvality než
+skupina enviromentalistov. Ale treba brať do úvahy, že skupina nie je viazana
+afiliáciou, ale účasti na projekte ACUMEN
+FP7\footnote{\url{http://research-acumen.eu/}}.
 
-\citet{Wildgaard2015} porovnával 17 citačných indikátorov na vzorke vedcou z rôznych vedných
-oblastí. Jednou z nich bola enviromentalistika. Vzorka obsahovala akademikov od doktorov po
-profesorov. Porovnávali sme hodnoty 
+Tabuľka \ref{tab:journal.results} predstavuje zoznam časopisov s najväčším
+počtom $n$ publikácií (zoradené zostupne) z citačných registrov WoS a scopus.
+Tabuľka zahrňuje najpoužívanejšie citačné indikátory na hodnotenie časopisov:
+impakt faktor (IF); Scimago rang časopisov; SciteCore a SNIP (viď. Tabuľku
+\ref{tab:indicators.review}).
+
+Zo scientometrického hodnotenia vyplýva, že najproduktívnejšia katedra je
+Katedra biofyziky, pretože dosahuje najvyšie hodnoty mediánov citačných
+indikátorov napriek výraznému rozdielu v absolútnych hodnotách počtu publikácií
+a citácií oproti Katedre chémie. Síce najhoršie sa umiestnila Katedra odbornej
+jazykovej prípravy (KOJP), čo už názov napovedá, že nebude sa zameriavať na
+prírodné vedy Podarilo sa nám vyhľadať do desať publikácií s minimom citácií.
+Preto sme ich dáta nevykresľovali do grafov. 
+
+Ďalšia katedra je katedra aplikovanej informatiky a matematiky (KAIM) má na
+internetových stránkach uvedený relatívne rozsiahli zoznam pracovníkov (15),
+ale publikácie všetkých uvedených pracovníkov sa nám podarilo vyhľadať iba z
+citačného registru Google Scholar (GS), ktorý prehľadáva všetky voľne prístupné
+publikácie. Teda má prístup k najväčšiemu počtu dokumentov. Extrémné hodnoty
+smerodajnej dochýlky (napr. v Tabuľke \ref{tab:5-staff.results}) sú spôsobené
+nevyváženou distribúciou citácií, teda valnej väčšine citácií katedry prislúcha
+niekoľkým veľmi citovaných pracovníkom. Ostatní nemajú takmer žiadne citácie.
+
+Katedra biológie, biotechnológií, ekochémie a rádiobiológie a dokonca aj chémie
+sú zhruba na rovnakej úrovni. Pri niektorých indikátoroch vyniká jedna, či
+druhá, ale s celkovým hodnotením a započítaním chyby nie je možné ďalej určiť
+poradie.
 
 \begin{figure}
   \centering
@@ -330,16 +372,6 @@ profesorov. Porovnávali sme hodnoty
   \caption{Medián citácií na publikáciu pre jednotlivé katedry FPV UCM v~Trnave}
   \label{fig:c/p.plot}
 \end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-results-data-e_index.png}
-  \caption{Medián $e$-indexu pre jednotlivé katedry FPV UCM v~Trnave}
-  \label{fig:e-index.plot}
-\end{figure}
-\clearpage
-
-
 
 \begin{table}
   \centering\small
@@ -536,48 +568,16 @@ Katedra & Cit. register& $\bar{x}$      & $\sigma$  & $\tilde{x}$ & MAD  & $\bar
   \label{fig:hm-index.plot}
 \end{figure}
 
-
-
-Obrázok~\ref{fig:all.publications.plot} vyjadruje grafické znázornenie množstva
-publikovaných článkov všetkými pracovníkmi Fakulty prírodných vied
-v~jednotlivých rokoch z~citačných registrov Scopus a WoS (samostatné krivky).
-Je prirodzené, že pracovníci slovenskej univerzity viac článkov publikujú
-v~európskych časopisoch, pre ktoré má Scopus väčšie pokrytie než WoS.  Čo môžeme
-vidieť ako rozdiel kriviek v~období 2004--2010.  Publikačný skok WoS od roku
-2012 je spôsobený obsiahnutím šesťnástich kapitol z~knihy \emph{Handbook of
-  Magentochemical Formulae} od doc.\,J.\,Boču z~Katedry chémie, ktoré nie sú
-citované (knihy sú o~mnoho menej citované ako vedecké články).  Zvýšenie počtu
-publikácií vo WoS v~roku 2015 je dôsledkom tlaku na získanie akreditácie.  Pre
-akreditačnú komisiu komisiu sú najdôležitejšie časopisy indexované vo WoS.
-
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{plot-all-publications-data.png}
-  \caption{Vývoj publikačnej činnosti pracovníkov FPV v~období 2000--2016.}
-  \label{fig:all.publications.plot}
-\end{figure}
-
-Graf na Obrázku~\ref{fig:all.citations.plot} zobrazuje celkový počet citácií
-článkov publikovaných v~danom roku.  Rozdiel v~citáciách medzi dátami z~Scopusu
-a WoS sú viditeľné hlavne už spomínanom období 2004--2010.  Extrémny rozdiel
-citácií na publikácie z~roku 2005 je spôsobený, že v~citačnom registri Scopus je
-obsiahnutých 16 článkov z~roku 2005, ktorých 15 sú dobre citované.  WoS obsahuje
-iba dva články z~tohto roku: ten necitovaný zo Scopusu a publikáciu, ktorá je
-obsiahnutá iba v~databáze z~WoS, ale tiež bez citácií.  Zvýšenie počtu
-publikáciách v~časopisoch indexovaných WoS neznamená vyššiu kvalitu článkou čo
-vidíme počte citácií pre rok 2015.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{plot-all-citations-data.png}
-  \caption{Citovanosť článkov všetkých pracovníkov FPV za obdobie
-    2000--2016.}
-  \label{fig:all.citations.plot}
+  \includegraphics[width=\textwidth]{plot-results-data-e_index.png}
+  \caption{Medián $e$-indexu pre jednotlivé katedry FPV UCM v~Trnave}
+  \label{fig:e-index.plot}
 \end{figure}
 
 {\small
 \begin{longtable}[c]{lcccccc}
-\caption{Tabuľka časopisov}
+  \caption[Prehľad časopisov, ktorých publikovali pracovníci FPV]{Prehľad časopisov, ktorých publikovali pracovníci FPV UCM v~Trnave.}
     \label{tab:journal.results} \\
    \toprule\noalign{\vspace{.3ex}}
    Názov časopisu                                                                   & $n$ & IF & SJR  & CS$^\ddagger$ & SNIP           \\[0.3ex]
