@@ -149,12 +149,13 @@ indikátorom sú mediány, pretože MAD hodnoty sú nižšie než smerodajné od
 V tomto prípade sú mediány $h$-index a $g$-indexu Katedry chémie okolo 100\,\%
 nižšie než gréckych katedier. Ale ak zoberieme do úvahy, že Katedra chémie raz
 toľko menej zamestnancov, tak výsledok je očakávateľný.
+  
 
 \citet{Lazaridis2010} vypočítal priemerný $h$-index gréckych chemických
 katedier prestížnych gréckych univerzít (Krétska, Patraska, Solúnska,
 Ioanninanska, a Aténska).  Dáta čerpal z citačného registru WoS, pričom na
-výpočet $h$-index používal webové rozhranie WoS, alebo ho počítal ručne. V
-Tabuľke \ref{tab:lazaridis.results} sú porovnané priemerné $h$-index katedier
+výpočet $h$-index používal webové rozhranie WoS, alebo ho počítal ručne. 
+V~Tabuľke \ref{tab:lazaridis} sú porovnané priemerné $h$-index katedier
 spomenutých gréckych univerzít a naše výsledky pre Katedru chémie. Síce
 priemerný $h$-index gréckych katedier je porovnateľný s KCh (s výnimkou z
 Krétskej univerzity), ale dátový súbor je výrazne menší. Zdá sa nám
@@ -165,10 +166,40 @@ a je nám dobre známe, že distribúcia citačných indikátorov nemusí byť p
 normálnemu rozdeleniu. V prípade nenormálnej distribúcie sa použitie
 aritmetického priemeru sa stáva nevhodným.
 
-Na grafickom porovaní mediánov $h$-index a $g$-indexu katedier FPV môžeme vidieť
-vyrazný rozdiel medzi Katedrov biofyziky a ostatnými katedrami, najmä Katedry
-Chémie, ktorá je výrazne zaostáva za KBf napriek najvyšiemu počtu publikácií
-a citácií (Obrázky \ref{fig:publications.plot} a \ref{fig:citations.plot}
+Na grafickom porovaní mediánov $h$-index {viz podkapitola \ref{sec:h-index} a
+$g$-indexu (viz podkapitola \ref{sec:g-index} katedier FPV môžeme vidieť vyrazný
+rozdiel medzi Katedrov biofyziky a ostatnými katedrami, najmä Katedry Chémie,
+ktorá je výrazne zaostáva za KBf napriek najvyšiemu počtu publikácií a citácií
+(viz Obrázky \ref{fig:publications.plot} a \ref{fig:citations.plot}).  Tento
+trend je možné pozorovať na každom hodnotení FPV pomocou citačných indikátorov
+(Obrázky \ref{fig:p/a.plot}, \ref{fig:c/p.plot}, \ref{fig:h-index.plot},
+\ref{fig:g-index.plot}, \ref{fig:e-index.plot}, \ref{fig:hc-index.plot}, \ref{fig:hi-index.plot},
+\ref{fig:hinorm.plot}, \ref{fig:hm-index.plot}, \ref{fig:awcr.plot}, \ref{fig:aw-index.plot}).
+
+Tabuľka \ref{tab:4-staff.results} ukazuje výsledné hodnoty individuálneho
+$h$-indexu ($h_{\mathrm{I}}$-index, viz podkapitolu \ref{sec:hi-index}) a jeho
+variante pre program Publish or Perish (viz podkapitolu \ref{sec:pop})
+$h_{\mathrm{I,norm}}$ (viz podkapitolu \ref{sec:hinorm}). Tieto indikátory 
+normujú $h$-index na počet spoluautorov. Rádovo vyšie hodnoty aritmetického
+priemeru oboch indikátorov GS je pravdepodobne spôsobený vlastnosťou Google Scholaru:
+automaticky zoznam autorov zužuje na 3-5 položiek (viz podkapitola \ref{sec:gs}),
+čím umelo zvyšuje hodnotu $h_{\mathrm{I}}$-index a $h_{\mathrm{I,norm}}$.
+Rozdiel mediánov jednotlivých katedier je graficky zobrazený na Obrázkoch \ref{fig:hi-index.plot} a
+\ref{fig:hinorm.plot}.
+
+V Tabuľke \ref{tab:5-staff.results} uvádzame prehľad výsledkov citačnej frekvencie váhovanej
+podľa veku (AWCR) a $AW$-index (viz podkapitoly \ref{sec:aw-index}. Ako názov napovedá
+tieto indikátory znižujú váhu starších publikácií. Využíva sa hlavne na porovnávanie
+vedcov s rôznymi akademickým vekom, pretože starší profesor s bohatou akademickou kariérov, ale
+na dôchodku sa javý produktívnejší v očiach $h$-indexu ako mladý vedec na začiatku kariéry
+v plnej sile. Priemerné hodoty AWCR podliehajú veľkej chybe, preto sme na graf použili 
+mediány (Obrázky \ref{fig:awcr.plot} a \ref{fig:aw-index.plot}).
+
+Na tabuľke \ref{tab:6-staff.results} sú zobrazené výsledné hodnoty súčasného $h$-indexu 
+($h^{\mathrm{c}}$-index) a mutliautorského $h$-indexu ($h_{\mathrm{m}}$-index).
+Súčasný $h$-index je ďalší indikátor, ktorý zahrnuje starnutie článkov (viď podkapitola \ref{sec:hc-index}) a
+multiautorský $h$-index znižuje hodnotu, podľa počtu autorov (vid. podkapitola \ref{sec:hm-index}).
+Mediány týchto citačných indikátorov pre FPV sú vykreslené ako Obrázok \ref{fig:hc-index.plot} a \ref{fig:hm-index.plot}/
 
 \begin{SCtable}
   \label{tab:kazakis.results}
@@ -196,7 +227,7 @@ a citácií (Obrázky \ref{fig:publications.plot} a \ref{fig:citations.plot}
 \end{SCtable}
 
 \begin{table}
-  \label{tab:lazaridis.results}
+  \label{tab:lazaridis}
   \caption[Porovnanie Katedry chémie a chemických katedier vybraných gréckych univerzít]
   {Porovnanie citačných indikátorov Katedry chémie a katedier chémie piatich gréckych univerzít \citep{Lazaridis2010}}
 \begin{tabular}{lllllllll}
@@ -209,23 +240,7 @@ a citácií (Obrázky \ref{fig:publications.plot} a \ref{fig:citations.plot}
 \end{tabular}
 \end{table}
 
-\begin{table}
-\label{tab:wildgaard.results}
-  \caption[Porovnanie KEB a vybranej skupiny enviromentalistov]
-  {Porovnanie citačných indikátorov Katedry ekochémie a rádiobiológie a vybranej skupiny vedcou z oblasti enviromentalistiky, ktorý sa zúčastnili
-  projektu ACUMEN FP7\citep{Wildgaard2015}}
-\begin{tabular}{lllllllllll}
-\hline
- kat. &Citačný    & n  & p    & c     & a/p  & c/p & awcr & AW  & h    & g    & e    \\
-      &register    &    &      &       &      &     &      &     &      &      &      \\
- ENV  & WoS      & 99 & 3228 & 34851 & 3,1   & 7,8   & 42,4  & 5,4  & 8,5  & 13,1  & 9,1   \\
-      & GS       & 99 & 7425 & 62351 & 3,2   & 7,6   & 76,1  & 7,5  & 11,9 & 18,4  & 13,2  \\
- KER  & WoS      & 7  & 275  & 1700  & 5,41  & 5,21  & 40,24 & 5,82 & 7,57 & 11    & 7,26  \\
-      & GS       & 7  & 543  & 2694  & 4,68  & 4,53  & 74,13 & 8,04 & 9,43 & 14,71 & 9,6   \\
- Kbt  & WoS      & 1  & 351  & 3707  & 7,83  & 7,4   & 33,76 & 4,71 & 6,55 & 12,09 & 9,63  \\
-      & GS       & 1  & 828  & 14901 & 23,15 & 14,14 & 84,97 & 7,48 & 9,73 & 22,55 & 18,96 \\
-\hline
-\end{tabular}
+
 
 \begin{figure}
   \centering
@@ -247,6 +262,25 @@ a citácií (Obrázky \ref{fig:publications.plot} a \ref{fig:citations.plot}
   \caption{Medián počtu publikácií na autora pre jednotlivé katedry FPV UCM v~Trnave}
   \label{fig:p/a.plot}
 \end{figure}
+
+\begin{table}
+\label{tab:wildgaard.results}
+  \caption[Porovnanie KEB a vybranej skupiny enviromentalistov]
+  {Porovnanie citačných indikátorov Katedry ekochémie a rádiobiológie a vybranej skupiny vedcou z oblasti enviromentalistiky, ktorý sa zúčastnili
+  projektu ACUMEN FP7\citep{Wildgaard2015}}
+\begin{tabular}{llllllllllll}
+\hline
+ kat. &Citačný    & n  & p    & c     & a/p  & c/p & awcr & AW  & h    & g    & e    \\
+      &register    &    &      &       &      &     &      &     &      &      &      \\
+ ENV  & WoS      & 99 & 3228 & 34851 & 3,1   & 7,8   & 42,4  & 5,4  & 8,5  & 13,1  & 9,1   \\
+      & GS       & 99 & 7425 & 62351 & 3,2   & 7,6   & 76,1  & 7,5  & 11,9 & 18,4  & 13,2  \\
+ KER  & WoS      & 7  & 275  & 1700  & 5,41  & 5,21  & 40,24 & 5,82 & 7,57 & 11    & 7,26  \\
+      & GS       & 7  & 543  & 2694  & 4,68  & 4,53  & 74,13 & 8,04 & 9,43 & 14,71 & 9,6   \\
+ Kbt  & WoS      & 1  & 351  & 3707  & 7,83  & 7,4   & 33,76 & 4,71 & 6,55 & 12,09 & 9,63  \\
+      & GS       & 1  & 828  & 14901 & 23,15 & 14,14 & 84,97 & 7,48 & 9,73 & 22,55 & 18,96 \\
+\hline
+\end{tabular}
+\end{table}
 
 
 \begin{figure}
