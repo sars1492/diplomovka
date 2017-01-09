@@ -1,28 +1,23 @@
 \chapter*{Príloha}
 \addcontentsline{toc}{chapter}{Príloha}
 
-\section*{Parametre  vlastných programov}
+\section*{Naše  programy na scientometrickú analýzu}
+
+
+\subsection*{Program \emph{scientometry-data-proc}}
 %\section*{Konfiguračný súbor programu \emph{scientometry-data-proc}}
 
-Program \emph{scientometry-data-proc} potrebuje k~svojej činnosti konfiguračný
-súbor vo formáte YAML\footnote{\url{http://yaml.org/}}, ktorý definuje parametre
-spracov:
-\begin{itemize}
-  \item adresár pre výstupné súbory (\verb|output-dir|),
-  \item metódu spracovania dát (\verb|class|),
-  \item názvy vstupných súborov a ich štítky (\verb|source|, \verb|journal-catalog|),
-  \item názvy výstupných súborov (názov sekcie\,--\,napr.\,\verb|all-publications-data|),
-  \item výber riadkov výstupných dát (\verb|years|, \verb|groups|),
-  \item výber stĺpcov vstupných a výstupných dát (\verb|extract|, \verb|select|).
-\end{itemize}
-Pre spracovanie dát v~tejto práci sme použili program
-\emph{scientometry-data-proc} spolu so~súborom \verb|config.yaml|
-s~nasledujúcim obsahom:
+Program \emph{scientometry-data-proc} sme vyvinuli ako univerzálna platforma na
+spracovanie scientometrických dát.  Samotný program je napísaný v programovacom
+jazyku Python verzie 2.7 a pre pre svoju činnosť potrebuje mať nadefinované
+parametre v textovom konfiguračnom súbore \verb|config.yaml| v značkovacom
+jazyku YAML\footnote{\url{http://yaml.org/}}. Pre účely tejto práce sme použili
+nasledujúci konfiguračný súbor:
 
 \begin{source}
 \begin{verbatim}
 defaults:
-  output-dir: out
+  output-dir:
 
 all-publications-data:
   class: PublicationsData
@@ -49,10 +44,22 @@ journals-data:
 results-data:
   class: ResultsData
   source: results-all-{date}.csv
-  groups: [ KB, KBt, KCh, KER, KAIM ]
+  groups: [ KB, KBt, KCh, KER, KBf, KAIM ]
   select: [ Group, Scopus, WoS, GS ]
 \end{verbatim}
 \end{source}
+
+Jednotlivé sekcie súboru definujú nezávislé bloky spracovania dát a ich
+parametre. V sekcii \verb|defaults| sú definované implicitné parametre platné
+pre všetky sekcie.
+
+\subsection*{Program \emph{scientometry-plot-gen}}
+
+Pre spracovanie dát v~tejto práci sme použili program
+\emph{scientometry-data-proc} spolu so~súborom \verb|config.yaml|
+s~nasledujúcim obsahom:
+
+
 
 \noindent Program \emph{scientometry-plot-gen} generuje grafy zo sady zadaných súborov a
 metadáta pre grafy sú definované v~textovom súbore vo formáte YAML. Pomocou tohto súboru
