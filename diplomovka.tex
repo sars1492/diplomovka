@@ -175,6 +175,10 @@ k~vytvoreniu priaznivých podmienok pre vznik mojej diplomovej práce.}
 % Zapnutie opakovania matematickych symbolov
 % \input{opakuj.sty}
 
+% Prikaz \cmidrule nefunguje, ak dokument pouziva slovencinu/cestinu cez babel
+% tento patch riesi tento problem
+\input{cmidrule-patch.sty}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%  Zaciatok dokumentu
