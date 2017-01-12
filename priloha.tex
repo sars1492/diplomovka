@@ -9,44 +9,44 @@
 
 Program \emph{scientometry-data-proc} sme vyvinuli ako univerzálnu platformu na
 spracovanie scientometrických dát.  Samotný program je napísaný v~programovacom
-jazyku \emph{Python} verzie 2.7 a pre pre svoju činnosť potrebuje mať nadefinované
-parametre v~textovom konfiguračnom súbore \verb|config.yaml| v~značkovacom
-jazyku YAML\footnote{\url{http://yaml.org/}}. Pre účely tejto práce sme použili
-nasledujúci konfiguračný súbor:
+jazyku \emph{Python} verzie 2.7 a pre pre svoju činnosť potrebuje mať
+nadefinované parametre v~textovom konfiguračnom súbore \verb|config.yaml|
+v~značkovacom jazyku YAML\footnote{\url{http://yaml.org/}}. Pre účely tejto
+práce sme použili nasledujúci konfiguračný súbor:
 
 \begin{source}
-\begin{verbatim}
-defaults:
-  output-dir:
+  \begin{verbatim}
+    defaults:
+      output-dir:
 
-all-publications-data:
-  class: PublicationsData
-  source:
-    Scopus: all-scopus-{date}.csv
-    WoS: all-wos-{date}.csv
-  years: 2000-2016
-  select: [ Year, Scopus, WoS ]
+    all-publications-data:
+      class: PublicationsData
+      source:
+        Scopus: all-scopus-{date}.csv
+        WoS: all-wos-{date}.csv
+      years: 2000-2016
+      select: [ Year, Scopus, WoS ]
 
-all-citations-data:
-  class: CitationsData
-  source:
-    Scopus: all-scopus-{date}.csv
-    WoS: all-wos-{date}.csv
-  years: 2000-2016
-  select: [ Year, Scopus, WoS ]
+    all-citations-data:
+      class: CitationsData
+      source:
+        Scopus: all-scopus-{date}.csv
+        WoS: all-wos-{date}.csv
+      years: 2000-2016
+      select: [ Year, Scopus, WoS ]
 
-journals-data:
-  class: JournalsData
-  source: all-merged-{date}.csv
-  journal-catalog: journal-catalog-{date}.csv
-  select: [ Source title, Papers, ISI JIF, SJR, Scimago h-index, CiteScore, SNIP, Notes ]
+    journals-data:
+      class: JournalsData
+      source: all-merged-{date}.csv
+      journal-catalog: journal-catalog-{date}.csv
+      select: [ Source title, Papers, ISI JIF, SJR, Scimago h-index, CiteScore, SNIP, Notes ]
 
-results-data:
-  class: ResultsData
-  source: results-all-{date}.csv
-  groups: [ KB, KBt, KCh, KER, KBf, KAIM ]
-  select: [ Group, Scopus, WoS, GS ]
-\end{verbatim}
+    results-data:
+      class: ResultsData
+      source: results-all-{date}.csv
+      groups: [ KB, KBt, KCh, KER, KBf, KAIM ]
+      select: [ Group, Scopus, WoS, GS ]
+  \end{verbatim}
 \end{source}
 
 Jednotlivé sekcie súboru definujú nezávislé časti spracovania dát a ich
@@ -89,129 +89,129 @@ v~jazyku \emph{Python} verzie 2.7, na kreslenie grafov využíva knižnicu
 
 Cieľom bolo spracovanie dát čo najviac automatizovať, preto je program
 \emph{scientometry-plot-gen} navrhnutý tak, aby mohol spracovávať výstupné
-súbory programu \emph{scientometry-data-proc} bez nutnosti ručných zásahov. 
+súbory programu \emph{scientometry-data-proc} bez nutnosti ručných zásahov.
 I~napriek našej snahe o~multiplatformovosť, program v~súčasnosti funguje iba
 v~operačných systémoch typu UNIX (GNU/Linux, MacOS, BSD). Tento nedostatok nám
 našťastie nijak nebránil vo využití programu pre účely tejto práce.
 
 Metadáta a parametre každého grafu je potrebné špecifikovať pomocou textového
 súboru \verb|plot-metadata.yaml|, ktorý využíva syntax značkovacieho jazyka
-YAML. V~tomto súbore je možné definovať metadáta pre ľubovoľný počet
-grafov, čo umožňuje rýchle generovanie celých sád grafov.
+YAML. V~tomto súbore je možné definovať metadáta pre ľubovoľný počet grafov, čo
+umožňuje rýchle generovanie celých sád grafov.
 
-Na základe nasledujúceho konfiguračného súboru vygeneroval
-program \emph{scientometry-plot-gen} v~jednej dávke všetky grafy, ktoré sú
-súčasťou tejto práce.
+Na základe nasledujúceho konfiguračného súboru vygeneroval program
+\emph{scientometry-plot-gen} v~jednej dávke všetky grafy, ktoré sú súčasťou
+tejto práce.
 
 \begin{source}
-\begin{verbatim}
+  \begin{verbatim}
 
 
-defaults:
-  format: png
-  resolution: 150 # [dpi]
-  figsize:
-    - 25.4 # width [cm]
-    - 14.1 # height [cm]
-  suptitle_fontsize: 14
-  title_fontsize: 12
-  ticklabel_fontsize: 11
-  axislabel_fontsize: 11
-  legend_fontsize: 11
-  legend_loc: best
-  suptitle: ''
-  xlabel: Katedra
-  title_y: 1.004
-  barwidth: 0.2
-  barcolors:
-    - blue
-    - red
-    - green
-  legend:
-    - Scopus
-    - WoS
-    - GS
-  ymax: best
+    defaults:
+      format: png
+      resolution: 150 # [dpi]
+      figsize:
+        - 25.4 # width [cm]
+        - 14.1 # height [cm]
+      suptitle_fontsize: 14
+      title_fontsize: 12
+      ticklabel_fontsize: 11
+      axislabel_fontsize: 11
+      legend_fontsize: 11
+      legend_loc: best
+      suptitle: ''
+      xlabel: Katedra
+      title_y: 1.004
+      barwidth: 0.2
+      barcolors:
+        - blue
+        - red
+        - green
+      legend:
+        - Scopus
+        - WoS
+        - GS
+      ymax: best
 
-all-publications-data:
-  title: Vývoj publikačnej činnosti FPV v~období 2000-2016
-  xlabel: Rok publikovania
-  ylabel: Počet publikácií
-  barwidth: 0.3
-  legend_loc: upper left
-  legend:
-    - Scopus
-    - WoS
+    all-publications-data:
+      title: Vývoj publikačnej činnosti FPV v~období 2000-2016
+      xlabel: Rok publikovania
+      ylabel: Počet publikácií
+      barwidth: 0.3
+      legend_loc: upper left
+      legend:
+        - Scopus
+        - WoS
 
-all-citations-data:
-  title: Citovanosť publikácii FPV v~období 2000-2016
-  xlabel: Rok publikovania
-  ylabel: Počet citácií
-  barwidth: 0.3
-  ymax: 350
-  legend:
-    - Scopus
-    - WoS
+    all-citations-data:
+      title: Citovanosť publikácii FPV v~období 2000-2016
+      xlabel: Rok publikovania
+      ylabel: Počet citácií
+      barwidth: 0.3
+      ymax: 350
+      legend:
+        - Scopus
+        - WoS
 
-results-data-papers:
-  title:  Celkový počet publikácií jednotlivých katedier FPV
-  ylabel: Počet publikácií
+    results-data-papers:
+      title:  Celkový počet publikácií jednotlivých katedier FPV
+      ylabel: Počet publikácií
 
-results-data-citations:
-  title:  Celkový počet citácií jednotlivých katedier FPV
-  ylabel: Počet citácií
+    results-data-citations:
+      title:  Celkový počet citácií jednotlivých katedier FPV
+      ylabel: Počet citácií
 
-results-data-papers_author:
-  title: Medián počtu publikácií na autora pre jednotlivé katedry FPV
-  ylabel: Medián počtu publikácií na autora
+    results-data-papers_author:
+      title: Medián počtu publikácií na autora pre jednotlivé katedry FPV
+      ylabel: Medián počtu publikácií na autora
 
-results-data-cites_paper:
-  title: Medián citácií na publikáciu pre jednotlivé katedry FPV
-  ylabel: Medián citácií na publikáciu
+    results-data-cites_paper:
+      title: Medián citácií na publikáciu pre jednotlivé katedry FPV
+      ylabel: Medián citácií na publikáciu
 
-results-data-e_index:
-  title: Medián $e$-indexu pre jednotlivé katedry FPV
-  ylabel: Medián $e$-indexu
-  ymax: 14
+    results-data-e_index:
+      title: Medián $e$-indexu pre jednotlivé katedry FPV
+      ylabel: Medián $e$-indexu
+      ymax: 14
 
-results-data-h_index:
-  title: Medián $h$-indexu pre jednotlivé katedry FPV
-  ylabel: Medián $h$-indexu
-  ymax: 12
+    results-data-h_index:
+      title: Medián $h$-indexu pre jednotlivé katedry FPV
+      ylabel: Medián $h$-indexu
+      ymax: 12
 
-results-data-g_index:
-  title: Medián $g$-indexu pre jednotlivé katediry FPV
-  ylabel: Medián $g$-indexu
-  ymax: 20
+    results-data-g_index:
+      title: Medián $g$-indexu pre jednotlivé katediry FPV
+      ylabel: Medián $g$-indexu
+      ymax: 20
 
-results-data-hi_index:
-  title: Medián $h_{\mathrm{I}}$-indexu pre jednotlivé katedry FPV
-  ylabel: Medián $h_{\mathrm{I}}$-indexu
+    results-data-hi_index:
+      title: Medián $h_{\mathrm{I}}$-indexu pre jednotlivé katedry FPV
+      ylabel: Medián $h_{\mathrm{I}}$-indexu
 
-results-data-hi_norm:
-  title: Medián $h_{\mathrm{I, norm}}$ pre jednotlivé katedry FPV
-  ylabel: Medián $h_{\mathrm{I, norm}}$
+    results-data-hi_norm:
+      title: Medián $h_{\mathrm{I, norm}}$ pre jednotlivé katedry FPV
+      ylabel: Medián $h_{\mathrm{I, norm}}$
 
-results-data-awcr:
-  title: Medián AWCR pre jednotlivé katedry FPV
-  ylabel: Medián AWCR
-  ymax: 100
+    results-data-awcr:
+      title: Medián AWCR pre jednotlivé katedry FPV
+      ylabel: Medián AWCR
+      ymax: 100
 
-results-data-aw_index:
-  title: Medián $\mathit{AW}$-indexu pre jednotlivé katedry FPV
-  ylabel: Medián $\mathit{AW}$-indexu
-  ymax: 10
+    results-data-aw_index:
+      title: Medián $\mathit{AW}$-indexu pre jednotlivé katedry FPV
+      ylabel: Medián $\mathit{AW}$-indexu
+      ymax: 10
 
-results-data-hc_index:
-  title: 'Medián $h^{\mathrm{c}}\!$-indexu pre jednotlivé katedry FPV'
-  ylabel: 'Medián $h^{\mathrm{c}}\!$-indexu'
-  ymax: 10
+    results-data-hc_index:
+      title: 'Medián $h^{\mathrm{c}}\!$-indexu pre jednotlivé katedry FPV'
+      ylabel: 'Medián $h^{\mathrm{c}}\!$-indexu'
+      ymax: 10
 
-results-data-hm_index:
-  title: Medián $h_{\mathrm{m}}$-indexu pre jednotlivé katedry FPV
-  ylabel: Medián $h_{\mathrm{m}}$-indexu
-  ymax: 5
-\end{verbatim}
+    results-data-hm_index:
+      title: Medián $h_{\mathrm{m}}$-indexu pre jednotlivé katedry FPV
+      ylabel: Medián $h_{\mathrm{m}}$-indexu
+      ymax: 5
+  \end{verbatim}
 \end{source}
 
 \section*{Zoznam časopisov, v~ktorých publikovali pracovníci FPV}
@@ -221,87 +221,83 @@ results-data-hm_index:
 \begin{longtable}[c]{lcccccc}
   %\caption*{Prehľad časopisov, v~ktorých publikovali pracovníci FPV UCM v~Trnave.}
   \toprule\noalign{\vspace{.3ex}}
-   %\hline
-   Názov časopisu                                                                   & $n$ & IF & SJR  & CS$^\ddagger$ & SNIP           \\[0.3ex]
- \midrule\noalign{\vspace{.5ex}}
-   % \hline
-    \endfirsthead
+  Názov časopisu & $n$ & IF & SJR & CS$^\ddagger$ & SNIP \\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}
+  \endfirsthead
 
-    \caption*{(pokračovanie zoznamu)} \\
-   \toprule\noalign{\vspace{.3ex}}
-  %\hline
-  Názov časopisu                                                                     & n & IF & SJR  & CS$^\ddagger$ & SNIP            \\[0.3ex]
- \midrule\noalign{\vspace{.5ex}}
-  %\hline
-    \endhead
+  \caption*{(pokračovanie zoznamu)} \\
+  \toprule\noalign{\vspace{.3ex}}
+  Názov časopisu & n & IF & SJR & CS$^\ddagger$ & SNIP \\[0.3ex]
+  \midrule\noalign{\vspace{.5ex}}
+  \endhead
 
-    \bottomrule \\ [-2ex]
-    \multicolumn{7}{l}{\footnotesize $^\dagger$ posledné dáta sú z~roku 2008; $^\ddagger$ CiteScore} \\
-    \endfoot
+  \bottomrule \\[-2ex]
+  \multicolumn{7}{l}{\footnotesize $^\dagger$ posledné dáta sú z~roku 2008; $^\ddagger$ CiteScore} \\
+  \endfoot
 
-  \bottomrule \\ [-2ex]
-    \multicolumn{7}{l}{\footnotesize $^\dagger$ posledné dáta sú z~roku 2008; $^\ddagger$ CiteScore} \\
-    \endlastfoot
+  \bottomrule \\[-2ex]
+  \multicolumn{7}{l}{\footnotesize $^\dagger$ posledné dáta sú z~roku 2008; $^\ddagger$ CiteScore} \\
+  \endlastfoot
 
-  Chemical Papers                                                                    & 25     & 1.326   & 0.382 &  1.36      & 0.56                  \\
-  Polyhedron                                                                         & 22     & 2.108   & 0.592 &  2.02      & 0.777                 \\
-  Biologia                                                                           & 15     & 1,10    & 0.322 &  0.88      & 0.88                  \\
-  Cereal Research Communications                                                     & 14     & 0.528   & 0.305 &  0.62      & 0.515                 \\
-  Dalton Transactions                                                                & 14     & 4.177   & 1.404 &  4.1       & 1                     \\[1ex]
-  Chemicke Listy                                                                     & 13     & 0.279   & 0.183 &  0.22      & 0.24                  \\
-  Inorganic Chemistry                                                                & 12     & 4.82    & 1.873 &  1.36      & 0.741                 \\
-  Inorganica Chimica Acta                                                            & 11     & 1.918   & 0.584 &  1.88      & 0.664                 \\
-  Nova Biotechnologica et Chimica                                                    & 11     & 0.188   & 0.129 &  0.31      & 0.044                 \\
-  Acta Chimica Slovenica                                                             & 7      & 1.167   & 0.288 &  0.99      & 0.528                 \\[1ex]
-  Journal of Food and Nutrition Research                                             & 7      & 1.676   & 0.334 &  0.74      & 0.393                 \\
-  Journal of Liquid Chromatography and Rel. Technologies                             & 7      & 0.669   & 0.299 &  0.69      & 0.416                 \\
-  Journal of Radioanalytical and Nuclear Chemistry                                     & 7      & 0.983   & 0.458 &  0.99      & 0.683                 \\
-  Acta Crystallographica Sec.\,E: Structure Reports Online                           & 6      & 0.21    & 0.179 &  0.17      & 0.106                 \\
-  Agriculture                                                                        & 6      & n/a     & 0.156 &  0.31      & 0.281                 \\[1ex]
-  Biologia\,--\,Section Cellular and Molecular Biology                               & 6      & 0.46$^\dagger$    & 0.138 $^\dagger$ &  --       & 0.259$^\dagger$ \\
-  Central European Journal of Chemistry                                             & 6      & 1.329   & 0.346 &  1.24      & 0.841                 \\
-  Journal of Biotechnology                                                           & 6      & 2.667   & 1.064 &  2.87      & 0.944                 \\
-  Arkivoc                                                                            & 5      & 1.096   & 0.237 &  0.8       & 0.342                 \\
-  Current Opinion in Biotechnology                                                   & 5      & 8.314   & 3.124 &  7.99      & 2.063                 \\[1ex]
-  Inorganic Chemistry Communications                                                 & 5      & 1.762   & 0.489 &  1.68      & 0.529                 \\
-  Czech Journal of Food Sciences                                                     & 4      & 0.728   & 0.409 &  0.95      & 0.681                 \\
-  International Journal of Molecular Sciences                                        & 4      & 3.257   & 1.16  &  3.37      & 1.076                 \\
-  Journal of Thermal Analysis and Calorimetry                                        & 4      & 1.781   & 0.612 &  1.69      & 0.951                 \\
-  Monatshefte für Chemie - Chemical Monthly                                          & 4      & 1.131   & 0.34  &  1.15      & 0.546                 \\[1ex]
-  New Journal of Chemistry                                                           & 4      & 3.277   & 0.987 &  3.27      & 0.819                 \\
-  Nukleonika                                                                         & 4      & 0.546   & 0.205 &  0.49      & 0.461                 \\
-  Applied Mechanics and Materials                                                    & 3      & 0.16    & 0.113 &  0.07      & 0.066                 \\
-  Collection of Czechoslovak Chemical Communications                                 & 3      & 2.27    & --   &   --        & --                    \\
- Current Pharmaceutical Design                                                      & 3      & 3.052   & 1.22  &  3.01      & 3.01                  \\[1ex]
- European Journal of Inorganic Chemistry                                            & 3      & 2.686   & 1.018 &  2.58      & 0.685                 \\
- Journal of Chromatography A~& 3      & 3.926   & 1.774 &  4.03      & 1.34                  \\
- Journal of Pharm. and Biomedicine Analysis                                         & 3      & 3.169   & 1.049 &  3.16      & 1.42                  \\
- Molecules                                                                          & 3      & 2.465   & 0.544 &  2.65      & 1.095                 \\
- Pharmazie                                                                          & 3      & 1.32    & 0.428 &  1.33      & 0.527                 \\[1ex]
- Polish Journal of Environmental Studies                                            & 3      & 0.71    & 0.341 &  0.92      & 0.627                 \\
- Advanced Materials Research                                                        & 2      & 0.23    & 0.115 &  0.08      & 0.096                 \\
- Analytical Methods                                                                 & 2      & 1.915   & 0.623 &  1.98      & 0.626                 \\
- Bioorganic and Medicinal Chemistry                                                 & 2      & 2.923   & 1.064 &  3         & 1.064                 \\
- Cellular and Molecular Life Sciences                                               & 2      & 5.694   & 3.388 &  5.68      & 1.388                 \\[1ex]
- Chemistry and Biodiversity                                                         & 2      & 1.444   & 0.542 &  1.65      & 0.804                 \\
- Chemistry of Heterocyclic Compounds                                                & 2      & 0.815   & 0.339 &  0.82      & 0.493                 \\
- Communications in Comp. and Inf. Science                                           & 2      & 0.35    & 0.149 &  0.15      & 0.166                 \\
- Computational and Theor. Chemistry                                                 & 2      & 1.403   & 0.566 &  1.42      & 0.585                 \\
- CrystEngComm                                                                       & 2      & 3.849   & 1.096 &  3.83      & 3.83                  \\[1ex]
- Desalination and Water Treatment                                                   & 2      & 1.272   & 0.392 &  1.17      & 0.691                 \\
- Enzyme and Microbial Tech. of Chemistry                                            & 2      & 2.624   & 0.854 &  2.63      & 0.933                 \\
- European Journal of Org. Chemistry                                                 & 2      & 3.068   & 1.245 &  2.88      & 0.735                 \\
- FEBS Journal                                                                       & 2      & 4.237   & 2.141 &  3.92      & 1.111                 \\
- Food Chemistry                                                                     & 2      & 4.052   & 1.62  &  4.31      & 1.883                 \\[1ex]
- Int. Journal of Electro-chemical Science                                           & 2      & 2.808   & 0.51  &  1.86      & 1.86                  \\
- Journal of Applied Microbiology                                                    & 2      & 2.156   & 0.921 &  2.57      & 1.026                 \\
- Journal of Coordination Chemistry                                                  & 2      & 1.756   & 0.404 &  1.55      & 0.608                 \\
- Journal of Molecular Structure                                                     & 2      & 1.78    & 0.463 &  1.7       & 0.813                 \\[1ex]
- Khimiya Geterotsiklicheskikh Soedinenii                                            & 2      & --      & 0.1   &  --        & --                      \\
- Neoplasma                                                                          & 2      & 1.961   & 0.726 &  1.94      & 0.565                 \\
- Plant Cell Reports                                                                 & 2      & 3.088   & 1.225 &  3.11      & 1.178                 \\
- Tetrahedron                                                                        & 2      & 2.645   & 0.991 &  2.72      & 0.814                 \\
- Transition Metal Chemistry                                                         & 2      & 1.465   & 0.398 &  1.36      & 0.592                 \\[0.5ex]
+  Chemical Papers                                          & 25 & 1.326         & 0.382          & 1.36 & 0.56          \\
+  Polyhedron                                               & 22 & 2.108         & 0.592          & 2.02 & 0.777         \\
+  Biologia                                                 & 15 & 1,10          & 0.322          & 0.88 & 0.88          \\
+  Cereal Research Communications                           & 14 & 0.528         & 0.305          & 0.62 & 0.515         \\
+  Dalton Transactions                                      & 14 & 4.177         & 1.404          & 4.1  & 1             \\[1ex]
+  Chemicke Listy                                           & 13 & 0.279         & 0.183          & 0.22 & 0.24          \\
+  Inorganic Chemistry                                      & 12 & 4.82          & 1.873          & 1.36 & 0.741         \\
+  Inorganica Chimica Acta                                  & 11 & 1.918         & 0.584          & 1.88 & 0.664         \\
+  Nova Biotechnologica et Chimica                          & 11 & 0.188         & 0.129          & 0.31 & 0.044         \\
+  Acta Chimica Slovenica                                   & 7  & 1.167         & 0.288          & 0.99 & 0.528         \\[1ex]
+  Journal of Food and Nutrition Research                   & 7  & 1.676         & 0.334          & 0.74 & 0.393         \\
+  Journal of Liquid Chromatography and Rel. Technologies   & 7  & 0.669         & 0.299          & 0.69 & 0.416         \\
+  Journal of Radioanalytical and Nuclear Chemistry         & 7  & 0.983         & 0.458          & 0.99 & 0.683         \\
+  Acta Crystallographica Sec.\,E: Structure Reports Online & 6  & 0.21          & 0.179          & 0.17 & 0.106         \\
+  Agriculture                                              & 6  & --            & 0.156          & 0.31 & 0.281         \\[1ex]
+  Biologia\,--\,Section Cellular and Molecular Biology     & 6  & 0.46$^\dagger$ & 0.138 $^\dagger$ &  --  & 0.259$^\dagger$ \\
+  Central European Journal of Chemistry                    & 6  & 1.329         & 0.346          & 1.24 & 0.841         \\
+  Journal of Biotechnology                                 & 6  & 2.667         & 1.064          & 2.87 & 0.944         \\
+  Arkivoc                                                  & 5  & 1.096         & 0.237          & 0.8  & 0.342         \\
+  Current Opinion in Biotechnology                         & 5  & 8.314         & 3.124          & 7.99 & 2.063         \\[1ex]
+  Inorganic Chemistry Communications                       & 5  & 1.762         & 0.489          & 1.68 & 0.529         \\
+  Czech Journal of Food Sciences                           & 4  & 0.728         & 0.409          & 0.95 & 0.681         \\
+  International Journal of Molecular Sciences              & 4  & 3.257         & 1.16           & 3.37 & 1.076         \\
+  Journal of Thermal Analysis and Calorimetry              & 4  & 1.781         & 0.612          & 1.69 & 0.951         \\
+  Monatshefte für Chemie - Chemical Monthly                & 4  & 1.131         & 0.34           & 1.15 & 0.546         \\[1ex]
+  New Journal of Chemistry                                 & 4  & 3.277         & 0.987          & 3.27 & 0.819         \\
+  Nukleonika                                               & 4  & 0.546         & 0.205          & 0.49 & 0.461         \\
+  Applied Mechanics and Materials                          & 3  & 0.16          & 0.113          & 0.07 & 0.066         \\
+  Collection of Czechoslovak Chemical Communications       & 3  & 2.27          & --             &  --  & --            \\
+ Current Pharmaceutical Design                             & 3  & 3.052         & 1.22           & 3.01 & 3.01          \\[1ex]
+ European Journal of Inorganic Chemistry                   & 3  & 2.686         & 1.018          & 2.58 & 0.685         \\
+ Journal of Chromatography                                 & 3  & 3.926         & 1.774          & 4.03 & 1.34          \\
+ Journal of Pharm. and Biomedicine Analysis                & 3  & 3.169         & 1.049          & 3.16 & 1.42          \\
+ Molecules                                                 & 3  & 2.465         & 0.544          & 2.65 & 1.095         \\
+ Pharmazie                                                 & 3  & 1.32          & 0.428          & 1.33 & 0.527         \\[1ex]
+ Polish Journal of Environmental Studies                   & 3  & 0.71          & 0.341          & 0.92 & 0.627         \\
+ Advanced Materials Research                               & 2  & 0.23          & 0.115          & 0.08 & 0.096         \\
+ Analytical Methods                                        & 2  & 1.915         & 0.623          & 1.98 & 0.626         \\
+ Bioorganic and Medicinal Chemistry                        & 2  & 2.923         & 1.064          & 3    & 1.064         \\
+ Cellular and Molecular Life Sciences                      & 2  & 5.694         & 3.388          & 5.68 & 1.388         \\[1ex]
+ Chemistry and Biodiversity                                & 2  & 1.444         & 0.542          & 1.65 & 0.804         \\
+ Chemistry of Heterocyclic Compounds                       & 2  & 0.815         & 0.339          & 0.82 & 0.493         \\
+ Communications in Comp. and Inf. Science                  & 2  & 0.35          & 0.149          & 0.15 & 0.166         \\
+ Computational and Theor. Chemistry                        & 2  & 1.403         & 0.566          & 1.42 & 0.585         \\
+ CrystEngComm                                              & 2  & 3.849         & 1.096          & 3.83 & 3.83          \\[1ex]
+ Desalination and Water Treatment                          & 2  & 1.272         & 0.392          & 1.17 & 0.691         \\
+ Enzyme and Microbial Tech. of Chemistry                   & 2  & 2.624         & 0.854          & 2.63 & 0.933         \\
+ European Journal of Org. Chemistry                        & 2  & 3.068         & 1.245          & 2.88 & 0.735         \\
+ FEBS Journal                                              & 2  & 4.237         & 2.141          & 3.92 & 1.111         \\
+ Food Chemistry                                            & 2  & 4.052         & 1.62           & 4.31 & 1.883         \\[1ex]
+ Int. Journal of Electro-chemical Science                  & 2  & 2.808         & 0.51           & 1.86 & 1.86          \\
+ Journal of Applied Microbiology                           & 2  & 2.156         & 0.921          & 2.57 & 1.026         \\
+ Journal of Coordination Chemistry                         & 2  & 1.756         & 0.404          & 1.55 & 0.608         \\
+ Journal of Molecular Structure                            & 2  & 1.78          & 0.463          & 1.7  & 0.813         \\[1ex]
+ Khimiya Geterotsiklicheskikh Soedinenii                   & 2  & --            & 0.1            & --   & --              \\
+ Neoplasma                                                 & 2  & 1.961         & 0.726          & 1.94 & 0.565         \\
+ Plant Cell Reports                                        & 2  & 3.088         & 1.225          & 3.11 & 1.178         \\
+ Tetrahedron                                               & 2  & 2.645         & 0.991          & 2.72 & 0.814         \\
+ Transition Metal Chemistry                                & 2  & 1.465         & 0.398          & 1.36 & 0.592         \\[0.5ex]
 \end{longtable}}
 
 %%% Local Variables:
