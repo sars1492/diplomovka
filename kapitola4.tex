@@ -187,7 +187,7 @@ citovaní.
 
 \citet{Kazakis2015} scientometricky porovnával katedry chemického inžinierstva
 troch gréckych univerzít (Atény, Solún a Patra).  V~Tabuľke
-\ref{tab:kazakis.results1} sme porovnali naše výsledky s~Kazakisovymi. Napriek
+\ref{tab:kazakis.results} sme porovnali naše výsledky s~Kazakisovymi. Napriek
 tomu, že Gréci čerpali iba z~citačného registru Scopus, my sme porovnali
 indikátory zo všetkých použitých citačných registrov. Na prvý pohľad si všimneme
 rozdiel v~počte pracovníkov (v~tabuľke označené ako $n$).  Grécke katedry
@@ -205,7 +205,7 @@ dvakrát menej zamestnancov, tak je výsledok očakávateľný.
 prestížnych gréckych univerzít (Krétska, Patraska, Solúnska, Ioanninanska, a
 Aténska).  Dáta čerpal z~citačného registru WoS, pričom na výpočet $h$-index
 používal webové rozhranie WoS, alebo ho počítal ručne.  V~Tabuľke
-\ref{tab:kazakis.results2} sú porovnané priemerné $h$-index katedier spomenutých
+\ref{tab:lazaridis.results} sú porovnané priemerné $h$-index katedier spomenutých
 gréckych univerzít a naše výsledky pre Katedru chémie. Síce priemerný $h$-index
 gréckych katedier je porovnateľný s~KCh (s~výnimkou Krétskej univerzity), ale
 dátový súbor je výrazne menší. Zdá sa nám nepravdepodobné aby taká inštitúcia
@@ -258,29 +258,27 @@ $h$-index znižuje hodnotu, podľa počtu autorov (vid. podkapitola
 na Obrázku \ref{fig:hc-index.plot} a Obrázku \ref{fig:hm-index.plot}.
 
 \begin{SCtable}
-  \centering\small
-  \caption[Porovnanie KCh FPV a kat. chem. inžinierstva troch gréckych
-  univerzít]%
+\centering\small
+  \caption[Porovnanie KCh FPV a kat. chem. inžinierstva  troch gréckych univerzít]%
   {Porovnanie citačných indikátorov Katedry chémie FPV a katedier chemického
     inžinierstva troch gréckych univerzít \citep{Kazakis2015}}
-  \label{tab:kazakis.results1}
+  \label{tab:kazakis.results}
   \begin{tabular}{lcccccc}
     \toprule\noalign{\vspace{.3ex}}
-    & \multicolumn{3}{c}{Katedra chémie FPV} & \multicolumn{3}{c}{\citet{Kazakis2015}} \\
-    \cmidrule{2-4}\cmidrule{5-7}
-    Indikátor & Scopus & WoS & GS &  Atény & Solún & Patra \\[0.3ex]
+    & \multicolumn{3}{c}{Katedra chémie FPV} & \multicolumn{3}{c}{\citet{Kazakis2015}}  \\
+    Indikátor & Scopus & WoS   & GS    &  Atény     & Solún      & Patra      \\[0.3ex]
     \midrule\noalign{\vspace{.5ex}}
-    $n$          & 18    & 18    & 18    & 72    & 34    & 30    \\
-    $P$          & 1106  & 1120  & 1525  & 4463  & 2253  & 2573  \\
-    P/A$^\dagger$ & 15.42 & 16.14 & 25.74 & 62    & 66,3  & 85,8  \\
-    $c$          & 19248 & 19223 & 25208 & 74368 & 39695 & 63718 \\
-    C/P$^\ddagger$ & 12,45 & 12,62 & 11,35 & 16,7  & 17,6  & 24,8  \\[1ex]
-    $\bar{h}$    & 11,78 & 11,94 & 13,61 & 16,3  & 16,8  & 21,3  \\
-    $\sigma (h)$ & 11,70 & 11,70 & 12,99 & 8     & 8,5   & 1,5   \\
-    $\tilde{h}$  & 7,50  & 7,50  & 9,00  & 15,5  & 17    & 18    \\
-    $\bar{g}$    & 19,83 & 20,22 & 23,56 & 26,8  & 28,3  & 35,5  \\
-    $\sigma (g)$ & 22,23 & 21,68 & 24,89 & 12,6  & 13,9  & 23    \\
-    $\tilde{g}$  & 14,50 & 15,00 & 16,50 & 26,5  & 27    & 30,5  \\[0.5ex]
+    $n$         & 18     & 18    & 18    & 72    & 34    & 30    \\
+    $P$         & 1106   & 1120  & 1525  & 4463  & 2253  & 2573  \\
+    P/A$^\dagger$         & 15,42  & 16,14 & 25,74 & 62    & 66,3  & 85,8  \\
+    $c$         & 19248  & 19223 & 25208 & 74368 & 39695 & 63718 \\
+    C/P$^\ddagger$         & 12,45  & 12,62 & 11,35 & 16,7  & 17,6  & 24,8  \\[1ex]
+    $\bar{h}$   & 11,78  & 11,94 & 13,61 & 16,3  & 16,8  & 21,3  \\
+    $\sigma (h)$ & 11,70  & 11,70 & 12,99 & 8     & 8,5   & 1,5   \\
+    $\tilde{h}$ & 7,50   & 7,50  & 9,00  & 15,5  & 17    & 18    \\
+    $\bar{g}$   & 19,83  & 20,22 & 23,56 & 26,8  & 28,3  & 35,5  \\
+    $\sigma (g)$  & 22,23  & 21,68 & 24,89 & 12,6  & 13,9  & 23    \\
+    $\tilde{g}$  & 14,50  & 15,00 & 16,50 & 26,5  & 27    & 30,5  \\[0.5ex]
     \bottomrule
     \multicolumn{7}{l}{\footnotesize $^\dagger$ počet autorov na publikáciu; $^\ddagger$ počet citácii na publikáciu} \\
   \end{tabular}
@@ -288,19 +286,17 @@ na Obrázku \ref{fig:hc-index.plot} a Obrázku \ref{fig:hm-index.plot}.
 
 \begin{table}
   \centering\small
-  \caption[Porovnanie KCh FPV a chemických katedier vybraných gréckych
-  univerzít]%
-  {Porovnanie citačných indikátorov Katedry chémie FPV a katedier chémie piatich
-    gréckych univerzít \citep{Lazaridis2010}}
-  \label{tab:kazakis.results2}
+  \caption[Porovnanie KCh FPV a chemických katedier vybraných gréckych univerzít]%
+  {Porovnanie citačných indikátorov Katedry chémie FPV  a katedier chémie
+    piatich gréckych univerzít \citep{Lazaridis2010}}
+  \label{tab:lazaridis.results}
   \begin{tabularx}{\textwidth}{Xccclccccc}
     \toprule\noalign{\vspace{.5ex}}
-    & \multicolumn{3}{c}{Katedra chémie FPV} & \phantom{M} & \multicolumn{5}{c}{\citet{Kazakis2015}} \\
-    \cmidrule{2-4}\cmidrule{5-9}
-    Indikátor & Scopus & WoS & GS & & Kréta & Patra & Solún & Ioaninna & Atény \\[0.3ex]
+    & \multicolumn{3}{c}{Katedra chémie FPV}& \phantom{M} & \multicolumn{5}{c}{\citet{Lazaridis2010}} \\
+    Indikátor  & Scopus & WoS   & GS                 &  & Kréta & Patra & Solún & Ioaninna & Atény \\[0.3ex]
     \midrule\noalign{\vspace{.5ex}}
-    $P$       & 1106  & 1120  & 1525  & & 56   & 61   & 41   & 48   & 219 \\
-    $\bar{h}$ & 11,78 & 11,94 & 13,61 & & 16,6 & 12,6 & 10,4 & 10,3 & 9,0 \\[0.5ex]
+    $P$         & 1106   & 1120  & 1525               & & 56    & 61    & 41    & 48       & 219   \\
+    $\bar{h}$  & 11,78  & 11,94 & 13,61              & & 16,6  & 12,6  & 10,4  & 10,3     & 9,0   \\[0.5ex]
     \bottomrule
   \end{tabularx}
 \end{table}
@@ -311,7 +307,7 @@ na Obrázku \ref{fig:hc-index.plot} a Obrázku \ref{fig:hm-index.plot}.
   {Porovnanie citačných indikátorov Katedry ekochémie a rádiobiológie a vybranej
     skupiny vedcov z~oblasti enviromentalistiky, ktorí sa zúčastnili projektu
     ACUMEN FP7 \citep{Wildgaard2015}.}
-  \label{tab:kazakis.results3}
+  \label{tab:wildgaard.results}
   \begin{tabularx}{\textwidth}{Xlcccccccccc}
     \toprule\noalign{\vspace{.3ex}}
     kat. &Cit.\,reg. & $n$ & $p$ & $c$ & A/P$^\dagger$ & C/P$^\ddagger$ & AWCR & AW & $h$ & $g$ & $e$ \\[0.3ex]
@@ -333,7 +329,7 @@ z~rôznych vedných oblastí. Jednou z~nich bola enviromentalistika. Vzorka
 obsahovala $n$ akademikov od doktorov po profesorov. Porovnávali sme Katedru
 ekochémie a rádiobiológie (KER), Katedru biotechnlógií a už vyšie uvedenú vzorku
 vedcov.  Porovnanie hodnôt citačných indikátorov je uvedené v~Tabuľke
-\ref{tab:kazakis.results3}.  Dáta boli získané z~citačných registrov \emph{Web
+\ref{tab:wildgaard.results}.  Dáta boli získané z~citačných registrov \emph{Web
   of Science} (WoS) a \emph{Google Scholar} (GS).  Napriek veľkému rozdielu
 v~počte akademikov ($n$), vo väčšine prípadov katedry FPV vykazujú väčšie
 kvality než skupina enviromentalistov. Ale treba brať do úvahy, že skupina nie
