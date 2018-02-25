@@ -135,7 +135,7 @@ k~vytvoreniu priaznivých podmienok pre vznik mojej diplomovej práce.}
 
 \TextPrehlasenia{Prehlasujem, že som svoju diplomovú prácu na tému
   \textit{Scientometrická analýza Fakulty prírodných vied Univerzity sv.\,Cyrila
-    a~Metoda v~Trnave} vypracoval samostatne pod odborným vedením svojho
+    a~Metoda v~Trnave} vypracoval samostatne pod~odborným vedením svojho
   školiteľa, s~použitím literatúry uvedenej v~zozname.}
 
 \DatumPrehlasenia{9.\,januára 2017}
@@ -178,6 +178,11 @@ k~vytvoreniu priaznivých podmienok pre vznik mojej diplomovej práce.}
 % Prikaz \cmidrule nefunguje, ak dokument pouziva slovencinu/cestinu cez babel
 % tento patch riesi tento problem
 \input{cmidrule-patch.sty}
+
+% Umozni zalamovanie dlhych linkov v \url
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
