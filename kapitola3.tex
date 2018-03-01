@@ -9,7 +9,7 @@ Pre potreby tejto práce sme získali bibliografické údaje, ktorých aspoň je
 z~autorov má príslušnosť (ang. \emph{affiliation}) k~FPV UCM v~Trnave. Na túto
 analýzu sme nepoužili GS, pretože neumožňuje vyhľadávať podľa inštitúcie.
 
-Bibligrafické záznamy FPV UCM sme získali z~citačných registrov WoS a Scopus dňa
+Bibliografické záznamy FPV UCM sme získali z~citačných registrov WoS a Scopus dňa
 21.\,decembra~2016.  Prístup k~obom citačným registrom bol umožnený
 prostredníctvom webovej služby \emph{Centra Vedecko-Technických Informácií
   SR}\footnote{\url{http://www.cvtisr.sk}} (ďalej len CVTI SR).  Webové nástroje
@@ -72,7 +72,7 @@ a v~ňom exportovali do formátu CSV.
       ( EXCLUDE ( EXACTSRCTITLE ,  "Pediatrika" ) )
   \end{Verbatim}
   \vspace*{-4mm}
-  \caption[Vyhľahávaci reťazec pre celú fakultu pre Scopus]%
+  \caption[Vyhľadávací reťazec pre celú fakultu pre Scopus]%
   {Vyhľadávací reťazec pre Scopus na zobrazenie zoznamu všetkých publikácii FPV
     UCM v~Trnave.  Z~celej fakulty (\texttt{AF-ID}) sme vyčlenili
     (\texttt{EXCLUDE}) podľa vedeckých oblastí (\texttt{SUBJAREA}): spoločenské
@@ -178,7 +178,7 @@ UCM v~Trnave v~decembri 2016.
 \begin{table}
   \centering\small
   \caption[Zoznam katedier FPV]%
-  {Zoznam katedier FPV a ich oficiálných skratiek, s~odkazmi na webové stránky}
+  {Zoznam katedier FPV a ich oficiálnych skratiek, s~odkazmi na webové stránky.}
   \label{tab:department.review}
   \begin{tabularx}{\textwidth}{lll}
     \toprule
@@ -255,7 +255,7 @@ Podľa Tabuľky \ref{tab:staff.list} sme vyhľadali záznamy jednotlivých
 pracovníkov FPV z~citačných registrov Scopus, Web of Science a Google Scholar.
 Dáta sú z~decembra 2016.
 
-Databáza citačného register Scopus má špeciálnu indentitu pre autorov
+Databáza citačného register Scopus má špeciálnu identitu pre autorov
 (\texttt{AU-ID}).  Pomocou celého mena autora, priezviska, alebo jeho
 príslušnosti (ang.  \emph{Affiliation}) je možné vyhľadať konkrétneho vedca a
 získať iba jeho bibliometrické informácie. Niektorých prípadoch mal jeden
@@ -271,7 +271,7 @@ systém uloženej identity autora ako Scopus. Z~toho dôvodu, ak meno pracovník
 obsahuje diakritiku, tak sme v~rozšírenom vyhľadávaní hľadali rôzne varianty
 s~chýbajúcom diakritikou. Následne sme museli zoznam publikácie triediť podľa
 iniciál, pretože väčšina publikácií neobsahuje celé mená autorov. V~prípade
-výskytu rôznych autorov s~rovnakým priezviskom a inicál sme museli zoznam
+výskytu rôznych autorov s~rovnakým priezviskom a iniciál sme museli zoznam
 triediť podľa vednej oblasti. Nakoniec sme zoznam porovnali z~dátami zo Scopusu
 toho istého autora a články, ktoré sa vyskytovali v~Scopuse, ale nie WoS sme
 hľadali podľa nadpisu vo WoS. Všetky relevantné záznamy sme uložili do
@@ -282,8 +282,8 @@ exportovali do CSV formátu.
 V~GS sme vyhľadávali priamo v~programe PoP. Vytvorili sme nový dopyt pre
 vyhľadávanie v~GS (\emph{New Google Scholar Query}). Do poľa \emph{Authors} sme
 zadali meno pracovníka a spustili sme vyhľadávania. Pretože program neumožňuje
-zadať alternatívy mena ako WoS, urobili sme niekoľko hľadaní vždy s~inou
-variantou mena (napr. s~diakritikou, bez diakritiky, s~krsným menom, inicálmi).
+zadať alternatívy mena ako WoS, urobili sme niekoľko hľadaní vždy s~iným
+variantom mena (napr. s~diakritikou, bez diakritiky, s~krstným menom, iniciálami).
 Ak sa meno bežne vyskytuje v~publikáciách (napr. Seman), PoP vyhľadal maximálne
 1\,000 záznamov, pretože GS neumožňuje zobraziť viac výsledkov. Tak sme museli
 vložiť do poľa \uv{všetky slová} (ang. \emph{All of the words}) reťazce, ktoré
@@ -291,7 +291,7 @@ bližšie určujú hľadané pracovníka ako napr.  \emph{Slovakia}.
 
 Z~podstaty fungovania GS je zrejmé, že výsledný zoznam bude obsahovať veľa
 balastu\footnote{Ako napr. záznamy iných autorov s~podobných, alebo rovnakým
-  priezviskom a iniciálmi; záznamy, ktoré vôbec nesúvisia s~dopytom; duplicitné
+  priezviskom a iniciálami; záznamy, ktoré vôbec nesúvisia s~dopytom; duplicitné
   záznamy, nekompletné záznamy; nezmyselné záznamy.} (viď podkapitola
 \ref{sec:gs}).  Preto obsah CSV súboru z~PoP bolo potrebné ešte dodatočne
 pretriediť a upraviť. Tento fakt uľahčovalo to, že väčšina záznamov obsahovala
@@ -305,7 +305,7 @@ uverejnená na internetových stránkach katedry.
 
 \begin{SCtable}
   \centering\small
-  \caption[Mená pracovníkov FPV, u~ktorých došlo k~zmene priezivska]%
+  \caption[Mená pracovníkov FPV, u~ktorých došlo k~zmene priezviska]%
   {Zoznam pracovníkov FPV, u~ktorých došlo k~zmene priezviska. Pôvodné
     priezvisko sme vyhľadali z~akademickej emailovej adresy.}
   \label{tab:staff.rename}
@@ -322,8 +322,7 @@ uverejnená na internetových stránkach katedry.
 
 \begin{SCtable}
   \centering\small
-  \caption[Mená pracovníkov FPV, pre ktorých sa nám nepodarilo získať všetky
-  dáta]%
+  \caption[Mená pracovníkov FPV, u~ktorých sa nám nepodarilo získať všetky dáta]%
   {Zoznam Pracovníkov FPV, pre ktorých sa nepodarilo získať z~niektorých
     citačných registrov žiadne dáta.  V~posledných troch stĺpcoch je uvedený
     počet publikácií, ktoré sa nám podarilo získať.}
@@ -366,7 +365,7 @@ vyhľadať, tak sme položku v~zozname označili pomlčkou.
   \centering\small
   \caption[Webové stránky citačných indikátorov na hodnotenie časopisov]%
   {Zoznam citačných indikátorov na hodnotenie časopisov, s~odkazmi na oficiálne
-    webové stránky}
+    webové stránky.}
   \label{tab:indicators.web}
   \begin{tabular}{ll}
     \toprule
@@ -391,9 +390,9 @@ systém Microsoft Windows na scientometrickú analýzu bibliografických záznam
 Prirodzene umožňuje získavanie bibliografických záznamov z~GS a Microsoft
 Academic. Prístup do GS je zdarma, ale pre prístup do MS Academic je potrebné
 vložiť kľúč.  Ďalej umožňuje importovať a exportovať dáta do najrôznejších
-formátov ako napr.  CSV, MS Exel, EndNote\footnote{\url{http://endnote.com/}}, a
-BibTex\footnote{\url{http://www.bibtex.org/}}.  PoP umožňuje scienometrickú
-analýzu s~použítím širokého spektra citačných indikátorov (časť, ktorú sme
+formátov ako napr.  CSV, MS Excel, EndNote\footnote{\url{http://endnote.com/}}, a
+BibTeX\footnote{\url{http://www.bibtex.org/}}.  PoP umožňuje scientometrickú
+analýzu s~použitím širokého spektra citačných indikátorov (časť, ktorú sme
 použili v~tejto práci je uvedená v~Tabuľke \ref{tab:indicators.review}).  Súbor
 dát, z~ktorého sa počítajú všetky indikátory sa nazýva dopyt
 (ang. \emph{query}).  PoP neumožňuje editovať položky v~danom dopyte. Aby sme
@@ -410,7 +409,7 @@ Okno programu (viz Obrázok \ref{fig:pop.screenshot}) pozostáva z~troch rámcov
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{publish-or-perish_wine.png}
-  \caption[Snímok obrazovky s~oknom programu \emph{Publish or Perish}.]%
+  \caption[Snímok obrazovky s~oknom programu \emph{Publish or Perish}]%
   {Snímok obrazovky s~oknom programu \emph{Publish or Perish} (skrátene PoP),
     ktorý sme v~tejto práci použili na scientometrickú analýzu.  Ukážka
     zobrazuje scientometrické dáta jednotlivých pracovníkov FPV UCM
@@ -447,14 +446,14 @@ každú katedru), ktorého každý riadok obsahuje skratku katedry a spracované
 jednotlivých citačných indikátorov.  Tieto dáta sme konvertovali do Tabuliek
 \ref{tab:1-staff.results}, \ref{tab:2-staff.results}, \ref{tab:3-staff.results},
 \ref{tab:4-staff.results}, \ref{tab:5-staff.results} a
-\ref{tab:6-staff.results}, ktore nájdeme v~nasledújúcej kapitole. Grafické
+\ref{tab:6-staff.results}, ktoré nájdeme v~nasledujúcej kapitole. Grafické
 znázornenie sme vytvorili pomocou vlastného programu
 \emph{scientometry-plot-gen} (viď podkapitola \ref{sec:program.my})
 
-Na zhotovenie grafického znázornenia vývoja publikačnej a čitačnej činnosti FPV
+Na zhotovenie grafického znázornenia vývoja publikačnej a citačnej činnosti FPV
 sme použili bibliometrické dáta z~celej fakulty, ktorých získanie popisujeme
 v~podkapitole \ref{sec.all.mining}. Z~jednotlivých dátových súborov (Scopus a
-Wos) sme zistili počet publikácií na každý rok a celkovú sumu citácií na tieto
+WoS) sme zistili počet publikácií na každý rok a celkovú sumu citácií na tieto
 publikácie, tiež rozdelených podľa rokov. Na tento výpočet sme použili vlastný
 program \emph{scientometry-data-proc} (viď podkapitola \ref{sec:program.my}).
 
@@ -484,4 +483,5 @@ sú oba súbory podrobne rozpísané).
 
 %%% Local Variables:
 %%% TeX-master: "diplomovka"
+%%% ispell-local-dictionary: "slovak"
 %%% End:
