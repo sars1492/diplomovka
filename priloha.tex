@@ -10,7 +10,7 @@
 
 Program \emph{scientometry-data-proc} sme vyvinuli ako univerzálnu platformu na
 spracovanie scientometrických dát.  Samotný program je napísaný v~programovacom
-jazyku \emph{Python} verzie 2.7 a pre pre svoju činnosť potrebuje mať
+jazyku \emph{Python} verzie 2.7 a~pre pre svoju činnosť potrebuje mať
 zadefinované parametre v~textovom konfiguračnom súbore \verb|config.yaml|
 v~značkovacom jazyku YAML\footnote{\url{http://yaml.org/}}.  Pre účely tejto
 práce sme použili nasledujúci konfiguračný súbor:
@@ -50,7 +50,7 @@ práce sme použili nasledujúci konfiguračný súbor:
   \end{verbatim}
 \end{source}
 
-Jednotlivé sekcie súboru definujú nezávislé časti spracovania dát a ich
+Jednotlivé sekcie súboru definujú nezávislé časti spracovania dát a~ich
 parametre.  V~sekcii \verb|defaults| sú definované implicitné parametre platné
 pre všetky sekcie.  Samotný proces spracovania dát definuje trieda
 (\verb|class|).  Zvyšok časti sekcie len definuje parametre pre vybranú triedu.
@@ -58,25 +58,25 @@ pre všetky sekcie.  Samotný proces spracovania dát definuje trieda
 Program postupne vykoná nasledujúce operácie:
 
 \begin{enumerate}
-\item Načíta vstupné súbory obsahujúce dáta z~citačných registrov Scopus a WoS.
+\item Načíta vstupné súbory obsahujúce dáta z~citačných registrov Scopus a~WoS.
   Spočíta v~počet článkov, ktoré boli publikované v~danom roku.  Následne
   vygeneruje súbor \verb|all-publications-data.csv|, ktorý bude obsahovať
-  tabuľku so stĺpcami definovanými parametrom \verb|select| a riadkami
+  tabuľku so stĺpcami definovanými parametrom \verb|select| a~riadkami
   definovanými parametrom \verb|years|.
-\item Načíta vstupné súbory obsahujúce dáta z~citačných registrov Scopus a WoS.
+\item Načíta vstupné súbory obsahujúce dáta z~citačných registrov Scopus a~WoS.
   Spočíta v~počet citácii na publikácie, ktoré boli publikované v~rovnakom roku.
   Následne vygeneruje súbor \verb|all-citations-data.csv|, ktorý bude obsahovať
-  tabuľku so stĺpcami definovanými parametrom \verb|select| a riadkami
+  tabuľku so stĺpcami definovanými parametrom \verb|select| a~riadkami
   definovanými parametrom \verb|years|.
 \item Načíta vstupný súbor obsahujúci ručne zlúčené dáta zo všetkých citačných
-  registrov a podľa ISSN spočíta počet článkov publikovaných v~jednotlivých
+  registrov a~podľa ISSN spočíta počet článkov publikovaných v~jednotlivých
   časopisoch.  Tieto hodnoty spojí s~ručne zostaveným katalógom všetkých
-  dostupných časopisov a vytvorí jednu tabuľku, ktorú uloží do súboru
+  dostupných časopisov a~vytvorí jednu tabuľku, ktorú uloží do súboru
   \verb|journals-data.csv|.
 \item Načíta upravenú verziu výstupného súboru programu \emph{Publish or
     Perish}.  Dáta zo súboru rozdelí do menších tabuliek -- pre každý citačný
   indikátor jednu.  Všetky výstupné tabuľky budú obsahovať stĺpce definované
-  parametrom \verb|select| a riadky definované parametrom \verb|groups|.  Budú
+  parametrom \verb|select| a~riadky definované parametrom \verb|groups|.  Budú
   uložené do súborov vo formáte CSV s~prefixom \verb|results-data.csv|.
 \end{enumerate}
 
@@ -86,7 +86,7 @@ Program postupne vykoná nasledujúce operácie:
 Program \emph{scientometry-plot-gen} slúži na automatizáciu vytvárania
 stĺpcových diagramov z~dátových súborov vo formáte CSV.  Program je napísaný
 v~jazyku \emph{Python} verzie 2.7, na kreslenie grafov využíva knižnicu
-\emph{matplotlib} a vytvára súbory vo formáte \texttt{.png}.
+\emph{matplotlib} a~vytvára súbory vo formáte \texttt{.png}.
 
 Cieľom bolo spracovanie dát čo najviac automatizovať, preto je program
 \emph{scientometry-plot-gen} navrhnutý tak, aby mohol spracovávať výstupné
@@ -95,12 +95,12 @@ I~napriek našej snahe o~multiplatformovosť, program v~súčasnosti funguje iba
 v~operačných systémoch typu UNIX (GNU/Linux, MacOS, BSD).  Tento nedostatok nám
 našťastie nijak nebránil vo využití programu pre účely tejto práce.
 
-Metadáta a parametre každého grafu je potrebné špecifikovať pomocou textového
+Metadáta a~parametre každého grafu je potrebné špecifikovať pomocou textového
 súboru \verb|plot-metadata.yaml|, ktorý využíva syntax značkovacieho jazyka
 YAML.  V~tomto súbore je možné definovať metadáta pre ľubovoľný počet grafov, čo
 umožňuje rýchle generovanie celých sád grafov.
 
-S použitím metadát a parametrov v nasledujúcom konfiguračnom súbore vygeneroval
+S použitím metadát a~parametrov v nasledujúcom konfiguračnom súbore vygeneroval
 program \emph{scientometry-plot-gen} v jednej dávke všetky grafy, ktoré sú
 súčasťou tejto práce.
 
@@ -214,7 +214,7 @@ súčasťou tejto práce.
   \end{verbatim}
 \end{source}
 
-\section*{Zoznam časopisov, v~ktorých publikovali pracovníci FPV}
+\section*{Zoznam časopisov, v ktorých publikovali pracovníci FPV}
 \vspace{-0.5em}
 
 {\small
