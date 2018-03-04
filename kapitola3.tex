@@ -45,7 +45,7 @@ to zhodnotili ako chybu v~databáze.
 
 Výsledný vyhľadávací reťazec (Obrázok~\ref{fig:scopus.query}), sme zadali (po
 odstránení zalomenia riadku) do poľa \emph{search} na webových stránkach Scopus
-a získali sme zoznam publikácií FPV UCM v~Trnave (obsahuje 360 záznamov).  Ten
+a získali sme zoznam publikácií FPV UCM v~Trnave (obsahuje 360~záznamov).  Ten
 sme stiahli, pomocou funkcie \emph{Export all} (Označili sme formát CSV%
 \footnote{Formát textového súboru, ktorý obsahuje tabuľku dát.  Jednotlivé
   riadky súboru zodpovedajú riadkom tabuľky a~položky jednotlivých stĺpcoch sú
@@ -74,7 +74,7 @@ a v~ňom exportovali do formátu CSV.
   \end{Verbatim}
   \vspace*{-4mm}
   \caption[Vyhľadávací reťazec pre celú fakultu pre Scopus]%
-  {Vyhľadávací reťazec pre Scopus na zobrazenie zoznamu všetkých publikácii FPV
+  {Vyhľadávací reťazec pre Scopus na zobrazenie zoznamu všetkých publikácií FPV
     UCM v~Trnave.  Z~celej fakulty (\texttt{AF-ID}) sme vyčlenili
     (\texttt{EXCLUDE}) podľa vedeckých oblastí (\texttt{SUBJAREA}): spoločenské
     a~humanitné vedy (\texttt{ARTS}), sociálne vedy (\texttt{SOCI}), ekonómia
@@ -93,14 +93,14 @@ neumožnili vyhľadávať podľa inštitúcie, ako v~nástroje Scopusu, preto sm
 nútený hľadávať podľa adresy inštitúcie.  Na webových stránkach WoS sme do poľa
 pre hľadanie podľa adresy inštitúcie zadali: \uv{methodius*} a~\uv{Trnava},
 pretože v~publikáciách sa vyskytujú rôzne varianty názvu univerzity
-(napr.~SS~Cyril \& Methodius Trnava, alebo Sv.~Cyril and Methodius Trnava).
+(napr.~SS~Cyril~\&~Methodius Trnava, alebo Sv.~Cyril and Methodius Trnava).
 Aby sme získali iba publikácie FPV, tak zoznam publikácií sme zúžili (použitím
 funkcie \emph{Refine}) na záznamy z~vedy a~techniky (\emph{SCIENCE TECHNOLOGY})
 a odstránili sme publikácie vedeckých oblastí mimo odborného záberu FPV:
 
 \begin{itemize}
 \item \emph{ORTHOPEDICS}: ortopédia,
-\item \emph{PEDIATRICS}: pediatria,
+\item \emph{PEDIATRICS}: pediatria,é
 \item \emph{RHEUMATOLOGY}: reumatológia,
 \item \emph{SOCIAL SCIENCES OTHER TOPICS}: iné oblasti sociálnych vied,
 \item \emph{SOCIOLOGY}: sociológia,
@@ -130,7 +130,7 @@ a odstránili sme publikácie vedeckých oblastí mimo odborného záberu FPV:
 \end{figure}
 
 
-Počet výsledkov hľadania sme zúžili na 315 záznamov.  Pre názornosť uvádzame
+Počet výsledkov hľadania sme zúžili na 315~záznamov.  Pre názornosť uvádzame
 popis kritérií hľadania (Obrázok~\ref{fig:wos.query}), ktorý je zobrazený na
 webových stránkach WoS.  V~zozname sme našli štyri publikácie, ktoré nenapísali
 pracovníci FPV.  Vyňatie prebehlo tak, že pomocou funkcie \emph{Marked list} sme
@@ -153,7 +153,7 @@ označili všetky publikácie okrem:
   % rehabilitácie,
 \end{itemize}
 
-Následne sme zoznam publikácii uložený v~\emph{Marked list} stiahli ako textový
+Následne sme zoznam publikácií uložený v~\emph{Marked list} stiahli ako textový
 súbor s~použitím funkcie \emph{Save to Other Formats} (uložiť do iných formátov)
 a v~okne \emph{Send to File} sme zvolili položku vo vyskakujúcom menu
 \emph{Tab-delimited (Win, UTF-8)}.  Na konverziu do formátu CSV je potrebné
@@ -287,7 +287,7 @@ zadali meno pracovníka a~spustili sme vyhľadávania.  Pretože program neumož
 zadať alternatívy mena ako WoS, urobili sme niekoľko hľadaní vždy s~iným
 variantom mena (napr.~s~diakritikou, bez diakritiky, s~krstným menom,
 iniciálami).  Ak sa meno bežne vyskytuje v~publikáciách (napr.~Seman), PoP
-vyhľadal maximálne 1\,000 záznamov, pretože GS neumožňuje zobraziť viac
+vyhľadal maximálne 1\,000~záznamov, pretože GS neumožňuje zobraziť viac
 výsledkov.  Tak sme museli vložiť do poľa \uv{všetky slová} (ang.~\emph{All of
   the words}) reťazce, ktoré bližšie určujú hľadané pracovníka ako
 napr.~\emph{Slovakia}.
@@ -299,7 +299,7 @@ balastu\footnote{Ako napr.~záznamy iných autorov s~podobných, alebo rovnakým
 (\emph{viď}~podkapitola~\ref{sec:gs}).  Preto obsah CSV súboru z~PoP bolo
 potrebné ešte dodatočne pretriediť a~upraviť.  Tento fakt uľahčovalo to, že
 väčšina záznamov obsahovala internetový odkaz na zdroj.  Ale aj tak bolo nutné
-doplniť chýbajúcich autorov (GS ukazuje max päť autorov) a~roky.
+doplniť chýbajúcich autorov (GS ukazuje najviac päť autorov) a~roky.
 
 Práce niektorých pracovníkov FPV sa nám vôbec nepodarilo vyhľadať.  Príčinou
 bola ich nedávna zmena mena po svadbe (\emph{viď}~Tabuľka~\ref{tab:staff.rename})
@@ -443,10 +443,10 @@ citačného registru, z~ktorého boli získané.  Vypočítali sme priemer, medi
   MAD sa používa v~distribúciách, ktoré sa príliš odchyľujú od normálnej
   distribúcie.\\\url{http://www.statisticshowto.com/median-absolute-deviation/}}
 (absolútnu odchýlku mediánu) pre každú skupinu.  Pre hodnoty počtu citácií
-a~publikácií sme nepočítali priemer a~medián, ale sme spočítali sumu počtu citácii
-a sumu počtu publikácii pre každú skupinu.
+a~publikácií sme nepočítali priemer a~medián, ale sme spočítali sumu počtu citácií
+a sumu počtu publikácií pre každú skupinu.
 
-Nakoniec sme vytvorili dátový súbor s~18 riadkami (dáta zo Scopus, WoW a~GS pre
+Nakoniec sme vytvorili dátový súbor s~18~riadkami (dáta zo Scopus, WoW a~GS pre
 každú katedru), ktorého každý riadok obsahuje skratku katedry a~spracované dáta
 jednotlivých citačných indikátorov.  Tieto dáta sme konvertovali do Tabuliek
 \ref{tab:1-staff.results}, \ref{tab:2-staff.results}, \ref{tab:3-staff.results},
