@@ -42,7 +42,7 @@ analýzy\index{kocitačné analýzy}.  Určujú podobnosť medzi dvoma elementam
 elementy \emph{A} aj \emph{B} sú citované elementom \emph{C}, môžeme uvažovať
 o~ich vzájomnom vzťahu, aj keď na seba priamo neodkazujú.  V~prípade ak sú
 elementy \emph{A} a~\emph{B} citované viacerými ďalšími elementami, ich vzájomný
-vzťah je silnejší čím sú spoločne viac citované.  Z~počiatku boli kocitácie
+vzťah je silnejší čím sú spoločne viac citované.  Spočiatku boli kocitácie
 navrhnuté ako základná metrika na charakterizáciu podobnosti medzi dokumentami.
 Teraz sa s~kocitačnou analýzou môžeme stretnúť pri vyhľadávaní podobných
 dokumentov v~databázach (ang.~\uv{\foreignlanguage{english}{related documents search}}), ktoré je niekedy
@@ -72,10 +72,10 @@ a~výskumu \citep{Hood2001}.
 Veľkú časť scientometrie tvorí aplikácia bibliometrie na vedecký výskum
 a~pokrok.  V~súčasnosti sa na kvantifikáciu vedeckého pokroku využívajú vedecké
 články.  Lenže ich samotný počet nič nehovorí o~ich kvalite.  Indikátorom
-kvality vedeckých publikácii sú tzv.~citácie.  Teda odkazy na pôvodnú
+kvality vedeckých publikácií sú tzv.~citácie.  Teda odkazy na pôvodnú
 publikáciu, z~ktorej čerpajú.  Ich počet je kvantitatívnym znakom kvality
 článku.  Pri analýze niekoľkých článkov, napr.~vyprodukovaných jedným
-pracovníkom je potrebné zahrňovať distribúciu citácii, medzi článkami.  Na to
+pracovníkom je potrebné zahrňovať distribúciu citácií, medzi článkami.  Na to
 slúži tzv.~citačná analýza.
 
 \citet{Glanzel2004} rozdeľujú scientometriu na niekoľko disciplín, podľa
@@ -202,7 +202,7 @@ s~$n$ publikáciami v~danom vedeckom obore.
 \label{eq:lotka.law2}
 a_n = \frac{a_1}{n^2}
 \end{equation}
-Napríklad v~súbore 100 autorov by štyria autori mali mať každý päť publikácii
+Napríklad v~súbore 100~autorov by štyria autori mali mať každý päť publikácií
 ($100/5^2 = 4$).
 
 
@@ -215,15 +215,15 @@ v~distribúcii počtu článkov s~konkrétnou tématikou vo vedeckých časopiso
 V~roku 1934 publikoval prácu, v~ktorej popísal tento jav \citep{Bradford1985}%
 \footnote{pôvodný článok z~roku 1934 je v~súčasnosti nedostupný}.  V~danej vedeckej
 práci študoval bibliografické záznamy časopisov z~oblasti geofyziky.  Články
-týkajúce sa istej témy našiel v~326 časopisoch.  Potom zostupne usporiadal
+týkajúce sa istej témy našiel v~326~časopisoch.  Potom zostupne usporiadal
 časopisy podľa počtu článkov spadajúcich to danej témy.  Nakoniec ich rozčlenil
 do troch skupín tak, aby každá skupina obsahovala zhruba taký istý počet
 článkov:
 
 \begin{itemize}
-\item prvá skupina obsahovala 9 časopisov s~429 článkami,
-\item druhá skupina obsahovala 59 časopisov s~499 článkami,
-\item tretia skupina obsahovala 258 časopisov s~404 článkami.
+\item prvá skupina obsahovala 9~časopisov s~429~článkami,
+\item druhá skupina obsahovala 59~časopisov s~499~článkami,
+\item tretia skupina obsahovala 258~časopisov s~404~článkami.
 \end{itemize}
 Prvú skupinu, s~najväčším počtom článkov na časopis, pomenoval \emph{jadro},
 druhú skupinu pomenoval \emph{prvá zóna} a~tretiu skupinu pomenoval \emph{druhá
@@ -258,15 +258,15 @@ a~informačnej vedy \citep[napr.][]{Nicolaisen2007}.
 \index{Zipfov zákon|textbf}
 
 Americký jazykovedec George Kingsley Zipf študoval kvantitatívnu analýzu jazyka
-v~texte knihy Odysseus\footnote{ang. \emph{Ulysses} -- známy román írskeho spisovateľa Jamesa Joycea}.  \citet{Powers1998} uvádza, že Zipf
-vybral z~textu 29\,899 špecifických slov (vylúčil bežné slová ako
-napr.~predložky a~spojky) a~zoradil ich podľa frekvencie výskytu.  Prvé
-najfrekventovanejšie slovo dostalo rang 1, druhé rang 2, atď.  Potom vynásobil
-frekvenciu výskytu každého slova s~príslušným rangom.  Prekvapujúco mu vyšli
-veľmi podobné hodnoty.Toto zistenie definoval matematicky
-vzťahom~(\ref{eq:zipf.law}), pričom $r$ je rang (poradové číslo) daného slova
-a~$f$ je frekvencia výskytu slova v~texte.  Tým pádom $c$ je konštanta, ktorá
-reprezentuje daný text.
+v~texte knihy Odysseus\footnote{ang. \emph{Ulysses} -- známy román írskeho
+  spisovateľa Jamesa Joycea}.  \citet{Powers1998} uvádza, že Zipf vybral z~textu
+29\,899~špecifických slov (vylúčil bežné slová ako napr.~predložky a~spojky)
+a~zoradil ich podľa frekvencie výskytu.  Prvé najfrekventovanejšie slovo dostalo
+rang 1, druhé rang 2, atď.  Potom vynásobil frekvenciu výskytu každého slova
+s~príslušným rangom.  Prekvapujúco mu vyšli veľmi podobné hodnoty.  Toto
+zistenie matematicky definoval vzťahom~(\ref{eq:zipf.law}), pričom $r$ je rang
+(poradové číslo) daného slova a~$f$ je frekvencia výskytu slova v~texte.  To
+znamená, že $c$ je konštanta, ktorá reprezentuje daný text.
 \begin{equation}
 \label{eq:zipf.law}
 c = r \cdot f
@@ -293,7 +293,7 @@ odkazy na publikované odborné texty.  Ich analýzou je možné objektívne pos
 kvalitu citovaných publikácií.  Citačné registre vznikli preto, aby bolo možné
 sledovať, aké ohlasy vo vedeckej komunite vzbudila daná publikácia.
 
-Z~počiatku citačné indexy vychádzali v~tlačenej forme a~ukladané boli ako
+Spočiatku citačné indexy vychádzali v~tlačenej forme a~ukladané boli ako
 mikrofilmy.  S~príchodom nových elektronických médií sa k~nim pridali magnetické
 pásky a~nosiče CD-ROM.  Od rozšírenia internetu sú všetky citačné registre
 prístupné on-line.
@@ -306,90 +306,86 @@ prístupné on-line.
 \index{Web of Knowledge|see{Web of Science}}
 \label{sec:wos}
 
-Web of Science (ďalej len WoS) je online platená služba umožňujúca
-prístup ku citačným registrom a~vykonať ich citačnú analýzu.  Poskytuje
-komplexné vyhľadávanie vo viacerých citačných a~abstraktových databázach, ktoré
-umožňuje dôkladne scientometricky študovať medziodborové oblasti výskumu.
+Web of Science (ďalej len WoS) je platená služba umožňujúca on-line prístup ku
+citačným registrom a~vykonať ich citačnú analýzu.  WoS poskytuje komplexné
+vyhľadávanie vo viacerých citačných a~abstraktových databázach, ktoré umožňuje
+dôkladne scientometricky študovať medziodborové oblasti výskumu.
 \citet{Drake2005} uvádza, že v~minulosti mala názov \emph{Web of Knowledge}
-a~bola spravovaná Inštitútom pre vedecké informácie \emph{Institute for Scientific
-  Information} (ISI).  V~súčasnosti je vo vlastníctve mediálneho gigantu
-\emph{Thomson Reuters} so sídlom New Yorku, USA.
+(skr.~WoK) a~bola spravovaná Inštitútom pre vedecké informácie
+(ang.~\emph{Institute for Scientific Information}, skr.~ISI).  V~súčasnosti je
+vo vlastníctve mediálneho gigantu \emph{Thomson Reuters} so sídlom v~New Yorku,
+USA.
 
-\citet{Smith2012} uviedol ako Eugene Garfield založil prvý moderný citačný
-register.  Z~počiatku zahrňoval iba články venujúce sa genetike.  Neskôr v~roku
-1960 založil inštitúciu \emph{Institute for Scientific Information} (ISI), ktorá
-od nasledujúceho roku začala vydávať prvý \uv{Citačný index pre prírodné vedy}
-\emph{Science Citation Index} (SCI), ktorý v~nasledujúcich rokoch začal
-indexovať publikácie ostatných disciplín.  V~roku 1972 vznikol \uv{Citačný index
-  pre sociálne vedy} \emph{Social Science Citation Index} (SSCI) a~\uv{Citačný
-  index pre umenie a~humanitné vedy} \emph{Arts \& Humanities Citation Index}
-(AHCI) v~roku 1978.
+Podľa Smitha (\citeyear{Smith2012}), história WoS siaha do roku~1964, keď
+ISI\footnote{inštitút založil Eugene Garfield v roku 1960} predstavil Citačný
+index pre prírodné vedy (ang.~\emph{Science Citation Index}, skr.~SCI).
+Spočiatku zahrňoval iba články venujúce sa genetike, ale v~nasledujúcich rokoch
+pribudli aj publikácie ostatných disciplín.  V~roku 1972 vznikol Citačný index
+pre sociálne vedy (ang.~\emph{Social Science Citation Index}, skr.~SSCI)
+a~neskôr, v~roku~1978, Citačný index pre umenie a~humanitné vedy
+(ang.~\emph{Arts~\&~Humanities Citation Index}, skr.~AHCI).
 
-WoS zahrňuje viac než 50\,000 odborných kníh, 12\,000 časopisov a~160\,000
-príspevkov z~konferencií viacerých akademických oblastí od prírodných vied, cez
-spoločenské vedy až po umenie.%
-\footnote{\url{http://wokinfo.com/citationconnection/realfacts}}  Keďže
-súčasťou WoS sú najstaršie citačné registre, tak obsahuje viac než 90 miliónov
-bibliografických záznamov, ktoré majú viac než 800 miliónov citácií.%
-\footnote{\url{http://wokinfo.com/citationconnection}}  Bohužiaľ väčšinu
-databázy WoS tvoria záznamy z~amerických publikácií a~konferencií.  Pokrytie
-dokumentov vydaných mimo Ameriky je obmedzené.  Čo samozrejme platí aj pre
-citácie.
+WoS zahrňuje viac než 50\,000~odborných kníh, 12\,000~časopisov
+a~160\,000~príspevkov z~konferencií viacerých akademických oblastí od prírodných
+vied, cez spoločenské vedy až po umenie.%
+\footnote{\url{http://wokinfo.com/citationconnection/realfacts}} Keďže súčasťou
+WoS sú najstaršie citačné registre, obsahuje viac než 90~miliónov
+bibliografických záznamov, ktoré majú viac než 800~miliónov citácií.%
+\footnote{\url{http://wokinfo.com/citationconnection}} Bohužiaľ väčšinu databázy
+WoS tvoria záznamy z~amerických publikácií a~konferencií.  Pokrytie dokumentov
+vydaných mimo USA je obmedzené, čo samozrejme platí aj pre citácie.
 
-WoS pozostáva z~citačných registrov:%
+WoS pozostáva z~nasledujúcich citačných registrov:%
 \footnote{\url{http://wokinfo.com/products_tools/multidisciplinary/webofscience/}}
 
 \begin{itemize}
-\item \textbf{Science Citation Index Expanded\R\ (SCI-E):}\\
-  Zahrňuje publikácie z~viac než 8\,500 časopisov, z~150 vedeckých od oblastí
-  roku 1900 do súčasnosti.
-\item \textbf{Social Sciences Citation Index\R\ (SSCI):}\\
-  Články z~viac než 3\,000 časopisov z~55 oblastí spoločenských vied a~vybrané
-  publikácie z~3\,500 vo svete vedeckých a~technických časopisov od roku 1900 po
-  súčasnosť.
-\item \textbf{Arts \& Humanities Citation Index\R\ (A\&HCI):}\\
-  Indexuje viac než 1\,700 časopisov z~oblasti umenia a~humanitných vied
-  a~vybrané články z~viac než 250 časopisov z~oblasti spoločenských vied od roku
-  1975 do súčasnosti.
-\item \textbf{Index Chemicus\R\ (IC):}\\
-  Obsahuje viac než 2,6 milióna záznamov zlúčenín od roku 1993 po súčasnosť.
-\item \textbf{Current Chemical Reactions\R\ (CCR):}\\
-  Zahrňuje viac než milión chemických reakcií od roku 1986, plus záznamy
-  z~francúzskeho Inštitútu duševného vlastníctva (INPI) od roku 1840 do 1985.
-\item \textbf{Book Citation Index\R\ -- Science (BKCI-S) a~Book Citation
-    Index\R\ -- Social Sciences \& Humanities (BKCI-SSH):}\\
-  Poskytuje viac než 60\,000 vybraných kníh.  Od roku 2005 pribúda 10\,000
-  nových kníh každým rokom.
-\item \textbf{Conference Proceedings Citation Index\R\ -- Science (CPCI-S)
-    a~Conference Proceedings Citation Index\R\ -- Social Sciences \& Humanities
-    (CPCI-SSH):}\\ Zahrňuje príspevky z~viac než 160\,000 konferencií z~256
-  rôznych oblastí \uv{vedy a~techniky (CPCI-S)} a~\uv{sociálnych a~humanitných
-    vied (CPCI-SSH)} od roku 1990.  Každým rokom do nej pribúda takmer 400\,000
-  konferenčných príspevkov z~cca.~12\,000 konferencií.
+\item \textbf{Science Citation Index Expanded\R\ (SCI-E)} zahrňuje články
+  z~viac než 8\,500~časopisov zo~150~vedeckých oblastí, od roku 1900 do
+  súčasnosti.
+\item \textbf{Social Sciences Citation Index\R\ (SSCI)} obsahuje články z~viac
+  než 3\,000~časopisov z~55~oblastí spoločenských vied a~vybrané publikácie
+  z~3\,500~vedeckých a~technických časopisov od roku 1900 po súčasnosť.
+\item \textbf{Arts~\&~Humanities Citation Index\R\ (A\&HCI)} indexuje viac než
+  1\,700 časopisov z~oblasti umenia a~humanitných vied a~vybrané články z~viac
+  než 250~časopisov z~oblasti spoločenských vied od roku 1975 do súčasnosti.
+\item \textbf{Index Chemicus\R\ (IC)} obsahuje viac než 2,6 milióna
+  záznamov zlúčenín od roku 1993 po súčasnosť.
+\item \textbf{Current Chemical Reactions\R\ (CCR)} zahrňuje viac než milión
+  chemických reakcií od roku 1986, plus záznamy z~francúzskeho Inštitútu
+  duševného vlastníctva (INPI) od roku 1840 do 1985.
+\item \textbf{Book Citation Index\R\ -- Science (BKCI-S)} a~\textbf{Book
+    Citation Index\R\ -- Social Sciences~\&~Humanities (BKCI-SSH)} poskytujú
+  viac než 60\,000 vybraných kníh.  Od roku 2005 pribúda 10\,000~nových kníh
+  každým rokom.
+\item \textbf{Conference Proceedings Citation Index\R\ -- Science (CPCI-S)}
+  a~\textbf{Conference Proceedings Citation Index\R\ -- Social
+    Sciences~\&~Humanities (CPCI-SSH)} zahrňujú príspevky z~viac než 160\,000
+  konferencií z~256 rôznych oblastí \uv{vedy a~techniky (CPCI-S)}
+  a~\uv{sociálnych a~humanitných vied (CPCI-SSH)} od roku 1990.  Každý rok do
+  nich pribúda takmer 400\,000 konferenčných príspevkov z~približne
+  12\,000~konferencií.
 \end{itemize}
-
 
 Okrem citačného registru \emph{Web of Science}, \emph{ISI Web of Knowledge}
-obsahuje nástroje na jednoduchý prístup k~publikáciám a~ich citačnej analýze%
-\footnote{\url{http://thomsonreuters.com/content/dam/openweb/documents/pdf/scholarly-scientific-research/fact-sheet/wos-next-gen-brochure.pdf}}:
+obsahuje nástroje na jednoduchý prístup k~publikáciám a~ich citačnej analýze:%
+\footnote{\url{http://thomsonreuters.com/content/dam/openweb/documents/pdf/scholarly-scientific-research/fact-sheet/wos-next-gen-brochure.pdf}}
 
 \begin{itemize}
-\item \textbf{Journal Citation Reports:} Poskytuje systematické a~objektívne
+\item \textbf{Journal Citation Reports} poskytuje systematické a~objektívne
   hodnotenie svetových časopisov a~ich vzájomné porovnanie použitím metrík ako
   impakt faktor.
-\item \textbf{Essential Scientific Indicator:} Umožňuje analyzovať a~hodnotiť
+\item \textbf{Essential Scientific Indicator} umožňuje analyzovať a~hodnotiť
   vedecký výkon spoločností, inštitúcií, krajín a~časopisov.
-\item \textbf{InCites:} Komplexný nástroj, ktorý umožňuje akademickým, alebo
+\item \textbf{InCites} je komplexný nástroj, ktorý umožňuje akademickým, alebo
   vládnym pracovníkom hodnotiť inštitúcie na základe počtu citácií.
-\item \textbf{Converis:} Je manažérsky nástroj pre univerzity, a~iné vedecké
+\item \textbf{Converis} je manažérsky nástroj pre univerzity, a~iné vedecké
   inštitúcie.
-\item \textbf{ScholarOne:} Je manažérsky systém pre vydavateľov vedecký
-  publikácií ako časopisov, kníh a~zborníkov z~konferencií.  Umožňuje manažovať
-  príspevky, \uv{peer review} proces a~samotnú publikáciu.
-\item \textbf{EndNote:} Poskytuje manažovať vlastné publikácie a~umožňuje ich
+\item \textbf{ScholarOne} je manažérsky systém pre vydavateľov vedeckých
+  publikácií (časopisov, kníh a~zborníkov z~konferencií), ktorý umožňuje
+  manažovať príspevky, recenzné konanie a~samotnú publikáciu.
+\item \textbf{EndNote} poskytuje manažovať vlastné publikácie a~umožňuje ich
   bibliometrickú analýzu.
 \end{itemize}
-
 
 
 \subsection{Scopus}
@@ -405,22 +401,22 @@ aj zborníky, patenty a~webové sídla.  Aktualizuje sa denne.  Podľa údajov
 z~januára 2016 indexuje viac ako 21\,500 titulov, ktoré zahrňujú:
 
 \begin{itemize}
-\item viac než 21\,500 recenzovaných časopisov (z~toho 4\,200 prístupných
+\item viac než 21\,500~recenzovaných časopisov (z~toho 4\,200 prístupných
   zdarma),
-\item viac než 360 obchodných časopisov,
-\item viac než 530 knižných edícií,
-\item viac než 7,2 milióna konferenčných príspevkov z~83\,000 konferencií,
-\item viac než 116\,000 knižných titulov,
-\item viac ako 27 miliónov patentových záznamov z~piatich patentových úradov,
-\item články v~tlači (Articles-in-Press) z~viac ako 5\,000 časopisov.
+\item viac než 360~obchodných časopisov,
+\item viac než 530~knižných edícií,
+\item viac než 7,2~milióna konferenčných príspevkov z~83\,000~konferencií,
+\item viac než 116\,000~knižných titulov,
+\item viac ako 27~miliónov patentových záznamov z~piatich patentových úradov,
+\item články v~tlači (Articles-in-Press) z~viac ako 5\,000~časopisov.
 \end{itemize}
 
-Jadro databázy k~januáru 2016 obsahuje viac než 60 miliónov záznamov%
+Jadro databázy k~januáru 2016 obsahuje viac než 60~miliónov záznamov%
 \footnote{\url{https://www.elsevier.com/__data/assets/pdf_file/0007/69451/scopus_content_coverage_guide.pdf}}, z~toho:
 
 \begin{itemize}
-\item viac než 38 miliónov záznamov od roku 1996 (84~\% všetkých citácií),
-\item viac než 22 miliónov záznamov z~obdobia 1823--1995 (staršie záznamy
+\item viac než 38~miliónov záznamov od roku 1996 (84~\% všetkých citácií),
+\item viac než 22~miliónov záznamov z~obdobia 1823--1995 (staršie záznamy
   obsahujú len abstrakty bez citácií),
 \item približne tri milióny záznamov pribudne každý rok (5\,500 za deň).
 \end{itemize}
@@ -436,19 +432,19 @@ miliónov starších článkov spred roku 1996.
 
 Google Scholar\footnote{\url{https://scholar.google.com/}} (ďalej len GS) je
 neplatená online služba, ktorá bola spustená v~roku 2004.  Umožňuje vyhľadávať
-bibliografické záznamy z~databázy GS.  Na rozdiel od WoS a~Scopusu, ktoré
-sú obmedzené len na istej skupiny konkrétnych vydavateľstiev, alebo časopisov,
-GS indexuje plné texty a~metadáta databáz vydavateľov odbornej literatúry,
+bibliografické záznamy z~databázy GS.  Na rozdiel od WoS a~Scopusu, ktoré sú
+obmedzené len na istej skupiny konkrétnych vydavateľstiev, alebo časopisov, GS
+indexuje plné texty a~metadáta databáz vydavateľov odbornej literatúry,
 odborných časopisov, archívov, ktoré obsahujú preprintové a~voľnoprístupné (open
 access) dokumenty, záverečné práce, patenty a~webové stránky.  Všetky dokumenty,
 ktoré \uv{pôsobia} vedecky \citep{Vine2006}.  Projekt Google Book je tiež
 indexovaný s~GS.  Síce Google nikdy nezverejnil rozsah databázy Google Scholar,
 ale \citet{Orduna-Malea2015} určili veľkosť na takmer 160 miliónov dokumentov
-k~máju 2014.  \citet{Khabsa2014} zistili, že GS zahrňuje 87~\% anglicky
-písaných dokumentov, na vzorke 114 miliónov dokumentov.
+k~máju 2014.  \citet{Khabsa2014} zistili, že GS zahrňuje 87~\% dokumentov
+písaných v angličtine, na vzorke 114 miliónov dokumentov.
 
 Bibliografické záznamy sú automaticky generované analýzou indexovaných
-dokumentov \citep{Vine2006}.  Čo spôsobuje mnohé chyby nie len u~citovaných, ale
+dokumentov \citep{Vine2006}, čo spôsobuje mnohé chyby nie len u~citovaných, ale
 aj citujúcich záznamoch.  Najčastejšie chyby sú:
 \begin{itemize}
 \item \emph{Duplicitné záznamy} vznikajú stiahnutím bibliografických záznamov na
@@ -461,12 +457,12 @@ aj citujúcich záznamoch.  Najčastejšie chyby sú:
   na zdroj, ktoré sú označené ako \texttt{[CITATION]}.  Tento fakt komplikuje
   ručnú korekciu, pretože je potrebné danú publikáciu vyhľadať, čo nie vždy je
   možné.
-\item \emph{Neúplný list autorov} je vlastnosť GS.  Vždy vyberá max päť autorov,
+\item \emph{Neúplný list autorov} je vlastnosť GS.  Vždy vyberá najviac päť autorov,
   ale vyskytuje sa záznam, ktorý neobsahuje vyhľadávané meno, alebo neobsahuje
   žiadnych autorov.
 \item \emph{Analýza nesprávnych dokumentov} vzniká pretože žiadny algoritmus nie
   je dokonalý.  Najčastejšie indexuje zoznam autorov v~zborníku ako samostatný
-  dokument, alebo ak zadané meno autora je bežné slovo (napr.~Lesný).  Niekedy
+  dokument, alebo ak zadané meno autora je bežné slovo (napr.~\uv{Lesný}).  Niekedy
   indexu dokument, ktorý vôbec nesúvisí s~kľúčom vyhľadávania.  GS dokonca
   spojil zoznam autorov so zbytkom referencie z~ďalšieho článku zo zoznamu
   referencií.
@@ -507,7 +503,7 @@ generovaním nezmyselných článkov programe \emph{SCIgen}\index{SCIgen|textbf}
   ktorý formálne pôsobí ako vedecká publikácia zadaných autorov z~oblasti
   informatiky, ale obsah nemá žiadny zmysel
   \citep{Labbe2013};\\\url{https://pdos.csail.mit.edu/archive/scigen/}}
-\citep{Beel2010a}.  Keďže z~princípu fungovania GS by mal pokrývať publikácii,
+\citep{Beel2010a}.  Keďže z~princípu fungovania GS by mal pokrývať publikácií,
 zdá sa to ako ideálny zdroj bibliometrických dát.  Skutočnosť je však úplne
 opačná.  Databáza stále nepokrýva 100~\% publikácií v~štandardných citačných
 registroch (ako WoS a~Scopus).  Publikácie v~malých časopisoch, ktoré nie sú
@@ -524,9 +520,9 @@ približný, informatívny, účel a~preto musia byť brané s~rezervou.
 \label{sec:indicators}
 
 Citačný indikátor je druh scientometrickej metódy na stanovenie \uv{kvality}
-vedeckých publikácii, vedeckých pracovníkov a~vedeckých inštitúcii.  Všetky
-indexy vychádzajú zo základných scientometrických parametrov: počet publikácii
-a~množstvo ich citácii.  Pri výpočte niektorých indexov zohľadňujú aj iné
+vedeckých publikácií, vedeckých pracovníkov a~vedeckých inštitúcii.  Všetky
+indexy vychádzajú zo základných scientometrických parametrov: počet publikácií
+a~množstvo ich citácií.  Pri výpočte niektorých indexov zohľadňujú aj iné
 parametre (napr.~vek pracovníkov).
 
 Základným indikátorom je citačná frekvencia, t.\,j.~priemer počtu citácií istej
@@ -619,14 +615,14 @@ Prvý citačný indikátor navrhol zakladateľ citačných registrov
 \citet{Garfield1955} ako presnejší spôsob evaluácie autorov vedeckých článkov
 než v~tej dobe používané počty publikácií a~počty citácií.  V~súčasnosti IF používa \emph{Institute of Scientific Information} na
 každoročné hodnotenie vedeckých časopisov v~rámci \emph{Journal citation
-  reports} (JCR).  Impact Factor je priemerný počet citácií na články
+  reports} (JCR).  Impakt faktor je priemerný počet citácií na články
 a~prehľadové články publikované v~danom časopise za posledné dva roky.
 
-Impact Factor pre rok 2016 možno matematicky vyjadriť vzťahom~(\ref{eq:if}), kde
+Impakt faktor pre rok 2016 možno matematicky vyjadriť vzťahom~(\ref{eq:if}), kde
 $a$ je celkový počet článkov a~prehľadových článkov, ktoré boli v~danom časopise
 publikované v~rokoch 2014--2015 a~$c$ je počet článkov publikovaných v~danom
 časopise v~rokoch 2014--2015, ktoré boli citované v~publikáciach indexovaných
-v~roku 2016.\footnote{Výsledný Impact Factor z~roku 2016 môže byť publikovaný až
+v~roku 2016.\footnote{Výsledný impakt faktor z~roku 2016 môže byť publikovaný až
   v~roku 2017, pretože ho nie je možné vypočítať skôr, než rok 2016 skončí.}
 
 \begin{equation}
@@ -757,23 +753,21 @@ pre daný časopis.
 
 Tento populárny citačný indikátor bol definovaný Jorgem E.~Hirshom v~roku 2005
 ako číslo $h$, ktoré zodpovedá počtu najcitovanejších článkov daného autora,
-ktorých každá publikácia má aspoň $h$ citácii \citep{Hirsch2005}.
-
-Pre lepšie pochopenie je vhodné uviesť príklad: \emph{Vedec A} má desať publikácii.
-Ak ich zoradíme podľa počtu citácii, potom prvá má 10 citácii, druhá má 8,
-tretia 5, štvrtá 4, piata 2 a~ostatné nemajú žiadne citácie.  Potom tento vedec
-má $h$-index 4, pretože štyri najcitovanejšie články (s~počtami citácii 10, 8, 5
-a 4) majú aspoň po štyri citácie.  Skupina článkov, z~ktorých každý má aspoň toľko
+ktorých každá publikácia má aspoň $h$ citácií \citep{Hirsch2005}.  Pre lepšie
+pochopenie je vhodné uviesť príklad: \emph{Vedec A} má desať publikácií.  Ak ich
+zoradíme podľa počtu citácií, potom prvá má 10 citácií, druhá má 8, tretia 5,
+štvrtá 4, piata 2 a~ostatné nemajú žiadne citácie.  Potom tento vedec má
+$h$-index 4, pretože štyri najcitovanejšie články (s~počtami citácií 10, 8, 5 a
+4) majú aspoň po štyri citácie.  Skupina článkov, z~ktorých každý má aspoň toľko
 citácií, ako je hodnota $h$-indexu sa súhrne nazýva h-core články.\index{h-core
   články|textbf}
 
 Hlavným problémom $h$-indexu je necitlivosť na malý počet veľmi citovaných
 článkov.  Ak porovnáme publikačnú činnosť \emph{vedca A} z~predchádzajúceho
 príkladu s~\emph{vedcom B}, ktorý má iba päť publikácií (s~počtami citácií 108,
-45, 12, 5 a~2), jeho Hirshov index je rovnaký ako u \emph{vedca A}.
-
-Sám Hirsh uvádza, že $h$-index nemožno použiť na porovnávanie autorov rôznych
-vedných disciplín.
+45, 12, 5 a~2), jeho Hirshov index je rovnaký ako u \emph{vedca A}.  Sám
+\citet{Hirsch2005} uvádza, že $h$-index nemožno použiť na porovnávanie autorov
+rôznych vedných disciplín.
 
 
 \subsection{Eggheov index ($g$-index)}
@@ -783,9 +777,9 @@ vedných disciplín.
 \index{g-index@$g$-index|see{Eggheov index}}
 \label{sec:g-index}
 
-Leo Egghe \citeyearpar{Egghe2006} publikoval indikátor $g$-index, ktorý má
-vyriešiť niektoré problémy $h$-indexu, najmä jeho necitlivosť k~autorom, ktorí
-majú málo extrémne citovaných publikácii.
+\citet{Egghe2006} publikoval indikátor $g$-index, ktorý má
+vyriešiť niektoré problémy Hirsch\-ovho indexu, najmä jeho necitlivosť
+k~autorom, ktorí majú málo extrémne citovaných publikácií.
 
 Eggheov $g$-index je definovaný ako číslo $g$, ktoré predstavuje počet
 najcitovanejších článkov konkrétneho autora, zostupne zoradený podľa počtu
@@ -824,8 +818,8 @@ zahrnuté do $h$-indexu $h^2$.
 
 Napríklad, ak $h$-index akademického pracovníka je 10 a~jeho publikácie v~h-core
 majú spolu 200 citácií, tak jeho $e$-index bude 10, pretože ak odčítame
-teoretické minimum na dosiahnutie $h$-indexu 10, t.\,j.~100 citácii od
-skutočného počtu citácii h-core článkov 200, výsledok bude 100, z~čoho druhá
+teoretické minimum na dosiahnutie $h$-indexu 10, t.\,j.~100~citácií od
+skutočného počtu citácií h-core článkov 200, výsledok bude 100, z~čoho druhá
 odmocnina je 10.
 
 To znamená, že $e$-index možno použiť na odlíšenie dvoch vedcov s~rovnakým
@@ -883,16 +877,15 @@ najvýhodnejšie nastaviť na $\gamma = 4$.
 
 Vek vedeckej publikácie (rozdiel medzi dnešným rokom a~rokom vydania daného
 článku) sa považuje za jeden z~faktorov, ktorý definuje impakt článku.  Na jeho
-kvantifikáciu je nutné započítať tento parameter do výpočtu.  Jednoduchým
-delením počtu citácií danej publikácie jej vekom váhujeme citačnú frekvenciu
-podľa veku publikácie (ang.~\emph{age-weighted citation rate}, skr.~AWCR).
+kvantifikáciu je nutné zaviesť váhy citačnej frekvencie podľa veku publikácie
+(ang.~\emph{age-weighted citation rate}, skr.~AWCR), ktoré získame jednoduchým
+podelením počtu citácií danej publikácie jej vekom.
 
 \citet{Jin2007} vytvorili indikátor, ktorý váhuje citačnú frekvenciu h-core
-článkov podľa veku.  Nazvali ho $\mathit{AR}$-index.
-
-Jeho matematická definícia je vyjadrená vzťahom~(\ref{eq:ar-index}), pričom $h$
-je Hirshov index autora, $\mathit{cit}_j$ je množstvo citácií j-teho
-najcitovanejšieho článku a~$a_j$ je počet rokov od publikácie j-teho článku.
+článkov podľa veku, nazývaný $\mathit{AR}$-index.  Jeho matematická definícia je
+vyjadrená vzťahom~(\ref{eq:ar-index}), pričom $h$ je Hirshov index autora,
+$\mathit{cit}_j$ je množstvo citácií j-teho najcitovanejšieho článku a~$a_j$ je
+počet rokov od publikácie j-teho článku.
 
 \begin{equation}
 \label{eq:ar-index}
@@ -900,9 +893,9 @@ najcitovanejšieho článku a~$a_j$ je počet rokov od publikácie j-teho člán
 \end{equation}
 
 Autori programu PoP\index{Publish or Perish} \index{PoP|see{Publish or Perish}}
-vytvorili $\mathit{AW}$-index -- modifikáciu $\mathit{AR}$-indexu.  Na rozdiel
-od $\mathit{AR}$-indexu, $\mathit{AW}$-index berie do úvahy všetky publikácie,
-nie len tie, ktoré sú začlenené v~h-core.
+vytvorili modifikáciu $\mathit{AR}$-indexu označovanú ako $\mathit{AW}$-index.
+Na rozdiel od $\mathit{AR}$-indexu, tento nový index berie do úvahy všetky
+publikácie, nie len tie, ktoré sú začlenené v~h-core.
 
 
 \subsection{Pôvodný individuálny $h$-index}
@@ -911,14 +904,13 @@ nie len tie, ktoré sú začlenené v~h-core.
 \index{individual h-index@\emph{individual $h$-index}|see{individuálny $h$-index}}
 \label{sec:hi-index}
 
-\citet{Batista2006} navrhli multidisciplinárny variant
-$h$-indexu -- $h_{\mathrm{I}}$-index -- tiež nazývaný individuálny $h$-index
-(ang.~\emph{individual $h$-index}).  Definovali ho ako $h$-indexu podelený
-priemerným počtom autorov h-core článkov\index{h-core články}
-(\emph{viď}~podkapitola~\ref{sec:h-index}).  pretože jeden z~hlavných rozdielov
+\citet{Batista2006} navrhli multidisciplinárny variant $h$-indexu nazývaný
+individuálny $h$-index (ang.~\emph{individual $h$-index}), označovaný ako
+$h_{\mathrm{I}}$.  Definovali ho ako $h$-index podelený priemerným počtom
+autorov h-core článkov\index{h-core články}
+(\emph{viď}~podkapitola~\ref{sec:h-index}).  pretože jedým z~hlavných rozdielov
 medzi vedeckými disciplínami je množstvo vedcov, ktorí pracujú v~danej
-disciplíne,
-
+disciplíne.
 
 Matematicky ho definovali vzťahom~(\ref{eq:hi-index}), kde $h$ je Hirshov index
 a $\langle N_a \rangle = N_a^{(T)} / h$, pričom $N_a^{(T)}$ je celkový počet
@@ -933,12 +925,12 @@ h_{\mathrm{I}} = \frac{h}{\langle N_a \rangle} = \frac{h^2}{N_a^{(T)}}
 \subsection{Variant individuálneho $h$-indexu pre PoP}
 \label{sec:hinorm}
 
-Autori programu PoP\index{Publish or Perish} modifikovali individuálny
-$h_{\mathrm{I}}$-index.  Na rozdiel od $h_{\mathrm{I}}$, jednoducho $h$-index
-delili počtom všetkých spoluautorov h-core článkov.  Pri výpočte
-$h_{\mathrm{I, norm}}$ sa počet citácií jednotlivých článkov podelí počtom
-autorov daného článku.  A~potom sa vypočíta Hirshov index z~už takto
-normalizovaných publikácií.  Tento index pomenovali $h_{\mathrm{I, norm}}$.
+Autori programu PoP\index{Publish or Perish} si vytvorili variant individuálneho
+$h$-indexu ($h_{\mathrm{I}}$), označovaný ako $h_{\mathrm{I, norm}}$.
+Definovali ho ako $h$-index podelený počtom \emph{všetkých} spoluautorov h-core
+článkov.  Pri výpočte $h_{\mathrm{I, norm}}$ sa najprv podelí počet citácií
+jednotlivých článkov počtom autorov daného článku a~až z~takto normalizovaných
+hodnôt sa vypočíta Hirshov index.
 
 
 \subsection{Multiautorský $h$-index}
@@ -946,10 +938,11 @@ normalizovaných publikácií.  Tento index pomenovali $h_{\mathrm{I, norm}}$.
 \index{multiautorský h-index@multiautorský $h$-index|textbf}
 \label{sec:hm-index}
 
-\citet{Schreiber2008} popísal nový indikátor, ktorý zahrňuje spoluautorstvo --
-$h_{\mathrm{m}}$-index.  Schreiber ho odvodil od individuálneho $h$-indexu
-$h_{\mathrm{I}}$ s~tým rozdielom, že počtom autorov je delený rang dokumentu,
-nie počet citácií, ako v~$h_{\mathrm{I}}$ a~z~toho sa vypočíta $h$-index.
+\citet{Schreiber2008} popísal nový indikátor, ktorý zahrňuje spoluautorstvo,
+tzv.~multiautorský $h$-index, označovaný tiež ako $h_{\mathrm{m}}$-index.  Tento
+indikátor je opäť obdobou individuálneho $h$-indexu ($h_{\mathrm{I}}$), s~tým
+rozdielom, že počtom autorov je delený rang dokumentu, nie počet citácií,
+ako v~prípade $h_{\mathrm{I}}$.
 
 Matematicky je definovaný vzťahom~(\ref{eq:hm-index}), pričom $r$ je
 tzv.~\emph{rang publikácie} v~zostupnom zoradení podľa počtu citácií, $c(r)$ je
